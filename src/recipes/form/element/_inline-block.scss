@@ -1,0 +1,25 @@
+@mixin form-element-inline($line-height: 1, $label-width: 8em, $input-width: 20em)
+{
+    label
+    {
+        display: inline-block;
+        width: $label-width;
+
+        // we use valign top for label + textarea
+        vertical-align: top;
+
+        // so we add a padding top to make the label no valigned on top of the input
+        padding-top: .4em;
+    }
+
+    input,
+    textarea
+    {
+        width: $input-width;
+    }
+
+    textarea
+    {
+        height: 50px;
+    }
+}
