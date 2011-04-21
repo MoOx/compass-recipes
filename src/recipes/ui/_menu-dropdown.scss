@@ -1,0 +1,44 @@
+// sometimes we don't use nesting all the time to optimize some selector
+
+// this mixin have to be used with a js for dropdown menu behavior
+// (display onhover with a timeout like 500ms for better UX)
+
+@import "recipes/shared/block-inline-block";
+
+@mixin ui-menu-dropdown($z-index: 3)
+{
+    z-index: $z-index;
+
+    ul
+    {
+        z-index: $z-index + 1;
+        list-style-position: outside; // ie fix
+
+        li
+        {
+            position: relative;
+            @include block-inline-block;
+        }
+
+        a
+        {
+            display: inline-block;
+        }
+    }
+
+        // sub menu
+        ul ul
+        {
+            position: absolute;
+            z-index: $z-index + 2;
+
+            // default behavior
+            display: none;
+        }
+
+            .no-js li:hover > ul
+            {
+                display: block;
+            }
+}
+

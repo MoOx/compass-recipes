@@ -1,0 +1,6 @@
+@mixin ui-border-bevel($width, $color, $variation: 15%)
+{
+    border: $width solid $color;
+    border-top-color: lighten($color, $variation);
+    border-bottom-color: darken($color, $variation);
+}
