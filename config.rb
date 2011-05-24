@@ -1,4 +1,6 @@
 http_path = "/"
-css_dir = "tests"
-sass_dir = "tests"
+css_dir = "."
+sass_dir = "."
 add_import_path "./src"
+add_import_path "./tests"
+line_comments = false
