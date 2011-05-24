@@ -1,0 +1,91 @@
+/* line 1, doc.scss */
+body {
+  margin-top: 1.0em;
+  background-color: #2F2F2F;
+  font-family: Sans-serif;
+  color: #C6C6C6;
+}
+
+/* line 7, doc.scss */
+#container {
+  margin: 0 auto;
+  width: 700px;
+}
+
+/* line 13, doc.scss */
+#logo {
+  background: url(img/compass-recipes.png) no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 428px;
+  height: 128px;
+  padding: 0;
+}
+
+/* line 22, doc.scss */
+h1 {
+  font-size: 3.8em;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+/* line 27, doc.scss */
+h1 .small {
+  font-size: 0.4em;
+}
+
+/* line 30, doc.scss */
+h1 a {
+  text-decoration: none;
+}
+
+/* line 33, doc.scss */
+h2 {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+/* line 37, doc.scss */
+h3 {
+  text-align: center;
+  color: #fff;
+}
+
+/* line 41, doc.scss */
+a {
+  color: #fff;
+}
+
+/* line 44, doc.scss */
+.description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+/* line 50, doc.scss */
+.download {
+  float: right;
+}
+
+/* line 53, doc.scss */
+pre {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+}
+
+/* line 58, doc.scss */
+hr {
+  border: 0;
+  width: 80%;
+  border-bottom: 1px solid #aaa;
+}
+
+/* line 63, doc.scss */
+.footer {
+  text-align: center;
+  padding-top: 30px;
+  font-style: italic;
+}
