@@ -32,7 +32,7 @@
         	border-color: $color $background-color;
         	@include border-radius(0 0 0 $border-radius);
 	    }
-	    @elseif ($position == 'top-left')
+	@elseif ($position == 'top-left')
     	{
     		top: 0;
 	        left: 0;
