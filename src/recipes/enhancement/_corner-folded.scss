@@ -31,7 +31,7 @@
         	border-width: 0 $width $width 0;
         	border-color: $color $background-color;
         	@include border-radius(0 0 0 $border-radius);
-	    }
+	}
 	@elseif ($position == 'top-left')
     	{
     		top: 0;
