@@ -1,0 +1,6 @@
+@mixin ui-gradient-from-middle($color: #ddd, $lighten-top: 10%, $darken-bottom: 10%)
+{
+    // fallback
+    background: $color;
+    @include background(linear-gradient(lighten($color, $lighten-top), darken($color, $darken-bottom)));
+}

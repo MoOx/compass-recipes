@@ -1,0 +1,42 @@
+/**
+ * Drop shadow mixins from Nicolas Gallagher demo
+ * 
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+@mixin drop-shadow-lifted($height: 15px, $margin: 10px, $angle: 3deg)
+{
+    & > :last-child::before
+    {
+        content:"";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &::before,
+    &::after
+    {
+        content:"";
+        position:absolute;
+        z-index: -2;
+        
+        bottom: $height;
+        left: $margin;
+        width: 50%;
+        height: 20%;
+        
+        @include box-shadow(0 $height 10px rgba(0, 0, 0, .7));
+        @include transform(rotate(-$angle));
+    }
+    
+    &::after
+    {
+        right: $margin;
+        left: auto;
+        
+        @include transform(rotate($angle));
+    }
+}
