@@ -1,4 +1,4 @@
-# Compass Recipes
+# Compass Recipes ![project status](http://stillmaintained.com/MoOx/Compass-Recipes.png) #
 
 This project is a collection of Sass mixins using Compass that you can use or learn from.
 
