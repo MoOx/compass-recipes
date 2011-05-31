@@ -4,10 +4,15 @@
  * So use only : and not :: if you want to support IE8
  * IE9 Webkit Firefox Opera understand ::
  */
-@mixin pseudo-element
+@mixin pseudo-element($width: 0, $height: auto, $content: "")
 {
-    content: "";
-    position:absolute;
-    display:block;
-    width: 0; // for ff3 positionning
+    content: $content;
+    position: absolute;
+    display: block;
+    width: $width; // default 0 is for ff3 positionning
+    
+    @if ($height != auto)
+    {
+        height: $height;
+    }
 }
