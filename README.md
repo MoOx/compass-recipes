@@ -12,7 +12,6 @@ http://moox.github.com/Compass-Recipes/
 * Add all shadow/drop mixins from http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ and http://www.creativejuiz.fr/trytotry/css3-box-shadow-after-before/
 * Add all shapes from http://css-tricks.com/examples/ShapesOfCSS/
 * Add normalize.css from @necolas
-* Choose a licence (Do WTF U want licence ?)
 
 ## Author
  
