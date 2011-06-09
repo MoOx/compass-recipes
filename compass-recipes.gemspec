@@ -1,21 +1,25 @@
 # -*- encoding: utf-8 -*-
 
-Gem::Specification.new do |s|
-  s.version = "0.1.0"
-  s.date = "2011-06-06"
+Gem::Specification.new do |gemspec|
+  gemspec.version = "0.1.0"
+  gemspec.date = "2011-07-01"
 
-  s.name = "compass-recipes"
-  s.authors = ["Maxime Thirouin"]
-  s.summary = %q{A Compass extension to have some sass/compass recipes ready to use}
-  s.description = %q{A Compass extension to have some sass/compass recipes ready to use ! }
-  s.email = "maxime.thirouin@gmail.com"
-  s.homepage = "http://moox.github.com/Compass-Recipes"
+  gemspec.name = "compass-recipes"
+  gemspec.authors = ["Maxime Thirouin"]
+  gemspec.summary = %q{Recipes for Compass}
+  gemspec.description = %q{A Compass extension to have some sass/compass recipes ready to use ! }
+  gemspec.email = "maxime.thirouin@gmail.com"
+  gemspec.homepage = "http://moox.github.com/Compass-Recipes"
 
-  s.files = %w(README.md LICENSE VERSION)
-  s.files += Dir.glob("stylesheets/**/*.*")
+  gemspec.rubyforge_project = "compass-recipes"
 
-  s.has_rdoc = false
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.8.5}
-  s.add_dependency("compass", [">= 0.11.1"])
+  gemspec.has_rdoc = false
+  gemspec.require_paths = %w(lib)
+  gemspec.rubygems_version = "1.3.5" # same as compass
+
+  gemspec.files = %w(README.md LICENSE VERSION)
+  gemspec.files += Dir.glob("lib/*.*")
+  gemspec.files += Dir.glob("stylesheets/**/*.*")
+
+  gemspec.add_dependency("compass", [">= 0.11.1"])
 end
