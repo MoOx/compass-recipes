@@ -1,25 +1,24 @@
+/**
+ * Form element inline mixin
+ * This mixin allow you to have a label inline with your input
+ * It's simply based on inline-block behavior
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
 @mixin form-element-inline($label-width: 8em, $input-width: 20em)
 {
     label
     {
         display: inline-block;
         width: $label-width;
-
-        // we use valign top for label + textarea
-        vertical-align: top;
-
-        // so we add a padding top to make the label no valigned on top of the input
-        padding-top: .4em;
+        
+        vertical-align: middle;
     }
 
     input,
     textarea
     {
         width: $input-width;
-    }
-
-    textarea
-    {
-        height: 50px;
+        vertical-align: middle;
     }
 }
