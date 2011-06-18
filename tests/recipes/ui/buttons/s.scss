@@ -14,10 +14,10 @@ div {
     @include cleverbutton(5px);
 }
 .stark {
-    @include cleverbutton(50%, $edge: "stark", $from: lighten(#DB523D, 30%), $to: #DB523D);
+    @include cleverbutton(4px, $edge: "stark", $from: lighten(#ff9900, 30%), $to: #ff9900);
 }
 .threedee {
-    @include cleverbutton(3px, $edge: "3d");
+    @include cleverbutton(4px, $edge: "3D");
 }
 .press {
     @include cleverbutton(3px, $edge: "press", $from: lighten(#3D7DB3, 40%), $to: #3D7DB3);

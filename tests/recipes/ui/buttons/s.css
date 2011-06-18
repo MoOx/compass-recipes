@@ -60,7 +60,7 @@ div {
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0.01em;
 }
 .glow, .glow:hover, .glow:focus, .glow:active {
   color: white;
@@ -81,7 +81,7 @@ div {
   background: -o-linear-gradient(#666666, #aaaaaa);
   background: -ms-linear-gradient(#666666, #aaaaaa);
   background: linear-gradient(#666666, #aaaaaa);
-  text-shadow: rgba(0, 0, 0, 0.6) 0 -0.05em 0;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0.01em;
 }
 
 .stark {
@@ -89,48 +89,52 @@ div {
   line-height: 2;
   display: inline-block;
   cursor: pointer;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3c5be), color-stop(100%, #db523d));
-  background: -webkit-linear-gradient(#f3c5be, #db523d);
-  background: -moz-linear-gradient(#f3c5be, #db523d);
-  background: -o-linear-gradient(#f3c5be, #db523d);
-  background: -ms-linear-gradient(#f3c5be, #db523d);
-  background: linear-gradient(#f3c5be, #db523d);
-  -moz-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
-  -webkit-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
-  -o-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
-  box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -khtml-border-radius: 50%;
-  border-radius: 50%;
-  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd699), color-stop(100%, #ff9900));
+  background: -webkit-linear-gradient(#ffd699, #ff9900);
+  background: -moz-linear-gradient(#ffd699, #ff9900);
+  background: -o-linear-gradient(#ffd699, #ff9900);
+  background: -ms-linear-gradient(#ffd699, #ff9900);
+  background: linear-gradient(#ffd699, #ff9900);
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -0.05em 0.03em, inset rgba(230, 138, 0, 0.5) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -0.05em 0.03em, inset rgba(230, 138, 0, 0.5) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -o-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -0.05em 0.03em, inset rgba(230, 138, 0, 0.5) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0 -0.05em 0.03em, inset rgba(230, 138, 0, 0.5) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0.01em;
 }
 .stark, .stark:hover, .stark:focus, .stark:active {
   color: white;
   text-decoration: none;
 }
 .stark:hover, .stark:focus {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efb2a9), color-stop(100%, #d73f28));
-  background: -webkit-linear-gradient(#efb2a9, #d73f28);
-  background: -moz-linear-gradient(#efb2a9, #d73f28);
-  background: -o-linear-gradient(#efb2a9, #d73f28);
-  background: -ms-linear-gradient(#efb2a9, #d73f28);
-  background: linear-gradient(#efb2a9, #d73f28);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc80), color-stop(100%, #e68a00));
+  background: -webkit-linear-gradient(#ffcc80, #e68a00);
+  background: -moz-linear-gradient(#ffcc80, #e68a00);
+  background: -o-linear-gradient(#ffcc80, #e68a00);
+  background: -ms-linear-gradient(#ffcc80, #e68a00);
+  background: linear-gradient(#ffcc80, #e68a00);
+  -moz-box-shadow: inset rgba(204, 122, 0, 0.6) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.8) 0 -0.1em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -webkit-box-shadow: inset rgba(204, 122, 0, 0.6) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.8) 0 -0.1em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -o-box-shadow: inset rgba(204, 122, 0, 0.6) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.8) 0 -0.1em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  box-shadow: inset rgba(204, 122, 0, 0.6) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.8) 0 -0.1em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
 }
 .stark:active {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #db523d), color-stop(100%, #f3c5be));
-  background: -webkit-linear-gradient(#db523d, #f3c5be);
-  background: -moz-linear-gradient(#db523d, #f3c5be);
-  background: -o-linear-gradient(#db523d, #f3c5be);
-  background: -ms-linear-gradient(#db523d, #f3c5be);
-  background: linear-gradient(#db523d, #f3c5be);
-  text-shadow: rgba(0, 0, 0, 0.6) 0 -0.05em 0;
-  -moz-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.2) 0 0.1em 0.5em 0.5em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
-  -webkit-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.2) 0 0.1em 0.5em 0.5em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
-  -o-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.2) 0 0.1em 0.5em 0.5em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
-  box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.2) 0 0.1em 0.5em 0.5em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff9900), color-stop(100%, #ffd699));
+  background: -webkit-linear-gradient(#ff9900, #ffd699);
+  background: -moz-linear-gradient(#ff9900, #ffd699);
+  background: -o-linear-gradient(#ff9900, #ffd699);
+  background: -ms-linear-gradient(#ff9900, #ffd699);
+  background: linear-gradient(#ff9900, #ffd699);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0.01em;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0.05em 0.03em, inset rgba(153, 92, 0, 0.3) 0 0 0.02em 0.2em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0.05em 0.03em, inset rgba(153, 92, 0, 0.3) 0 0 0.02em 0.2em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  -o-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0.05em 0.03em, inset rgba(153, 92, 0, 0.3) 0 0 0.02em 0.2em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0 0.05em 0.03em, inset rgba(153, 92, 0, 0.3) 0 0 0.02em 0.2em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
 }
 
 .threedee {
@@ -144,17 +148,17 @@ div {
   background: -o-linear-gradient(#aaaaaa, #666666);
   background: -ms-linear-gradient(#aaaaaa, #666666);
   background: linear-gradient(#aaaaaa, #666666);
-  -moz-box-shadow: rgba(0, 0, 0, 0.9) 0 0.2em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0.2em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
-  -o-box-shadow: rgba(0, 0, 0, 0.9) 0 0.2em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
-  box-shadow: rgba(0, 0, 0, 0.9) 0 0.2em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
+  -moz-box-shadow: inset rgba(255, 255, 255, 0.8) 0 0.05em 0.1em, rgba(0, 0, 0, 0.9) 0 0.2em 0.05em, inset rgba(0, 0, 0, 0.6) 0 0 0.1em;
+  -webkit-box-shadow: inset rgba(255, 255, 255, 0.8) 0 0.05em 0.1em, rgba(0, 0, 0, 0.9) 0 0.2em 0.05em, inset rgba(0, 0, 0, 0.6) 0 0 0.1em;
+  -o-box-shadow: inset rgba(255, 255, 255, 0.8) 0 0.05em 0.1em, rgba(0, 0, 0, 0.9) 0 0.2em 0.05em, inset rgba(0, 0, 0, 0.6) 0 0 0.1em;
+  box-shadow: inset rgba(255, 255, 255, 0.8) 0 0.05em 0.1em, rgba(0, 0, 0, 0.9) 0 0.2em 0.05em, inset rgba(0, 0, 0, 0.6) 0 0 0.1em;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0.01em;
 }
 .threedee, .threedee:hover, .threedee:focus, .threedee:active {
   color: white;
@@ -175,11 +179,11 @@ div {
   background: -o-linear-gradient(#666666, #aaaaaa);
   background: -ms-linear-gradient(#666666, #aaaaaa);
   background: linear-gradient(#666666, #aaaaaa);
-  text-shadow: rgba(0, 0, 0, 0.6) 0 -0.05em 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
-  -o-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
-  box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0.01em;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset black 0 0 0.1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset black 0 0 0.1em;
+  -o-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset black 0 0 0.1em;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset black 0 0 0.1em;
   -moz-transform: translateY(0.2em);
   -webkit-transform: translateY(0.2em);
   -o-transform: translateY(0.2em);
@@ -208,7 +212,7 @@ div {
   -ms-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
-  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0.01em;
 }
 .press, .press:hover, .press:focus, .press:active {
   color: white;
@@ -229,7 +233,7 @@ div {
   background: -o-linear-gradient(#3d7db3, #cedfee);
   background: -ms-linear-gradient(#3d7db3, #cedfee);
   background: linear-gradient(#3d7db3, #cedfee);
-  text-shadow: rgba(0, 0, 0, 0.6) 0 -0.05em 0;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0.01em;
   text-shadow: rgba(0, 0, 0, 0.5) 0 0.1em 0.1em, #a8c7e1 0.05em 0.05em 0;
   -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
@@ -258,7 +262,7 @@ div {
   -ms-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
-  text-shadow: rgba(255, 255, 255, 0.6) 0 1px 0;
+  text-shadow: rgba(255, 255, 255, 0.6) 0 1px 0.01em;
 }
 .fullcustom, .fullcustom:hover, .fullcustom:focus, .fullcustom:active {
   color: black;
@@ -279,5 +283,5 @@ div {
   background: -o-linear-gradient(#66cc00, #b3ffb3);
   background: -ms-linear-gradient(#66cc00, #b3ffb3);
   background: linear-gradient(#66cc00, #b3ffb3);
-  text-shadow: rgba(255, 255, 255, 0.6) 0 -0.05em 0;
+  text-shadow: rgba(255, 255, 255, 0.6) 0 -1px 0.01em;
 }

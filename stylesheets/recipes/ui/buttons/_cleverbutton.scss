@@ -14,10 +14,10 @@
     @include box-shadow(rgba(0,0,0,.6) 0 .1em .1em, inset rgba(255,255,255,.9) 0px .1em .1em);
   }
   @if $edge == "stark" {
-    @include box-shadow( inset $to 0 0 .02em .15em, inset rgba(0,0,0,.4) 0 0 .5em, rgba(0,0,0,.4) 0 0 .01em .01em);
+    @include box-shadow(inset rgba(0,0,0,.5) 0 -.05em .03em, inset transparentize(darken($to, 5%), .5) 0 0 .02em .2em, inset rgba(0,0,0,.4) 0 0 .5em, rgba(0,0,0,.4) 0 0 .01em .01em);
   }
-  @if $edge == "3d" {
-    @include box-shadow(rgba(0,0,0,.9) 0 .2em .1em, inset rgba(0,0,0,.4) 0 0 .1em);
+  @if $edge == "3D" {
+    @include box-shadow(inset rgba(255,255,255,.8) 0 .05em .1em, rgba(0,0,0,.9) 0 .2em .05em, inset rgba(0,0,0,.6) 0 0 .1em);
   }
   @if $edge == "press" {
     @include box-shadow(darken(saturate($from, 10%), 20%) 0 0 5px inset, transparentize(white, .2) 0 2px 7px inset, darken($to, 30%) 0 1px 2px) 
@@ -32,10 +32,10 @@
   $light_shadow_color: lighten($textcolor,100%);
 
   @if $is_light {
-    @include text-shadow(transparentize($dark_shadow_color, .4) 0 1px 0);
+    @include text-shadow(transparentize($dark_shadow_color, .4) 0 1px .01em);
   }
   @if $is_light == false {
-    @include text-shadow(transparentize($light_shadow_color, .4) 0 1px 0);
+    @include text-shadow(transparentize($light_shadow_color, .4) 0 1px .01em);
   }
 
   &, &:hover, &:focus, &:active {
@@ -43,32 +43,28 @@
     text-decoration: none;
   }
 
-  @if $textcolor == white {
-    $is_bg_light: lightness($to) < 50%;
-    @if $is_bg_light {
-      $textcolor: black;
-    }
-  }
-
-
   &:hover, &:focus {
     @include background(linear-gradient(darken($from, 5%), darken($to, 5%)));
+    // include $edge specific styles in an @if block, see example bellow:
+    @if $edge == "stark" {
+      @include box-shadow(inset transparentize(saturate(darken($to, 10%), 100%), .4) 0 0 .02em .2em, inset rgba(0,0,0,.8) 0 -.1em .1em, inset rgba(0,0,0,.4) 0 0 .5em, rgba(0,0,0,.4) 0 0 .01em .01em);
+    }
   }
     
   &:active {
     @include background(linear-gradient($to, $from));
     
     @if $is_light {
-      @include text-shadow(transparentize($dark_shadow_color, .4) 0 -.05em 0);
+      @include text-shadow(transparentize($dark_shadow_color, .4) 0 -1px .01em);
     }
     @if $is_light == false {
-      @include text-shadow(transparentize($light_shadow_color, .4) 0 -.05em 0);
+      @include text-shadow(transparentize($light_shadow_color, .4) 0 -1px .01em);
     }
     @if $edge == "stark" {
-      @include box-shadow(inset $to 0 0 .02em .15em, inset rgba(0,0,0,.2) 0 .1em .5em .5em, inset rgba(255,255,255,.4) 0 0 .1em);
+      @include box-shadow(inset rgba(0,0,0,.5) 0 .05em .03em, inset transparentize(darken($to, 20%), .7) 0 0 .02em .2em, inset rgba(255,255,255,.4) 0 0 .1em);
     }
-    @if $edge == "3d" {
-      @include box-shadow(rgba(0,0,0,.7) 0 .05em .15em, inset rgba(0,0,0,.4) 0 0 .1em);
+    @if $edge == "3D" {
+      @include box-shadow(rgba(0,0,0,.7) 0 .05em .15em, inset rgba(0,0,0,1) 0 0 .1em);
       @include transform(translateY(.2em));
     }
     @if $edge == "press" {
