@@ -13,13 +13,16 @@
  * HTML
  * <body>
  *     <div class="v-align-container">
- *         <div class="v-align-container">
- *             <div class="v-align-container">
+ *         <div class="v-align-content-container">
+ *             <div class="v-align-content">
  *             Your content !
  *             </div>
  *         </div> 
  *     </div>
  * </body>
+ *
+ * @thanks Chris Coyier
+ * @autor Maxime Thirouin maxime.thirouin@gmail.com @MoOx
  */
 
 @mixin vertical-align-requirement
@@ -27,7 +30,9 @@
     html,
     body
     {
-        height:100%
+        height:100%;
+        margin: 0;
+        padding: 0;
     }
 }
 
