@@ -1,0 +1,5 @@
+@mixin rectangle($width: 200px: $height: 100px)
+{
+	width: $width;
+	height: $height;
+}

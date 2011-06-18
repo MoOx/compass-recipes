@@ -1,9 +1,14 @@
 /**
- * Bundles of shapes
- * 
- * @todo all other shapes that are not here !
- * 
- * @thanks Chris Coyier
- * @link http://css-tricks.com/examples/ShapesOfCSS/
- */
+* Bundles of shapes
+* 
+* @todo all other shapes that are not here !
+* 
+* @thanks Chris Coyier
+* @link http://css-tricks.com/examples/ShapesOfCSS/
+*/
+@import "recipes/shape/square";
+@import "recipes/shape/rectangle";
+@import "recipes/shape/circle";
+@import "recipes/shape/oval";
 @import "recipes/shape/triangle";
+@import "recipes/shape/parallelogram";
