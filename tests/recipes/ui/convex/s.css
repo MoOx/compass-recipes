@@ -4,6 +4,7 @@ html {
   background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: linear-gradient(#dddddd, #ffffff) no-repeat;
 }
 
@@ -42,6 +43,7 @@ p.doc a {
   background: -webkit-linear-gradient(#eeeeee, #dddddd);
   background: -moz-linear-gradient(#eeeeee, #dddddd);
   background: -o-linear-gradient(#eeeeee, #dddddd);
+  background: -ms-linear-gradient(#eeeeee, #dddddd);
   background: linear-gradient(#eeeeee, #dddddd);
 }
 
@@ -51,6 +53,7 @@ p.doc a {
   background: -webkit-linear-gradient(#eeeeee, #dddddd);
   background: -moz-linear-gradient(#eeeeee, #dddddd);
   background: -o-linear-gradient(#eeeeee, #dddddd);
+  background: -ms-linear-gradient(#eeeeee, #dddddd);
   background: linear-gradient(#eeeeee, #dddddd);
 }
 .ui-convex-hover:hover, .ui-convex-hover:focus {
@@ -58,5 +61,6 @@ p.doc a {
   background: -webkit-linear-gradient(#dddddd, #eeeeee);
   background: -moz-linear-gradient(#dddddd, #eeeeee);
   background: -o-linear-gradient(#dddddd, #eeeeee);
+  background: -ms-linear-gradient(#dddddd, #eeeeee);
   background: linear-gradient(#dddddd, #eeeeee);
 }
