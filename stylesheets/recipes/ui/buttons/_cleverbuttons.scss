@@ -1,0 +1,55 @@
+// cleverButtons by Olivier Lacan & Andrew Smith (http://clevercode.net)
+@mixin cleverButton($radius: 5px, $textcolor: white, $from: #aaa, $to: #666, $edge: "glow")
+{
+  // adjustable settings for padding
+  padding: 0.3em 1.5em 0.2em;
+  
+  // in case you want to make buttons with non anchor elements
+  cursor: pointer;
+  
+  @include background(linear-gradient($from, $to));
+
+  @if $edge == "glow"
+    @include box-shadow(rgba(0,0,0,.6) 0 1px 1px, inset rgba(255,255,255,.9) 0px 1px 2px)
+
+  @if $edge == "stark"
+    @include box-shadow(inset rgba(255,255,255,.7) 0 10px 10px, inset rgba(0,0,0,.4) 0 0 1px)
+
+  @if $edge == "3d"
+    @include box-shadow(rgba(0,0,0,.9) 0 3px 1px, inset rgba(0,0,0,.4) 0 0 1px)
+  
+  // making sure IE gets at least a border
+  border: 1px solid saturate(darken($to, 10%), 10%)
+  +border-radius($radius)
+
+  $is_light: lightness($textcolor) > 50%
+
+  $dark_shadow_color: darken($textcolor,100%)
+  $light_shadow_color: lighten($textcolor,100%)
+
+  @if $is_light
+    @include text-shadow(transparentize($dark_shadow_color, .4) 0 1px 0)
+  @if $is_light == false
+    @include text-shadow(transparentize($light_shadow_color, .4) 0 1px 0)
+
+  &, &:hover, &:focus, &:active
+    color: $textcolor
+    text-decoration: none
+
+  &:hover, &:focus
+    @include background(linear-gradient(darken($from, 5%), darken($to, 5%)))
+    
+  &:active
+    @include background(linear-gradient($to, $from))
+    
+    @if $is_light
+      @include text-shadow(transparentize($dark_shadow_color, .4) 0 -1px 0)
+    @if $is_light == false
+      @include text-shadow(transparentize($light_shadow_color, .4) 0 -1px 0)
+      
+    @if $edge == "stark"
+      @include box-shadow(inset rgba(0,0,0,.7) 0 5px 10px, inset rgba(255,255,255,.4) 0 0 1px)
+    @if $edge == "3d"
+      @include box-shadow(rgba(0,0,0,.7) 0 1px 1px, inset rgba(0,0,0,.4) 0 0 1px)
+      @include transform(translateY(2px))
+}
