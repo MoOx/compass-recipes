@@ -1,0 +1,283 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+p.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #bbb;
+  margin: 1em;
+  font-style: italic;
+}
+p.doc a {
+  color: #999;
+}
+
+div {
+  margin: 0 1em 1em 0;
+  width: auto;
+  display: inline;
+  font: 1em Helvetica, Arial, sans-serif;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.glow {
+  padding: 0 1.5em;
+  line-height: 2;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #aaaaaa), color-stop(100%, #666666));
+  background: -webkit-linear-gradient(#aaaaaa, #666666);
+  background: -moz-linear-gradient(#aaaaaa, #666666);
+  background: -o-linear-gradient(#aaaaaa, #666666);
+  background: -ms-linear-gradient(#aaaaaa, #666666);
+  background: linear-gradient(#aaaaaa, #666666);
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
+}
+.glow, .glow:hover, .glow:focus, .glow:active {
+  color: white;
+  text-decoration: none;
+}
+.glow:hover, .glow:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9d9d9d), color-stop(100%, #595959));
+  background: -webkit-linear-gradient(#9d9d9d, #595959);
+  background: -moz-linear-gradient(#9d9d9d, #595959);
+  background: -o-linear-gradient(#9d9d9d, #595959);
+  background: -ms-linear-gradient(#9d9d9d, #595959);
+  background: linear-gradient(#9d9d9d, #595959);
+}
+.glow:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(100%, #aaaaaa));
+  background: -webkit-linear-gradient(#666666, #aaaaaa);
+  background: -moz-linear-gradient(#666666, #aaaaaa);
+  background: -o-linear-gradient(#666666, #aaaaaa);
+  background: -ms-linear-gradient(#666666, #aaaaaa);
+  background: linear-gradient(#666666, #aaaaaa);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -0.05em 0;
+}
+
+.stark {
+  padding: 0 1.5em;
+  line-height: 2;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3c5be), color-stop(100%, #db523d));
+  background: -webkit-linear-gradient(#f3c5be, #db523d);
+  background: -moz-linear-gradient(#f3c5be, #db523d);
+  background: -o-linear-gradient(#f3c5be, #db523d);
+  background: -ms-linear-gradient(#f3c5be, #db523d);
+  background: linear-gradient(#f3c5be, #db523d);
+  -moz-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -webkit-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -o-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  border-radius: 50%;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
+}
+.stark, .stark:hover, .stark:focus, .stark:active {
+  color: white;
+  text-decoration: none;
+}
+.stark:hover, .stark:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efb2a9), color-stop(100%, #d73f28));
+  background: -webkit-linear-gradient(#efb2a9, #d73f28);
+  background: -moz-linear-gradient(#efb2a9, #d73f28);
+  background: -o-linear-gradient(#efb2a9, #d73f28);
+  background: -ms-linear-gradient(#efb2a9, #d73f28);
+  background: linear-gradient(#efb2a9, #d73f28);
+}
+.stark:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #db523d), color-stop(100%, #f3c5be));
+  background: -webkit-linear-gradient(#db523d, #f3c5be);
+  background: -moz-linear-gradient(#db523d, #f3c5be);
+  background: -o-linear-gradient(#db523d, #f3c5be);
+  background: -ms-linear-gradient(#db523d, #f3c5be);
+  background: linear-gradient(#db523d, #f3c5be);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -0.05em 0;
+  -moz-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.2) 0 0.1em 0.5em 0.5em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  -webkit-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.2) 0 0.1em 0.5em 0.5em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  -o-box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.2) 0 0.1em 0.5em 0.5em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  box-shadow: inset #db523d 0 0 0.02em 0.15em, inset rgba(0, 0, 0, 0.2) 0 0.1em 0.5em 0.5em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+}
+
+.threedee {
+  padding: 0 1.5em;
+  line-height: 2;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #aaaaaa), color-stop(100%, #666666));
+  background: -webkit-linear-gradient(#aaaaaa, #666666);
+  background: -moz-linear-gradient(#aaaaaa, #666666);
+  background: -o-linear-gradient(#aaaaaa, #666666);
+  background: -ms-linear-gradient(#aaaaaa, #666666);
+  background: linear-gradient(#aaaaaa, #666666);
+  -moz-box-shadow: rgba(0, 0, 0, 0.9) 0 0.2em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0.2em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  -o-box-shadow: rgba(0, 0, 0, 0.9) 0 0.2em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  box-shadow: rgba(0, 0, 0, 0.9) 0 0.2em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
+}
+.threedee, .threedee:hover, .threedee:focus, .threedee:active {
+  color: white;
+  text-decoration: none;
+}
+.threedee:hover, .threedee:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9d9d9d), color-stop(100%, #595959));
+  background: -webkit-linear-gradient(#9d9d9d, #595959);
+  background: -moz-linear-gradient(#9d9d9d, #595959);
+  background: -o-linear-gradient(#9d9d9d, #595959);
+  background: -ms-linear-gradient(#9d9d9d, #595959);
+  background: linear-gradient(#9d9d9d, #595959);
+}
+.threedee:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(100%, #aaaaaa));
+  background: -webkit-linear-gradient(#666666, #aaaaaa);
+  background: -moz-linear-gradient(#666666, #aaaaaa);
+  background: -o-linear-gradient(#666666, #aaaaaa);
+  background: -ms-linear-gradient(#666666, #aaaaaa);
+  background: linear-gradient(#666666, #aaaaaa);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -0.05em 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  -o-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset rgba(0, 0, 0, 0.4) 0 0 0.1em;
+  -moz-transform: translateY(0.2em);
+  -webkit-transform: translateY(0.2em);
+  -o-transform: translateY(0.2em);
+  -ms-transform: translateY(0.2em);
+  transform: translateY(0.2em);
+}
+
+.press {
+  padding: 0 1.5em;
+  line-height: 2;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cedfee), color-stop(100%, #3d7db3));
+  background: -webkit-linear-gradient(#cedfee, #3d7db3);
+  background: -moz-linear-gradient(#cedfee, #3d7db3);
+  background: -o-linear-gradient(#cedfee, #3d7db3);
+  background: -ms-linear-gradient(#cedfee, #3d7db3);
+  background: linear-gradient(#cedfee, #3d7db3);
+  -moz-box-shadow: #79afdd 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #162d41 0 1px 2px;
+  -webkit-box-shadow: #79afdd 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #162d41 0 1px 2px;
+  -o-box-shadow: #79afdd 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #162d41 0 1px 2px;
+  box-shadow: #79afdd 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #162d41 0 1px 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
+}
+.press, .press:hover, .press:focus, .press:active {
+  color: white;
+  text-decoration: none;
+}
+.press:hover, .press:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bbd3e8), color-stop(100%, #3770a0));
+  background: -webkit-linear-gradient(#bbd3e8, #3770a0);
+  background: -moz-linear-gradient(#bbd3e8, #3770a0);
+  background: -o-linear-gradient(#bbd3e8, #3770a0);
+  background: -ms-linear-gradient(#bbd3e8, #3770a0);
+  background: linear-gradient(#bbd3e8, #3770a0);
+}
+.press:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3d7db3), color-stop(100%, #cedfee));
+  background: -webkit-linear-gradient(#3d7db3, #cedfee);
+  background: -moz-linear-gradient(#3d7db3, #cedfee);
+  background: -o-linear-gradient(#3d7db3, #cedfee);
+  background: -ms-linear-gradient(#3d7db3, #cedfee);
+  background: linear-gradient(#3d7db3, #cedfee);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -0.05em 0;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0.1em 0.1em, #a8c7e1 0.05em 0.05em 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+}
+
+.fullcustom {
+  padding: 0 1.5em;
+  line-height: 2;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b3ffb3), color-stop(100%, #66cc00));
+  background: -webkit-linear-gradient(#b3ffb3, #66cc00);
+  background: -moz-linear-gradient(#b3ffb3, #66cc00);
+  background: -o-linear-gradient(#b3ffb3, #66cc00);
+  background: -ms-linear-gradient(#b3ffb3, #66cc00);
+  background: linear-gradient(#b3ffb3, #66cc00);
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: rgba(255, 255, 255, 0.6) 0 1px 0;
+}
+.fullcustom, .fullcustom:hover, .fullcustom:focus, .fullcustom:active {
+  color: black;
+  text-decoration: none;
+}
+.fullcustom:hover, .fullcustom:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9aff9a), color-stop(100%, #5ab300));
+  background: -webkit-linear-gradient(#9aff9a, #5ab300);
+  background: -moz-linear-gradient(#9aff9a, #5ab300);
+  background: -o-linear-gradient(#9aff9a, #5ab300);
+  background: -ms-linear-gradient(#9aff9a, #5ab300);
+  background: linear-gradient(#9aff9a, #5ab300);
+}
+.fullcustom:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #66cc00), color-stop(100%, #b3ffb3));
+  background: -webkit-linear-gradient(#66cc00, #b3ffb3);
+  background: -moz-linear-gradient(#66cc00, #b3ffb3);
+  background: -o-linear-gradient(#66cc00, #b3ffb3);
+  background: -ms-linear-gradient(#66cc00, #b3ffb3);
+  background: linear-gradient(#66cc00, #b3ffb3);
+  text-shadow: rgba(255, 255, 255, 0.6) 0 -0.05em 0;
+}

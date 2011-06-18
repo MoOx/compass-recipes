@@ -1,0 +1,29 @@
+@import "tests";
+
+@import "recipes/ui/buttons/cleverbutton";
+
+div {
+  margin: 0 1em 1em 0;
+  width: auto;
+  display: inline;
+  font: 1em Helvetica, Arial, sans-serif;
+  text-transform: lowercase;
+  text-align: center;
+}
+.glow {
+    @include cleverbutton(5px);
+}
+.stark {
+    @include cleverbutton(50%, $edge: "stark", $from: lighten(#DB523D, 30%), $to: #DB523D);
+}
+.threedee {
+    @include cleverbutton(3px, $edge: "3d");
+}
+.press {
+    @include cleverbutton(3px, $edge: "press", $from: lighten(#3D7DB3, 40%), $to: #3D7DB3);
+}
+.fullcustom {
+    @include cleverbutton(3px, $textcolor: black, $from: lighten(green, 60%), $to: lighten(adjust-hue(green, -30), 15%), $edge: "glow");
+}
+
+
