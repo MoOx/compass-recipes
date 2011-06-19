@@ -1,0 +1,292 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+p.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #bbb;
+  margin: 1em;
+  font-style: italic;
+}
+p.doc a {
+  color: #999;
+}
+
+div {
+  margin: 0 1em 1em 0;
+  width: auto;
+  display: inline;
+  font: 1em Helvetica, Arial, sans-serif;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.glow {
+  padding: 0 1.4em;
+  line-height: 2.3;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #aaaaaa), color-stop(100%, #666666));
+  background: -webkit-linear-gradient(#aaaaaa, #666666);
+  background: -moz-linear-gradient(#aaaaaa, #666666);
+  background: -o-linear-gradient(#aaaaaa, #666666);
+  background: -ms-linear-gradient(#aaaaaa, #666666);
+  background: linear-gradient(#aaaaaa, #666666);
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0.1em 0.1em, inset rgba(255, 255, 255, 0.9) 0px 0.1em 0.1em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0.01em;
+}
+.glow, .glow:hover, .glow:focus, .glow:active {
+  color: white;
+  text-decoration: none;
+}
+.glow:hover, .glow:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9d9d9d), color-stop(100%, #595959));
+  background: -webkit-linear-gradient(#9d9d9d, #595959);
+  background: -moz-linear-gradient(#9d9d9d, #595959);
+  background: -o-linear-gradient(#9d9d9d, #595959);
+  background: -ms-linear-gradient(#9d9d9d, #595959);
+  background: linear-gradient(#9d9d9d, #595959);
+}
+.glow:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(100%, #aaaaaa));
+  background: -webkit-linear-gradient(#666666, #aaaaaa);
+  background: -moz-linear-gradient(#666666, #aaaaaa);
+  background: -o-linear-gradient(#666666, #aaaaaa);
+  background: -ms-linear-gradient(#666666, #aaaaaa);
+  background: linear-gradient(#666666, #aaaaaa);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0.01em;
+}
+
+.stark {
+  padding: 0 1.4em;
+  line-height: 2.3;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd699), color-stop(100%, #ff9900));
+  background: -webkit-linear-gradient(#ffd699, #ff9900);
+  background: -moz-linear-gradient(#ffd699, #ff9900);
+  background: -o-linear-gradient(#ffd699, #ff9900);
+  background: -ms-linear-gradient(#ffd699, #ff9900);
+  background: linear-gradient(#ffd699, #ff9900);
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -0.05em 0.03em, inset rgba(230, 138, 0, 0.5) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -0.05em 0.03em, inset rgba(230, 138, 0, 0.5) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -o-box-shadow: inset rgba(0, 0, 0, 0.5) 0 -0.05em 0.03em, inset rgba(230, 138, 0, 0.5) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0 -0.05em 0.03em, inset rgba(230, 138, 0, 0.5) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0.01em;
+}
+.stark, .stark:hover, .stark:focus, .stark:active {
+  color: white;
+  text-decoration: none;
+}
+.stark:hover, .stark:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc80), color-stop(100%, #e68a00));
+  background: -webkit-linear-gradient(#ffcc80, #e68a00);
+  background: -moz-linear-gradient(#ffcc80, #e68a00);
+  background: -o-linear-gradient(#ffcc80, #e68a00);
+  background: -ms-linear-gradient(#ffcc80, #e68a00);
+  background: linear-gradient(#ffcc80, #e68a00);
+  -moz-box-shadow: inset rgba(204, 122, 0, 0.6) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.8) 0 -0.1em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -webkit-box-shadow: inset rgba(204, 122, 0, 0.6) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.8) 0 -0.1em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  -o-box-shadow: inset rgba(204, 122, 0, 0.6) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.8) 0 -0.1em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+  box-shadow: inset rgba(204, 122, 0, 0.6) 0 0 0.02em 0.2em, inset rgba(0, 0, 0, 0.8) 0 -0.1em 0.1em, inset rgba(0, 0, 0, 0.4) 0 0 0.5em, rgba(0, 0, 0, 0.4) 0 0 0.01em 0.01em;
+}
+.stark:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff9900), color-stop(100%, #ffd699));
+  background: -webkit-linear-gradient(#ff9900, #ffd699);
+  background: -moz-linear-gradient(#ff9900, #ffd699);
+  background: -o-linear-gradient(#ff9900, #ffd699);
+  background: -ms-linear-gradient(#ff9900, #ffd699);
+  background: linear-gradient(#ff9900, #ffd699);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0.01em;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0.05em 0.03em, inset rgba(153, 92, 0, 0.3) 0 0 0.02em 0.2em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0.05em 0.03em, inset rgba(153, 92, 0, 0.3) 0 0 0.02em 0.2em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  -o-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0.05em 0.03em, inset rgba(153, 92, 0, 0.3) 0 0 0.02em 0.2em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0 0.05em 0.03em, inset rgba(153, 92, 0, 0.3) 0 0 0.02em 0.2em, inset rgba(255, 255, 255, 0.4) 0 0 0.1em;
+}
+
+.threedee {
+  padding: 0 1.4em;
+  line-height: 2.3;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #aaaaaa), color-stop(100%, #666666));
+  background: -webkit-linear-gradient(#aaaaaa, #666666);
+  background: -moz-linear-gradient(#aaaaaa, #666666);
+  background: -o-linear-gradient(#aaaaaa, #666666);
+  background: -ms-linear-gradient(#aaaaaa, #666666);
+  background: linear-gradient(#aaaaaa, #666666);
+  -moz-box-shadow: inset rgba(255, 255, 255, 0.8) 0 0.05em 0.1em, rgba(0, 0, 0, 0.9) 0 0.2em 0.05em, inset rgba(0, 0, 0, 0.6) 0 0 0.1em;
+  -webkit-box-shadow: inset rgba(255, 255, 255, 0.8) 0 0.05em 0.1em, rgba(0, 0, 0, 0.9) 0 0.2em 0.05em, inset rgba(0, 0, 0, 0.6) 0 0 0.1em;
+  -o-box-shadow: inset rgba(255, 255, 255, 0.8) 0 0.05em 0.1em, rgba(0, 0, 0, 0.9) 0 0.2em 0.05em, inset rgba(0, 0, 0, 0.6) 0 0 0.1em;
+  box-shadow: inset rgba(255, 255, 255, 0.8) 0 0.05em 0.1em, rgba(0, 0, 0, 0.9) 0 0.2em 0.05em, inset rgba(0, 0, 0, 0.6) 0 0 0.1em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0.01em;
+}
+.threedee, .threedee:hover, .threedee:focus, .threedee:active {
+  color: white;
+  text-decoration: none;
+}
+.threedee:hover, .threedee:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9d9d9d), color-stop(100%, #595959));
+  background: -webkit-linear-gradient(#9d9d9d, #595959);
+  background: -moz-linear-gradient(#9d9d9d, #595959);
+  background: -o-linear-gradient(#9d9d9d, #595959);
+  background: -ms-linear-gradient(#9d9d9d, #595959);
+  background: linear-gradient(#9d9d9d, #595959);
+}
+.threedee:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(100%, #aaaaaa));
+  background: -webkit-linear-gradient(#666666, #aaaaaa);
+  background: -moz-linear-gradient(#666666, #aaaaaa);
+  background: -o-linear-gradient(#666666, #aaaaaa);
+  background: -ms-linear-gradient(#666666, #aaaaaa);
+  background: linear-gradient(#666666, #aaaaaa);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0.01em;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset black 0 0 0.1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset black 0 0 0.1em;
+  -o-box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset black 0 0 0.1em;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 0.05em 0.15em, inset black 0 0 0.1em;
+  -moz-transform: translateY(0.2em);
+  -webkit-transform: translateY(0.2em);
+  -o-transform: translateY(0.2em);
+  -ms-transform: translateY(0.2em);
+  transform: translateY(0.2em);
+}
+
+.press {
+  padding: 0 1.4em;
+  line-height: 2.3;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cedfee), color-stop(100%, #3d7db3));
+  background: -webkit-linear-gradient(#cedfee, #3d7db3);
+  background: -moz-linear-gradient(#cedfee, #3d7db3);
+  background: -o-linear-gradient(#cedfee, #3d7db3);
+  background: -ms-linear-gradient(#cedfee, #3d7db3);
+  background: linear-gradient(#cedfee, #3d7db3);
+  -moz-box-shadow: #79afdd 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #162d41 0 1px 2px;
+  -webkit-box-shadow: #79afdd 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #162d41 0 1px 2px;
+  -o-box-shadow: #79afdd 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #162d41 0 1px 2px;
+  box-shadow: #79afdd 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #162d41 0 1px 2px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0.01em;
+}
+.press, .press:hover, .press:focus, .press:active {
+  color: white;
+  text-decoration: none;
+}
+.press:hover, .press:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bbd3e8), color-stop(100%, #3770a0));
+  background: -webkit-linear-gradient(#bbd3e8, #3770a0);
+  background: -moz-linear-gradient(#bbd3e8, #3770a0);
+  background: -o-linear-gradient(#bbd3e8, #3770a0);
+  background: -ms-linear-gradient(#bbd3e8, #3770a0);
+  background: linear-gradient(#bbd3e8, #3770a0);
+}
+.press:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3d7db3), color-stop(100%, #cedfee));
+  background: -webkit-linear-gradient(#3d7db3, #cedfee);
+  background: -moz-linear-gradient(#3d7db3, #cedfee);
+  background: -o-linear-gradient(#3d7db3, #cedfee);
+  background: -ms-linear-gradient(#3d7db3, #cedfee);
+  background: linear-gradient(#3d7db3, #cedfee);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0.01em;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0.1em 0.1em, #a8c7e1 0.05em 0.05em 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+}
+
+.fullcustom {
+  padding: 0 1.4em;
+  line-height: 2.3;
+  display: inline-block;
+  cursor: pointer;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b3ffb3), color-stop(100%, #66cc00));
+  background: -webkit-linear-gradient(#b3ffb3, #66cc00);
+  background: -moz-linear-gradient(#b3ffb3, #66cc00);
+  background: -o-linear-gradient(#b3ffb3, #66cc00);
+  background: -ms-linear-gradient(#b3ffb3, #66cc00);
+  background: linear-gradient(#b3ffb3, #66cc00);
+  -moz-box-shadow: #4dff4d 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #1a3300 0 1px 2px;
+  -webkit-box-shadow: #4dff4d 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #1a3300 0 1px 2px;
+  -o-box-shadow: #4dff4d 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #1a3300 0 1px 2px;
+  box-shadow: #4dff4d 0 0 5px inset, rgba(255, 255, 255, 0.8) 0 2px 7px inset, #1a3300 0 1px 2px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  text-shadow: rgba(255, 255, 255, 0.6) 0 1px 0.01em;
+}
+.fullcustom, .fullcustom:hover, .fullcustom:focus, .fullcustom:active {
+  color: black;
+  text-decoration: none;
+}
+.fullcustom:hover, .fullcustom:focus {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9aff9a), color-stop(100%, #5ab300));
+  background: -webkit-linear-gradient(#9aff9a, #5ab300);
+  background: -moz-linear-gradient(#9aff9a, #5ab300);
+  background: -o-linear-gradient(#9aff9a, #5ab300);
+  background: -ms-linear-gradient(#9aff9a, #5ab300);
+  background: linear-gradient(#9aff9a, #5ab300);
+}
+.fullcustom:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #66cc00), color-stop(100%, #b3ffb3));
+  background: -webkit-linear-gradient(#66cc00, #b3ffb3);
+  background: -moz-linear-gradient(#66cc00, #b3ffb3);
+  background: -o-linear-gradient(#66cc00, #b3ffb3);
+  background: -ms-linear-gradient(#66cc00, #b3ffb3);
+  background: linear-gradient(#66cc00, #b3ffb3);
+  text-shadow: rgba(255, 255, 255, 0.6) 0 -1px 0.01em;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0.1em 0.1em, #80ff80 0.05em 0.05em 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 0.1em 0.2em inset, rgba(0, 0, 0, 0.5) 0 -0.1em 0.15em inset;
+}
