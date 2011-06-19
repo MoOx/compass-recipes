@@ -1,8 +1,8 @@
 // cleverButtons by Olivier Lacan & Andrew Smith (http://clevercode.net)
 @mixin cleverbutton($radius: 5px, $textcolor: white, $from: #aaa, $to: #666, $edge: "glow") {
   // non-adjustable settings for padding
-  padding: 0 1.5em;
-  line-height: 2;
+  padding: 0 1.4em;
+  line-height: 2.3;
   display: inline-block;
   
   // in case you want to make buttons with non anchor elements
