@@ -4,5 +4,16 @@
 {
     width: $width;
     height: $height;
-    @include border-radius($width/2, $height/2);
+    
+    @if ($width == $height) {
+        @include border-radius($width/2);
+    }
+    @else {
+        @include border-radius($width/2, $height/2);
+    }
+}
+
+@mixin circle($width: 100px)
+{
+    @include ellipse($width, $width);
 }

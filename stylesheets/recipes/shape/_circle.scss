@@ -1,8 +1,0 @@
-@import "compass/css3/border-radius";
-
-@mixin circle($diameter: 100px)
-{
-    width: $diameter;
-    height: $diameter;
-    @include border-radius($diameter/2);
-}
