@@ -1,5 +1,5 @@
 // cleverButtons by Olivier Lacan & Andrew Smith (http://clevercode.net)
-@mixin cleverbutton($radius: 5px, $textcolor: white, $from: #aaa, $to: #666, $edge: "glow") {
+@mixin cleverbutton($from: #aaa, $to: #666, $textcolor: white, $edge: "glow", $radius: 5px) {
   // non-adjustable settings for padding
   padding: 0 1.4em;
   line-height: 2.3;

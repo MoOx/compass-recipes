@@ -14,16 +14,16 @@ div {
     @include cleverbutton;
 }
 .stark {
-    @include cleverbutton($edge: "stark", $from: lighten(#ff9900, 30%), $to: #ff9900);
+    @include cleverbutton($from: lighten(#ff9900, 30%), $to: #ff9900, $edge: "stark");
 }
 .threedee {
     @include cleverbutton($edge: "3D");
 }
 .press {
-    @include cleverbutton($edge: "press", $from: lighten(#3D7DB3, 40%), $to: #3D7DB3);
+    @include cleverbutton($from: lighten(#3D7DB3, 40%), $to: #3D7DB3, $edge: "press");
 }
 .fullcustom {
-    @include cleverbutton(10px, $textcolor: black, $from: lighten(green, 60%), $to: lighten(adjust-hue(green, -30), 15%), $edge: "press");
+    @include cleverbutton($from: lighten(green, 60%), $to: lighten(adjust-hue(green, -30), 15%), $textcolor: black, $edge: "press", $radius: 10px);
 }
 
 
