@@ -11,19 +11,19 @@ div {
   text-align: center;
 }
 .glow {
-    @include cleverbutton(5px);
+    @include cleverbutton;
 }
 .stark {
-    @include cleverbutton(4px, $edge: "stark", $from: lighten(#ff9900, 30%), $to: #ff9900);
+    @include cleverbutton($edge: "stark", $from: lighten(#ff9900, 30%), $to: #ff9900);
 }
 .threedee {
-    @include cleverbutton(4px, $edge: "3D");
+    @include cleverbutton($edge: "3D");
 }
 .press {
-    @include cleverbutton(3px, $edge: "press", $from: lighten(#3D7DB3, 40%), $to: #3D7DB3);
+    @include cleverbutton($edge: "press", $from: lighten(#3D7DB3, 40%), $to: #3D7DB3);
 }
 .fullcustom {
-    @include cleverbutton(3px, $textcolor: black, $from: lighten(green, 60%), $to: lighten(adjust-hue(green, -30), 15%), $edge: "glow");
+    @include cleverbutton(10px, $textcolor: black, $from: lighten(green, 60%), $to: lighten(adjust-hue(green, -30), 15%), $edge: "press");
 }
 
 
