@@ -37,7 +37,7 @@ p.doc a {
  * IE8 is not supported because it not render properly box-shadow and
  * pseudo element should be selected with ::element and not :element
  * 
- * @thanks to Nicolas Gallagher
+ * @thanks Nicolas Gallagher @necolas
  * @link http://nicolasgallagher.com/pure-css-folded-corner-effect/demo/
  */
 /**
