@@ -48,3 +48,8 @@ Compass-Recipes is maintained by Maxime Thirouin, a front-end web developer work
 Fork, modify, push, submit pull request ! That's easy !
 
 *I'm not a Ruby coder, so anyone which want to help me for anything will be appreciated !*
+
+## Thanks (indirect contributors)
+
+This project will never exists without these people : @necolas, @simurai, @chriscoyier
+They give me inspiration (and snippets of code!).
