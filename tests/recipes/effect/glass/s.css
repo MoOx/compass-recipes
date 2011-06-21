@@ -4,6 +4,7 @@ html {
   background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: linear-gradient(#dddddd, #ffffff) no-repeat;
 }
 
@@ -78,6 +79,7 @@ p.doc a {
   background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 50.5%);
+  background: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 50.5%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 50.5%);
 }
 
@@ -113,5 +115,6 @@ p.doc a {
   background: -webkit-linear-gradient(-20deg, rgba(221, 221, 255, 0.12) 50%, rgba(221, 221, 255, 0) 50.5%);
   background: -moz-linear-gradient(-20deg, rgba(221, 221, 255, 0.12) 50%, rgba(221, 221, 255, 0) 50.5%);
   background: -o-linear-gradient(-20deg, rgba(221, 221, 255, 0.12) 50%, rgba(221, 221, 255, 0) 50.5%);
+  background: -ms-linear-gradient(-20deg, rgba(221, 221, 255, 0.12) 50%, rgba(221, 221, 255, 0) 50.5%);
   background: linear-gradient(-20deg, rgba(221, 221, 255, 0.12) 50%, rgba(221, 221, 255, 0) 50.5%);
 }

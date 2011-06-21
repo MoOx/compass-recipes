@@ -1,8 +1,0 @@
-@import "compass/css3/transform";
-
-@mixin parallelogram($width: 150px, $height: 100px, $skew: 20deg)
-{
-    width: $width;
-    height: $height;
-    @include transform(skew($skew));
-}

@@ -4,6 +4,7 @@ html {
   background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: linear-gradient(#dddddd, #ffffff) no-repeat;
 }
 
@@ -29,6 +30,11 @@ p.doc a {
   color: #999;
 }
 
+/**
+ * Shape/Polygon/Triangle
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
 .triangle-top {
   width: 0;
   height: 0;

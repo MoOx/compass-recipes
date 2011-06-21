@@ -1,0 +1,76 @@
+/**
+ * Shape/Polygon/Star
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+
+// Star (6-points)
+@mixin star-6($width: $width, $background-color: transparent)
+{
+    width: 0;
+    height: 0;
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-bottom: $width solid $background-color;
+    position: relative;
+
+    &:after
+    {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-top: $width solid $background-color;
+        
+        top: $width*0.3;
+        left: -$width/2;
+    }
+}
+
+// Star (5-points)
+@mixin star-5($width: $width, $background-color: transparent)
+{
+    margin: $width/2 0;
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    
+    border-right:  $width solid transparent;
+    border-bottom: $width*0.7  solid $background-color;
+    border-left:   $width solid transparent;
+    @include transform(rotate(35deg));
+
+    &:before,
+    &:after
+    {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+    }
+
+    &:before
+    {
+        top: -$width*0.45;
+        left: -$width*0.65;
+        border-bottom: $width*0.8 solid $background-color;
+        border-left: $width*0.3 solid transparent;
+        border-right: $width*0.3 solid transparent;
+        @include transform(rotate(-35deg));
+    }
+
+    &:after
+    {
+        top: $width*0.03;
+        left: -$width*1.05;
+        border-right: $width solid transparent;
+        border-bottom: $width*0.7 solid $background-color;
+        border-left: $width solid transparent;
+        @include transform(rotate(-70deg));
+    }
+}

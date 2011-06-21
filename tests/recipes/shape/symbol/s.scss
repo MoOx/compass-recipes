@@ -1,0 +1,8 @@
+@import "tests";
+
+@import "recipes/shape/symbol";
+
+.heart { @include heart(5em, 4em, #000) }
+.heart2 { @include heart(10em, 8em, #000) }
+.infinity { @include infinity(5em, false, #000) }
+.infinity2 { @include infinity(false, 5em, #000) }

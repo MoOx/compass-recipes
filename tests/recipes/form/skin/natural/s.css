@@ -4,6 +4,7 @@ html {
   background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
   background: linear-gradient(#dddddd, #ffffff) no-repeat;
 }
 
@@ -71,6 +72,7 @@ textarea {
   background: -webkit-linear-gradient(#ffffff, #e6e6e6 1%, #ffffff 30%);
   background: -moz-linear-gradient(#ffffff, #e6e6e6 1%, #ffffff 30%);
   background: -o-linear-gradient(#ffffff, #e6e6e6 1%, #ffffff 30%);
+  background: -ms-linear-gradient(#ffffff, #e6e6e6 1%, #ffffff 30%);
   background: linear-gradient(#ffffff, #e6e6e6 1%, #ffffff 30%);
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.4em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.4em;
@@ -117,6 +119,7 @@ button,
   background: -webkit-linear-gradient(#61b0ee, #1780d2);
   background: -moz-linear-gradient(#61b0ee, #1780d2);
   background: -o-linear-gradient(#61b0ee, #1780d2);
+  background: -ms-linear-gradient(#61b0ee, #1780d2);
   background: linear-gradient(#61b0ee, #1780d2);
   -moz-border-radius: 0.6em;
   -webkit-border-radius: 0.6em;
@@ -138,6 +141,7 @@ button:focus, button:hover,
   background: -webkit-linear-gradient(#6ab5ef, #167ac9);
   background: -moz-linear-gradient(#6ab5ef, #167ac9);
   background: -o-linear-gradient(#6ab5ef, #167ac9);
+  background: -ms-linear-gradient(#6ab5ef, #167ac9);
   background: linear-gradient(#6ab5ef, #167ac9);
 }
 button:active,
@@ -148,5 +152,6 @@ button:active,
   background: -webkit-linear-gradient(#167ac9, #6ab5ef);
   background: -moz-linear-gradient(#167ac9, #6ab5ef);
   background: -o-linear-gradient(#167ac9, #6ab5ef);
+  background: -ms-linear-gradient(#167ac9, #6ab5ef);
   background: linear-gradient(#167ac9, #6ab5ef);
 }

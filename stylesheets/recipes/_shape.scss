@@ -1,14 +1,11 @@
 /**
-* Bundles of shapes
+* Shapes !
+* Polygons, ellipses and symbols
 * 
-* @todo all other shapes that are not here !
-* 
-* @thanks Chris Coyier
+* @thanks Chris Coyier @chriscoyier
 * @link http://css-tricks.com/examples/ShapesOfCSS/
+* @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
 */
-@import "recipes/shape/square";
-@import "recipes/shape/rectangle";
-@import "recipes/shape/circle";
-@import "recipes/shape/oval";
-@import "recipes/shape/triangle";
-@import "recipes/shape/parallelogram";
+@import "recipes/shape/ellipse";
+@import "recipes/shape/polygon";
+@import "recipes/shape/symbol";
