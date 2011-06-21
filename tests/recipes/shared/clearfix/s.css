@@ -36,6 +36,7 @@ p.doc a {
  * The clearfix hack is a popular way to clear floats without resorting to using presentational markup. This article presents an update to the clearfix method that further reduces the amount of CSS required.
  * Known support: Firefox 2+, Safari 2+, Chrome, Opera 9.27+, IE 6+, IE Mac.
  *
+ * @thanks Nicolas Gallagher @necolas
  * @link http://nicolasgallagher.com/micro-clearfix-hack/
  */
 .body {

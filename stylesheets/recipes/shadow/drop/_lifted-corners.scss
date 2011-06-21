@@ -1,10 +1,13 @@
 /**
- * Drop shadow mixins from Nicolas Gallagher demo
- * 
+ * Drop shadow w/ lifted corners
+ *
+ * @thanks Nicolas Gallagher @necolas
  * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
  */
-@mixin drop-shadow-lifted($height: 15px, $margin: 10px, $angle: 3deg)
+@mixin drop-shadow-lifted-corners($height: 15px, $margin: 10px, $angle: 4deg)
 {
+    position: relative;
+    
     & > :last-child::before
     {
         content:"";

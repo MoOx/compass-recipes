@@ -1,0 +1,101 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+p.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #bbb;
+  margin: 1em;
+  font-style: italic;
+}
+p.doc a {
+  color: #999;
+}
+
+/**
+ * Drop shadow mixins from Nicolas Gallagher demo
+ * 
+ * @thanks Nicolas Gallagher @necolas, @simurai, @cameronmoll, @matthamm
+ * 
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Drop shadow w/ lifted corners
+ *
+ * @thanks Nicolas Gallagher @necolas
+ * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ */
+/**
+ * Shadow along the top edge of the browser viewport
+ * 
+ * @link http://playground.genelocklin.com/depth/
+ */
+div {
+  width: 15em;
+  height: 10em;
+  margin: 5em auto;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+div p {
+  padding: 3em 0;
+  text-align: center;
+}
+
+.drop-lifted-corners {
+  position: relative;
+}
+.drop-lifted-corners > :last-child::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.drop-lifted-corners::before, .drop-lifted-corners::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+.drop-lifted-corners::after {
+  right: 10px;
+  left: auto;
+  -moz-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
