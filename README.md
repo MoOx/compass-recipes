@@ -2,6 +2,10 @@
 
 This project is a collection of Sass mixins using Compass that you can use or learn from.
 
+## Demos
+
+http://moox.github.com/compass-recipes/
+
 ## Installation
 
 [Compass-Recipes is now available as a gem on RubyGems.org](https://rubygems.org/gems/compass-recipes). So installation is quite easy.
@@ -35,10 +39,6 @@ Like Compass does, you can include all recipes in a folder like this
     {
         @include square;
     }
-
-## Demos
-
-http://moox.github.com/compass-recipes/
 
 ## Author
  
