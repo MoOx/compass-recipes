@@ -10,35 +10,40 @@ http://moox.github.com/compass-recipes/
 
 [Compass-Recipes is now available as a gem on RubyGems.org](https://rubygems.org/gems/compass-recipes). So installation is quite easy.
 
-    gem install compass-recipes
+> gem install compass-recipes
 
 # Usage
 
 When compass-recipes installed, you just need to require the compass plugin in your project
 
-    require 'compass-recipes'
+```css
+require 'compass-recipes'
+```
 
 Then you can include some recipes like this
 
-    @import "recipes/shape/triangle";
-    .my-triangle
-    {
-        @include triangle;
-    }
+```css
+@import "recipes/shape/triangle";
+.my-triangle
+{
+    @include triangle;
+}
 
 Like Compass does, you can include all recipes in a folder like this
 
-    @import "recipes/shape";
+```css
+@import "recipes/shape";
 
-    .my-triangle
-    {
-        @include triangle;
-    }
+.my-triangle
+{
+    @include triangle;
+}
 
-    .my-square
-    {
-        @include square;
-    }
+.my-square
+{
+    @include square;
+}
+```
 
 ## Author
  
