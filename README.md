@@ -60,3 +60,7 @@ Fork, modify, push, submit pull request ! That's easy !
 
 This project will never exists without these people : @necolas, @simurai, @chriscoyier
 They give me inspiration (and snippets of code!).
+
+## Licence
+
+MIT: http://moox.mit-license.org/
