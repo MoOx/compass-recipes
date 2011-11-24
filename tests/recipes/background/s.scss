@@ -1,0 +1,40 @@
+@import "tests";
+
+@import "recipes/background";
+
+div
+{
+    width: 20em;
+    height: 20em;
+
+    cursor: pointer;
+    background-color: gray;
+    @include border-radius(50%);
+    @include box-shadow(
+        -3px -3px 10px 2px rgba(0,0,0,.3) inset,
+        0 0 0 15px rgba(255, 255, 255, .6) inset,
+        0 0 0 1px rgba(0,0,0,.5),
+        2px 2px 10px rgba(0,0,0,.6)
+    );
+}
+
+.blueprint-grid
+{
+    @include background-blueprint-grid;
+}
+
+.noise
+{
+    //background-color: #000;
+    @include background-noise(
+        //$intensity: .5,
+        $opacity: .15
+        //$size: 200,
+        //$monochrome: true,
+    );
+}
+
+.tartan
+{
+    @include background-tartan;
+}
