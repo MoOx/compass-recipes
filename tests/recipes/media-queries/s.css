@@ -1,0 +1,84 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+p.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #bbb;
+  margin: 1em;
+  font-style: italic;
+}
+p.doc a {
+  color: #999;
+}
+
+/**
+ * Media Queries Mixins
+ * 
+ * @todo Do we have to take care of print ?
+ * 
+ * @require sass-3.2 (you need eventually to do "sudo gem install sass --pre")
+ * @author Maxime Thirouin <maxime.thirouin@gmail.com>
+ */
+/*
+$media-query-width-big: 1280px;
+$media-query-width-medium: 960px;
+$media-query-width-small: 480px;
+*/
+div {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .big {
+    display: block;
+  }
+}
+
+@media (max-width: 1279px) {
+  .medium {
+    display: block;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+  .medium-only {
+    display: block;
+  }
+}
+
+@media (max-width: 959px) {
+  .small {
+    display: block;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 959px) {
+  .small-only {
+    display: block;
+  }
+}
+
+@media (max-width: 479px) {
+  .tiny {
+    display: block;
+  }
+}
