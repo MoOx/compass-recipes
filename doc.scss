@@ -1,8 +1,15 @@
+//@import "recipes/background/noise";
+@import "compass/css3";
+
 body {
     margin-top: 1.0em;
-    background-color: #2F2F2F;
-    font-family: Sans-serif;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
     color: #C6C6C6;
+    @include background(
+        linear-gradient(0, rgba(#000, .4), rgba(#000, 0) 25%),
+        linear-gradient(0, rgba(#000, 0) 75%, rgba(#000, .4)),
+        radial-gradient(rgba(#000, 0) 75%, rgba(#000, .4)),
+        #2F2F2F);
 }
 #container {
     margin: 0 auto;
@@ -23,13 +30,16 @@ h1 {
     font-size: 3.8em;
     color: #fff;
     margin-bottom: 3px;
+    
+    .small {
+        font-size: 0.4em;
+    }
+
+    a {
+        text-decoration: none
+    }
 }
-h1 .small {
-    font-size: 0.4em;
-}
-h1 a {
-    text-decoration: none
-}
+
 h2 {
     font-size: 1.5em;
     color: #fff;
@@ -38,29 +48,71 @@ h3 {
     text-align: center;
     color: #fff;
 }
+
 a {
     color: #fff;
+    &:hover
+    {
+        text-shadow: 0 0 .16em #fff;
+    }
 }
+
+hr {
+    border: 0;
+    width: 80%;
+    border-bottom: 1px solid #aaa
+}
+
 .description {
     font-size: 1.2em;
     margin-bottom: 30px;
     margin-top: 30px;
     font-style: italic;
 }
+
 .download {
     float: right;
 }
+
 pre {
     background: #000;
     color: #fff;
     padding: 15px;
 }
-hr {
-    border: 0;
-    width: 80%;
-    border-bottom: 1px solid #aaa
+
+code
+{
+    font-size: .9em;
+
+    color: #f1f1f1;
+    text-shadow: 0 1px 1px rgba(#000,.25);
+
+    @include border-radius(.2em);
+
+    background-color: rgba(#000, .3);
+    @include box-shadow(rgba(#fff, .1) 0 1px 0, rgba(#000, .8) 0 1px 7px 0px inset);
+
+    @include transition(box-shadow, .2s);
+
+    &:hover
+    {
+        @include box-shadow(rgba(#fff, .2) 0 1px 0, rgba(#000, .9) 0 1px 14px 0px inset);
+    }
+
+    &.block
+    {
+        display: block;
+        white-space: pre;
+        margin: 2em 0;
+        padding: 1em;
+        //padding: 0 6px 6px;
+        overflow: hidden;
+        overflow-x: auto;
+    }
 }
-.footer {
+
+.footer
+{
     text-align: center;
     padding-top: 30px;
     font-style: italic;
