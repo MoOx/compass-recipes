@@ -1,0 +1,150 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+p.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #bbb;
+  margin: 1em;
+  font-style: italic;
+}
+p.doc a {
+  color: #999;
+}
+
+/**
+* Buttons mixins
+* 
+* @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+*/
+/**
+* Buttons selector mixins
+*
+* @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+*/
+/*
+@mixin ui-button-normal-selector()
+{
+    &
+    {
+        @content;
+    }
+}
+*/
+/*
+ * source for code
+http://lab.simurai.com/css/buttons/
+http://brandonmathis.com/projects/fancy-buttons/demo/
+https://github.com/ubuwaits/css3-buttons/blob/gh-pages/scss/buttons.scss
+http://nicolasgallagher.com/lab/css3-animated-button/
+
+ * source for predefined buttons
+http://forrst.com/posts/CSS_Button_Contest-5J1
+http://houseofbuttons.tumblr.com/
+http://ubuwaits.github.com/css3-buttons/
+https://github.com/maxart/CSS3-Push-Button/blob/master/style.css
+*/
+/*
+A button is defined by multiples attributes:
+typography
+colors
+shape (round, oval, brackets, skew, back, knife, shield, drop, morph)
+size (+predefined: xs, s, m, l, xl, xxl)
+hover/active/disabled effect
+material (glossy, glass, texture ?)
+*/
+.ui-button {
+  font-weight: bold;
+  margin: 0;
+  padding: 0.2em 0.4em;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-border-radius: default;
+  -webkit-border-radius: default;
+  -o-border-radius: default;
+  -ms-border-radius: default;
+  -khtml-border-radius: default;
+  border-radius: default;
+}
+.ui-button:not([disabled]):hover {
+  border: 1px solid #444;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  background: -webkit-linear-gradient(#ffffff, #cccccc);
+  background: -moz-linear-gradient(#ffffff, #cccccc);
+  background: -o-linear-gradient(#ffffff, #cccccc);
+  background: -ms-linear-gradient(#ffffff, #cccccc);
+  background: linear-gradient(#ffffff, #cccccc);
+}
+.ui-button:not([disabled]):active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #e3e3e3), color-stop(70%, #f9f9f9));
+  background: -webkit-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: -moz-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: -o-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: -ms-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+}
+.ui-button[disabled] {
+  color: #ccc;
+}
+
+.ui-button-green {
+  font-weight: bold;
+  margin: 0;
+  padding: 0.2em 0.4em;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-border-radius: default;
+  -webkit-border-radius: default;
+  -o-border-radius: default;
+  -ms-border-radius: default;
+  -khtml-border-radius: default;
+  border-radius: default;
+}
+.ui-button-green:not([disabled]):hover {
+  border: 1px solid #444;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  background: -webkit-linear-gradient(#ffffff, #cccccc);
+  background: -moz-linear-gradient(#ffffff, #cccccc);
+  background: -o-linear-gradient(#ffffff, #cccccc);
+  background: -ms-linear-gradient(#ffffff, #cccccc);
+  background: linear-gradient(#ffffff, #cccccc);
+}
+.ui-button-green:not([disabled]):active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #e3e3e3), color-stop(70%, #f9f9f9));
+  background: -webkit-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: -moz-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: -o-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: -ms-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+  background: linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
+}
+.ui-button-green[disabled] {
+  color: #ccc;
+}
