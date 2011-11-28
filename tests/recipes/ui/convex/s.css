@@ -30,6 +30,13 @@ p.doc a {
   color: #999;
 }
 
+/**
+ * UI convex effect from one color
+ *
+ * @todo merge with ui-button ?
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
 .ui-convex,
 .ui-convex-hover {
   width: 10em;

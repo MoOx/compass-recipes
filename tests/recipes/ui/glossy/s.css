@@ -1,0 +1,60 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+p.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #bbb;
+  margin: 1em;
+  font-style: italic;
+}
+p.doc a {
+  color: #999;
+}
+
+/**
+ * UI Glossy helper
+ *
+ * @todo merge with ui-button ?
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+.ui-glossy {
+  width: 10em;
+  height: 2em;
+  margin: 1em auto;
+}
+
+.ui-glossy {
+  border-left: 0;
+  border-right: 0;
+  border: 0.1em solid rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(85, 85, 85, 0.6);
+  outline: 0.1em solid rgba(0, 0, 0, 0.6);
+  background: black;
+  background: rgba(0, 0, 0, 0.4);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(112, 112, 112, 0.55)), color-stop(49%, rgba(56, 56, 56, 0.46)), color-stop(51%, rgba(0, 0, 0, 0.58)), color-stop(51%, rgba(0, 0, 0, 0.58)));
+  background: -webkit-linear-gradient(rgba(112, 112, 112, 0.55), rgba(56, 56, 56, 0.46) 49%, rgba(0, 0, 0, 0.58) 51%, rgba(0, 0, 0, 0.58) 51%);
+  background: -moz-linear-gradient(rgba(112, 112, 112, 0.55), rgba(56, 56, 56, 0.46) 49%, rgba(0, 0, 0, 0.58) 51%, rgba(0, 0, 0, 0.58) 51%);
+  background: -o-linear-gradient(rgba(112, 112, 112, 0.55), rgba(56, 56, 56, 0.46) 49%, rgba(0, 0, 0, 0.58) 51%, rgba(0, 0, 0, 0.58) 51%);
+  background: -ms-linear-gradient(rgba(112, 112, 112, 0.55), rgba(56, 56, 56, 0.46) 49%, rgba(0, 0, 0, 0.58) 51%, rgba(0, 0, 0, 0.58) 51%);
+  background: linear-gradient(rgba(112, 112, 112, 0.55), rgba(56, 56, 56, 0.46) 49%, rgba(0, 0, 0, 0.58) 51%, rgba(0, 0, 0, 0.58) 51%);
+}

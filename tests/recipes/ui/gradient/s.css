@@ -31,6 +31,10 @@ p.doc a {
 }
 
 /**
+ * UI simple gradient from one color
+ *
+ * @todo merge with ui-button ?
+ *
  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
  */
 .ui-gradient-demo {
