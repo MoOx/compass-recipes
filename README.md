@@ -2,9 +2,25 @@
 
 This project is a collection of Sass mixins using Compass that you can use or learn from.
 
-## Demos
+## [Demos](http://moox.github.com/compass-recipes/)
 
-http://moox.github.com/compass-recipes/
+*This are demos of the repository at his current state. So it will be not reflection what is available into the last stable gem. To get what you see in the demos, see Installation to see how to install the repo at his current state*
+
+## What do we have here ?
+
+* [backgrounds](http://moox.github.com/compass-recipes/recipes/background/) (patterns)
+* [bases](http://moox.github.com/compass-recipes/recipes/base/) (just normalize.css from @necolas for now)
+* [effects](http://moox.github.com/compass-recipes/recipes/effect/) (visual ones, not animations)
+* [form skins](http://moox.github.com/compass-recipes/recipes/form/skin/) (just one, feel free to pull news)
+* [icons](http://moox.github.com/compass-recipes/recipes/icon) recipes (just rules to use icons, not icons themselves)
+* [layout](http://moox.github.com/compass-recipes/recipes/layout) recipes
+* [media queries](http://moox.github.com/compass-recipes/recipes/media-queries) (predefined for commons devices width)
+* [shadows](http://moox.github.com/compass-recipes/recipes/shadow/) (funky ones)
+* [shapes](http://moox.github.com/compass-recipes/recipes/shape/) (geometrical ones, and some others fancy)
+* [shared](http://moox.github.com/compass-recipes/recipes/shared/) (commons stuffs like hacks or tricks)
+* [ui](http://moox.github.com/compass-recipes/recipes/ui/) (stuffs for UI - more incomming)
+
+* *more incomming (see [compass recipes issues](/MoOx/compass-recipes/issues)), feel free to make a pull request to add your own !!*
 
 ## Installation
 
@@ -13,6 +29,9 @@ http://moox.github.com/compass-recipes/
 ```shell
 gem install compass-recipes
 ```
+
+/!\ *If you want all latests recipes, you can just checkout the recipes (or download as zip) and add '{your-path-here-or-./}compass-recipes/stylesheets' using `additional_import_paths` or `add_import_path` (see [Compass configuration reference](http://compass-style.org/help/tutorials/configuration-reference/)*
+
 # Usage
 
 When compass-recipes installed, you just need to require the compass plugin in your project
@@ -58,9 +77,11 @@ Fork, modify, push, submit pull request ! That's easy !
 
 ## Thanks (indirect contributors)
 
-This project will never exists without these people : @necolas, @simurai, @chriscoyier
+This project will never exists without these people : @necolas, @simurai, @chriscoyier, @leaverou.
+
 They give me inspiration (and snippets of code!).
 
-## Licence
+## [MIT Licence](http://moox.mit-license.org/)
 
-MIT: http://moox.mit-license.org/
+##### Notes
+*Readme created using [Mou.app](http://mouapp.com/)*
