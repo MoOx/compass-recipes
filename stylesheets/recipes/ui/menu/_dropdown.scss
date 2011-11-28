@@ -1,7 +1,13 @@
-// sometimes we don't use nesting all the time to optimize some selector
+/**
+ * Menu dropdown helper
+ *
+ * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+*/
 
 // this mixin have to be used with a js for dropdown menu behavior
 // (display onhover with a timeout like 500ms for better UX)
+
+// sometimes we don't use nesting all the time to optimize some selector
 
 @import "recipes/shared/block-inline-block";
 
@@ -36,9 +42,11 @@
             display: none;
         }
 
-            .no-js li:hover > ul
+            // we use a selector with a parent class like this to do not override
+            // eventual js added behavior (see comment a the top of this file)
+            .no-js & li:hover > ul
             {
-                display: block;
+                    display: block;
             }
 }
 
