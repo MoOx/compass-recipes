@@ -77,7 +77,11 @@ Fork, modify, push, submit pull request ! That's easy !
 
 ## Build Documentation
 
-To build the gh-pages from the `tests/`, you need to call
+First you need bundle
+
+```bundle install```
+
+Then, to build the gh-pages from the `tests/`, you need to call
 
 ```bundle exec rake pages```
 
