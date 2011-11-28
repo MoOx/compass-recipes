@@ -18,15 +18,16 @@ h2 {
   margin-bottom: .6em;
 }
 
-p.doc {
+.doc {
   background: #fff;
   border: #ddd;
   padding: 1em;
-  color: #bbb;
+  color: #aaa;
   margin: 1em;
   font-style: italic;
+  list-style: inside;
 }
-p.doc a {
+.doc a {
   color: #999;
 }
 
