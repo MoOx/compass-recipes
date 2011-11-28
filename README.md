@@ -75,6 +75,12 @@ Fork, modify, push, submit pull request ! That's easy !
 
 *I'm not a Ruby coder, so anyone which want to help me for anything will be appreciated !*
 
+## Build Documentation
+
+To build the gh-pages from the `tests/`, you need to call
+
+```bundle exec rake pages```
+
 ## Thanks (indirect contributors)
 
 This project will never exists without these people : @necolas, @simurai, @chriscoyier, @leaverou.
