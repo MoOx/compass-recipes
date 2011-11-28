@@ -10,6 +10,9 @@
  * @author Marta Armada http://swwweet.com/ for the original pattern
  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx for the sass mixin
  */
+
+@import "compass/css3/images";
+
 @mixin background-tartan($background-color: hsl(2, 57%, 40%))
 {
     $transparent: rgba(#fff, 0);

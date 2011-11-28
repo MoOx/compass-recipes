@@ -8,7 +8,7 @@ div
     height: 20em;
 
     cursor: pointer;
-    background-color: gray;
+    background-color: #ccc;
     @include border-radius(50%);
     @include box-shadow(
         -3px -3px 10px 2px rgba(0,0,0,.3) inset,
@@ -18,12 +18,12 @@ div
     );
 }
 
-.blueprint-grid
+.background-blueprint-grid
 {
     @include background-blueprint-grid;
 }
 
-.noise
+.background-noise
 {
     //background-color: #000;
     @include background-noise(
@@ -34,7 +34,12 @@ div
     );
 }
 
-.tartan
+.background-radial-overlay
+{
+    @include background-radial-overlay;
+}
+
+.background-tartan
 {
     @include background-tartan;
 }
