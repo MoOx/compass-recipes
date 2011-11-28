@@ -18,19 +18,23 @@ h2 {
   margin-bottom: .6em;
 }
 
-p.doc {
+.doc {
   background: #fff;
   border: #ddd;
   padding: 1em;
-  color: #bbb;
+  color: #aaa;
   margin: 1em;
   font-style: italic;
 }
-p.doc a {
+.doc a {
   color: #999;
 }
 
 /**
+ * UI simple gradient from one color
+ *
+ * @todo merge with ui-button ?
+ *
  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
  */
 .ui-gradient-demo {
