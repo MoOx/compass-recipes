@@ -61,6 +61,11 @@ h2 {
  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
  */
 /**
+ * Shape/Polygon/Rhombus
+ *
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
  * Shape/Polygon/Square
  *
  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
@@ -68,6 +73,7 @@ h2 {
 /**
  * Shape/Polygon/Star
  *
+ * @todo check if setting a z-index by default is a good thing
  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
  */
 /**
@@ -322,6 +328,39 @@ div {
   background: black;
 }
 
+.rhombus {
+  width: 5em;
+  height: 5em;
+  background: black;
+  -moz-transform: rotate(-45deg) skew(0deg, 0deg);
+  -webkit-transform: rotate(-45deg) skew(0deg, 0deg);
+  -o-transform: rotate(-45deg) skew(0deg, 0deg);
+  -ms-transform: rotate(-45deg) skew(0deg, 0deg);
+  transform: rotate(-45deg) skew(0deg, 0deg);
+}
+
+.rhombus2 {
+  width: 8em;
+  height: 8em;
+  background: black;
+  -moz-transform: rotate(-45deg) skew(-10deg, -10deg);
+  -webkit-transform: rotate(-45deg) skew(-10deg, -10deg);
+  -o-transform: rotate(-45deg) skew(-10deg, -10deg);
+  -ms-transform: rotate(-45deg) skew(-10deg, -10deg);
+  transform: rotate(-45deg) skew(-10deg, -10deg);
+}
+
+.rhombus3 {
+  width: 5em;
+  height: 5em;
+  background: black;
+  -moz-transform: rotate(-45deg) skew(20deg, 20deg);
+  -webkit-transform: rotate(-45deg) skew(20deg, 20deg);
+  -o-transform: rotate(-45deg) skew(20deg, 20deg);
+  -ms-transform: rotate(-45deg) skew(20deg, 20deg);
+  transform: rotate(-45deg) skew(20deg, 20deg);
+}
+
 .square {
   width: 5em;
   height: 5em;
@@ -332,140 +371,6 @@ div {
   width: 8em;
   height: 8em;
   background: black;
-}
-
-.star6 {
-  width: 0;
-  height: 0;
-  border-left: 2.5em solid transparent;
-  border-right: 2.5em solid transparent;
-  border-bottom: 5em solid black;
-  position: relative;
-}
-.star6:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 2.5em solid transparent;
-  border-right: 2.5em solid transparent;
-  border-top: 5em solid black;
-  top: 1.5em;
-  left: -2.5em;
-}
-
-.star62 {
-  width: 0;
-  height: 0;
-  border-left: 4em solid transparent;
-  border-right: 4em solid transparent;
-  border-bottom: 8em solid black;
-  position: relative;
-}
-.star62:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 4em solid transparent;
-  border-right: 4em solid transparent;
-  border-top: 8em solid black;
-  top: 2.4em;
-  left: -4em;
-}
-
-.star5 {
-  margin: 2.5em 0;
-  position: relative;
-  display: block;
-  width: 0;
-  height: 0;
-  border-right: 5em solid transparent;
-  border-bottom: 3.5em solid black;
-  border-left: 5em solid transparent;
-  -moz-transform: rotate(35deg);
-  -webkit-transform: rotate(35deg);
-  -o-transform: rotate(35deg);
-  -ms-transform: rotate(35deg);
-  transform: rotate(35deg);
-}
-.star5:before, .star5:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-}
-.star5:before {
-  top: -2.25em;
-  left: -3.25em;
-  border-bottom: 4em solid black;
-  border-left: 1.5em solid transparent;
-  border-right: 1.5em solid transparent;
-  -moz-transform: rotate(-35deg);
-  -webkit-transform: rotate(-35deg);
-  -o-transform: rotate(-35deg);
-  -ms-transform: rotate(-35deg);
-  transform: rotate(-35deg);
-}
-.star5:after {
-  top: 0.15em;
-  left: -5.25em;
-  border-right: 5em solid transparent;
-  border-bottom: 3.5em solid black;
-  border-left: 5em solid transparent;
-  -moz-transform: rotate(-70deg);
-  -webkit-transform: rotate(-70deg);
-  -o-transform: rotate(-70deg);
-  -ms-transform: rotate(-70deg);
-  transform: rotate(-70deg);
-}
-
-.star52 {
-  margin: 4em 0;
-  position: relative;
-  display: block;
-  width: 0;
-  height: 0;
-  border-right: 8em solid transparent;
-  border-bottom: 5.6em solid black;
-  border-left: 8em solid transparent;
-  -moz-transform: rotate(35deg);
-  -webkit-transform: rotate(35deg);
-  -o-transform: rotate(35deg);
-  -ms-transform: rotate(35deg);
-  transform: rotate(35deg);
-}
-.star52:before, .star52:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-}
-.star52:before {
-  top: -3.6em;
-  left: -5.2em;
-  border-bottom: 6.4em solid black;
-  border-left: 2.4em solid transparent;
-  border-right: 2.4em solid transparent;
-  -moz-transform: rotate(-35deg);
-  -webkit-transform: rotate(-35deg);
-  -o-transform: rotate(-35deg);
-  -ms-transform: rotate(-35deg);
-  transform: rotate(-35deg);
-}
-.star52:after {
-  top: 0.24em;
-  left: -8.4em;
-  border-right: 8em solid transparent;
-  border-bottom: 5.6em solid black;
-  border-left: 8em solid transparent;
-  -moz-transform: rotate(-70deg);
-  -webkit-transform: rotate(-70deg);
-  -o-transform: rotate(-70deg);
-  -ms-transform: rotate(-70deg);
-  transform: rotate(-70deg);
 }
 
 .trapezoid {
