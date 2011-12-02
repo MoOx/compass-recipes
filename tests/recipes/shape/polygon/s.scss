@@ -28,14 +28,12 @@ div
 .rectangle { @include rectangle(8em, 5em, #000) }
 .rectangle2 { @include rectangle(5em, 8em, #000)  }
 
+.rhombus { @include rhombus(5em, #000) }
+.rhombus2 { @include rhombus(8em, #000, -10deg) }
+.rhombus3 { @include rhombus(5em, #000, 20deg) }
+
 .square { @include square(5em, #000) }
 .square2 { @include square(8em, #000) }
-
-.star6 { @include star-6(5em, #000) }
-.star62 { @include star-6(8em, #000) }
-
-.star5 { @include star-5(5em, #000) }
-.star52 { @include star-5(8em, #000) }
 
 .trapezoid { @include trapezoid(5em, 5em, #000) }
 .trapezoid2 { @include trapezoid(8em, 5em, #000) }

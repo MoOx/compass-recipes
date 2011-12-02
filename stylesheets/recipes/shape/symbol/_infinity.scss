@@ -1,6 +1,7 @@
 /**
  * Shape/Symbol/Infinity
- *
+ * 
+ * @author Nicolas Gallagher @necolas
  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
  */
 @mixin infinity($width: 212px, $height: 100px, $background-color: transparent)
@@ -29,6 +30,7 @@
         height: $height*.6;
         border: $height*.2 solid $background-color;
     }
+
     $radius: $height/2;
     &:before
     {
