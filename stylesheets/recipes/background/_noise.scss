@@ -12,8 +12,8 @@
  * Ported to a sass gem by Antti Salonen @antsa
  * @link https://github.com/antsa/sassy_noise
  * 
- * Mixin: 		background-noise
- * Function: 	background_noise
+ * Mixin:        background-noise
+ * Function:     background_noise
  * 
  * @author Daniel Rapp @DanielRapp
  * @author Aaron Russell @aaronrussell
@@ -31,17 +31,17 @@ $background-noise-size-default:       200 !default;
 $background-noise-monochrome-default: false !default;
 
 @mixin background-noise(
-  $intensity:   $background-noise-intensity-default,
-  $opacity:     $background-noise-opacity-default,
-  $size:        $background-noise-size-default,
-  $monochrome:  $background-noise-monochrome-default
+    $intensity:   $background-noise-intensity-default,
+    $opacity:     $background-noise-opacity-default,
+    $size:        $background-noise-size-default,
+    $monochrome:  $background-noise-monochrome-default
 )
 {
-  	background-image: background_noise(
-    	$intensity: $intensity,
-    	$opacity: $opacity,
-    	$size: $size,
-    	$monochrome: $monochrome
-  	);
-  	background-repeat: repeat;
+    background-image: background_noise(
+        $intensity: $intensity,
+        $opacity: $opacity,
+        $size: $size,
+        $monochrome: $monochrome
+    );
+    background-repeat: repeat;
 }
