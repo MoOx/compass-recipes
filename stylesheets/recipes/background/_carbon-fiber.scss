@@ -6,7 +6,6 @@
  * @author Lea Verou http://lea.verou.me/ for the original pattern
  * @author David Kaneda http://www.davidkaneda.com/ for the Sass mixin
  *
- * WebKit only for now.
  */
 
 $base-color: #333 !default;
@@ -20,13 +19,15 @@ $base-color: #333 !default;
     $spacing-size: 20px,
     $dotsize: 20%
 ) {
+    @include background-image(
+        radial-gradient($dotcolor $dotsize, rgba(#fff, 0) $dotsize + 1),
+        radial-gradient($dotcolor $dotsize, rgba(#fff, 0) $dotsize + 1),
+        radial-gradient($highlightcolor $dotsize, rgba(#fff, 0) $dotsize + 4),
+        radial-gradient($highlightcolor $dotsize, rgba(#fff, 0) $dotsize + 4)
+    );
 
-    background: 
-        -webkit-radial-gradient($dotcolor $dotsize, rgba(#fff, 0) $dotsize + 1) 0 0,
-        -webkit-radial-gradient($dotcolor $dotsize, rgba(#fff, 0) $dotsize + 1) $spacing-size/2 $spacing-size/2,
-        -webkit-radial-gradient($highlightcolor $dotsize, rgba(#fff, 0) $dotsize + 4) 0 1px,
-        -webkit-radial-gradient($highlightcolor $dotsize, rgba(#fff, 0) $dotsize + 4) $spacing-size/2 $spacing-size/2 + 1px;
-
+    background-repeat: repeat;
+    background-position: 0 0, $spacing-size/2 $spacing-size/2, 0 1px, $spacing-size/2 $spacing-size/2 + 1px;
     background-color: $bgcolor;
     background-size: $spacing-size $spacing-size;
 }
