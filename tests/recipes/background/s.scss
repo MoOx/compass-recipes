@@ -2,8 +2,7 @@
 
 @import "recipes/background";
 
-div
-{
+div {
     width: 20em;
     height: 20em;
 
@@ -18,28 +17,28 @@ div
     );
 }
 
-.background-blueprint-grid
-{
+.background-blueprint-grid {
     @include background-blueprint-grid;
 }
 
-.background-noise
-{
+.background-noise {
     //background-color: #000;
     @include background-noise(
         //$intensity: .5,
-        $opacity: .15
         //$size: 200,
         //$monochrome: true,
+        $opacity: .15
     );
 }
 
-.background-radial-overlay
-{
+.background-radial-overlay {
     @include background-radial-overlay;
 }
 
-.background-tartan
-{
+.background-tartan {
     @include background-tartan;
+}
+
+.background-carbon-fiber {
+    @include background-carbon-fiber;
 }
