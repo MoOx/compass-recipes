@@ -1,0 +1,32 @@
+/**
+ * Carbon Fiber background pattern
+ * 
+ * @link http://lea.verou.me/css3patterns/
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author David Kaneda http://www.davidkaneda.com/ for the Sass mixin
+ *
+ * WebKit only for now.
+ */
+
+$base-color: #333 !default;
+
+@import "compass/css3/images";
+
+@mixin background-carbon-fiber(
+    $bgcolor: $base-color,
+    $dotcolor: darken($bgcolor, 10),
+    $highlightcolor: rgba(#fff, .1),
+    $spacing-size: 20px,
+    $dotsize: 20%
+) {
+
+    background: 
+        -webkit-radial-gradient($dotcolor $dotsize, rgba(#fff, 0) $dotsize + 1) 0 0,
+        -webkit-radial-gradient($dotcolor $dotsize, rgba(#fff, 0) $dotsize + 1) $spacing-size/2 $spacing-size/2,
+        -webkit-radial-gradient($highlightcolor $dotsize, rgba(#fff, 0) $dotsize + 4) 0 1px,
+        -webkit-radial-gradient($highlightcolor $dotsize, rgba(#fff, 0) $dotsize + 4) $spacing-size/2 $spacing-size/2 + 1px;
+
+    background-color: $bgcolor;
+    background-size: $spacing-size $spacing-size;
+}
