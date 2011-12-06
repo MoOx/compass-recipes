@@ -2,8 +2,7 @@
 
 @import "recipes/background";
 
-div
-{
+div {
     width: 20em;
     height: 20em;
 
@@ -18,28 +17,60 @@ div
     );
 }
 
-.background-blueprint-grid
-{
+.background-blueprint-grid {
     @include background-blueprint-grid;
 }
 
-.background-noise
-{
+.background-noise {
     //background-color: #000;
     @include background-noise(
         //$intensity: .5,
-        $opacity: .15
         //$size: 200,
         //$monochrome: true,
+        $opacity: .15
     );
 }
 
-.background-radial-overlay
-{
+.background-radial-overlay {
     @include background-radial-overlay;
 }
 
-.background-tartan
-{
+.background-tartan {
     @include background-tartan;
+}
+
+.background-carbon-fiber {
+    @include background-carbon-fiber;
+}
+
+
+// Gradients
+$gradient-color: #CF714A;
+
+.background-glossy {
+    @include background-gradient($gradient-color, glossy);
+}
+
+.background-matte {
+    @include background-gradient($gradient-color, matte);
+}
+
+.background-bevel {
+    @include background-gradient($gradient-color, bevel);
+}
+
+.background-recessed {
+    @include background-gradient($gradient-color, recessed);
+}
+
+
+// Caution! Mixing background noise with other gradients will output 
+// the same base64-encoded image for every vendor prefixed gradient syntax.
+// Consider overlaying with a pseudo-element, or disabling specific vendor prefixes
+.background-mixed {
+    @include background-image(
+        background_noise($size: 40),
+        matte-gradient(rgba(yellow, .2)),
+        glossy-gradient($gradient-color)
+    );
 }
