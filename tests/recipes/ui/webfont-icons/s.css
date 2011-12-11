@@ -1,0 +1,186 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #aaa;
+  margin: 1em;
+  font-style: italic;
+}
+.doc a {
+  color: #999;
+}
+
+/**
+ *
+ * @class Gradients
+ * @author David Kaneda http://www.davidkaneda.com/
+ *
+ */
+/**
+ * Adds a background gradient into a specified selector.
+ * 
+ *     @include background-gradient(#444, 'glossy');
+ * 
+ * You can also use color-stops if you want full control of the gradient:
+ * 
+ *     @include background-gradient(#444, color-stops(#333, #222, #111));
+ * 
+ * @param {color} $bg-color
+ * The base color of the gradient.
+ * 
+ * @param {string/list} $type
+ * The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or linear:
+ *
+ *     @include background-gradient(red, 'glossy');
+ *
+ * It can also accept a list of color-stop values:;
+ * 
+ *     @include background-gradient(black, color-stops(#333, #111, #000));
+ * 
+ * @param {string} $direction
+ * The direction of the gradient.
+ */
+/**
+ * @class Webfont Icon
+ * Great to use with the [Pictos font](http://pictos.drewwilson.com/)
+ * 
+ */
+/**
+ * @cfg {color} $webfont-icon-base-color
+ * The default color of icons when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `white`.
+ */
+/**
+ * @cfg {color} $webfont-icon-default-border
+ * The default color to use on the border of icons, when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `null`.
+ */
+/**
+ * @cfg {string} $webfont-icon-default-gradient
+ * The default gradient to use when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `matte`.
+ */
+/**
+ * Includes a character into the specified selector, styled as an icon.
+ * 
+ *     @include webfont-icon('a');
+ * 
+ * @param {color} $color
+ * The color of the icon. Defaults to {@link #$webfont-icon-default-background $webfont-icon-default-background}.
+ * 
+ * @param {measurement} $size
+ * The size of the icon
+ * 
+ * @param {color} $border
+ * The color of the border. Defautls to {@link #$webfont-icon-default-border $webfont-icon-default-border}.
+ * 
+ * @param {boolean} $include-staes
+ * True to include states for hover and active. Defaults to `true`.
+ */
+.webfont-icon-base, .smiley:after, .smiley:before {
+  font-family: Helvetica, Arial, sans-serif;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  -khtml-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+}
+
+.smiley {
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  -khtml-background-clip: text;
+  background-clip: text;
+  overflow: visible;
+  position: relative;
+  height: 500px;
+  display: inline-block;
+  line-height: 500px;
+  text-indent: -9000px;
+  -webkit-text-stroke: 1px #b99332;
+}
+.smiley:after, .smiley:before {
+  font-size: 500px;
+  content: "\263a";
+  background-image: none;
+  background-color: #cfab4f;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dfc88b), color-stop(3%, #d4b563), color-stop(100%, #caa13b));
+  background-image: -webkit-linear-gradient(top, #dfc88b, #d4b563 3%, #caa13b);
+  background-image: -moz-linear-gradient(top, #dfc88b, #d4b563 3%, #caa13b);
+  background-image: -o-linear-gradient(top, #dfc88b, #d4b563 3%, #caa13b);
+  background-image: -ms-linear-gradient(top, #dfc88b, #d4b563 3%, #caa13b);
+  background-image: linear-gradient(top, #dfc88b, #d4b563 3%, #caa13b);
+}
+.smiley:before {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  background: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+}
+.smiley:hover {
+  -webkit-text-stroke: 1px #65b042;
+}
+.smiley:hover:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #65b042 0 0 10px;
+}
+.smiley:hover:after {
+  background-image: none;
+  background-color: #65b042;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fcb74), color-stop(3%, #72bd4f), color-stop(100%, #5a9d3b));
+  background-image: -webkit-linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
+  background-image: -moz-linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
+  background-image: -o-linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
+  background-image: -ms-linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
+  background-image: linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
+}
+.smiley:active {
+  -webkit-text-stroke: 1px #508b34;
+}
+.smiley:active:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #65b042 0 0 10px;
+}
+.smiley:active:after {
+  background-image: none;
+  background-color: #508b34;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3a6626), color-stop(10%, #45782d), color-stop(65%, #508b34), color-stop(100%, #518d35));
+  background-image: -webkit-linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
+  background-image: -moz-linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
+  background-image: -o-linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
+  background-image: -ms-linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
+  background-image: linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
+}
