@@ -1,0 +1,8 @@
+@import "tests";
+@import "recipes/webfont-icon";
+
+@include webfont-icon-init;
+
+.smiley {
+    @include webfont-icon('\263a', $size: 500px, $color: #CFAB4F);
+}

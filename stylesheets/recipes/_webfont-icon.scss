@@ -1,0 +1,148 @@
+@import 'compass';
+
+@import 'background/gradients';
+
+/**
+ * @class Webfont Icon
+ * Great to use with the [Pictos font](http://pictos.drewwilson.com/)
+ * 
+ */
+
+/**
+ * @cfg {color} $webfont-icon-base-color
+ * The default color of icons when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `white`.
+ */
+$webfont-icon-base-color: #999 !default;
+
+/**
+ * @cfg {color} $webfont-icon-default-border
+ * The default color to use on the border of icons, when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `null`.
+ */
+$webfont-icon-default-border: darken($webfont-icon-base-color, 10) !default;
+
+$webfont-icon-highlight-color: #65B042 !default;
+
+/**
+ * @cfg {string} $webfont-icon-default-gradient
+ * The default gradient to use when using the {@link #webfont-icon} mixin.
+ * 
+ * Defaults to `matte`.
+ */
+$webfont-icon-default-gradient: matte !default;
+
+
+/// TODO: ADD HIDETEXT CONFIG
+
+@mixin webfont-icon-init(
+    $webfont-name: 'Helvetica, Arial, sans-serif',
+    $class: 'base'
+) {
+    .webfont-icon-#{$class} {
+        font-family: #{$webfont-name};
+        color: transparent;
+        @include background-clip(text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: 0;
+    }
+}
+
+/**
+ * Includes a character into the specified selector, styled as an icon.
+ * 
+ *     @include webfont-icon('a');
+ * 
+ * @param {color} $color
+ * The color of the icon. Defaults to {@link #$webfont-icon-default-background $webfont-icon-default-background}.
+ * 
+ * @param {measurement} $size
+ * The size of the icon
+ * 
+ * @param {color} $border
+ * The color of the border. Defautls to {@link #$webfont-icon-default-border $webfont-icon-default-border}.
+ * 
+ * @param {boolean} $include-staes
+ * True to include states for hover and active. Defaults to `true`.
+ */
+@mixin webfont-icon($character,
+    $class: 'base',
+    
+    $color: $webfont-icon-base-color,
+    $color-hover: $webfont-icon-highlight-color,
+    $color-active: darken($color-hover, 10%),
+
+    $size: 24px,
+    
+    $glow: null,
+    $glow-hover: $webfont-icon-highlight-color 0 0 10px,
+    $glow-active: $glow-hover,
+
+    $shadow: rgba(#000, .5) 0 1px 3px,
+
+    $border: 1px darken($color, 10),
+    $border-hover: 1px $color-hover,
+    $border-active: 1px $color-active,
+
+    $gradient: $webfont-icon-default-gradient,
+    $gradient-hover: $gradient,
+    $gradient-active: recessed,
+
+    $include-states: true,
+    $hidetext: true
+) {
+    @include background-clip(text);
+    overflow: visible;
+    position: relative;
+    height: $size;
+    display: inline-block;
+    line-height: $size;
+    text-indent: -9000px;
+
+    @if $border != null {
+        -webkit-text-stroke: $border;
+    }
+    &:after, &:before {
+        @extend .webfont-icon-#{$class};
+        font-size: $size;
+        content: $character;
+
+        
+        @include background-gradient($color, $gradient);
+    }
+    &:before {
+        @include background-clip(padding-box);
+        background: none;
+        @include text-shadow($shadow);
+    }
+    
+    @if $include-states {
+        &:hover {
+            @if $border-hover != null {
+                -webkit-text-stroke: $border-hover;
+            }
+
+            &:before {
+                @include text-shadow($shadow, $glow-hover);
+            }
+            &:after {
+                @include background-gradient($color-hover, $gradient-hover);
+            }
+        }
+        &:active {
+            @if $border-active != null {
+                -webkit-text-stroke: $border-active;
+            }
+            &:before {
+                @include text-shadow($shadow, $glow-active);
+            }
+            &:after {
+                @include background-gradient($color-active, $gradient-active);
+            }
+        }
+    }
+}
