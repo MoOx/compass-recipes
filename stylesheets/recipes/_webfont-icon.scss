@@ -17,14 +17,14 @@
 $webfont-icon-base-color: #999 !default;
 
 /**
- * @cfg {color} $webfont-icon-default-border
+ * @cfg {color} $webfont-icon-default-stroke
  * The default color to use on the border of icons, when using the {@link #webfont-icon} mixin.
  * 
  * Defaults to `null`.
  */
-$webfont-icon-default-border: darken($webfont-icon-base-color, 10) !default;
+$webfont-icon-default-stroke: darken($webfont-icon-base-color, 10) !default;
 
-$webfont-icon-highlight-color: #65B042 !default;
+$webfont-icon-highlight-color: #3778E5 !default;
 
 /**
  * @cfg {string} $webfont-icon-default-gradient
@@ -34,21 +34,60 @@ $webfont-icon-highlight-color: #65B042 !default;
  */
 $webfont-icon-default-gradient: matte !default;
 
+// Base style for pseudo-selectors
+// @todo Doc me yo
 
-/// TODO: ADD HIDETEXT CONFIG
+.webfont-icon-base {
+    color: transparent;
+    @include background-clip(text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+    @include text-shadow(none);
+}
 
-@mixin webfont-icon-init(
-    $webfont-name: 'Helvetica, Arial, sans-serif',
-    $class: 'base'
-) {
-    .webfont-icon-#{$class} {
-        font-family: #{$webfont-name};
-        color: transparent;
-        @include background-clip(text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-indent: 0;
+// @todo Doc me yo
+
+@mixin include-font-websymbols {
+    @include font-face(
+        "websymbols",
+        font-files(
+            "websymbols/websymbols-regular-webfont.ttf", truetype,
+
+            "websymbols/websymbols-regular-webfont.eot", opentype
+        )
+    );
+    .webfont-icon-websymbols {
+        font-family: websymbols;
+        @extend .webfont-icon-base;
+    }
+}
+
+@mixin include-font-heydings {
+    @include font-face(
+        "heydings",
+        font-files(
+            "heydings/heydings_icons.ttf", truetype
+        )
+    );
+    .webfont-icon-heydings {
+        font-family: heydings;
+        @extend .webfont-icon-base;
+    }
+}
+
+@mixin include-font-iconic {
+    @include font-face(
+        "iconic",
+        font-files(
+            "iconic/iconic_stroke.ttf", truetype,
+            "iconic/iconic_stroke.otf", opentype
+        )
+    );
+    .webfont-icon-iconic {
+        font-family: iconic;
+        @extend .webfont-icon-base;
     }
 }
 
@@ -63,30 +102,31 @@ $webfont-icon-default-gradient: matte !default;
  * @param {measurement} $size
  * The size of the icon
  * 
- * @param {color} $border
+ * @param {color} $stroke
  * The color of the border. Defautls to {@link #$webfont-icon-default-border $webfont-icon-default-border}.
  * 
  * @param {boolean} $include-staes
  * True to include states for hover and active. Defaults to `true`.
  */
-@mixin webfont-icon($character,
+@mixin webfont-icon(
+    $character: attr(data-icon),
     $class: 'base',
     
     $color: $webfont-icon-base-color,
     $color-hover: $webfont-icon-highlight-color,
     $color-active: darken($color-hover, 10%),
 
-    $size: 24px,
+    $size: 48px,
     
     $glow: null,
     $glow-hover: $webfont-icon-highlight-color 0 0 10px,
     $glow-active: $glow-hover,
 
-    $shadow: rgba(#000, .5) 0 1px 3px,
+    $shadow: rgba(#000, .5) 0 1px 3px, // Shadow doesn't change, but hover does
 
-    $border: 1px darken($color, 10),
-    $border-hover: 1px $color-hover,
-    $border-active: 1px $color-active,
+    $stroke: false,
+    $stroke-hover: 1px darken($color-hover, 10),
+    $stroke-active: 1px darken($color-active, 10),
 
     $gradient: $webfont-icon-default-gradient,
     $gradient-hover: $gradient,
@@ -102,9 +142,10 @@ $webfont-icon-default-gradient: matte !default;
     display: inline-block;
     line-height: $size;
     text-indent: -9000px;
+    width: $size;
 
-    @if $border != null {
-        -webkit-text-stroke: $border;
+    @if $stroke {
+        -webkit-text-stroke: if($stroke == true, darken($color, 10), $stroke);
     }
     &:after, &:before {
         @extend .webfont-icon-#{$class};
@@ -122,8 +163,8 @@ $webfont-icon-default-gradient: matte !default;
     
     @if $include-states {
         &:hover {
-            @if $border-hover != null {
-                -webkit-text-stroke: $border-hover;
+            @if $stroke-hover and $stroke {
+                -webkit-text-stroke: $stroke-hover;
             }
 
             &:before {
@@ -133,9 +174,9 @@ $webfont-icon-default-gradient: matte !default;
                 @include background-gradient($color-hover, $gradient-hover);
             }
         }
-        &:active {
-            @if $border-active != null {
-                -webkit-text-stroke: $border-active;
+        &:active {            
+            @if $stroke-active and $stroke {
+                -webkit-text-stroke: $stroke-active;
             }
             &:before {
                 @include text-shadow($shadow, $glow-active);

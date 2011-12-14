@@ -72,7 +72,7 @@ h2 {
  * Defaults to `white`.
  */
 /**
- * @cfg {color} $webfont-icon-default-border
+ * @cfg {color} $webfont-icon-default-stroke
  * The default color to use on the border of icons, when using the {@link #webfont-icon} mixin.
  * 
  * Defaults to `null`.
@@ -83,25 +83,7 @@ h2 {
  * 
  * Defaults to `matte`.
  */
-/**
- * Includes a character into the specified selector, styled as an icon.
- * 
- *     @include webfont-icon('a');
- * 
- * @param {color} $color
- * The color of the icon. Defaults to {@link #$webfont-icon-default-background $webfont-icon-default-background}.
- * 
- * @param {measurement} $size
- * The size of the icon
- * 
- * @param {color} $border
- * The color of the border. Defautls to {@link #$webfont-icon-default-border $webfont-icon-default-border}.
- * 
- * @param {boolean} $include-staes
- * True to include states for hover and active. Defaults to `true`.
- */
-.webfont-icon-base, .smiley:after, .smiley:before {
-  font-family: Helvetica, Arial, sans-serif;
+.webfont-icon-base, .webfont-icon-websymbols, .websymbols:after, .websymbols:before, .webfont-icon-heydings, .heydings:after, .heydings:before, .webfont-icon-iconic, .iconic:after, .iconic:before, .smiley:after, .smiley:before {
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;
@@ -113,6 +95,51 @@ h2 {
   top: 0;
   left: 0;
   text-indent: 0;
+  text-shadow: none;
+}
+
+/**
+ * Includes a character into the specified selector, styled as an icon.
+ * 
+ *     @include webfont-icon('a');
+ * 
+ * @param {color} $color
+ * The color of the icon. Defaults to {@link #$webfont-icon-default-background $webfont-icon-default-background}.
+ * 
+ * @param {measurement} $size
+ * The size of the icon
+ * 
+ * @param {color} $stroke
+ * The color of the border. Defautls to {@link #$webfont-icon-default-border $webfont-icon-default-border}.
+ * 
+ * @param {boolean} $include-staes
+ * True to include states for hover and active. Defaults to `true`.
+ */
+@font-face {
+  font-family: "websymbols";
+  src: url('../../../../fonts/websymbols/websymbols-regular-webfont.ttf') format('truetype'), url('../../../../fonts/websymbols/websymbols-regular-webfont.eot') format('opentype');
+}
+
+.webfont-icon-websymbols, .websymbols:after, .websymbols:before {
+  font-family: websymbols;
+}
+
+@font-face {
+  font-family: "heydings";
+  src: url('../../../../fonts/heydings/heydings_icons.ttf') format('truetype');
+}
+
+.webfont-icon-heydings, .heydings:after, .heydings:before {
+  font-family: heydings;
+}
+
+@font-face {
+  font-family: "iconic";
+  src: url('../../../../fonts/iconic/iconic_stroke.ttf') format('truetype'), url('../../../../fonts/iconic/iconic_stroke.otf') format('opentype');
+}
+
+.webfont-icon-iconic, .iconic:after, .iconic:before {
+  font-family: iconic;
 }
 
 .smiley {
@@ -128,7 +155,8 @@ h2 {
   display: inline-block;
   line-height: 500px;
   text-indent: -9000px;
-  -webkit-text-stroke: 1px #b99332;
+  width: 500px;
+  display: block;
 }
 .smiley:after, .smiley:before {
   font-size: 500px;
@@ -152,35 +180,221 @@ h2 {
   background: none;
   text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
 }
-.smiley:hover {
-  -webkit-text-stroke: 1px #65b042;
-}
 .smiley:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #65b042 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
 }
 .smiley:hover:after {
   background-image: none;
-  background-color: #65b042;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fcb74), color-stop(3%, #72bd4f), color-stop(100%, #5a9d3b));
-  background-image: -webkit-linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
-  background-image: -moz-linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
-  background-image: -o-linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
-  background-image: -ms-linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
-  background-image: linear-gradient(top, #8fcb74, #72bd4f 3%, #5a9d3b);
-}
-.smiley:active {
-  -webkit-text-stroke: 1px #508b34;
+  background-color: #3778e5;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
+  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -ms-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
 }
 .smiley:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #65b042 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
 }
 .smiley:active:after {
   background-image: none;
-  background-color: #508b34;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3a6626), color-stop(10%, #45782d), color-stop(65%, #508b34), color-stop(100%, #518d35));
-  background-image: -webkit-linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
-  background-image: -moz-linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
-  background-image: -o-linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
-  background-image: -ms-linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
-  background-image: linear-gradient(top, #3a6626, #45782d 10%, #508b34 65%, #518d35);
+  background-color: #1b5ece;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1549a1), color-stop(10%, #1854b8), color-stop(65%, #1b5ece), color-stop(100%, #1b5fd0));
+  background-image: -webkit-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -moz-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -o-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -ms-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+}
+
+.heydings {
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  -khtml-background-clip: text;
+  background-clip: text;
+  overflow: visible;
+  position: relative;
+  height: 100px;
+  display: inline-block;
+  line-height: 100px;
+  text-indent: -9000px;
+  width: 100px;
+}
+.heydings:after, .heydings:before {
+  font-size: 100px;
+  content: attr(data-icon);
+  background-image: none;
+  background-color: #999999;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
+  background-image: -webkit-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -moz-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -o-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -ms-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+}
+.heydings:before {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  background: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+}
+.heydings:hover:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+}
+.heydings:hover:after {
+  background-image: none;
+  background-color: #3778e5;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
+  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -ms-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+}
+.heydings:active:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+}
+.heydings:active:after {
+  background-image: none;
+  background-color: #1b5ece;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1549a1), color-stop(10%, #1854b8), color-stop(65%, #1b5ece), color-stop(100%, #1b5fd0));
+  background-image: -webkit-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -moz-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -o-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -ms-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+}
+
+.websymbols {
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  -khtml-background-clip: text;
+  background-clip: text;
+  overflow: visible;
+  position: relative;
+  height: 100px;
+  display: inline-block;
+  line-height: 100px;
+  text-indent: -9000px;
+  width: 100px;
+}
+.websymbols:after, .websymbols:before {
+  font-size: 100px;
+  content: attr(data-icon);
+  background-image: none;
+  background-color: #999999;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
+  background-image: -webkit-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -moz-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -o-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -ms-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+}
+.websymbols:before {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  background: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+}
+.websymbols:hover:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+}
+.websymbols:hover:after {
+  background-image: none;
+  background-color: #3778e5;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
+  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -ms-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+}
+.websymbols:active:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+}
+.websymbols:active:after {
+  background-image: none;
+  background-color: #1b5ece;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1549a1), color-stop(10%, #1854b8), color-stop(65%, #1b5ece), color-stop(100%, #1b5fd0));
+  background-image: -webkit-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -moz-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -o-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -ms-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+}
+
+.iconic {
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  -khtml-background-clip: text;
+  background-clip: text;
+  overflow: visible;
+  position: relative;
+  height: 100px;
+  display: inline-block;
+  line-height: 100px;
+  text-indent: -9000px;
+  width: 100px;
+}
+.iconic:after, .iconic:before {
+  font-size: 100px;
+  content: attr(data-icon);
+  background-image: none;
+  background-color: #999999;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
+  background-image: -webkit-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -moz-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -o-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -ms-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+}
+.iconic:before {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  background: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+}
+.iconic:hover:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+}
+.iconic:hover:after {
+  background-image: none;
+  background-color: #3778e5;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
+  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -ms-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+}
+.iconic:active:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+}
+.iconic:active:after {
+  background-image: none;
+  background-color: #1b5ece;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1549a1), color-stop(10%, #1854b8), color-stop(65%, #1b5ece), color-stop(100%, #1b5fd0));
+  background-image: -webkit-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -moz-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -o-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: -ms-linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
+  background-image: linear-gradient(top, #1549a1, #1854b8 10%, #1b5ece 65%, #1b5fd0);
 }
