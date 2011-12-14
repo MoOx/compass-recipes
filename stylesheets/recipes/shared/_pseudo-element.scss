@@ -9,7 +9,10 @@
     content: $content;
     position: absolute;
     display: block;
-    width: $width; // default 0 is for ff3 positionning
+
+    @if ($width != auto) {
+        width: $width; // default 0 is for ff3 positionning
+    }
     
     @if ($height != auto)
     {
