@@ -1,13 +1,19 @@
-@mixin bevel()
+$bevel-base-color: rgba(#333, .5) !default;
+$bevel-depth: 5px !default;
+$bevel-contrast: 8% !default;
+$bevel-border-width: 1px !default;
+$bevel-blur: 0 !default;
+
+@mixin bevel
 {
     @include bevel-border;
     @include bevel-shadow;
 }
 
 @mixin bevel-border(
-    $base-color: rgba(#333, .5),
-    $border-width: 1px,
-    $contrast: 8%
+    $base-color: $bevel-base-color,
+    $border-width: $bevel-border-width,
+    $contrast: $bevel-contrast
 )
 {
     border: $border-width solid $base-color;
@@ -15,10 +21,11 @@
     border-bottom-color: darken($base-color, $contrast);
 }
 
+// @todo: $direction
+
 @mixin bevel-shadow(
-    $depth: 5px,
-    $blur: 0
-    // $direction: up
+    $depth: $bevel-depth,
+    $blur: $bevel-blur
 )
 {
     @include box-shadow(
