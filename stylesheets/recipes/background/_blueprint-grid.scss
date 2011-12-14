@@ -9,14 +9,17 @@
 
 @import "compass/css3/images";
 
-@mixin background-blueprint-grid($background-color: #269, $foreground-color: #fff, $foreground-color-alt: auto, $width: 100px, $width-alt: 20px, $border-width: 2px, $border-width-alt: 1px)
+@mixin background-blueprint-grid(
+    $background-color: #4285C9,
+    $foreground-color: rgba(#fff, .2),
+    $foreground-color-alt: rgba(#fff, .1),
+    $width: 100px,
+    $width-alt: 20px,
+    $border-width: 2px,
+    $border-width-alt: 1px)
 {
     background-color: $background-color;
 
-    @if ($foreground-color-alt == auto)
-    {
-        $foreground-color-alt: transparentize($foreground-color, .3); // rgba .3
-    }
     $transparent: transparentize($foreground-color, 1);
     
     // cannot use 0 (sass_extensions error) for horizontal linear-gradient, so we use keyword 'left'
