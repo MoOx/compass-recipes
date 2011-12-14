@@ -5,7 +5,7 @@ Gem::Specification.new do |gemspec|
   gemspec.date = "2011-07-12"
 
   gemspec.name = "compass-recipes"
-  gemspec.authors = ["Maxime Thirouin"]
+  gemspec.authors = ["Maxime Thirouin", "David Kaneda"]
   gemspec.summary = %q{Recipes for Compass}
   gemspec.description = %q{A Compass extension to have some sass/compass recipes ready to use ! }
   gemspec.email = "maxime.thirouin@gmail.com"
