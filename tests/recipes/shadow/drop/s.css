@@ -50,6 +50,12 @@ h2 {
  * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
  */
 /**
+ * Drop shadow flying
+ *
+ * @thanks Geoffrey Crofte @geoffrey_crofte
+ * @link http://www.creativejuiz.fr/trytotry/css3-box-shadow-after-before/
+ */
+/**
  * Drop shadow w/ lifted corners
  *
  * @thanks Nicolas Gallagher @necolas
@@ -70,7 +76,7 @@ h2 {
 /**
  * Drop shadow rules required for transform on drop shadow
  * 
- * /!\ This is required is you want to apply some transform on the element using drop shadow
+ * /!\ This is required if you want to apply some transform on the element using drop shadow
  *
  * @thanks Nicolas Gallagher @necolas
  * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
@@ -101,6 +107,11 @@ a.more {
 /*
  * This is required is you want to apply some transform on the element using drop shadow
  */
+.drop-shadow-curved-vt,
+.drop-shadow-lifted-corners,
+.drop-shadow-perspective {
+  position: relative;
+}
 .drop-shadow-curved-vt > :last-child::before,
 .drop-shadow-lifted-corners > :last-child::before,
 .drop-shadow-perspective > :last-child::before {
@@ -167,7 +178,7 @@ a.more {
 .drop-shadow-curved-vt:before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: -1;
   top: 10px;
   bottom: 10px;
   left: 0;

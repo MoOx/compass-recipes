@@ -50,6 +50,12 @@ h2 {
  * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
  */
 /**
+ * Drop shadow flying
+ *
+ * @thanks Geoffrey Crofte @geoffrey_crofte
+ * @link http://www.creativejuiz.fr/trytotry/css3-box-shadow-after-before/
+ */
+/**
  * Drop shadow w/ lifted corners
  *
  * @thanks Nicolas Gallagher @necolas
@@ -70,7 +76,7 @@ h2 {
 /**
  * Drop shadow rules required for transform on drop shadow
  * 
- * /!\ This is required is you want to apply some transform on the element using drop shadow
+ * /!\ This is required if you want to apply some transform on the element using drop shadow
  *
  * @thanks Nicolas Gallagher @necolas
  * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
@@ -102,6 +108,14 @@ div:hover {
 /*
  * This is required is you want to apply some transform on the element using drop shadow
  */
+.drop-shadow-curved-vt-1,
+.drop-shadow-curved-vt-2,
+.drop-shadow-curved-vt,
+.drop-shadow-curved-hz-1,
+.drop-shadow-curved-hz-2,
+.drop-shadow-curved-hz {
+  position: relative;
+}
 .drop-shadow-curved-vt-1 > :last-child::before,
 .drop-shadow-curved-vt-2 > :last-child::before,
 .drop-shadow-curved-vt > :last-child::before,
@@ -124,7 +138,7 @@ div:hover {
 .drop-shadow-curved-vt-1:before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: -1;
   top: 10px;
   bottom: 10px;
   left: 0;
@@ -147,7 +161,7 @@ div:hover {
 .drop-shadow-curved-vt-2:before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: -1;
   top: 10px;
   bottom: 10px;
   left: 50%;
@@ -170,7 +184,7 @@ div:hover {
 .drop-shadow-curved-vt:before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: -1;
   top: 10px;
   bottom: 10px;
   left: 0;
@@ -193,7 +207,7 @@ div:hover {
 .drop-shadow-curved-hz-1:before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: -1;
   top: 0;
   bottom: 50%;
   left: 10px;
@@ -216,7 +230,7 @@ div:hover {
 .drop-shadow-curved-hz-2:before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: -1;
   top: 50%;
   bottom: 0;
   left: 10px;
@@ -239,7 +253,7 @@ div:hover {
 .drop-shadow-curved-hz:before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: -1;
   top: 0;
   bottom: 0;
   left: 10px;
