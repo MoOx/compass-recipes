@@ -7,21 +7,18 @@
  * 
  * @thanks Nicolas Gallagher @necolas
  * @link http://nicolasgallagher.com/pure-css-folded-corner-effect/demo/
- * @todo Nix in .4
  */
 
 @import "recipes/shared/pseudo-element";
 
-@mixin effect-corner-folded(
+@mixin folded-corner (
     $position: top-right,
     $color: #ddd,
-    $background-color: #fff,
+    $background-color: transparent,
     $width: 1em,
     $border-radius: .3em,
     $box-shadow: rgba(0, 0, 0, .3) 0 0 .6em)
 {
-    @warn 'Deprecated, please use folded-corner mixin instead.';
-
     position: relative;
     overflow: hidden;
 

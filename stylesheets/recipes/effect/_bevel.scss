@@ -1,5 +1,5 @@
 $bevel-base-color: rgba(#333, .5) !default;
-$bevel-depth: 5px !default;
+$bevel-size: 5px !default;
 $bevel-contrast: 8% !default;
 $bevel-border-width: 1px !default;
 $bevel-blur: 0 !default;
@@ -24,14 +24,14 @@ $bevel-blur: 0 !default;
 // @todo: $direction
 
 @mixin bevel-shadow(
-    $depth: $bevel-depth,
+    $size: $bevel-size,
     $blur: $bevel-blur
 )
 {
     @include box-shadow(
         inset 0 0 (1px + $blur) rgba(#000, .8),
         inset 0 2px $blur rgba(#fff, .5),
-        inset 0 (-$depth) $blur rgba(#000, .6),
-        inset 0 (-$depth - 1px - $blur) $blur rgba(#fff, .3)
+        inset 0 (-$size) $blur rgba(#000, .6),
+        inset 0 (-$size - 1px - $blur) $blur rgba(#fff, .3)
     );
 }

@@ -1,5 +1,6 @@
 @import 'compass';
 
+@import 'shared';
 @import 'background/gradients';
 
 /**
@@ -45,6 +46,7 @@ $webfont-icon-default-gradient: matte !default;
     left: 0;
     text-indent: 0;
     @include text-shadow(none);
+    @include user-select(none);
 }
 
 // @todo Doc me yo
@@ -114,7 +116,7 @@ $webfont-icon-default-gradient: matte !default;
     
     $color: $webfont-icon-base-color,
     $color-hover: $webfont-icon-highlight-color,
-    $color-active: darken($color-hover, 10%),
+    $color-active: darken($color-hover, 7%),
 
     $size: 48px,
     
@@ -125,8 +127,8 @@ $webfont-icon-default-gradient: matte !default;
     $shadow: rgba(#000, .5) 0 1px 3px, // Shadow doesn't change, but hover does
 
     $stroke: false,
-    $stroke-hover: 1px darken($color-hover, 10),
-    $stroke-active: 1px darken($color-active, 10),
+    $stroke-hover: 1px darken($color-hover, 5),
+    $stroke-active: 1px darken($color-active, 5),
 
     $gradient: $webfont-icon-default-gradient,
     $gradient-hover: $gradient,
@@ -156,7 +158,7 @@ $webfont-icon-default-gradient: matte !default;
         @include background-gradient($color, $gradient);
     }
     &:before {
-        @include background-clip(padding-box);
+        // @include background-clip(padding-box);
         background: none;
         @include text-shadow($shadow);
     }

@@ -26,5 +26,5 @@
 }
 
 .cutout-deep {
-    @include cutout($depth: 10px, $blur: 20px);
+    @include cutout($size: 10px, $blur: 20px);
 }
