@@ -34,10 +34,16 @@ h2 {
  * Glass effect
  * Use this on image for better effect render
  * 
- * Inspired from Simurai's Imdb redisign
+ * Inspired from Simurai's IMDB redisign
  *
  * @link http://lab.simurai.com/redesign/imdb
  * @thanks Simurai @simurai
+ */
+/**
+ * Note IE7/6 doesn't understand pseudo element as ::before and ::after
+ * IE8 need to have :before and not ::before
+ * So use only : and not :: if you want to support IE8
+ * IE9 Webkit Firefox Opera understand ::
  */
 .glass,
 .glass-blue {
@@ -56,10 +62,11 @@ h2 {
   -khtml-border-radius: 4px;
   border-radius: 4px;
 }
-.glass:before {
+.glass:after {
   content: "";
   position: absolute;
-  z-index: 1;
+  display: block;
+  overflow: hidden;
   top: 0;
   right: 0;
   bottom: 0;
@@ -92,10 +99,11 @@ h2 {
   -khtml-border-radius: 1em;
   border-radius: 1em;
 }
-.glass-blue:before {
+.glass-blue:after {
   content: "";
   position: absolute;
-  z-index: 1;
+  display: block;
+  overflow: hidden;
   top: 0;
   right: 0;
   bottom: 0;

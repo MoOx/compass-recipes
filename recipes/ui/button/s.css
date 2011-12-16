@@ -1,150 +1,86 @@
-html {
-  padding: 1em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
-  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: linear-gradient(#dddddd, #ffffff) no-repeat;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin-bottom: .6em;
-}
-
-.doc {
-  background: #fff;
-  border: #ddd;
-  padding: 1em;
-  color: #aaa;
-  margin: 1em;
-  font-style: italic;
-}
-.doc a {
-  color: #999;
-}
-
-/**
-* Buttons mixins
-* 
-* @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
-*/
-/**
-* Buttons selector mixins
-*
-* @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
-*/
 /*
-@mixin ui-button-normal-selector()
-{
-    &
-    {
-        @content;
-    }
-}
-*/
-/*
- * source for code
-http://lab.simurai.com/css/buttons/
-http://brandonmathis.com/projects/fancy-buttons/demo/
-https://github.com/ubuwaits/css3-buttons/blob/gh-pages/scss/buttons.scss
-http://nicolasgallagher.com/lab/css3-animated-button/
+Syntax error: File to import not found or unreadable: tests.
+              Load paths:
+                /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes
+                /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets
+                /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets
+                /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/stylesheets
+                /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/tests
+                Compass::SpriteImporter
+        on line 1 of /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/tests/recipes/ui/button/s.scss
 
- * source for predefined buttons
-http://forrst.com/posts/CSS_Button_Contest-5J1
-http://houseofbuttons.tumblr.com/
-http://ubuwaits.github.com/css3-buttons/
-https://github.com/maxart/CSS3-Push-Button/blob/master/style.css
-*/
-/*
-A button is defined by multiples attributes:
-typography
-colors
-shape (round, oval, brackets, skew, back, knife, shield, drop, morph)
-size (+predefined: xs, s, m, l, xl, xxl)
-hover/active/disabled effect
-material (glossy, glass, texture ?)
-*/
-.ui-button {
-  font-weight: bold;
-  margin: 0;
-  padding: 0.2em 0.4em;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -moz-border-radius: default;
-  -webkit-border-radius: default;
-  -o-border-radius: default;
-  -ms-border-radius: default;
-  -khtml-border-radius: default;
-  border-radius: default;
-}
-.ui-button:not([disabled]):hover {
-  border: 1px solid #444;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
-  background: -webkit-linear-gradient(#ffffff, #cccccc);
-  background: -moz-linear-gradient(#ffffff, #cccccc);
-  background: -o-linear-gradient(#ffffff, #cccccc);
-  background: -ms-linear-gradient(#ffffff, #cccccc);
-  background: linear-gradient(#ffffff, #cccccc);
-}
-.ui-button:not([disabled]):active {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #e3e3e3), color-stop(70%, #f9f9f9));
-  background: -webkit-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-  background: -moz-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-  background: -o-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-  background: -ms-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-  background: linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-}
-.ui-button[disabled] {
-  color: #ccc;
-}
+1: /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/tests/recipes/ui/button/s.scss
 
-.ui-button-green {
-  font-weight: bold;
-  margin: 0;
-  padding: 0.2em 0.4em;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -moz-border-radius: default;
-  -webkit-border-radius: default;
-  -o-border-radius: default;
-  -ms-border-radius: default;
-  -khtml-border-radius: default;
-  border-radius: default;
-}
-.ui-button-green:not([disabled]):hover {
-  border: 1px solid #444;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
-  background: -webkit-linear-gradient(#ffffff, #cccccc);
-  background: -moz-linear-gradient(#ffffff, #cccccc);
-  background: -o-linear-gradient(#ffffff, #cccccc);
-  background: -ms-linear-gradient(#ffffff, #cccccc);
-  background: linear-gradient(#ffffff, #cccccc);
-}
-.ui-button-green:not([disabled]):active {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #e3e3e3), color-stop(70%, #f9f9f9));
-  background: -webkit-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-  background: -moz-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-  background: -o-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-  background: -ms-linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-  background: linear-gradient(#e3e3e3 40%, #f9f9f9 70%);
-}
-.ui-button-green[disabled] {
-  color: #ccc;
-}
+Backtrace:
+/Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/tests/recipes/ui/button/s.scss:1
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/import_node.rb:64:in `import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/import_node.rb:62:in `import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/import_node.rb:25:in `imported_file'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:147:in `visit_import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:145:in `visit_import'
+org/jruby/RubyKernel.java:2097:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:20:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+org/jruby/RubyArray.java:2318:in `collect'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:29:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:41:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:28:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:49:in `visit_root'
+org/jruby/RubyKernel.java:2097:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:20:in `visit'
+org/jruby/RubyKernel.java:2097:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/engine.rb:305:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/engine.rb:253:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/util.rb:297:in `silence_sass_warnings'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.35/lib/sass/engine.rb:253:in `render'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:136:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:122:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:135:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:134:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:114:in `compile_if_required'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:99:in `run'
+org/jruby/RubyArray.java:1612:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:97:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:122:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/compiler.rb:96:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/commands/watch_project.rb:142:in `recompile'
+src/compass_patch.rb:45:in `perform'
+org/jruby/RubyProc.java:270:in `call'
+org/jruby/RubyProc.java:220:in `call'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/path.rb:73:in `run_callback'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/path.rb:55:in `callback_action'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/path.rb:39:in `delete'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/state/directory.rb:32:in `deleted'
+org/jruby/RubyArray.java:1612:in `each'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/state/directory.rb:31:in `deleted'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/state/directory.rb:16:in `refresh'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/backends/rbfsevent.rb:30:in `temporary_multipath_handler'
+org/jruby/RubyArray.java:1612:in `each'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/backends/rbfsevent.rb:27:in `temporary_multipath_handler'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/backends/rbfsevent.rb:17:in `run'
+org/jruby/RubyArray.java:1612:in `each'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/backends/rbfsevent.rb:16:in `run'
+org/jruby/RubyProc.java:270:in `call'
+org/jruby/RubyProc.java:220:in `call'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/rb-fsevent-0.4.0/lib/rb-fsevent/fsevent.rb:38:in `run'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/backends/rbfsevent.rb:20:in `run'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm/monitor.rb:26:in `run'
+/Volumes/HD/Users/MoOx/Applications/Developer/compass.app/Contents/Resources/ruby/jruby/fssm-dbb37bba/lib/fssm.rb:20:in `monitor'
+src/compass_patch.rb:37:in `perform'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.11.5/lib/compass/commands/project_base.rb:19:in `execute'
+src/ui/tray.rb:371:in `watch'
+org/jruby/RubyProc.java:270:in `call'
+org/jruby/RubyProc.java:224:in `call'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: tests.\A               Load paths:\A                 /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes\A                 /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets\A                 /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets\A                 /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/stylesheets\A                 /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/tests\A                 Compass::SpriteImporter\A         on line 1 of /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/tests/recipes/ui/button/s.scss\A \A 1: /Volumes/HD/Dropboxs/MoOx/Dropbox/Geek/Development/Repositories/Compass-Recipes/tests/recipes/ui/button/s.scss"; }
