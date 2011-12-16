@@ -14,7 +14,7 @@
 @mixin folded-corner (
     $position: top-right,
     $color: #ddd,
-    $background-color: transparent,
+    $background-color: #fff,
     $width: 1em,
     $border-radius: .3em,
     $box-shadow: rgba(0, 0, 0, .3) 0 0 .6em)

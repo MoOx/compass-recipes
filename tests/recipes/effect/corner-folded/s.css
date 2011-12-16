@@ -84,7 +84,7 @@ h2 {
   top: 0;
   left: 0;
   border-width: 1em 1em 0 0;
-  border-color: transparent #dddddd;
+  border-color: white #dddddd;
   -moz-border-radius: 0 0 0.3em 0;
   -webkit-border-radius: 0 0 0.3em 0;
   -o-border-radius: 0 0 0.3em 0;
@@ -110,7 +110,7 @@ h2 {
   top: 0;
   right: 0;
   border-width: 0 1em 1em 0;
-  border-color: #dddddd transparent;
+  border-color: #dddddd white;
   -moz-border-radius: 0 0 0 0.3em;
   -webkit-border-radius: 0 0 0 0.3em;
   -o-border-radius: 0 0 0 0.3em;
@@ -136,7 +136,7 @@ h2 {
   bottom: 0;
   left: 0;
   border-width: 1em 0 0 1em;
-  border-color: #dddddd transparent;
+  border-color: #dddddd white;
   -moz-border-radius: 0 0.3em 0 0;
   -webkit-border-radius: 0 0.3em 0 0;
   -o-border-radius: 0 0.3em 0 0;
@@ -162,7 +162,7 @@ h2 {
   bottom: 0;
   right: 0;
   border-width: 0 0 1em 1em;
-  border-color: transparent #dddddd;
+  border-color: white #dddddd;
   -moz-border-radius: 0.3em 0 0 0;
   -webkit-border-radius: 0.3em 0 0 0;
   -o-border-radius: 0.3em 0 0 0;

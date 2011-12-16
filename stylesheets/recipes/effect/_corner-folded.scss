@@ -10,7 +10,7 @@
  * @todo Nix in .4
  */
 
-@import "recipes/shared/pseudo-element";
+@import "recipes/effect/folded-corner";
 
 @mixin effect-corner-folded(
     $position: top-right,
@@ -22,47 +22,5 @@
 {
     @warn 'Deprecated, please use folded-corner mixin instead.';
 
-    position: relative;
-    overflow: hidden;
-
-    &::before
-    {
-        @include pseudo-element;
-        border-style: solid;
-
-        @include box-shadow($box-shadow);
-
-        @if ($position == 'top-right')
-        {
-            top: 0;
-            right: 0;
-            border-width: 0 $width $width 0;
-            border-color: $color $background-color;
-            @include border-radius(0 0 0 $border-radius);
-        }
-        @elseif ($position == 'top-left')
-        {
-            top: 0;
-            left: 0;
-            border-width: $width $width 0 0;
-            border-color: $background-color $color;
-            @include border-radius(0 0 $border-radius 0);
-        }
-        @elseif ($position == 'bottom-right')
-        {
-            bottom: 0;
-            right: 0;
-            border-width: 0 0 $width $width;
-            border-color: $background-color $color;
-            @include border-radius($border-radius 0 0 0);
-        }
-        @elseif ($position == 'bottom-left')
-        {
-            bottom: 0;
-            left: 0;
-            border-width: $width 0 0 $width;
-            border-color: $color $background-color;
-            @include border-radius(0 $border-radius 0 0);
-        }
-    }
+    @include folded-corner($position, $color, $background-color, $width, $border-radius, $box-shadow);
 }
