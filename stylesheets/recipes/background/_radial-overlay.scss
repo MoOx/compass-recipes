@@ -7,9 +7,9 @@
 @import "compass/css3/images";
 
 @mixin background-radial-overlay(
-    $background-color: rgba(#fff, .7),
-    $foreground-color: rgba(#fff, .3),
-    $radial-change-color-distance: 35px)
+    $background-color: rgba(#000, .7),
+    $foreground-color: rgba(#7f7f7f, .5),
+    $radial-change-color-distance: 35%)
 {
     @include background-image(radial-gradient($foreground-color, $foreground-color $radial-change-color-distance, $background-color));
 }
