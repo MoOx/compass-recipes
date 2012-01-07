@@ -51,6 +51,10 @@ div {
     @include background-diagonal-stripes;
 }
 
+.background-stripes-cicada {
+    @include background-stripes-cicada;
+}
+
 
 // Gradients
 $gradient-color: #CF714A;
