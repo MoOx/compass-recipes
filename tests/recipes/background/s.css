@@ -152,6 +152,18 @@ h2 {
  *
  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
  */
+/**
+ *
+ * Before compass 0.11.5, you need to add
+ * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
+ * To your configuration (config.rb)
+ * @see https://github.com/chriseppstein/compass/issues/401
+ *
+ * @link http://lea.verou.me/css3patterns/#lined-paper
+ *
+ * @author Sarah Backhouse http://www.jadu.net/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
 div {
   width: 20em;
   height: 20em;
@@ -257,6 +269,17 @@ div {
   background-image: -ms-linear-gradient(0, rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%), -ms-linear-gradient(rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
   background-image: linear-gradient(0, rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%), linear-gradient(rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
   background-size: 50px 50px;
+}
+
+.background-lined-paper {
+  background-color: white;
+  background-image: -webkit-gradient(linear, 0% 50%, 82 50%, color-stop(96.341%, rgba(255, 255, 255, 0)), color-stop(96.341%, #abced4), color-stop(100%, #abced4), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, #eeeeee), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 79px, #abced4 79px, #abced4 82px, rgba(255, 255, 255, 0) 82px), -webkit-linear-gradient(top, #eeeeee 0.05em, rgba(255, 255, 255, 0) 0.05em);
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 79px, #abced4 79px, #abced4 82px, rgba(255, 255, 255, 0) 82px), -moz-linear-gradient(top, #eeeeee 0.05em, rgba(255, 255, 255, 0) 0.05em);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 79px, #abced4 79px, #abced4 82px, rgba(255, 255, 255, 0) 82px), -o-linear-gradient(top, #eeeeee 0.05em, rgba(255, 255, 255, 0) 0.05em);
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 79px, #abced4 79px, #abced4 82px, rgba(255, 255, 255, 0) 82px), -ms-linear-gradient(top, #eeeeee 0.05em, rgba(255, 255, 255, 0) 0.05em);
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0) 79px, #abced4 79px, #abced4 82px, rgba(255, 255, 255, 0) 82px), linear-gradient(top, #eeeeee 0.05em, rgba(255, 255, 255, 0) 0.05em);
+  background-size: 100% 1.5em;
 }
 
 .background-glossy {

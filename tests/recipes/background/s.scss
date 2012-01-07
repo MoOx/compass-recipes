@@ -59,6 +59,10 @@ div {
     @include background-tablecloth;
 }
 
+.background-lined-paper {
+    @include background-lined-paper;
+}
+
 
 // Gradients
 $gradient-color: #CF714A;
