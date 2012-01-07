@@ -141,6 +141,17 @@ h2 {
  * @author Randy Merril http://forthedeveloper.com/ for the original pattern
  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
  */
+/**
+ *
+ * Before compass 0.11.5, you need to add
+ * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
+ * To your configuration (config.rb)
+ * @see https://github.com/chriseppstein/compass/issues/401
+ *
+ * @link http://lea.verou.me/css3patterns/#tablecloth
+ *
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
 div {
   width: 20em;
   height: 20em;
@@ -235,6 +246,17 @@ div {
   background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0) 50%), -ms-linear-gradient(left, rgba(255, 255, 255, 0.13) 50%, rgba(255, 255, 255, 0) 50%), -ms-linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.17) 50%), -ms-linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.19) 50%);
   background-image: linear-gradient(left, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0) 50%), linear-gradient(left, rgba(255, 255, 255, 0.13) 50%, rgba(255, 255, 255, 0) 50%), linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.17) 50%), linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.19) 50%);
   background-size: 13px, 29px, 37px, 53px;
+}
+
+.background-tablecloth {
+  background-color: white;
+  background-image: -webkit-gradient(linear, 0, 0, color-stop(50%, rgba(200, 0, 0, 0.5)), color-stop(50%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, rgba(200, 0, 0, 0.5)), color-stop(50%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(0, rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%), -webkit-linear-gradient(rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: -moz-linear-gradient(0, rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%), -moz-linear-gradient(rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: -o-linear-gradient(0, rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%), -o-linear-gradient(rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: -ms-linear-gradient(0, rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%), -ms-linear-gradient(rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient(0, rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%), linear-gradient(rgba(200, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 50%);
+  background-size: 50px 50px;
 }
 
 .background-glossy {
