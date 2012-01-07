@@ -117,6 +117,17 @@ h2 {
  * @link http://lea.verou.me/css3patterns/
  *
  */
+/**
+ *
+ * Before compass 0.11.5, you need to add
+ * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
+ * To your configuration (config.rb)
+ * @see https://github.com/chriseppstein/compass/issues/401
+ *
+ * @link http://lea.verou.me/css3patterns/#horizontal-stripes, http://lea.verou.me/css3patterns/#vertical-stripes
+ *
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
 div {
   width: 20em;
   height: 20em;
@@ -180,6 +191,26 @@ div {
   background-position: 0 0, 8px 8px, 0 1px, 8px 9px;
   background-color: #222222;
   background-size: 16px 16px;
+}
+
+.background-horizontal-stripes {
+  background-color: gray;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 50%);
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 50%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 50%);
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 50%);
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5) 50%);
+  background-size: 50px 50px;
+}
+
+.background-diagonal-stripes {
+  background-color: gray;
+  background-image: -webkit-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 50px);
+  background-image: -moz-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 50px);
+  background-image: -o-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 50px);
+  background-image: -ms-repeating-linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 50px);
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 50px);
 }
 
 .background-glossy {

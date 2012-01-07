@@ -43,6 +43,14 @@ div {
     @include background-carbon-fiber;
 }
 
+.background-horizontal-stripes {
+    @include background-stripes-straight;
+}
+
+.background-diagonal-stripes {
+    @include background-diagonal-stripes;
+}
+
 
 // Gradients
 $gradient-color: #CF714A;
@@ -64,7 +72,7 @@ $gradient-color: #CF714A;
 }
 
 
-// Caution! Mixing background noise with other gradients will output 
+// Caution! Mixing background noise with other gradients will output
 // the same base64-encoded image for every vendor prefixed gradient syntax.
 // Consider overlaying with a pseudo-element, or disabling specific vendor prefixes
 .background-mixed {
