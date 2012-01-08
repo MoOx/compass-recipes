@@ -13,12 +13,8 @@
 
 @import "compass/css3/images";
 
-$transparent: rgba(black, 0);
-
 @mixin background-stripes-straight($dir: left, $bg-color: gray, $stripe-color:  rgba(white, 0.5), $size: 50px) {
-  @if alpha($bg-color) < 1 {
-    background-color: change-color($bg-color, $alpha: 1);
-  }
+  $transparent: rgba(black, 0);
   background-color: $bg-color;
   @include background-image(
     linear-gradient(
@@ -32,6 +28,7 @@ $transparent: rgba(black, 0);
 
 
 @mixin background-diagonal-stripes($dir: 45deg, $bg-color: gray, $stripe-color: rgba(white, 0.5), $size: 50px) {
+  $transparent: rgba(black, 0);
   background-color: $bg-color;
   @include background-image(
     repeating-linear-gradient(

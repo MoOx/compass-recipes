@@ -12,12 +12,8 @@
 
 @import "compass/css3/images";
 
-$transparent: rgba(black, 0);
-
 @mixin background-tablecloth($bg-color: white, $stripe-color: rgba(200,0,0,.5), $size: 50px) {
-  @if alpha($bg-color) < 1 {
-    background-color: change-color($bg-color, $alpha: 1);
-  }
+  $transparent: rgba(black, 0);
   background-color: $bg-color;
   @include background-image(
     linear-gradient(

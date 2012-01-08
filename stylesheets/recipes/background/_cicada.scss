@@ -13,16 +13,12 @@
 
 @import "compass/css3/images";
 
-$transparent: rgba(black, 0);
-
 @mixin background-stripes-cicada($bg-color: gray, $stripe-color: white, $dir: left) {
+  $transparent: rgba(black, 0);
   $stripe-color1: rgba($stripe-color, 0.07);
   $stripe-color2: rgba($stripe-color, 0.13);
   $stripe-color3: rgba($stripe-color, 0.17);
   $stripe-color4: rgba($stripe-color, 0.19);
-  @if alpha($bg-color) < 1 {
-    background-color: change-color($bg-color, $alpha: 1);
-  }
   background-color: $bg-color;
   @include background-image(
     linear-gradient(

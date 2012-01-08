@@ -13,9 +13,8 @@
 
 @import "compass/css3/images";
 
-$transparent: rgba(black, 0);
-
 @mixin background-madras($bg-color: hsl(34, 53%, 82%), $color1: $bg-color, $color2: $bg-color, $color3: $bg-color) {
+  $transparent: rgba(black, 0);
   // calculate colors if specific colors aren't passed in
   @if ($color1 == $bg-color){
     $color1: change-color(rgba(complement($bg-color), 1), $saturation: 65%, $lightness: 10%, $alpha: 0.5);
@@ -25,9 +24,6 @@ $transparent: rgba(black, 0);
   }
   @if ($color3 == $bg-color){
     $color3: adjust-color(rgba($bg-color, 1), $saturation: 35%, $lightness: -20%, $alpha: -0.5);
-  }
-  @if alpha($bg-color) < 1 {
-    background-color: change-color($bg-color, $alpha: 1);
   }
   background-color: $bg-color;
   @include background-image(
