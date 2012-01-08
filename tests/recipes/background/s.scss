@@ -67,6 +67,14 @@ div {
     @include background-madras;
 }
 
+.background-checkerboard {
+    @include background-checkerboard;
+}
+
+.background-checkerboard-diagonal {
+    @include background-checkerboard-diagonal;
+}
+
 // Gradients
 $gradient-color: #CF714A;
 
