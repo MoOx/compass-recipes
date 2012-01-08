@@ -63,6 +63,9 @@ div {
     @include background-lined-paper;
 }
 
+.background-madras {
+    @include background-madras;
+}
 
 // Gradients
 $gradient-color: #CF714A;
