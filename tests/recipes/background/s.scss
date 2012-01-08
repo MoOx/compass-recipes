@@ -79,6 +79,10 @@ div {
     @include background-houndstooth;
 }
 
+.background-polka-dot {
+    @include background-polka-dot;
+}
+
 // Gradients
 $gradient-color: #CF714A;
 

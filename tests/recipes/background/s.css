@@ -187,6 +187,15 @@ h2 {
  * @author Antoine Bernier http://abernier.name for the original pattern
  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
  */
+/**
+ *
+ * Polkadot background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#polka-dot
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
 div {
   width: 20em;
   height: 20em;
@@ -347,6 +356,18 @@ div {
   background-image: linear-gradient(-45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #ffffff 75%, #ffffff), linear-gradient(45deg, #000000 17%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0) 25%, #000000 25%, #000000 36%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 64%, #000000 64%, #000000 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 83%, #000000 83%);
   background-size: 2em 2em;
   background-position: 0 0, 1em 1em, 1em 1em;
+}
+
+.background-polka-dot {
+  background-color: black;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 16, color-stop(15%, #ffffff), color-stop(16%, rgba(0, 0, 0, 0))), -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 16, color-stop(15%, #ffffff), color-stop(16%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%), -webkit-radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%);
+  background-image: -moz-radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%), -moz-radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%);
+  background-image: -o-radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%), -o-radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%);
+  background-image: -ms-radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%), -ms-radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%);
+  background-image: radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%), radial-gradient(#ffffff 15%, rgba(0, 0, 0, 0) 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
 }
 
 .background-glossy {
