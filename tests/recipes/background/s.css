@@ -168,15 +168,20 @@ h2 {
  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
  */
 /**
- *
- * Before compass 0.11.5, you need to add
- * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
- * To your configuration (config.rb)
- * @see https://github.com/chriseppstein/compass/issues/401
+ * Checkerboard background pattern
  *
  * @link http://lea.verou.me/css3patterns/#checkerboard
  * @link http://lea.verou.me/css3patterns/#diagonal-checkerboard
  *
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
+/**
+ *
+ * Houndstooth background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#houndstooth
+ *
+ * @author Antoine Bernier http://abernier.name for the original pattern
  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
  */
 div {
@@ -327,6 +332,18 @@ div {
   background-image: -ms-linear-gradient(45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), -ms-linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000);
   background-image: linear-gradient(45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000);
   background-size: 60px 60px;
+}
+
+.background-houndstooth {
+  background-color: white;
+  background-image: -webkit-gradient(linear, -45deg, -45deg, color-stop(25%, #ffffff), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, #000000), color-stop(100%, #000000)), -webkit-gradient(linear, -45deg, -45deg, color-stop(25%, #000000), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, #ffffff), color-stop(100%, #ffffff)), -webkit-gradient(linear, 45deg, 45deg, color-stop(17%, #000000), color-stop(17%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(25%, #000000), color-stop(36%, #000000), color-stop(36%, rgba(0, 0, 0, 0)), color-stop(64%, rgba(0, 0, 0, 0)), color-stop(64%, #000000), color-stop(75%, #000000), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(83%, rgba(0, 0, 0, 0)), color-stop(83%, #000000));
+  background-image: -webkit-linear-gradient(-45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), -webkit-linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #ffffff 75%, #ffffff), -webkit-linear-gradient(45deg, #000000 17%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0) 25%, #000000 25%, #000000 36%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 64%, #000000 64%, #000000 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 83%, #000000 83%);
+  background-image: -moz-linear-gradient(-45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), -moz-linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #ffffff 75%, #ffffff), -moz-linear-gradient(45deg, #000000 17%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0) 25%, #000000 25%, #000000 36%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 64%, #000000 64%, #000000 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 83%, #000000 83%);
+  background-image: -o-linear-gradient(-45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), -o-linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #ffffff 75%, #ffffff), -o-linear-gradient(45deg, #000000 17%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0) 25%, #000000 25%, #000000 36%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 64%, #000000 64%, #000000 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 83%, #000000 83%);
+  background-image: -ms-linear-gradient(-45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), -ms-linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #ffffff 75%, #ffffff), -ms-linear-gradient(45deg, #000000 17%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0) 25%, #000000 25%, #000000 36%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 64%, #000000 64%, #000000 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 83%, #000000 83%);
+  background-image: linear-gradient(-45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), linear-gradient(-45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #ffffff 75%, #ffffff), linear-gradient(45deg, #000000 17%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0) 25%, #000000 25%, #000000 36%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 64%, #000000 64%, #000000 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 83%, #000000 83%);
+  background-size: 2em 2em;
+  background-position: 0 0, 1em 1em, 1em 1em;
 }
 
 .background-glossy {

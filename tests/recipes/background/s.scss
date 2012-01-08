@@ -75,6 +75,10 @@ div {
     @include background-checkerboard-diagonal;
 }
 
+.background-houndstooth {
+    @include background-houndstooth;
+}
+
 // Gradients
 $gradient-color: #CF714A;
 
