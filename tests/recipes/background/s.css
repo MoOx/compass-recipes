@@ -118,6 +118,7 @@ h2 {
  *
  */
 /**
+ * Striped background patterns
  *
  * Before compass 0.11.5, you need to add
  * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
@@ -130,11 +131,7 @@ h2 {
  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
  */
 /**
- *
- * Before compass 0.11.5, you need to add
- * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
- * To your configuration (config.rb)
- * @see https://github.com/chriseppstein/compass/issues/401
+ * Cicada background pattern
  *
  * @link http://lea.verou.me/css3patterns/#cicada-stripes
  *
@@ -143,21 +140,14 @@ h2 {
  */
 /**
  *
- * Before compass 0.11.5, you need to add
- * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
- * To your configuration (config.rb)
- * @see https://github.com/chriseppstein/compass/issues/401
+ * Tablecloth background pattern
  *
  * @link http://lea.verou.me/css3patterns/#tablecloth
  *
  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
  */
 /**
- *
- * Before compass 0.11.5, you need to add
- * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
- * To your configuration (config.rb)
- * @see https://github.com/chriseppstein/compass/issues/401
+ * Lined paper background pattern
  *
  * @link http://lea.verou.me/css3patterns/#lined-paper
  *
@@ -165,6 +155,7 @@ h2 {
  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
  */
 /**
+ * Madras background pattern
  *
  * Before compass 0.11.5, you need to add
  * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
