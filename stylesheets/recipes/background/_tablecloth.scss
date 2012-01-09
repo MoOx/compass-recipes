@@ -11,20 +11,20 @@
 @import "compass/css3/images";
 
 @mixin background-tablecloth($bg-color: white, $stripe-color: rgba(200,0,0,.5), $size: 50px) {
-  $transparent: rgba(black, 0);
-  background-color: $bg-color;
-  @include background-image(
-    linear-gradient(
-      0,
-      $stripe-color 50%,
-      $transparent 50%
-    ),
-    linear-gradient(
-      $stripe-color 50%,
-      $transparent 50%
-    )
-  );
-  background-size: $size $size;
+    $transparent: rgba(black, 0);
+    background-color: $bg-color;
+    @include background-image(
+        linear-gradient(
+            0,
+            $stripe-color 50%,
+            $transparent 50%
+        ),
+        linear-gradient(
+            $stripe-color 50%,
+            $transparent 50%
+        )
+    );
+    background-size: $size $size;
 }
 
 
