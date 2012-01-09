@@ -1,4 +1,4 @@
-# Compass Recipes ![project status](http://stillmaintained.com/MoOx/compass-recipes.png) #
+# Compass Recipes ![project status](http://stillmaintained.com/MoOx/compass-recipes.png)
 
 A series of Compass and Sass mixins and functions for creating delicious CSS effects.
 
@@ -8,16 +8,16 @@ Note: These are demos of the repository at its current state, *not* last stable 
 
 ## Types of Recipes
 
-* **[Backgrounds](http://moox.github.com/compass-recipes/recipes/background/)** Background patterns, gradients.
+* **[Backgrounds](http://moox.github.com/compass-recipes/recipes/background/)** - Background patterns, gradients.
 * **Color** Advanced color functions like `brightness()`
-* **[Effects](http://moox.github.com/compass-recipes/recipes/effect/)** Visual effects like `bevel` and `cutout`
-* **[Form skins](http://moox.github.com/compass-recipes/recipes/form/skin/)** Only one at the moment.
-* **[Icons](http://moox.github.com/compass-recipes/recipes/icon)** Includes webfont icon support and a few open source fonts.
-* **[Layout](http://moox.github.com/compass-recipes/recipes/layout)** Vertical centering and box layout shortcuts.
-* **[Media queries](http://moox.github.com/compass-recipes/recipes/media-queries)** Predefined queries for common device widths. *Experimental: Uses `compass --pre`*
-* **[Shadows](http://moox.github.com/compass-recipes/recipes/shadow/)** A wide collection of shadows which use pseudo elements to create fold effects, etc.
-* **[Shapes](http://moox.github.com/compass-recipes/recipes/shape/)** Geometric and iconic shapes, created only with CSS
-* **[Shared](http://moox.github.com/compass-recipes/recipes/shared/)** Common CSS tricks and hacks.
+* **[Effects](http://moox.github.com/compass-recipes/recipes/effect/)** - Visual effects like `bevel` and `cutout`
+* **[Form skins](http://moox.github.com/compass-recipes/recipes/form/skin/)** - Only one at the moment.
+* **[Icons](http://moox.github.com/compass-recipes/recipes/icon)** - Includes webfont icon support and a few open source fonts.
+* **[Layout](http://moox.github.com/compass-recipes/recipes/layout)** - Vertical centering and box layout shortcuts.
+* **[Media queries](http://moox.github.com/compass-recipes/recipes/media-queries)** - Predefined queries for common device widths. *Experimental: Uses `compass --pre`*
+* **[Shadows](http://moox.github.com/compass-recipes/recipes/shadow/)** - A wide collection of shadows which use pseudo elements to create fold effects, etc.
+* **[Shapes](http://moox.github.com/compass-recipes/recipes/shape/)** - Geometric and iconic shapes, created only with CSS
+* **[Shared](http://moox.github.com/compass-recipes/recipes/shared/)** - Common CSS tricks and hacks.
 * **[UI](http://moox.github.com/compass-recipes/recipes/ui/)** Element styling for buttons, etc.
 * View other potential items: http://moox.github.com/compass-recipes/issues/
 
@@ -29,7 +29,7 @@ Note: These are demos of the repository at its current state, *not* last stable 
 gem install compass-recipes
 ```
 
-/!\ *If you want all latests recipes, you can just checkout the recipes (or download as zip) and add '{your-path-here-or-./}compass-recipes/stylesheets' using `additional_import_paths` or `add_import_path` (see [Compass configuration reference](http://compass-style.org/help/tutorials/configuration-reference/)*
+*If you want all latests recipes, you can just checkout the recipes (or download as zip) and add '{your-path-here-or-./}compass-recipes/stylesheets' using `additional_import_paths` or `add_import_path` (see [Compass configuration reference](http://compass-style.org/help/tutorials/configuration-reference/)*
 
 # Usage
 
@@ -91,9 +91,9 @@ Then, to build the gh-pages from the `tests/`, you need to call
 
 Some other great CSS/SCSS/design projects for making delicious websites:
 
-* [Normalize](http://necolas.github.com/normalize.css/)
+* [Normalize](http://necolas.github.com/normalize.css/) - The standard of CSS normalizations.
 * [Subtle Patterns](http://subtlepatterns.com/) - Great collection of free background patterns, some of which are not possible with CSS alone.
-* [Animate.sass](https://github.com/adamstac/animate.sass)
-* [OMG Text](http://jaredhardy.com/omg-text/)
+* [Animate.sass](https://github.com/adamstac/animate.sass) - A bevy of pre-defined keyframe animations.
+* [OMG Text](http://jaredhardy.com/omg-text/) - Some super-rad text effects using text-shadow
 
 ## [MIT Licence](http://moox.mit-license.org/)
