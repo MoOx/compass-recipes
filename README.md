@@ -4,7 +4,7 @@ A series of Compass and Sass mixins and functions for creating delicious CSS eff
 
 ## [Demos](http://moox.github.com/compass-recipes/)
 
-Note: These are demos of the repository at its current state, *not* last stable gem. To get the most up-to-date recipes, please see Installation for instructions on installing the repo at his current state*
+Note: These are demos of the repository at its current state, *not* the last stable gem. To get the most up-to-date recipes, please see Installation for instructions on installing the repo at his current state*
 
 ## Types of Recipes
 
