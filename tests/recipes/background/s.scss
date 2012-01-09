@@ -43,6 +43,45 @@ div {
     @include background-carbon-fiber;
 }
 
+.background-horizontal-stripes {
+    @include background-stripes-straight;
+}
+
+.background-diagonal-stripes {
+    @include background-diagonal-stripes;
+}
+
+.background-stripes-cicada {
+    @include background-stripes-cicada;
+}
+
+.background-tablecloth {
+    @include background-tablecloth;
+}
+
+.background-lined-paper {
+    @include background-lined-paper;
+}
+
+.background-madras {
+    @include background-madras;
+}
+
+.background-checkerboard {
+    @include background-checkerboard;
+}
+
+.background-checkerboard-diagonal {
+    @include background-checkerboard-diagonal;
+}
+
+.background-houndstooth {
+    @include background-houndstooth;
+}
+
+.background-polka-dot {
+    @include background-polka-dot;
+}
 
 // Gradients
 $gradient-color: #CF714A;
@@ -64,7 +103,7 @@ $gradient-color: #CF714A;
 }
 
 
-// Caution! Mixing background noise with other gradients will output 
+// Caution! Mixing background noise with other gradients will output
 // the same base64-encoded image for every vendor prefixed gradient syntax.
 // Consider overlaying with a pseudo-element, or disabling specific vendor prefixes
 .background-mixed {
