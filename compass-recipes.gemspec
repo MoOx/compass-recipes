@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gemspec|
-  gemspec.version = "0.2.0"
-  gemspec.date = "2011-07-12"
+  gemspec.version = File.read(File.dirname(__FILE__) + '/VERSION').strip
+  gemspec.date = Date.today
 
   gemspec.name = "compass-recipes"
   gemspec.authors = ["Maxime Thirouin", "David Kaneda"]
@@ -18,8 +18,9 @@ Gem::Specification.new do |gemspec|
   gemspec.rubygems_version = "1.3.5" # same as compass
 
   gemspec.files = %w(README.md LICENSE VERSION)
-  gemspec.files += Dir.glob("lib/*.*")
+  gemspec.files += Dir.glob("fonts/**/*.*")
+  gemspec.files += Dir.glob("lib/**/*.*")
   gemspec.files += Dir.glob("stylesheets/**/*.*")
 
-  gemspec.add_dependency("compass", [">= 0.11.5"])
+  gemspec.add_dependency("compass", [">= 0.11.7"]) # latest version of compass
 end

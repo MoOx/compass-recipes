@@ -67,7 +67,7 @@ Like Compass does, you can include all recipes in a folder like this
 
 ## Authors/Maintainers
  
-Compass Recipes is maintained by Maxime Thirouin, a front-end web developer at [Shopbot](http://shopbot-inc.com), and [David Kaneda](http://www.davidkaneda.com), creative director at [Sencha](http://www.sencha.com).
+Compass Recipes is maintained by [Maxime Thirouin](http://moox.fr), a front-end web developer at [Shopbot](http://shopbot-inc.com), and [David Kaneda](http://www.davidkaneda.com), creative director at [Sencha](http://www.sencha.com).
 
 ### Sous Chefs
 
@@ -96,4 +96,8 @@ Some other great CSS/SCSS/design projects for making delicious websites:
 * [Animate.sass](https://github.com/adamstac/animate.sass) - A bevy of pre-defined keyframe animations.
 * [OMG Text](http://jaredhardy.com/omg-text/) - Some super-rad text effects using text-shadow
 
-## [MIT Licence](http://moox.mit-license.org/)
+## License
+
+Copyright (c) 2012 Maxime Thirouin
+
+Released under [MIT Licence](http://moox.mit-license.org/)
