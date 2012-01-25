@@ -54,7 +54,7 @@
     @elseif ($direction == 'bottom-left')
     {
         border-top: $width solid transparent;
-            border-bottom: $width solid $color;
+        border-bottom: $width solid $color;
         border-left: $width solid $color;
         border-right: $width solid transparent;   
     }
@@ -64,5 +64,10 @@
         border-left: $width solid transparent;
         border-bottom: $width solid $color;
         border-right: $width solid $color;
+    }
+    @else
+    {
+    	// @todo https://gist.github.com/1671259#comments
+        @warn 'The direction used does not exist';
     }
 }
