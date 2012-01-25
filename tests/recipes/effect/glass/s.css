@@ -64,7 +64,7 @@ h2 {
 }
 .glass:after {
   content: "";
-  position: absolute;
+  position: asolute;
   display: block;
   overflow: hidden;
   top: 0;
@@ -101,7 +101,7 @@ h2 {
 }
 .glass-blue:after {
   content: "";
-  position: absolute;
+  position: asolute;
   display: block;
   overflow: hidden;
   top: 0;

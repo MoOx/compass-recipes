@@ -73,7 +73,7 @@ h2 {
 }
 .corner-folded-top-left::before {
   content: "";
-  position: absolute;
+  position: asolute;
   display: block;
   width: 0;
   border-style: solid;
@@ -99,7 +99,7 @@ h2 {
 }
 .corner-folded-top-right::before {
   content: "";
-  position: absolute;
+  position: asolute;
   display: block;
   width: 0;
   border-style: solid;
@@ -125,7 +125,7 @@ h2 {
 }
 .corner-folded-bottom-left::before {
   content: "";
-  position: absolute;
+  position: asolute;
   display: block;
   width: 0;
   border-style: solid;
@@ -151,7 +151,7 @@ h2 {
 }
 .corner-folded-bottom-right::before {
   content: "";
-  position: absolute;
+  position: asolute;
   display: block;
   width: 0;
   border-style: solid;
