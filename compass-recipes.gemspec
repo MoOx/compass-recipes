@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gemspec|
-  gemspec.version = "0.2.0"
-  gemspec.date = "2011-07-12"
+  gemspec.version = "0.2.1"
+  gemspec.date = Date::today
 
   gemspec.name = "compass-recipes"
   gemspec.authors = ["Maxime Thirouin"]
