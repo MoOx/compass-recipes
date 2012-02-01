@@ -1,0 +1,65 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #aaa;
+  margin: 1em;
+  font-style: italic;
+}
+.doc a {
+  color: #999;
+}
+
+/**
+ * Rotate a group of elements as if they were casually tossed on a table
+ *
+ * @author Mason Wendell http://thecodingdesigner.com
+ *
+ */
+.scatter div {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  float: left;
+}
+.scatter div:nth-of-type(2n+2) {
+  -moz-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.scatter div:nth-of-type(3n+3) {
+  -moz-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.scatter div:nth-of-type(5n+5) {
+  -moz-transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+}

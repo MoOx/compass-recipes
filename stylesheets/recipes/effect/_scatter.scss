@@ -1,0 +1,26 @@
+/**
+ * Rotate a group of elements as if they were casually tossed on a table
+ *
+ * @author Mason Wendell http://thecodingdesigner.com
+ *
+ */
+
+@mixin scatter($rotate: 2deg -3deg 1deg, $child: false) {
+    &:nth-of-type(2n+2) {
+        @if $child {
+            #{$child} {
+                @include rotate(nth($rotate, 1)); } }
+        @else {
+            @include rotate(nth($rotate, 1)); } }
+    &:nth-of-type(3n+3) {
+        @if $child {
+            #{$child} {
+                @include rotate(nth($rotate, 2)); } }
+        @else {
+            @include rotate(nth($rotate, 2)); } }
+    &:nth-of-type(5n+5) {
+        @if $child {
+            #{$child} {
+                @include rotate(nth($rotate, 3)); } }
+        @else {
+            @include rotate(nth($rotate, 3)); } } }
