@@ -1,0 +1,12 @@
+@import "tests";
+@import "recipes/effect/corners-tucked";
+
+.tucked-corners{
+    @include corners-tucked;
+    width: 300px;
+    margin: 4em auto;
+    background-color: #BADA55;
+    .bottom-corners {
+      padding: 0.5em 1em;
+    }
+}

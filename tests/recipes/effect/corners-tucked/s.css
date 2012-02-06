@@ -1,0 +1,110 @@
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
+  background: linear-gradient(#dddddd, #ffffff) no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+.doc {
+  background: #fff;
+  border: #ddd;
+  padding: 1em;
+  color: #aaa;
+  margin: 1em;
+  font-style: italic;
+}
+.doc a {
+  color: #999;
+}
+
+/**
+ * CSS3 Tucked Corners effect
+ *
+ * @thanks Chris Coyier @chriscoyier
+ * @link http://css-tricks.com/snippets/css/tucked-corners/
+ * @author Mason Wendell http://thecodingdesigner.com
+ *
+ */
+.tucked-corners {
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 300px;
+  margin: 4em auto;
+  background-color: #BADA55;
+}
+.tucked-corners:after, .tucked-corners:before, .tucked-corners span.bottom-corners:after, .tucked-corners span.bottom-corners:before {
+  position: absolute;
+  content: "";
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.5);
+  height: 50px;
+  width: 100px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 6px 9px -8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 6px 9px -8px;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 6px 9px -8px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 6px 9px -8px;
+}
+.tucked-corners:after {
+  top: -25px;
+  left: -50px;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.tucked-corners:before {
+  top: -25px;
+  right: -50px;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.tucked-corners span.bottom-corners {
+  display: block;
+  position: relative;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tucked-corners span.bottom-corners:after {
+  bottom: -25px;
+  left: -50px;
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.tucked-corners span.bottom-corners:before {
+  bottom: -25px;
+  right: -50px;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.tucked-corners .bottom-corners {
+  padding: 0.5em 1em;
+}
