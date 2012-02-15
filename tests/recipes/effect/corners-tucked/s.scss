@@ -15,10 +15,10 @@ html {
 }
 
 .tucked-corners{
-    @include corners-tucked(50px, 100px, #eeeeee);
+    @include corners-tucked(#eeeeee);
     padding: 0.5em 1em;
 }
 
 .taped-corners{
-    @include corners-tucked;
+    @include corners-taped;
 }

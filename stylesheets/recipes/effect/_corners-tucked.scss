@@ -9,7 +9,7 @@
 
 // $tape-color: the background css property
 // $inner-element: the selector for the inner element (for bottom corners)
-@mixin corners-tucked($height: 50px, $width: 100px, $tape-color: rgba(white, 0.5), $inner-element: "span.bottom-corners") {
+@mixin corners-tucked($tape-color: white, $height: 50px, $width: 100px, $inner-element: "span.bottom-corners") {
     position: relative;
     @include box-sizing(border-box);
     &:after, &:before, #{$inner-element}:after, #{$inner-element}:before {
@@ -41,3 +41,8 @@
             bottom: -($height * 0.5);
             right: -($width * 0.5);
             @include rotate(135deg); } } }
+
+
+@mixin corners-taped($tape-color: rgba(white, 0.5), $height: 50px, $width: 100px, $inner-element: "span.bottom-corners") {
+    @include corners-tucked($tape-color, $height, $width, $inner-element);
+}
