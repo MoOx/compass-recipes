@@ -36,7 +36,7 @@ h2 {
  * @author Mason Wendell http://thecodingdesigner.com
  *
  */
-.scatter div {
+.scatter {
   -moz-transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
   -o-transform: rotate(10deg);
@@ -47,21 +47,21 @@ h2 {
   background-color: blue;
   float: left;
 }
-.scatter div:nth-of-type(2n+2) {
+.scatter:nth-of-type(2n+2) {
   -moz-transform: rotate(4deg);
   -webkit-transform: rotate(4deg);
   -o-transform: rotate(4deg);
   -ms-transform: rotate(4deg);
   transform: rotate(4deg);
 }
-.scatter div:nth-of-type(3n+3) {
+.scatter:nth-of-type(3n+3) {
   -moz-transform: rotate(16deg);
   -webkit-transform: rotate(16deg);
   -o-transform: rotate(16deg);
   -ms-transform: rotate(16deg);
   transform: rotate(16deg);
 }
-.scatter div:nth-of-type(5n+5) {
+.scatter:nth-of-type(5n+5) {
   -moz-transform: rotate(13deg);
   -webkit-transform: rotate(13deg);
   -o-transform: rotate(13deg);

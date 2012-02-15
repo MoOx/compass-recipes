@@ -2,11 +2,9 @@
 @import "recipes/effect/scatter";
 
 .scatter{
-  div {
-    @include scatter;
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    float: left;
-  }
+  @include scatter;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  float: left;
 }
