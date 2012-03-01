@@ -1,0 +1,29 @@
+@import "tests";
+
+@import "recipes/helper/gravatar";
+
+.gravatar
+{
+    @include helper-gravatar('m@moox.fr', 64px);
+    // equivalent to
+    //$width: 48px;
+    //width: $width;
+    //height: $width;
+    //background: gravatar_url($email: m@moox.fr, $size: $width) no-repeat;
+
+    margin-left: 50px; // to show the :after
+
+    // two example with one element :);
+    &::after
+    {
+        @include helper-gravatar-pseudo($email: "m@moox.fr", $ssl: true);
+
+        position: relative;
+        left: -50px;
+    }
+}
+
+.gravatar-using-pseudo
+{
+    @include helper-gravatar-auto();
+}

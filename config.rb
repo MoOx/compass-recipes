@@ -2,6 +2,10 @@
 # Compass Recipes
 # Configuration files mainly used for tests
 #
+
+# for testing extension
+require File.join(File.dirname(__FILE__), 'lib', 'compass-recipes')
+
 http_path = '/'
 css_dir = '.'
 sass_dir = '.'
@@ -13,9 +17,6 @@ additional_import_paths = [
     './stylesheets',
     './tests'
 ]
-
-# just for testing extension
-require File.join(File.dirname(__FILE__), 'lib', 'compass-recipes')
 
 # for repeating-linear-gradient
 # https://github.com/chriseppstein/compass/issues/401
