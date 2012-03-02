@@ -10,10 +10,10 @@
 
 @import "compass/css3/images";
 
-$base-color: #222 !default;
+$background-carbon-fiber-base-color: #222 !default;
 
 @mixin background-carbon-fiber(
-    $background-color: $base-color,
+    $background-color: $background-carbon-fiber-base-color,
     $dot-color: scale-lightness($background-color, -50),
     $highlight-color: rgba(#fff, .1),
     $spacing-size: 16px,
