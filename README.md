@@ -66,8 +66,8 @@ Like Compass does, you can include all recipes in a folder like this
 ```
 
 ## Authors/Maintainers
- 
-Compass Recipes is maintained by [Maxime Thirouin](http://moox.fr), a front-end web developer at [Shopbot](http://shopbot-inc.com), and [David Kaneda](http://www.davidkaneda.com), creative director at [Sencha](http://www.sencha.com).
+
+Compass Recipes is maintained by [Maxime Thirouin](http://moox.fr), and [David Kaneda](http://www.davidkaneda.com), creative director at [Sencha](http://www.sencha.com).
 
 ### Sous Chefs
 
