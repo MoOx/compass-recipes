@@ -1,4 +1,5 @@
 @import "recipes/shape/polygon/triangle";
+@import "recipes/shared/pseudo-element";
 
 @mixin ui-helper-arrow($position: bottom, $width: 6px, $color: #fff)
 {
@@ -12,17 +13,12 @@
 
 @mixin ui-helper-arrow-element($position: bottom, $width: 6px, $color: #fff, $margin-side: auto, $margin: auto)
 {
-    position: absolute;
-    
-    display: block;
-    content: "";
-    width:0; height:0;
+    @include pseudo-element();
 
     $position-offset: 50%;
     @if ($margin-side == auto)
     {
         $margin: -#{$width};
-        
     }
     @else
     {
