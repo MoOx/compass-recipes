@@ -2,11 +2,18 @@
 
 @import "recipes/background";
 
+section
+{
+    @include clearfix;
+}
+
+// @todo add variante on hover
+
 div {
     width: 20em;
     height: 20em;
 
-    cursor: pointer;
+    //cursor: pointer; // not used for now
     background-color: #ccc;
     @include border-radius(50%);
     @include box-shadow(
@@ -15,6 +22,10 @@ div {
         0 0 0 1px rgba(0,0,0,.5),
         2px 2px 10px rgba(0,0,0,.6)
     );
+
+    // sort of grid
+    float: left;
+    margin: 1em;
 }
 
 .background-blueprint-grid {
@@ -27,7 +38,7 @@ div {
         //$intensity: .5,
         //$size: 200,
         //$monochrome: true,
-        $opacity: .15
+        $opacity: .12
     );
 }
 
@@ -81,6 +92,14 @@ div {
 
 .background-polka-dot {
     @include background-polka-dot;
+}
+
+.background-rainbow {
+    @include background-rainbow;
+    &:hover
+    {
+        @include background-rainbow(.8);
+    }
 }
 
 // Gradients
