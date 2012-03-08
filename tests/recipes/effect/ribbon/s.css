@@ -1,0 +1,190 @@
+@charset "utf-8";
+.clearfix {
+@silent;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.45)), color-stop(100%, rgba(0, 0, 0, 0.1))) no-repeat;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+  background: -ms-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+}
+
+body {
+  font-family: Lucida Sans Unicode, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: .6em;
+}
+
+h1, h2, h3 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.doc {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1em;
+  margin: 1em 0;
+  font-style: italic;
+  font-size: .8em;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -khtml-border-radius: 0.2em;
+  border-radius: 0.2em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.6);
+}
+.doc,
+.doc a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.doc:hover,
+.doc a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/**
+ * Note IE7/6 doesn't understand pseudo element as ::before and ::after
+ * IE8 need to have :before and not ::before
+ * So use only : and not :: if you want to support IE8
+ * IE9 Webkit Firefox Opera understand ::
+ */
+.effect-ribbon-skin-classic, .top-left, .top-right, .bottom-right, .bottom-left {
+@silent;
+  border: .1em solid #631a15;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c73b3c), color-stop(100%, #b8201f));
+  background: -webkit-linear-gradient(#c73b3c, #b8201f);
+  background: -moz-linear-gradient(#c73b3c, #b8201f);
+  background: -o-linear-gradient(#c73b3c, #b8201f);
+  background: -ms-linear-gradient(#c73b3c, #b8201f);
+  background: linear-gradient(#c73b3c, #b8201f);
+  box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.6);
+}
+.effect-ribbon-skin-classic:before, .top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before {
+  border: 1px dashed #da5050;
+  margin-top: .1em;
+}
+.effect-ribbon-skin-classic:after, .top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
+  border: 1px dashed #631a15;
+}
+.effect-ribbon-skin-classic:before, .top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before, .effect-ribbon-skin-classic:after, .top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 86%;
+  top: 7%;
+  border-left: 0;
+  border-right: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.top-left {
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  width: 10em;
+  height: 3em;
+  line-height: 3em;
+  top: 4.042em;
+  left: 0;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -moz-transform-origin: 0 100%;
+  -webkit-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.top-right {
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  width: 20em;
+  height: 3em;
+  line-height: 3em;
+  top: 11.113em;
+  right: 0;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.bottom-right {
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  width: 10em;
+  height: 2em;
+  line-height: 2em;
+  bottom: 5.042em;
+  right: 0;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -moz-transform-origin: 100% 0;
+  -webkit-transform-origin: 100% 0;
+  -o-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.bottom-left {
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  width: 10em;
+  height: 5em;
+  line-height: 5em;
+  bottom: 2.042em;
+  left: 0;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
