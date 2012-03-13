@@ -1,6 +1,8 @@
 @import "compass/css3/transform";
 @import "recipes/shared/pseudo-element";
 
+// add http://soiheardyouliekribbon.com/
+
 @mixin effect-ribbon-corner($position: 'top left', $width: 10em, $height: 2em, $lines: 1, $skin: 'classic', $width-add: 0, $height-add: 0)
 {
     position: absolute;
@@ -45,14 +47,14 @@
 
     @if ($skin == 'classic')
     {
-        @extend .effect-ribbon-skin-classic;
+        @extend %effect-ribbon-skin-classic;
         // skin border size to remove;
         $width-add: .1em;
         $height-add: .1em;
     }
     //@elseif ($skin == 'github')
     //{
-    //    @extend .effect-ribbon-skin-github;
+    //    @extend %effect-ribbon-skin-github;
     //}
 
     // here is the awesome trick !
@@ -64,9 +66,11 @@
     @include transform-origin($transform-origin-x, $transform-origin-y);
 }
 
-.effect-ribbon-skin-classic
+%effect-ribbon-skin-classic
 {
-    @silent;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(#000, .8);
+
     border: .1em solid #631a15;
     @include background(linear-gradient(rgb(199,59,60),rgb(184,32,31)));
     box-shadow: 0 .2em .6em rgba(#000, .6);
@@ -92,7 +96,7 @@
     }
 }
 
-//.effect-ribbon-skin-github
+//%effect-ribbon-skin-github
 //{
-//    @silent;
+//
 //}
