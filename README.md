@@ -19,17 +19,18 @@ Note: These are demos of the repository at its current state, *not* the last sta
 * **[Shapes](http://moox.github.com/compass-recipes/recipes/shape/)** - Geometric and iconic shapes, created only with CSS
 * **[Shared](http://moox.github.com/compass-recipes/recipes/shared/)** - Common CSS tricks and hacks.
 * **[UI](http://moox.github.com/compass-recipes/recipes/ui/)** Lots of element styling for menu, buttons, loader, etc.
-* [View other potential icoming items](http://github.com/MoOx/compass-recipes/issues/)
+* [View other potential icoming items](https://github.com/MoOx/compass-recipes/issues?labels=enhancement%2Cfeature)
 
 ## Installation
 
 [Compass Recipes is available as a gem on RubyGems.org](https://rubygems.org/gems/compass-recipes), so installation is quite easy.
 
 ```shell
-gem install compass-recipes
+(sudo) gem install compass-recipes
 ```
 
 *If you want all latests recipes, you can just checkout the recipes (or download as zip) and add '{your-path-here-or-./}compass-recipes/stylesheets' using `additional_import_paths` or `add_import_path` (see [Compass configuration reference](http://compass-style.org/help/tutorials/configuration-reference/)).
+
 More informations on the [Wiki](https://github.com/MoOx/compass-recipes/wiki)*
 
 
@@ -94,6 +95,9 @@ If you have a nifty CSS trick that makes sense to be abstracted (and isn't alrea
 
 ## Build Documentation
 
+*You do not need to build documentation for testing your recipes.*
+*Just run `compass watch/compile` at the root of the repositorie.*
+
 First you need bundle
 
 ```bundle install```
@@ -101,6 +105,8 @@ First you need bundle
 Then, to build the gh-pages from the `tests/`, you need to call
 
 ```bundle exec rake pages```
+
+This process create the pages & push them to your gh-pages branch.
 
 ## Fonts
 
