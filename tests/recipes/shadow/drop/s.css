@@ -1,36 +1,3 @@
-@charset "utf-8";
-html {
-  padding: 1em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
-  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: linear-gradient(#dddddd, #ffffff) no-repeat;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin-bottom: .6em;
-}
-
-.doc {
-  background: #fff;
-  border: #ddd;
-  padding: 1em;
-  color: #aaa;
-  margin: 1em;
-  font-style: italic;
-}
-.doc a {
-  color: #999;
-}
-
 /**
  * Drop shadow mixins from Nicolas Gallagher demo
  * 
@@ -128,20 +95,19 @@ a.more {
 .drop-shadow-curved-vt:hover,
 .drop-shadow-lifted-corners:hover,
 .drop-shadow-perspective:hover {
-  -moz-transform: rotate(3deg);
   -webkit-transform: rotate(3deg);
-  -o-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
   -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
   transform: rotate(3deg);
 }
 
 .drop-shadow-curled-corners {
   position: relative;
-  -moz-border-radius: 0 0 120px 120px/0 0 6px 6px;
   -webkit-border-radius: 0 0 120px 120px/0 0 6px 6px;
-  -o-border-radius: 0 0 120px 120px/0 0 6px 6px;
+  -moz-border-radius: 0 0 120px 120px/0 0 6px 6px;
   -ms-border-radius: 0 0 120px 120px/0 0 6px 6px;
-  -khtml-border-radius: 0 0 120px 120px/0 0 6px 6px;
+  -o-border-radius: 0 0 120px 120px/0 0 6px 6px;
   border-radius: 0 0 120px 120px/0 0 6px 6px;
 }
 .drop-shadow-curled-corners:before, .drop-shadow-curled-corners:after {
@@ -151,25 +117,24 @@ a.more {
   bottom: 12px;
   width: 50%;
   height: 55%;
-  -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
 }
 .drop-shadow-curled-corners:before {
   left: 10px;
-  -moz-transform: skew(-8deg) rotate(-3deg);
   -webkit-transform: skew(-8deg) rotate(-3deg);
-  -o-transform: skew(-8deg) rotate(-3deg);
+  -moz-transform: skew(-8deg) rotate(-3deg);
   -ms-transform: skew(-8deg) rotate(-3deg);
+  -o-transform: skew(-8deg) rotate(-3deg);
   transform: skew(-8deg) rotate(-3deg);
 }
 .drop-shadow-curled-corners:after {
   right: 10px;
-  -moz-transform: skew(8deg) rotate(3deg);
   -webkit-transform: skew(8deg) rotate(3deg);
-  -o-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
   -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
   transform: skew(8deg) rotate(3deg);
 }
 
@@ -184,15 +149,13 @@ a.more {
   bottom: 10px;
   left: 0;
   right: 0;
-  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-  -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-  -moz-border-radius: 0.1;
   -webkit-border-radius: 0.1;
-  -o-border-radius: 0.1;
+  -moz-border-radius: 0.1;
   -ms-border-radius: 0.1;
-  -khtml-border-radius: 0.1;
+  -o-border-radius: 0.1;
   border-radius: 0.1;
 }
 
@@ -212,25 +175,24 @@ a.more {
   bottom: 15px;
   width: 50%;
   height: 20%;
-  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
 }
 .drop-shadow-lifted-corners::before {
   left: 10px;
-  -moz-transform: rotate(-4deg);
   -webkit-transform: rotate(-4deg);
-  -o-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
   -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
   transform: rotate(-4deg);
 }
 .drop-shadow-lifted-corners::after {
   right: 10px;
-  -moz-transform: rotate(4deg);
   -webkit-transform: rotate(4deg);
-  -o-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
   -ms-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
   transform: rotate(4deg);
 }
 
@@ -245,25 +207,23 @@ a.more {
   bottom: 5px;
   width: 50%;
   height: 35%;
-  -moz-box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
-  -o-box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
   box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
-  -moz-transform: skew(50deg);
   -webkit-transform: skew(50deg);
-  -o-transform: skew(50deg);
+  -moz-transform: skew(50deg);
   -ms-transform: skew(50deg);
+  -o-transform: skew(50deg);
   transform: skew(50deg);
-  -moz-transform-origin: 0 100% 50%;
   -webkit-transform-origin: 0 100% 50%;
-  -o-transform-origin: 0 100% 50%;
+  -moz-transform-origin: 0 100% 50%;
   -ms-transform-origin: 0 100% 50%;
+  -o-transform-origin: 0 100% 50%;
   transform-origin: 0 100% 50%;
 }
 
 .drop-shadow-raised {
-  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
 }

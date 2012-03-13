@@ -1,79 +1,178 @@
-@charset "utf-8";
-.clearfix {
-@silent;
-}
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: block;
-  overflow: hidden;
-}
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  zoom: 1;
-}
-
-html {
-  padding: 1em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.45)), color-stop(100%, rgba(0, 0, 0, 0.1))) no-repeat;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
-  background: -ms-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
-}
-
-body {
-  font-family: Lucida Sans Unicode, sans-serif;
-  margin: 0;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin-bottom: .6em;
-}
-
-h1, h2, h3 {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.doc {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 1em;
-  margin: 1em 0;
-  font-style: italic;
-  font-size: .8em;
-  -moz-border-radius: 0.2em;
-  -webkit-border-radius: 0.2em;
-  -o-border-radius: 0.2em;
-  -ms-border-radius: 0.2em;
-  -khtml-border-radius: 0.2em;
-  border-radius: 0.2em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.6);
-}
-.doc,
-.doc a {
-  color: rgba(0, 0, 0, 0.5);
-}
-.doc:hover,
-.doc a:hover {
-  color: rgba(0, 0, 0, 0.7);
-}
-
+/**
+ * Background noise recipe
+ *
+ * This recipe use a sass function to generate a .png file
+ *
+ * Inspired by a jQuery plugin "Noisy" by Daniel Rapp @DanielRapp
+ * @link https://github.com/DanielRapp/Noisy
+ *
+ * Converted using Sass by Aaron Russell @aaronrussell & Philipp Bosch @philippbosch
+ * @link https://gist.github.com/1021332
+ *
+ * Ported to a sass gem by Antti Salonen @antsa
+ * @link https://github.com/antsa/sassy_noise
+ *
+ * Mixin:        background-noise
+ * Function:     background_noise
+ *
+ * @author Daniel Rapp @DanielRapp
+ * @author Aaron Russell @aaronrussell
+ * @author Philipp Bosch @philippbosch
+ * @author Antti Salonen @antsa
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+ */
+/**
+ *
+ * @class Gradients
+ * @author David Kaneda http://www.davidkaneda.com/
+ *
+ */
+/**
+ * Adds a background gradient into a specified selector.
+ * 
+ *     @include background-gradient(#444, 'glossy');
+ * 
+ * You can also use color-stops if you want full control of the gradient:
+ * 
+ *     @include background-gradient(#444, color-stops(#333, #222, #111));
+ * 
+ * @param {color} $bg-color
+ * The base color of the gradient.
+ * 
+ * @param {string/list} $type
+ * The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or linear:
+ *
+ *     @include background-gradient(red, 'glossy');
+ *
+ * It can also accept a list of color-stop values:;
+ * 
+ *     @include background-gradient(black, color-stops(#333, #111, #000));
+ * 
+ * @param {string} $direction
+ * The direction of the gradient.
+ */
+/**
+ * Blueprint grid background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#blueprint-grid
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx for the sass mixin
+ */
+/**
+ * Background overlay inspired by Google Chrome modal overlay
+ * 
+ * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+ */
+/**
+ *
+ * Before compass 0.11.5, you need to add
+ * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
+ * To your configuration (config.rb)
+ * @see https://github.com/chriseppstein/compass/issues/401
+ *
+ * @link http://lea.verou.me/css3patterns/#tartan
+ *
+ * @author Marta Armada http://swwweet.com/ for the original pattern
+ * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx for the sass mixin
+ */
+/**
+ * Carbon Fiber background pattern
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author David Kaneda http://www.davidkaneda.com/ for the Sass mixin
+ *
+ * @link http://lea.verou.me/css3patterns/
+ *
+ */
+/**
+ * Striped background patterns
+ *
+ * Before compass 0.11.5, you need to add
+ * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
+ * To your configuration (config.rb)
+ * @see https://github.com/chriseppstein/compass/issues/401
+ *
+ * @link http://lea.verou.me/css3patterns/#horizontal-stripes
+ * @link http://lea.verou.me/css3patterns/#vertical-stripes
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
+/**
+ * Cicada background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#cicada-stripes
+ *
+ * @author Randy Merril http://forthedeveloper.com/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
+/**
+ *
+ * Tablecloth background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#tablecloth
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
+/**
+ * Lined paper background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#lined-paper
+ *
+ * @author Sarah Backhouse http://www.jadu.net/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
+/**
+ * Madras background pattern
+ *
+ * Before compass 0.11.5, you need to add
+ * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
+ * To your configuration (config.rb)
+ * @see https://github.com/chriseppstein/compass/issues/401
+ *
+ * @link http://lea.verou.me/css3patterns/#madras
+ *
+ * @author Divya Manian http://nimbupani.com/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
+/**
+ * Checkerboard background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#checkerboard
+ * @link http://lea.verou.me/css3patterns/#diagonal-checkerboard
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
+/**
+ *
+ * Houndstooth background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#houndstooth
+ *
+ * @author Antoine Bernier http://abernier.name for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
+/**
+ *
+ * Polkadot background pattern
+ *
+ * @link http://lea.verou.me/css3patterns/#polka-dot
+ *
+ * @author Lea Verou http://lea.verou.me/ for the original pattern
+ * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+ */
 /**
  * Note IE7/6 doesn't understand pseudo element as ::before and ::after
  * IE8 need to have :before and not ::before
  * So use only : and not :: if you want to support IE8
  * IE9 Webkit Firefox Opera understand ::
  */
-.effect-ribbon-skin-classic, .top-left, .top-right, .bottom-right, .bottom-left {
-@silent;
+.top-left, .top-right, .bottom-right, .bottom-left {
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
   border: .1em solid #631a15;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c73b3c), color-stop(100%, #b8201f));
   background: -webkit-linear-gradient(#c73b3c, #b8201f);
@@ -83,14 +182,14 @@ h1, h2, h3 {
   background: linear-gradient(#c73b3c, #b8201f);
   box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.6);
 }
-.effect-ribbon-skin-classic:before, .top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before {
+.top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before {
   border: 1px dashed #da5050;
   margin-top: .1em;
 }
-.effect-ribbon-skin-classic:after, .top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
+.top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
   border: 1px dashed #631a15;
 }
-.effect-ribbon-skin-classic:before, .top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before, .effect-ribbon-skin-classic:after, .top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
+.top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before, .top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
   content: "";
   position: absolute;
   display: block;
@@ -114,15 +213,15 @@ body {
   line-height: 3em;
   top: 4.042em;
   left: 0;
-  -moz-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  -moz-transform-origin: 0 100%;
   -webkit-transform-origin: 0 100%;
-  -o-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
   -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
   transform-origin: 0 100%;
 }
 
@@ -135,15 +234,15 @@ body {
   line-height: 3em;
   top: 11.113em;
   right: 0;
-  -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  -moz-transform-origin: 100% 100%;
   -webkit-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
 
@@ -156,15 +255,15 @@ body {
   line-height: 2em;
   bottom: 5.042em;
   right: 0;
-  -moz-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  -moz-transform-origin: 100% 0;
   -webkit-transform-origin: 100% 0;
-  -o-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
+  -o-transform-origin: 100% 0;
   transform-origin: 100% 0;
 }
 
@@ -177,14 +276,14 @@ body {
   line-height: 5em;
   bottom: 2.042em;
   left: 0;
-  -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  -moz-transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
   transform-origin: 0 0;
 }
