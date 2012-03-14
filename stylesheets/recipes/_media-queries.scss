@@ -17,19 +17,13 @@ $media-query-width-xxs: 320px   !default; // eg. portrait iPhone
 
 // size: exclusive queries
 @mixin media-xxl        { @media (min-width: $media-query-width-xxl)                                                        { @content } }
-// this syntax do not work for now
-//@mixin media-xl         { @media (min-width: $media-query-width-xl)     and (max-width: $media-query-width-xxl    - 1px)    { @content } }
-//@mixin media-l          { @media (min-width: $media-query-width-l)      and (max-width: $media-query-width-xl     - 1px)    { @content } }
-//@mixin media-m          { @media (min-width: $media-query-width-m)      and (max-width: $media-query-width-l      - 1px)    { @content } }
-//@mixin media-s          { @media (min-width: $media-query-width-s)      and (max-width: $media-query-width-m      - 1px)    { @content } }
-//@mixin media-xs         { @media (min-width: $media-query-width-xs)     and (max-width: $media-query-width-s      - 1px)    { @content } }
-//@mixin media-xxs        { @media (min-width: $media-query-width-xxs)    and (max-width: $media-query-width-xs     - 1px)    { @content } }
-@mixin media-xl         { $max: $media-query-width-xxl  - 1px; @media (min-width: $media-query-width-xl)     and (max-width: $max)  { @content } }
-@mixin media-l          { $max: $media-query-width-xl   - 1px; @media (min-width: $media-query-width-l)      and (max-width: $max)  { @content } }
-@mixin media-m          { $max: $media-query-width-l    - 1px; @media (min-width: $media-query-width-m)      and (max-width: $max)  { @content } }
-@mixin media-s          { $max: $media-query-width-m    - 1px; @media (min-width: $media-query-width-s)      and (max-width: $max)  { @content } }
-@mixin media-xs         { $max: $media-query-width-s    - 1px; @media (min-width: $media-query-width-xs)     and (max-width: $max)  { @content } }
-@mixin media-xxs        { @media (max-width: $media-query-width-xs)                                                          { @content } }
+@mixin media-xl         { @media (min-width: $media-query-width-xl)     and (max-width: $media-query-width-xxl    - 1px)    { @content } }
+@mixin media-l          { @media (min-width: $media-query-width-l)      and (max-width: $media-query-width-xl     - 1px)    { @content } }
+@mixin media-m          { @media (min-width: $media-query-width-m)      and (max-width: $media-query-width-l      - 1px)    { @content } }
+@mixin media-s          { @media (min-width: $media-query-width-s)      and (max-width: $media-query-width-m      - 1px)    { @content } }
+@mixin media-xs         { @media (min-width: $media-query-width-xs)     and (max-width: $media-query-width-s      - 1px)    { @content } }
+@mixin media-xxs        { @media (min-width: $media-query-width-xxs)    and (max-width: $media-query-width-xs     - 1px)    { @content } }
+@mixin media-xxs        { @media (max-width: $media-query-width-xs)                                                         { @content } }
 
 // size: min/max queries
 @mixin media-xxl-max    { @media (max-width: $media-query-width-xxl)    { @content } }
