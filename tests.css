@@ -1,0 +1,52 @@
+@charset "utf-8";
+html {
+  padding: 1em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.45)), color-stop(100%, rgba(0, 0, 0, 0.1))) no-repeat;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+  background: -ms-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)) no-repeat;
+}
+
+body {
+  font-family: Lucida Sans Unicode, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: .6em;
+}
+
+h1, h2, h3 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+}
+
+.doc {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1em;
+  margin: 1em 0;
+  font-style: italic;
+  font-size: .8em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.6);
+}
+.doc,
+.doc a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.doc:hover,
+.doc a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
