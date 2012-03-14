@@ -1,3 +1,6 @@
+.container {
+  *zoom: 1;
+}
 .container:before, .container:after {
   content: "";
   display: block;
@@ -5,9 +8,6 @@
 }
 .container:after {
   clear: both;
-}
-.container {
-  zoom: 1;
 }
 
 .body {
