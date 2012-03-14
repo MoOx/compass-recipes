@@ -1,84 +1,142 @@
-html {
-  padding: 1em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
-  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: linear-gradient(#dddddd, #ffffff) no-repeat;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin-bottom: .6em;
-}
-
-.doc {
-  background: #fff;
-  border: #ddd;
-  padding: 1em;
-  color: #aaa;
-  margin: 1em;
-  font-style: italic;
-}
-.doc a {
-  color: #999;
-}
-
-/**
- * Media Queries Mixins
- * 
- * @todo Do we have to take care of print ?
- * 
- * @require sass-3.2 (you need eventually to do "sudo gem install sass --pre")
- * @author Maxime Thirouin <maxime.thirouin@gmail.com>
- */
-/*
-$media-query-width-big: 1280px;
-$media-query-width-medium: 960px;
-$media-query-width-small: 480px;
-*/
 div {
   display: none;
 }
+div:after {
+  content: attr(class);
+  font-size: 2em;
+}
 
-@media (min-width: 1280px) {
-  .big {
+.min,
+.max {
+  opacity: .4;
+}
+
+.only {
+  font-weight: bold;
+}
+
+@media (min-width: 1824px) {
+  .xxl.min {
     display: block;
   }
 }
 
-@media (max-width: 1279px) {
-  .medium {
+@media (min-width: 1382px) {
+  .xl.min {
     display: block;
   }
 }
 
-@media (min-width: 960px) and (max-width: 1279px) {
-  .medium-only {
+@media (min-width: 992px) {
+  .l.min {
     display: block;
   }
 }
 
-@media (max-width: 959px) {
-  .small {
+@media (min-width: 768px) {
+  .m.min {
     display: block;
   }
 }
 
-@media (min-width: 480px) and (max-width: 959px) {
-  .small-only {
+@media (min-width: 600px) {
+  .s.min {
     display: block;
   }
 }
 
-@media (max-width: 479px) {
-  .tiny {
+@media (min-width: 480px) {
+  .xs.min {
+    display: block;
+  }
+}
+
+@media (min-width: 320px) {
+  .xxs.min {
+    display: block;
+  }
+}
+
+@media (min-width: 1824px) {
+  .xxl.only {
+    display: block;
+  }
+}
+
+@media (min-width: 1382px) and (max-width: 1823px) {
+  .xl.only {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1381px) {
+  .l.only {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .m.only {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .s.only {
+    display: block;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 599px) {
+  .xs.only {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .xxs.only {
+    display: block;
+  }
+}
+
+@media (max-width: 1824px) {
+  .xxl.max {
+    display: block;
+  }
+}
+
+@media (max-width: 1382px) {
+  .xl.max {
+    display: block;
+  }
+}
+
+@media (max-width: 992px) {
+  .l.max {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .m.max {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .s.max {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .xs.max {
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  .xxs.max {
     display: block;
   }
 }

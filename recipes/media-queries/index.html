@@ -2,17 +2,35 @@
 <link rel="stylesheet" href="s.css" />
 <h1>Tests for <a href="../">recipes</a>/media-queries</h1>
 
-<p class="doc">Resize this window</p>
-        
-<div class="big">I'm big</div>
+<p class="doc">
+    Resize this window to checkout the result.
+    To be able to use this mixins, you should choose how many screen size you're about to support
+</p>
 
-<div class="medium">I'm medium</div>
-<div class="medium-only">I'm medium-only</div>
+<div class="min xxs"></div>
+<div class="min xs"></div>
+<div class="min s"></div>
+<div class="min m"></div>
+<div class="min l"></div>
+<div class="min xl"></div>
+<div class="min xxl"></div>
 
-<div class="small">I'm small</div>
-<div class="small-only">I'm small-only</div>
+<div class="only xxl"></div>
+<div class="only xl"></div>
+<div class="only l"></div>
+<div class="only m"></div>
+<div class="only s"></div>
+<div class="only xs"></div>
+<div class="only xxs"></div>
 
-<div class="tiny">I'm tiny</div><script>
+<div class="max xxs"></div>
+<div class="max xs"></div>
+<div class="max s"></div>
+<div class="max m"></div>
+<div class="max l"></div>
+<div class="max xl"></div>
+<div class="max xxl"></div>
+<script>
   var _gaq=[["_setAccount","UA-1716762-10"],["_trackPageview"],["_trackPageLoadTime"]];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
   g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
