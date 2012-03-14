@@ -1,101 +1,71 @@
-/**
- * Media Queries Mixins
- * 
- * @todo Do we have to take care of print ?
- * 
- * @require sass-3.2 (you need eventually to do "sudo gem install sass --pre")
- * @author Maxime Thirouin <maxime.thirouin@gmail.com>
- */
+//
+// Predefined Media Queries Mixins
+//
+// @require sass-3.2 (you need eventually to do "sudo gem install sass --pre")
+//
+// @author Maxime Thirouin <maxime.thirouin@gmail.com>
+//
 
-// differentes screen width definition: 3 limits allow 4 configurations
-/*
-$media-query-width-big: 1280px;
-$media-query-width-medium: 960px;
-$media-query-width-small: 480px;
-*/
-// recent desktop & big screen
-@mixin media-big
+// sizes
+$media-query-width-xxl: 1824px  !default; // eg. oversized luxury screen
+$media-query-width-xl:  1382px  !default; // eg. high-res. PC browser
+$media-query-width-l:   992px   !default; // 1024 eg. common resolution PC
+$media-query-width-m:   768px   !default; // eg. portrait iPad
+$media-query-width-s:   600px   !default; // eg. Kindle
+$media-query-width-xs:  480px   !default; // eg. landscape iPhone
+$media-query-width-xxs: 320px   !default; // eg. portrait iPhone
+
+// size: exclusive queries
+@mixin media-xxl        { @media (min-width: $media-query-width-xxl)                                                        { @content } }
+// this syntax do not work for now
+//@mixin media-xl         { @media (min-width: $media-query-width-xl)     and (max-width: $media-query-width-xxl    - 1px)    { @content } }
+//@mixin media-l          { @media (min-width: $media-query-width-l)      and (max-width: $media-query-width-xl     - 1px)    { @content } }
+//@mixin media-m          { @media (min-width: $media-query-width-m)      and (max-width: $media-query-width-l      - 1px)    { @content } }
+//@mixin media-s          { @media (min-width: $media-query-width-s)      and (max-width: $media-query-width-m      - 1px)    { @content } }
+//@mixin media-xs         { @media (min-width: $media-query-width-xs)     and (max-width: $media-query-width-s      - 1px)    { @content } }
+//@mixin media-xxs        { @media (min-width: $media-query-width-xxs)    and (max-width: $media-query-width-xs     - 1px)    { @content } }
+@mixin media-xl         { $max: $media-query-width-xxl  - 1px; @media (min-width: $media-query-width-xl)     and (max-width: $max)  { @content } }
+@mixin media-l          { $max: $media-query-width-xl   - 1px; @media (min-width: $media-query-width-l)      and (max-width: $max)  { @content } }
+@mixin media-m          { $max: $media-query-width-l    - 1px; @media (min-width: $media-query-width-m)      and (max-width: $max)  { @content } }
+@mixin media-s          { $max: $media-query-width-m    - 1px; @media (min-width: $media-query-width-s)      and (max-width: $max)  { @content } }
+@mixin media-xs         { $max: $media-query-width-s    - 1px; @media (min-width: $media-query-width-xs)     and (max-width: $max)  { @content } }
+@mixin media-xxs        { @media (max-width: $media-query-width-xs)                                                          { @content } }
+
+// size: min/max queries
+@mixin media-xxl-max    { @media (max-width: $media-query-width-xxl)    { @content } }
+@mixin media-xl-max     { @media (max-width: $media-query-width-xl)     { @content } }
+@mixin media-l-max      { @media (max-width: $media-query-width-l)      { @content } }
+@mixin media-m-max      { @media (max-width: $media-query-width-m)      { @content } }
+@mixin media-s-max      { @media (max-width: $media-query-width-s)      { @content } }
+@mixin media-xs-max     { @media (max-width: $media-query-width-xs)     { @content } }
+@mixin media-xxs-max    { @media (max-width: $media-query-width-xxs)    { @content } }
+
+@mixin media-xxl-min    { @media (min-width: $media-query-width-xxl)    { @content } }
+@mixin media-xl-min     { @media (min-width: $media-query-width-xl)     { @content } }
+@mixin media-l-min      { @media (min-width: $media-query-width-l)      { @content } }
+@mixin media-m-min      { @media (min-width: $media-query-width-m)      { @content } }
+@mixin media-s-min      { @media (min-width: $media-query-width-s)      { @content } }
+@mixin media-xs-min     { @media (min-width: $media-query-width-xs)     { @content } }
+@mixin media-xxs-min    { @media (min-width: $media-query-width-xxs)    { @content } }
+
+// @todo add/review more verbose mixins ?
+
+// orientation (horizontal & vertical)
+@mixin media-portrait   { @media (orientation:portrait)     { @content } }
+@mixin media-landscape  { @media (orientation:landscape)    { @content } }
+// shortcuts
+@mixin media-h          { @include media-portrait           { @content } }
+@mixin media-v          { @include media-landscape          { @content } }
+
+// high resolution screen
+@mixin media-highres($coefficient: 2)
 {
-    //@media (min-width: $media-query-width-big)
-    @media (min-width: 1280px)
-    {
-        @content;
-    }
-}
-
-// average desktop
-@mixin media-medium
-{
-    //@media (max-width: $media-query-width-big - 1px)
-    @media (max-width: 1279px)
-    {
-        @content;
-    }
-}
-    @mixin media-medium-only
-    {
-        //@media (min-width: $media-query-width-medium) and (max-width: $media-query-width-big - 1px)
-        @media (min-width: 960px) and (max-width: 1279px)
-        {
-            @content;
-        }
-    }
-
-// old computer & tablet
-@mixin media-small
-{
-    //@media (max-width: $media-query-width-medium - 1px)
-    @media (max-width: 959px)
-    {
-        @content;
-    }
-}
-
-    @mixin media-small-only
-    {
-        //@media (min-width: $media-query-width-small) and (max-width: $media-query-width-medium - 1px)
-        @media (min-width: 480px) and (max-width: 959px)
-        {
-            @content;
-        }
-    }
-
-
-// mobile
-@mixin media-tiny
-{
-    //@media (max-width: $media-query-width-small - 1px)
-    @media (max-width: 479px)
-    {
-        @content;
-    }
-}
-
-// orientation
-@mixin media-portrait
-{
-    @media (orientation:portrait)
-    {
-        @content;
-    }
-}
-
-@mixin media-landscape
-{
-    @media (orientation:landscape)
-    {
-        @content;
-    }
-}
-
-// media for high resolution screen
-@mixin media-highres
-{
-
+    $oCoef: $coefficient*2;
     @media
-        (-webkit-min-device-pixel-ratio: 2),
-        (-o-min-device-pixel-ratio: 3/2),
-        (min-device-pixel-ratio: 2)
+        (-webkit-min-device-pixel-ratio: $coefficient),
+        (-moz-min-device-pixel-ratio: $coefficient),
+        (-o-min-device-pixel-ratio: $oCoef/2),
+        (min-device-pixel-ratio: $coefficient)
     {
         @content;
     }
