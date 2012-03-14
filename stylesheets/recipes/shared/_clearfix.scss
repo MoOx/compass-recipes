@@ -8,6 +8,9 @@
 // @link http://nicolasgallagher.com/micro-clearfix-hack/
 //
 
+@import "compass/utilities/general/hacks";
+
+// can be included as is
 @mixin clearfix-hack
 {
     // For modern browsers
@@ -24,22 +27,16 @@
         clear: both;
     }
 
-    //For IE 6/7 (trigger hasLayout)
-    &
-    {
-        zoom: 1;
-    }
+    @include has-layout;
 }
 
-$clearfix-class: 'clearfix' !default;
-$clearfix-silent: true !default;
-
-%#{$clearfix-class}
+%clearfix-hack
 {
     @include clearfix-hack;
 }
 
+// or can be used like this
 @mixin clearfix
 {
-    @extend %#{$clearfix-class};
+    @extend %clearfix-hack;
 }
