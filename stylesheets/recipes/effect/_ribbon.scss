@@ -1,0 +1,102 @@
+@import "compass/css3/transform";
+@import "recipes/shared/pseudo-element";
+
+// add http://soiheardyouliekribbon.com/
+
+@mixin effect-ribbon-corner($position: 'top left', $width: 10em, $height: 2em, $lines: 1, $skin: 'classic', $width-add: 0, $height-add: 0)
+{
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+
+    width: $width;
+    height: $height;
+    line-height: $height / $lines;
+
+    // @if ($position == top left)
+    $position-v: top;
+    $position-h: left;
+    $angle: -45deg;
+    $transform-origin-x: 0;
+    $transform-origin-y: 100%;
+
+    @if ($position == 'top right')
+    {
+        //$position-v: top;
+        $position-h: right;
+        $angle: 45deg;
+        $transform-origin-x: 100%;
+        //$transform-origin-y: 100%;
+    }
+    @elseif ($position == 'bottom right')
+    {
+        $position-v: bottom;
+        $position-h: right;
+        //$angle: -45deg
+        $transform-origin-x: 100%;
+        $transform-origin-y: 0;
+    }
+    @elseif ($position == 'bottom left')
+    {
+        $position-v: bottom;
+        //$position-h: left;
+        $angle: 45deg;
+        //$transform-origin-x: 0;
+        $transform-origin-y: 0;
+    }
+
+    @if ($skin == 'classic')
+    {
+        @extend %effect-ribbon-skin-classic;
+        // skin border size to remove;
+        $width-add: .1em;
+        $height-add: .1em;
+    }
+    //@elseif ($skin == 'github')
+    //{
+    //    @extend %effect-ribbon-skin-github;
+    //}
+
+    // here is the awesome trick !
+    $value: pow($width + $width-add, 2) / 2 ;
+    #{$position-v}: sqrt($value) - $height - $height-add;
+    #{$position-h}: 0;
+
+    @include transform(rotate($angle));
+    @include transform-origin($transform-origin-x, $transform-origin-y);
+}
+
+%effect-ribbon-skin-classic
+{
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(#000, .8);
+
+    border: .1em solid #631a15;
+    @include background(linear-gradient(rgb(199,59,60),rgb(184,32,31)));
+    box-shadow: 0 .2em .6em rgba(#000, .6);
+
+    // light before(below) dark
+    &:before
+    {
+        border: 1px dashed #da5050;
+        margin-top: .1em;
+    }
+    &:after
+    {
+        border: 1px dashed #631a15;
+    }
+
+    &:before,
+    &:after
+    {
+        @include pseudo-element(100%, 86%);
+        top: 7%;
+        border-left: 0;
+        border-right: 0;
+    }
+}
+
+//%effect-ribbon-skin-github
+//{
+//
+//}

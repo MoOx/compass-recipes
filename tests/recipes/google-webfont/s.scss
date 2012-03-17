@@ -1,9 +1,8 @@
+@import "compass/css3";
 @import 'recipes/google-webfont';
 @import 'recipes/color';
 
 @include google-webfont('Ubuntu', 700);
-
-@import 'tests';
 
 h2 {
     font-family: Ubuntu, Helvetica, sans-serif;

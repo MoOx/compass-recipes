@@ -1,5 +1,4 @@
-@import "tests";
-
+@import "compass/css3";
 @import "recipes/shape/symbol";
 
 .diamond { @include diamond(5em, #000) }

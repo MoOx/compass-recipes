@@ -20,8 +20,9 @@ Gem::Specification.new do |gemspec|
   gemspec.files = %w(README.md LICENSE VERSION)
   gemspec.files += Dir.glob("fonts/**/*.*")
   gemspec.files += Dir.glob("lib/**/*.*")
-  gemspec.files += Dir.glob("templates/**/*.*")
+  gemspec.files += Dir.glob("templates/**{,/*/**}/*.*")
   gemspec.files += Dir.glob("stylesheets/**/*.*")
 
-  gemspec.add_dependency("compass", [">= 0.11.7"]) # latest version of compass
+  gemspec.add_dependency("sass", "~> 3.2.0.alpha.93")
+  gemspec.add_dependency("compass", [">= 0.12.1"])
 end

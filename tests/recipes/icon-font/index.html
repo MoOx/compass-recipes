@@ -1,0 +1,56 @@
+<!doctype html>
+<link rel="stylesheet" href="s.css" />
+<h1>Tests for <a href="../">recipes</a>/icon-font</h1>
+
+<h2>Unicode<h2>
+<a class="smiley">Test Text (to be hidden)</a>
+
+<script>
+// I USE DOCUMENT.WRITE YES
+(function()
+{
+    function recipes_icon_font_abcplease(className, startChar, endChar)
+    {
+
+        startChar = endChar || 'a';
+        endChar = endChar || 'z';
+        for(var letter = startChar; letter <= endChar; letter = String.fromCharCode(letter.charCodeAt(0) + 1))
+        {
+            document.write('<span class="' + className + '" data-icon="' + letter + '"></span>');
+        }
+    }
+
+    var fonts =  [
+        'entypo',
+        'heydings',
+        'heydings_controls',
+        'iconic_fill',
+        'iconic_stroke',
+        'icomoon',
+        'modern-pictograms',
+        'socialico',
+        'websymbols'
+    ];
+    for(var i = 0; i < fonts.length; i++)
+    {
+        document.write('<h2>' + fonts[i]+  '</h2>');
+        recipes_icon_font_abcplease(fonts[i]);
+    }
+
+})();
+
+/*
+// Generate something like
+
+<h2>iconic<h2>
+<a data-icon="a" class="iconic"></a>
+<a data-icon="b" class="iconic"></a>
+<a data-icon="c" class="iconic"></a>
+...
+
+<h2>icomoon<h2>
+<a data-icon="a" class="icomoon"></a>
+<a data-icon="b" class="icomoon"></a>
+...
+*/
+</script>

@@ -1,36 +1,3 @@
-@charset "utf-8";
-html {
-  padding: 1em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
-  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: linear-gradient(#dddddd, #ffffff) no-repeat;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin-bottom: .6em;
-}
-
-.doc {
-  background: #fff;
-  border: #ddd;
-  padding: 1em;
-  color: #aaa;
-  margin: 1em;
-  font-style: italic;
-}
-.doc a {
-  color: #999;
-}
-
 /**
  * Shape/Polygon
  *
@@ -241,10 +208,10 @@ div {
 .parallelogram {
   width: 8em;
   height: 5em;
-  -moz-transform: skew(30deg);
   -webkit-transform: skew(30deg);
-  -o-transform: skew(30deg);
+  -moz-transform: skew(30deg);
   -ms-transform: skew(30deg);
+  -o-transform: skew(30deg);
   transform: skew(30deg);
   background: black;
 }
@@ -252,10 +219,10 @@ div {
 .parallelogram2 {
   width: 5em;
   height: 8em;
-  -moz-transform: skew(-10deg);
   -webkit-transform: skew(-10deg);
-  -o-transform: skew(-10deg);
+  -moz-transform: skew(-10deg);
   -ms-transform: skew(-10deg);
+  -o-transform: skew(-10deg);
   transform: skew(-10deg);
   background: black;
 }
@@ -333,10 +300,10 @@ div {
   width: 5em;
   height: 5em;
   background: black;
-  -moz-transform: rotate(-45deg) skew(0deg, 0deg);
   -webkit-transform: rotate(-45deg) skew(0deg, 0deg);
-  -o-transform: rotate(-45deg) skew(0deg, 0deg);
+  -moz-transform: rotate(-45deg) skew(0deg, 0deg);
   -ms-transform: rotate(-45deg) skew(0deg, 0deg);
+  -o-transform: rotate(-45deg) skew(0deg, 0deg);
   transform: rotate(-45deg) skew(0deg, 0deg);
 }
 
@@ -344,10 +311,10 @@ div {
   width: 8em;
   height: 8em;
   background: black;
-  -moz-transform: rotate(-45deg) skew(-10deg, -10deg);
   -webkit-transform: rotate(-45deg) skew(-10deg, -10deg);
-  -o-transform: rotate(-45deg) skew(-10deg, -10deg);
+  -moz-transform: rotate(-45deg) skew(-10deg, -10deg);
   -ms-transform: rotate(-45deg) skew(-10deg, -10deg);
+  -o-transform: rotate(-45deg) skew(-10deg, -10deg);
   transform: rotate(-45deg) skew(-10deg, -10deg);
 }
 
@@ -355,10 +322,10 @@ div {
   width: 5em;
   height: 5em;
   background: black;
-  -moz-transform: rotate(-45deg) skew(20deg, 20deg);
   -webkit-transform: rotate(-45deg) skew(20deg, 20deg);
-  -o-transform: rotate(-45deg) skew(20deg, 20deg);
+  -moz-transform: rotate(-45deg) skew(20deg, 20deg);
   -ms-transform: rotate(-45deg) skew(20deg, 20deg);
+  -o-transform: rotate(-45deg) skew(20deg, 20deg);
   transform: rotate(-45deg) skew(20deg, 20deg);
 }
 

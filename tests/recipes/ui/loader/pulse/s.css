@@ -1,36 +1,4 @@
 @charset "utf-8";
-html {
-  padding: 1em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
-  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: linear-gradient(#dddddd, #ffffff) no-repeat;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin-bottom: .6em;
-}
-
-.doc {
-  background: #fff;
-  border: #ddd;
-  padding: 1em;
-  color: #aaa;
-  margin: 1em;
-  font-style: italic;
-}
-.doc a {
-  color: #999;
-}
-
 /**
  * CSS pulse loader
  *
@@ -51,11 +19,10 @@ h2 {
   background: -o-radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)) 50% 50%;
   background: -ms-radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)) 50% 50%;
   background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)) 50% 50%;
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  -khtml-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -79,11 +46,10 @@ h2 {
 }
 .ui-loader-pulse:before {
   content: "";
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  -khtml-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
   background: black;
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(40%, #000000), color-stop(100%, #999999));
@@ -92,9 +58,8 @@ h2 {
   background: -o-radial-gradient(#000000 40%, #999999);
   background: -ms-radial-gradient(#000000 40%, #999999);
   background: radial-gradient(#000000 40%, #999999);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
 }
@@ -128,11 +93,10 @@ h2 {
   background: -o-radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)) 50% 50%;
   background: -ms-radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)) 50% 50%;
   background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)) 50% 50%;
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  -khtml-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -156,11 +120,10 @@ h2 {
 }
 .ui-loader-pulse.white:before {
   content: "";
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  -khtml-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
   background: black;
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(40%, #000000), color-stop(100%, #999999));
@@ -169,9 +132,8 @@ h2 {
   background: -o-radial-gradient(#000000 40%, #999999);
   background: -ms-radial-gradient(#000000 40%, #999999);
   background: radial-gradient(#000000 40%, #999999);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
 }

@@ -1,0 +1,46 @@
+@import "recipes/media-queries";
+
+div
+{
+    display: none;
+    &:after
+    {
+        content: attr(class);
+        font-size: 2em;
+    }
+}
+
+.min,
+.max
+{
+    opacity: .4;
+}
+
+.only
+{
+    font-weight: bold;
+}
+
+.xxl.min    { @include media-xxl-min    { display: block }}
+.xl.min     { @include media-xl-min     { display: block }}
+.l.min      { @include media-l-min      { display: block }}
+.m.min      { @include media-m-min      { display: block }}
+.s.min      { @include media-s-min      { display: block }}
+.xs.min     { @include media-xs-min     { display: block }}
+.xxs.min    { @include media-xxs-min    { display: block }}
+
+.xxl.only   { @include media-xxl        { display: block }}
+.xl.only    { @include media-xl         { display: block }}
+.l.only     { @include media-l          { display: block }}
+.m.only     { @include media-m          { display: block }}
+.s.only     { @include media-s          { display: block }}
+.xs.only    { @include media-xs         { display: block }}
+.xxs.only   { @include media-xxs        { display: block }}
+
+.xxl.max    { @include media-xxl-max    { display: block }}
+.xl.max     { @include media-xl-max     { display: block }}
+.l.max      { @include media-l-max      { display: block }}
+.m.max      { @include media-m-max      { display: block }}
+.s.max      { @include media-s-max      { display: block }}
+.xs.max     { @include media-xs-max     { display: block }}
+.xxs.max    { @include media-xxs-max    { display: block }}

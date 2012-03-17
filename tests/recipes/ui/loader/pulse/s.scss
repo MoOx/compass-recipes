@@ -1,4 +1,5 @@
-@import "tests";
+@charset "utf-8"; // require for the pulse loader characters
+@import "compass/css3";
 @import "recipes/ui/loader/pulse";
 
 .ui-loader-pulse

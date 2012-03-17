@@ -1,0 +1,32 @@
+//
+// Font face mixin to import a pack generated from fontsquirrel.com
+// include .eot (ie), .svg (iphone), .ttf & .woff
+//
+// @link http://www.fontsquirrel.com/fontface/generator
+// @link http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
+//
+// @author Maxime Thirouin m@moox.fr
+//
+
+@import "compass/css3/font-face";
+
+@mixin font-face-kit($font-name, $font-id, $font-file-suffix: auto, $font-dir: auto)
+{
+    @if ($font-file-suffix == auto)
+    {
+        $font-file-suffix: $font-name + '-webfont';
+    }
+    @if ($font-dir == auto)
+    {
+        $font-dir: $font-name;
+    }
+    @include font-face(
+        "#{$font-name}",
+        font-files(
+            "#{$font-dir}/#{$font-file-suffix}.eot?#iefix",
+            "#{$font-dir}/#{$font-file-suffix}.woff",
+            "#{$font-dir}/#{$font-file-suffix}.ttf",
+            "#{$font-dir}/#{$font-file-suffix}.svg##{$font-id}"
+        )
+    );
+}

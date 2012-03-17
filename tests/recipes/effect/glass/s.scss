@@ -1,26 +1,24 @@
-@import "tests";
+@import "compass/css3";
 @import "recipes/effect/glass";
-
-.body
-{
-    
-}
 
 .glass,
 .glass-blue
 {
-    width: 400px;
-    height: 400px;
     margin: 20px auto;
-    background: #000;
 }
 
 .glass
 {
     @include effect-glass;
+    background: #000;
+    width: 400px;
+    height: 400px;
 }
 
 .glass-blue
 {
-    @include effect-glass(#ddf, -20deg, 1em);
+    width: 100px;
+    height: 100px;
+    @include effect-glass(#fff, -20deg, .6em);
+    background: #000 url(http://lorempixel.com/100/100/) no-repeat;
 }

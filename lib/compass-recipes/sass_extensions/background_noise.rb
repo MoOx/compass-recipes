@@ -13,9 +13,9 @@ module Sass::Script::Functions
         opts = {}
         Sass::Util.map_hash({
          "intensity"  => [0..1,          "",   :Number, Sass::Script::Number.new(0.5) ],
-         "opacity"    => [0..1,          "",   :Number, Sass::Script::Number.new(0.08)],
+         "opacity"    => [0..1,          "",   :Number, Sass::Script::Number.new(0.12)],
          "size"       => [1..512,        "px", :Number, Sass::Script::Number.new(200) ],
-         "monochrome" => [[true, false], "",   :Bool,   Sass::Script::Bool.new(false) ]
+         "monochrome" => [[true, false], "",   :Bool,   Sass::Script::Bool.new(true) ]
          }) do |name, (range, units, type, default)|
 
             if val = kwargs.delete(name)
