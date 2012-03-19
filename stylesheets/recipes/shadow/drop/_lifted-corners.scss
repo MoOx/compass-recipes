@@ -18,18 +18,18 @@
  * @thanks Matt Hamm @matthamm
  * @link http://matthamm.com/box-shadow-curl.html
  */
-@mixin drop-shadow-lifted-corners($height: 15px, $margin: 10px, $angle: 4deg, $color: rgba(#000, .7))
+@mixin drop-shadow-lifted-corners($height: 15px, $margin: 10px, $angle: 6deg, $color: rgba(#000, .7))
 {
     position: relative;
     z-index: 1;
-    @include box-shadow(0 1px $height/2 lighten($color, 40%));
+    @include box-shadow(0 1px $height/4 transparentize($color, 0.6));
 
     &::before,
     &::after
     {
         content:"";
         position:absolute;
-        z-index: -1;
+        z-index: -2;
         
         bottom: $height+$margin;
 
