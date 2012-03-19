@@ -22,14 +22,13 @@
 {
     position: relative;
     z-index: 1;
-    @include box-shadow(0 1px $height/4 transparentize($color, 0.6));
+    @include box-shadow(0 1px $height/2 transparentize($color, 0.6));
 
     &::before,
     &::after
     {
         content:"";
         position:absolute;
-        z-index: -2;
         
         bottom: $height+$margin;
 
@@ -44,12 +43,14 @@
     &::before
     {
         left: $margin;
+        z-index: -2;
         @include transform(skew(-$angle*2) rotate(-$angle));
     }
     
     &::after
     {
         right: $margin;
+        z-index: -1;
         @include transform(skew($angle*2) rotate($angle));
     }
 }
