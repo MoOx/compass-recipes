@@ -24,10 +24,15 @@
  * @link http://www.creativejuiz.fr/trytotry/css3-box-shadow-after-before/
  */
 /**
+ * Drop shadow w/ lifted corners parent element. Totally optional.
+ */
+/**
  * Drop shadow w/ lifted corners
  *
  * @thanks Nicolas Gallagher @necolas
  * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ * @thanks Matt Hamm @matthamm
+ * @link http://matthamm.com/box-shadow-curl.html
  */
 /**
  * Drop shadow w/ perspective
