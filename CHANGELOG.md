@@ -8,15 +8,15 @@
 * ui keyboard
 * ui dropdown menu
 * merge effects & enhancements
-* deprecated ui gradients & ui convex
+* deprecated ui glossy, gradients & convex
 * ui separator
 * animations keyframes
 * colors names & functions
-* icons (using fonts) : webfonts
+* icons (using fonts) : icon-fonts extension
 * Animation mixin ! (require sass 3.2+)
 * loading indicator
 * 2 news effects (corners scatter & tuckeds/taped)
-* gravatar helper
+* gravatar helper extension
 
 ## 0.2.1
 
