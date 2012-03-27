@@ -23,6 +23,6 @@ Gem::Specification.new do |gemspec|
   gemspec.files += Dir.glob("templates/**{,/*/**}/*.*")
   gemspec.files += Dir.glob("stylesheets/**/*.*")
 
-  gemspec.add_dependency("sass", "~> 3.2.0.alpha.93")
+  gemspec.add_dependency("sass", "~> 3.2.0.alpha.96")
   gemspec.add_dependency("compass", [">= 0.12.1"])
 end
