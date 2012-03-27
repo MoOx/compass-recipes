@@ -72,6 +72,7 @@
     text-shadow: 0 1px 0 rgba(#000, .8);
 
     border: .1em solid #631a15;
+    background: rgb(199,59,60); //fallback
     @include background(linear-gradient(rgb(199,59,60),rgb(184,32,31)));
     box-shadow: 0 .2em .6em rgba(#000, .6);
 
@@ -79,7 +80,7 @@
     &:before
     {
         border: 1px dashed #da5050;
-        margin-top: .1em;
+        margin-top: 1px;
     }
     &:after
     {
