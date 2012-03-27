@@ -4,7 +4,7 @@ A series of Compass and Sass mixins and functions for creating delicious CSS eff
 
 ## [Demos](http://moox.github.com/compass-recipes/)
 
-Note: These are demos of the repository at its current state, *not* the last stable gem. To get the most up-to-date recipes, please see Installation for instructions on installing the repo at his current state*
+_Note: These are demos of the repository at its current state, *not* the last stable gem. To get the most up-to-date recipes, please see Installation for instructions on installing the repo at his current state_
 
 ## Types of Recipes
 
@@ -34,17 +34,17 @@ Note: These are demos of the repository at its current state, *not* the last sta
 More informations on the [Wiki](https://github.com/MoOx/compass-recipes/wiki)*
 
 
-# Usage
+## Usage
 
 When compass-recipes installed, you just need to require the compass plugin in your project
 
-```css
+```ruby
 require 'compass-recipes'
 ```
 
 Then you can include some recipes like this
 
-```css
+```scss
 @import "recipes/shape/triangle";
 .my-triangle
 {
@@ -54,7 +54,7 @@ Then you can include some recipes like this
 
 Like Compass does, you can include all recipes in a folder like this
 
-```css
+```scss
 @import "recipes/shape";
 
 .my-triangle
@@ -68,30 +68,26 @@ Like Compass does, you can include all recipes in a folder like this
 }
 ```
 
-## Authors/Maintainers
+## Support/Community
 
-Compass Recipes is maintained by [Maxime Thirouin](http://moox.fr), a french front-end web developer, and [David Kaneda](http://www.davidkaneda.com), creative director at [Sencha](http://www.sencha.com).
+Compass Recipes has for now a little community because this projet is (for now) only at the beginning.
 
-### Recurrent Contributors
+[@Compass_Recipes](https://twitter.com/#!/Compass_Recipes) on _Twitter_ is a great place to ask very short questions that you want answered quickly.
 
-* [@canarymason](https://github.com/canarymason)
+There is also an IRC channel, **#compass-recipes** on _irc.freenode.net_.
 
-### Sous Chefs
+Feel free to ping @MoOx if he’s there to get his attention quickly. If there’s no one on **#compass-recipes**, you can try the **#compass** or maybe the **#sass** channel on IRC.
 
-While Maxime and David are the primary project maintainers, most of the core ideas and techniques in the recipes are not from them.
-
-Credits & Thanks:
-
-* [@chriscoyier](https://github.com/chriscoyier) (shapes & lots of tricks)
-* [@leaverou](https://github.com/leaverou) (backgrounds patterns)
-* [@necolas](https://github.com/necolas) (normalize & tricks)
-* [@simurai](https://github.com/simurai) (awesomes design stuffs)
-* All of the people who contribute to the recipes (all names are in each recipes)
-
+If you have a longer question (or no one’s around on IRC at the moment), the Sass Google group is a great place to go. You’ll usually get a response within a couple hours or so.
 
 ## Open to All
 
 If you have a nifty CSS trick that makes sense to be abstracted (and isn't already in another Github repo), please fork and submit a pull request. Note: If you are not the author of the CSS trick, you must get their permission before adding.
+
+## Fonts
+
+All fonts are repackaged using [Fontsquirrel](http://www.fontsquirrel.com/fontface/generator).
+Licences are distributed with the fonts.
 
 ## Build Documentation
 
@@ -108,19 +104,34 @@ Then, to build the gh-pages from the `tests/`, you need to call
 
 This process create the pages & push them to your gh-pages branch.
 
-## Fonts
+## Authors/Maintainers
 
-All fonts are repackaged using [Fontsquirrel](http://www.fontsquirrel.com/fontface/generator).
-Licences are distributed with the fonts.
+Compass Recipes is maintained by [Maxime Thirouin](http://moox.fr), a french front-end web developer, and [David Kaneda](http://www.davidkaneda.com), creative director at [Sencha](http://www.sencha.com).
 
-## Additional Resources
+### Recurrent Contributors
+
+* [@canarymason](https://github.com/canarymason)
+
+#### Sous Chefs
+
+While Maxime and David are the primary project maintainers, most of the core ideas and techniques in the recipes are not from them.
+
+Credits & Thanks:
+
+* [@chriscoyier](https://github.com/chriscoyier) (shapes & lots of tricks)
+* [@leaverou](https://github.com/leaverou) (backgrounds patterns)
+* [@necolas](https://github.com/necolas) (normalize & tricks)
+* [@simurai](https://github.com/simurai) (awesomes design stuffs)
+* All of the people who contribute to the recipes (all names are in each recipes)
+
+### Additional Resources
 
 Some other great CSS/SCSS/design projects for making delicious websites:
 
-* [Normalize](http://necolas.github.com/normalize.css/) - The standard of CSS normalizations. (included as a recipe)
 * [Subtle Patterns](http://subtlepatterns.com/) - Great collection of free background patterns, some of which are not possible with CSS alone.
 * [Animate.sass](https://github.com/adamstac/animate.sass) - A bevy of pre-defined keyframe animations.
 * [OMG Text](http://jaredhardy.com/omg-text/) - Some super-rad text effects using text-shadow
+
 
 ## License
 
