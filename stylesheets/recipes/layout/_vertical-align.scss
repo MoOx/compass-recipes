@@ -1,29 +1,4 @@
-/**
- * Vertical alignement for page
- * Inspired by http://css-tricks.com/snippets/css/center-div-with-dynamic-height/
- * 
- * Usage:
- * 
- * SCSS
- * @include vertical-align-requirement;
- * .v-align-container { @include vertical-align-container }
- * .v-align-content-container { @include vertical-align-content-container }
- * .v-align-content { @include vertical-align-content }
- * 
- * HTML
- * <body>
- *     <div class="v-align-container">
- *         <div class="v-align-content-container">
- *             <div class="v-align-content">
- *             Your content !
- *             </div>
- *         </div> 
- *     </div>
- * </body>
- *
- * @thanks Chris Coyier @chriscoyier
- * @autor Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
+//  Vertical alignement for page//  Inspired by http://css-tricks.com/snippets/css/center-div-with-dynamic-height///  //  Usage://  //  SCSS//  @include vertical-align-requirement;//  .v-align-container { @include vertical-align-container }//  .v-align-content-container { @include vertical-align-content-container }//  .v-align-content { @include vertical-align-content }//  //  HTML//  <body>//      <div class="v-align-container">//          <div class="v-align-content-container">//              <div class="v-align-content">//              Your content !//              </div>//          </div> //      </div>//  </body>//  @thanks Chris Coyier @chriscoyier//  @autor Maxime Thirouin maxime.thirouin@gmail.com @MoOx// /
 
 @mixin vertical-align-requirement
 {

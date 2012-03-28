@@ -1,10 +1,4 @@
-/**
- * UI convex effect from one color
- *
- * @todo merge with ui-button ?
- *
- * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
+//  UI convex effect from one color//  @todo merge with ui-button ?//  @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx// /
 @mixin ui-convex($color: #ddd, $button-effect: true, $opacity-top: .5, $opacity-bottom: 0, $color-mix: #fff)
 {
     background: $color; // fallback
