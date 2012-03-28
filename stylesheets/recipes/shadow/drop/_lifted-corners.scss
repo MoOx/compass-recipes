@@ -1,4 +1,4 @@
-//  Drop shadow w/ lifted corners//  @thanks Nicolas Gallagher @necolas//  @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/// /
+//  Drop shadow w/ lifted corners//  @thanks Nicolas Gallagher @necolas//  @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
 @mixin drop-shadow-lifted-corners($height: 15px, $margin: 10px, $angle: 4deg, $color: rgba(#000, .7))
 {
     position: relative;
