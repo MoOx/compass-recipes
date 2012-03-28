@@ -1,11 +1,11 @@
-/**
- * <hr /> separator style
- *
- * @author Chris Coyier @chriscoyier
- * @link http://jsfiddle.net/chriscoyier/GaEzp/35/
- *
- * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
- */
+// /**
+//  * <hr /> separator style
+//  *
+//  * @author Chris Coyier @chriscoyier
+//  * @link http://jsfiddle.net/chriscoyier/GaEzp/35/
+//  *
+//  * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+//  */
 
 @mixin ui-separator-gradient($color: rgba(#000, .75), $color-alt: rgba(#000, 0), $height: 1px)
 {

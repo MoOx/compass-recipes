@@ -1,8 +1,8 @@
-/**
- * Shape/Polygon/Rectangle
- *
- * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
+// /**
+//  * Shape/Polygon/Rectangle
+//  *
+//  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+//  */
 @mixin rectangle($width: 100px, $height: 100px, $background: transparent)
 {
     width: $width;

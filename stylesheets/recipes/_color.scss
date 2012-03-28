@@ -1,21 +1,21 @@
-/**
- *
- * @author David Kaneda - http://www.davidkaneda.com
- *
- */
+// /**
+//  *
+//  * @author David Kaneda - http://www.davidkaneda.com
+//  *
+//  */
 
 @import "color/name";
 
-/**
- * @class Color
- */
+// /**
+//  * @class Color
+//  */
 
-/**
- * Returns the brightness (out of 100) of a specified color.
- * @todo explain why this is useful
- * @param {color} $color The color you want the brightness value of
- * @return {measurement}
- */
+// /**
+//  * Returns the brightness (out of 100) of a specified color.
+//  * @todo explain why this is useful
+//  * @param {color} $color The color you want the brightness value of
+//  * @return {measurement}
+//  */
 @function brightness($color) {
     $r: red($color) / 255 * 100;
     $g: green($color) / 255 * 100;
@@ -25,12 +25,12 @@
     @return $brightness;
 }
 
-// @private
+// // @private
 @function color-difference($c1, $c2) {
     @return (max(red($c1), red($c2)) - min(red($c1), red($c2))) + (max(green($c1), green($c2)) - min(green($c1), green($c2))) + (max(blue($c1), blue($c2)) - min(blue($c1), blue($c2)));
 }
 
-// @private
+// // @private
 @function color-luminance($value) {
     @if $value <= 0.03928 {
         @return $value / 12.92;
@@ -39,12 +39,12 @@
     }
 }
 
-/**
- * Returns the luminosity for a specified color
- * @todo explain why this is useful
- * @param {color} The color to check
- * @return {measurement}
- */
+// /**
+//  * Returns the luminosity for a specified color
+//  * @todo explain why this is useful
+//  * @param {color} The color to check
+//  * @return {measurement}
+//  */
 @function luminosity($color) {
     $r: color-luminance(red($color) / 255);
     $g: color-luminance(green($color) / 255);
@@ -165,7 +165,7 @@ $base-gradient: matte !default;
 $default-text-contrast: 85% !default;
 $color-mode: get-color-mode($neutral-color) !default;
 
-// @debug color-difference(#95419F, #0FFF90);
-// @debug brightness(#cbea0d) - brightness(#ea850d);
-// @debug contrast-ratio(#95419F, #0FFF90);
-// @debug brightness(#E0F200);
+// // @debug color-difference(#95419F, #0FFF90);
+// // @debug brightness(#cbea0d) - brightness(#ea850d);
+// // @debug contrast-ratio(#95419F, #0FFF90);
+// // @debug brightness(#E0F200);

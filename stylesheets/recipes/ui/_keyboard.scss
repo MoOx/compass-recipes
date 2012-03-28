@@ -1,14 +1,14 @@
-/**
- * Keyboard key touch
- * A simple stylesheet for rendering beautiful keyboard-style elements.
+// /**
+//  * Keyboard key touch
+//  * A simple stylesheet for rendering beautiful keyboard-style elements.
 
- * @author Michael Hüneburg http://michaelhue.com/keyscss
- * @link https://github.com/michaelhue/keyscss (commit 76bb603e921d0145362e0f60eabb79d4f69cbda0)
- *
- * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
-*/
+//  * @author Michael Hüneburg http://michaelhue.com/keyscss
+//  * @link https://github.com/michaelhue/keyscss (commit 76bb603e921d0145362e0f60eabb79d4f69cbda0)
+//  *
+//  * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+// */
 
-// Base style, essential for every key
+// // Base style, essential for every key
 @mixin ui-keyboard-key-requirements($font-size: .85em, $line-height: 1, $font-family: "Lucida Grande")
 {
     padding: .2em .3em;
@@ -33,9 +33,9 @@
     }
 }
 
-// it's will be nice to manage color schema with mixin like
-// key-light, key-dark but, we can't @include them with a variable
-// it's not yet possible to make a @include key-#{$color-schema};
+// // it's will be nice to manage color schema with mixin like
+// // key-light, key-dark but, we can't @include them with a variable
+// // it's not yet possible to make a @include key-#{$color-schema};
 @mixin ui-keyboard-key-color-schema($color-schema: light)
 {
     @if ($color-schema == dark)

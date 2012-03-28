@@ -21,7 +21,7 @@ $bevel-blur: 0 !default;
     border-bottom-color: darken($base-color, $contrast);
 }
 
-// @todo: $direction
+// // @todo: $direction
 
 @mixin bevel-shadow(
     $size: $bevel-size,

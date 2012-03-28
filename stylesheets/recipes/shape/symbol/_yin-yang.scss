@@ -1,9 +1,9 @@
-/**
- * Shape/Symbol/Yin-yang
- *
- * @author Alexander Futekov
- * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
+// /**
+//  * Shape/Symbol/Yin-yang
+//  *
+//  * @author Alexander Futekov
+//  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+//  */
 @mixin yin-yang($width: 10em, $color: #000, $color-alt: #fff)
 {
     width: $width*96/100;

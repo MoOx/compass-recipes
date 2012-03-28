@@ -1,17 +1,17 @@
-/**
- * Striped background patterns
- *
- * Before compass 0.11.5, you need to add
- * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
- * To your configuration (config.rb)
- * @see https://github.com/chriseppstein/compass/issues/401
- *
- * @link http://lea.verou.me/css3patterns/#horizontal-stripes
- * @link http://lea.verou.me/css3patterns/#vertical-stripes
- *
- * @author Lea Verou http://lea.verou.me/ for the original pattern
- * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
- */
+// /**
+//  * Striped background patterns
+//  *
+//  * Before compass 0.11.5, you need to add
+//  * Compass::BrowserSupport.add_support("repeating-linear-gradient", "webkit", "moz", "o", "ms")
+//  * To your configuration (config.rb)
+//  * @see https://github.com/chriseppstein/compass/issues/401
+//  *
+//  * @link http://lea.verou.me/css3patterns/#horizontal-stripes
+//  * @link http://lea.verou.me/css3patterns/#vertical-stripes
+//  *
+//  * @author Lea Verou http://lea.verou.me/ for the original pattern
+//  * @author Mason Wendell mason@canarypromo.com @canarymason for the sass mixin
+//  */
 
 @import "compass/css3/images";
 

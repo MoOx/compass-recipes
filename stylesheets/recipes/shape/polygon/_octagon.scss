@@ -1,10 +1,10 @@
-/**
- * Shape/Polygon/Octagon
- *
- * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
+// /**
+//  * Shape/Polygon/Octagon
+//  *
+//  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+//  */
 
-//Don't ask me when the coefficient cames from... I just compute then from original code by @chriscoyier
+// //Don't ask me when the coefficient cames from... I just compute then from original code by @chriscoyier
 @mixin octagon($width: 100px, $height: 100px, $background-color: transparent)
 {
     width: $width;

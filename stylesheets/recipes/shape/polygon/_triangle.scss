@@ -1,8 +1,8 @@
-/**
- * Shape/Polygon/Triangle
- *
- * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
+// /**
+//  * Shape/Polygon/Triangle
+//  *
+//  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+//  */
 @mixin triangle($direction: top, $width: 1em, $height: 0, $color: #000)
 {
     @if ($height == 0)

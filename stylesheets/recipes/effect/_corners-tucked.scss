@@ -1,14 +1,14 @@
-/**
- * CSS3 Tucked Corners effect
- *
- * @thanks Chris Coyier @chriscoyier
- * @link http://css-tricks.com/snippets/css/tucked-corners/
- * @author Mason Wendell http://thecodingdesigner.com
- *
- */
+// /**
+//  * CSS3 Tucked Corners effect
+//  *
+//  * @thanks Chris Coyier @chriscoyier
+//  * @link http://css-tricks.com/snippets/css/tucked-corners/
+//  * @author Mason Wendell http://thecodingdesigner.com
+//  *
+//  */
 
-// $tape-color: the background css property
-// $inner-element: the selector for the inner element (for bottom corners)
+// // $tape-color: the background css property
+// // $inner-element: the selector for the inner element (for bottom corners)
 @mixin corners-tucked($tape-color: white, $height: 50px, $width: 100px, $inner-element: "span.bottom-corners") {
     position: relative;
     @include box-sizing(border-box);
