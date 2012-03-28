@@ -1,8 +1,13 @@
-//  Shape/Polygon/Star//  @todo check if setting a z-index by default is a good thing//  @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+// /**
+//  * Shape/Polygon/Star
+//  *
+//  * @todo check if setting a z-index by default is a good thing
+//  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+//  */
 
-// Star (5-points)
-// @author Kit Macallister
-// @link http://kitmacallister.com/2011/css-only-5-point-star/
+// // Star (5-points)
+// // @author Kit Macallister
+// // @link http://kitmacallister.com/2011/css-only-5-point-star/
 @mixin star-5($width: $width, $background-color: transparent, $z-index: 0)
 {
     margin-top: $width/2;
@@ -49,7 +54,7 @@
     }
 }
 
-// Star (6-points)
+// // Star (6-points)
 @mixin star-6($width: $width, $background-color: transparent, $z-index: 0)
 {
     width: 0;
@@ -77,9 +82,9 @@
     }
 }
 
-// @author Alan Johnson
-// @link http://commondream.net/post/8848553728/pure-css-badges
-// @todo maybe improve this to be able to include text without the transform()
+// // @author Alan Johnson
+// // @link http://commondream.net/post/8848553728/pure-css-badges
+// // @todo maybe improve this to be able to include text without the transform()
 @mixin star-8($width: 8em, $color: #000, $z-index: 0)
 {
     &,

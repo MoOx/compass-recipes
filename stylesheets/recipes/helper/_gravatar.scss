@@ -1,17 +1,17 @@
-//
-// Gravatar recipe
-//
-// This recipe use a gravatar as an element
-//
-// It's not really usable as it could be, @link https://github.com/MoOx/compass-recipes/issues/27
-// But I want something, so use javascript if you can, or helper if you just need one hardcoded gravatar
-//
-// @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
-//
+// //
+// // Gravatar recipe
+// //
+// // This recipe use a gravatar as an element
+// //
+// // It's not really usable as it could be, @link https://github.com/MoOx/compass-recipes/issues/27
+// // But I want something, so use javascript if you can, or helper if you just need one hardcoded gravatar
+// //
+// // @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+// //
 
 @import "recipes/shared/pseudo-element";
 
-// default values
+// // default values
 $helper-gravatar-size:      48px    !default;
 $helper-gravatar-default:   ""      !default;
 $helper-gravatar-rating:    PG      !default;

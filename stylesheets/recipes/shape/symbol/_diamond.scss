@@ -1,4 +1,11 @@
-//  Shape/Symbol/Diamond//  @todo add height support//  //  @author Alexander Futekov//  @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+// /**
+//  * Shape/Symbol/Diamond
+//  *
+//  * @todo add height support
+//  * 
+//  * @author Alexander Futekov
+//  * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+//  */
 @mixin diamond($width: 5em, $color: #000)
 {
     $half-width: $width/2;

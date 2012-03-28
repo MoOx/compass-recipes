@@ -1,9 +1,9 @@
-// taken from bourbon
+// // taken from bourbon
 
-// http://www.w3.org/TR/css3-animations/#the-animation-name-property-
-// Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
+// // http://www.w3.org/TR/css3-animations/#the-animation-name-property-
+// // Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
 
-// Official animation shorthand property.
+// // Official animation shorthand property.
 @mixin animation ($animation-1,
   $animation-2: false, $animation-3: false,
   $animation-4: false, $animation-5: false,
@@ -18,7 +18,7 @@
           animation: $full;
 }
 
-// Individual Animation Properties
+// // Individual Animation Properties
 @mixin animation-name ($name-1,
   $name-2: false, $name-3: false,
   $name-4: false, $name-5: false,
@@ -50,7 +50,7 @@
 
 
 @mixin animation-timing-function ($motion-1: ease,
-//  ease | linear | ease-in | ease-out | ease-in-out
+// //  ease | linear | ease-in | ease-out | ease-in-out
   $motion-2: false, $motion-3: false,
   $motion-4: false, $motion-5: false,
   $motion-6: false, $motion-7: false,
@@ -66,7 +66,7 @@
 
 
 @mixin animation-iteration-count ($value-1: 1,
-//  infinite | <number>
+// //  infinite | <number>
   $value-2: false, $value-3: false,
   $value-4: false, $value-5: false,
   $value-6: false, $value-7: false,
@@ -82,7 +82,7 @@
 
 
 @mixin animation-direction ($direction-1: normal,
-//  normal | alternate
+// //  normal | alternate
   $direction-2: false, $direction-3: false,
   $direction-4: false, $direction-5: false,
   $direction-6: false, $direction-7: false,
@@ -98,7 +98,7 @@
 
 
 @mixin animation-play-state ($state-1: running,
-//  running | paused
+// //  running | paused
   $state-2: false, $state-3: false,
   $state-4: false, $state-5: false,
   $state-6: false, $state-7: false,
@@ -129,8 +129,8 @@
 
 
 @mixin animation-fill-mode ($mode-1: none,
-//  http://goo.gl/l6ckm
-//  none | forwards | backwards | both
+// //  http://goo.gl/l6ckm
+// //  none | forwards | backwards | both
   $mode-2: false, $mode-3: false,
   $mode-4: false, $mode-5: false,
   $mode-6: false, $mode-7: false,

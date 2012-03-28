@@ -1,4 +1,9 @@
-//  Drop shadow curved//  @thanks Nicolas Gallagher @necolas//  @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+// /**
+//  * Drop shadow curved
+//  *
+//  * @thanks Nicolas Gallagher @necolas
+//  * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+//  */
 @mixin drop-shadow-curved($side: 'vertical', $distance: 10px, $box-shadow: 0 0 15px rgba(#000, .6), $radius-1: 10px, $radius-2: 100px)
 {
     position: relative;

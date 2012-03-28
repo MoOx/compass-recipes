@@ -1,4 +1,8 @@
-//  CSS pulse loader//  @author Maxime Thirouin maxime.thirouin@gmail.com
+// /**
+//  * CSS pulse loader
+//  *
+//  * @author Maxime Thirouin maxime.thirouin@gmail.com
+//  */
 
 @import "recipes/animation";
 
@@ -103,7 +107,7 @@
     }
 }
 
-// Cannot work ?
+// // Cannot work ?
 @mixin ui-loader-pulse-content-animation()
 {
     @include keyframes(ui-loader-pulse-content)

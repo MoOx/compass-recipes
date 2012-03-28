@@ -1,9 +1,13 @@
-//  Menu dropdown helper//  @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+// /**
+//  * Menu dropdown helper
+//  *
+//  * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+// */
 
-// this mixin have to be used with a js for dropdown menu behavior
-// (display onhover with a timeout like 500ms for better UX)
+// // this mixin have to be used with a js for dropdown menu behavior
+// // (display onhover with a timeout like 500ms for better UX)
 
-// sometimes we don't use nesting all the time to optimize some selector
+// // sometimes we don't use nesting all the time to optimize some selector
 
 @import "recipes/shared/block-inline-block";
 

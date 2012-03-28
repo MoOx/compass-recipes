@@ -1,4 +1,21 @@
-//  Shortcuts for Flexible Box Model//  //  Usage://  //  SCSS//  @include box-layout;//  .mycontainer { @extend .hbox }//  .mybox { @extend .flex2 }//  Or in HTML:;//  <div class="vbox">//   <div class="flex">//     ...//  @autor David Kaneda
+// /**
+//  * Shortcuts for Flexible Box Model
+//  * 
+//  * Usage:
+//  * 
+//  * SCSS
+//  * @include box-layout;
+//  * .mycontainer { @extend .hbox }
+//  * .mybox { @extend .flex2 }
+//  *
+//  * Or in HTML:;
+//  * <div class="vbox">
+//  *  <div class="flex">
+//  *    ...
+//  *
+//  * @autor David Kaneda
+//  *
+//  */
 
  @mixin flexible-box-layout {
     .box {
