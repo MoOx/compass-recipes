@@ -15,7 +15,7 @@
 //  */
 
 $icon-font-class-suffix: "icon-font" !default;
-$icon-font-base-class:   ".#{$icon-font-class-suffix}-base" !default;
+$icon-font-base-class:   "#{$icon-font-class-suffix}-base" !default;
 
 // /**
 //  * @cfg {color} $icon-font-base-color
@@ -46,9 +46,8 @@ $icon-font-default-gradient: matte !default;
 // // Base style for pseudo-selectors
 // // @todo Doc me yo
 
-#{$icon-font-base-class}
+%#{$icon-font-base-class}
 {
-    @silent;
     color: transparent;
     @include background-clip(text);
     position: absolute;
@@ -68,7 +67,7 @@ $icon-font-default-gradient: matte !default;
     .#{$icon-font-class-suffix}-#{$font-name}
     {
         font-family: #{$font-name};
-        @extend #{$icon-font-base-class};
+        @extend .#{$icon-font-base-class};
     }
 }
 
