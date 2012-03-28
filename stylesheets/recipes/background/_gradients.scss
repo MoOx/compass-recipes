@@ -1,34 +1,6 @@
-/**
- *
- * @class Gradients
- * @author David Kaneda http://www.davidkaneda.com/
- *
- */
+//  @class Gradients//  @author David Kaneda http://www.davidkaneda.com/// /
 
-/**
- * Adds a background gradient into a specified selector.
- * 
- *     @include background-gradient(#444, 'glossy');
- * 
- * You can also use color-stops if you want full control of the gradient:
- * 
- *     @include background-gradient(#444, color-stops(#333, #222, #111));
- * 
- * @param {color} $bg-color
- * The base color of the gradient.
- * 
- * @param {string/list} $type
- * The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or linear:
- *
- *     @include background-gradient(red, 'glossy');
- *
- * It can also accept a list of color-stop values:;
- * 
- *     @include background-gradient(black, color-stops(#333, #111, #000));
- * 
- * @param {string} $direction
- * The direction of the gradient.
- */
+//  Adds a background gradient into a specified selector.//  //      @include background-gradient(#444, 'glossy');//  //  You can also use color-stops if you want full control of the gradient://  //      @include background-gradient(#444, color-stops(#333, #222, #111));//  //  @param {color} $bg-color//  The base color of the gradient.//  //  @param {string/list} $type//  The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or linear://      @include background-gradient(red, 'glossy');//  It can also accept a list of color-stop values:;//  //      @include background-gradient(black, color-stops(#333, #111, #000));//  //  @param {string} $direction//  The direction of the gradient.// /
 
 @import "compass/css3/images";
 
