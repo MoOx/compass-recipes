@@ -8,7 +8,7 @@
 // @thanks Simurai @simurai
 ///
 
-@import '../shared/pseudo-element';
+@import "recipes/shared/pseudo-element";
 
 @mixin effect-glass(
     $color: rgba(#fff, .12),

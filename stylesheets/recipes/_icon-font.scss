@@ -4,13 +4,13 @@
 // Great to use with the some pictos fonts
 ///
 
-@import 'compass';
+@import "compass/css3/background-clip";
+@import "compass/css3/user-interface";
+@import "compass/css3/text-shadow";
 @import "compass/typography/text/replacement";
 
-@import 'shared';
-@import 'font';
-
-@import 'background/gradients';
+@import "recipes/font";
+@import "recipes/background/gradients";
 
 // @todo add http://fortaweso.me/font-awesome
 
