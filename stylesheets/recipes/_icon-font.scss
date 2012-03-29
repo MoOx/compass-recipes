@@ -1,3 +1,8 @@
+////
+// Icon Fonts helpers
+// 
+// Great to use with the some pictos fonts
+///
 
 @import 'compass';
 @import "compass/typography/text/replacement";
@@ -8,11 +13,6 @@
 @import 'background/gradients';
 
 // @todo add http://fortaweso.me/font-awesome
-
-////
-// @class font Icon
-// Great to use with the some pictos fonts
-///
 
 $icon-font-class-suffix: "icon-font" !default;
 $icon-font-base-class:   "#{$icon-font-class-suffix}-base" !default;

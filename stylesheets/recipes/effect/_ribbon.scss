@@ -1,7 +1,15 @@
+////
+// Ribbon effect
+// Transform an element to a "ribbon"
+// For now ribbon in corner is the only one available
+//
+// @todo add something inspired by http://soiheardyouliekribbon.com/
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
 @import "compass/css3/transform";
 @import "recipes/shared/pseudo-element";
-
-// add http://soiheardyouliekribbon.com/
 
 @mixin effect-ribbon-corner($position: 'top left', $width: 10em, $height: 2em, $lines: 1, $skin: 'classic', $width-add: 0, $height-add: 0)
 {
