@@ -9,38 +9,38 @@
 
 // @todo add http://fortaweso.me/font-awesome
 
-/**
- * @class font Icon
- * Great to use with the some pictos fonts
- */
+////
+// @class font Icon
+// Great to use with the some pictos fonts
+///
 
 $icon-font-class-suffix: "icon-font" !default;
 $icon-font-base-class:   ".#{$icon-font-class-suffix}-base" !default;
 
-/**
- * @cfg {color} $icon-font-base-color
- * The default color of icons when using the {@link #icon-font} mixin.
- *
- * Defaults to `white`.
- */
+////
+// @cfg {color} $icon-font-base-color
+// The default color of icons when using the {@link #icon-font} mixin.
+//
+// Defaults to `white`.
+///
 $icon-font-base-color: #999 !default;
 
-/**
- * @cfg {color} $icon-font-default-stroke
- * The default color to use on the border of icons, when using the {@link #icon-font} mixin.
- *
- * Defaults to `null`.
- */
+////
+// @cfg {color} $icon-font-default-stroke
+// The default color to use on the border of icons, when using the {@link #icon-font} mixin.
+//
+// Defaults to `null`.
+///
 $icon-font-default-stroke: darken($icon-font-base-color, 10) !default;
 
 $icon-font-highlight-color: #3778E5 !default;
 
-/**
- * @cfg {string} $icon-font-default-gradient
- * The default gradient to use when using the {@link #icon-font} mixin.
- *
- * Defaults to `matte`.
- */
+////
+// @cfg {string} $icon-font-default-gradient
+// The default gradient to use when using the {@link #icon-font} mixin.
+//
+// Defaults to `matte`.
+///
 $icon-font-default-gradient: matte !default;
 
 // Base style for pseudo-selectors
@@ -82,23 +82,23 @@ $icon-font-default-gradient: matte !default;
 @mixin icon-font-face-socialico()               { @include icon-font-face(socialico, SocialicoRegular, socialico-webfont, icons/socialico); }
 @mixin icon-font-face-websymbols()              { @include icon-font-face(websymbols, WebSymbolsRegular, websymbols-regular-webfont, icons/websymbols); }
 
-/**
- * Includes a character into the specified selector, styled as an icon.
- *
- *     @include icon-font('a');
- *
- * @param {color} $color
- * The color of the icon. Defaults to {@link #$icon-font-default-background $icon-font-default-background}.
- *
- * @param {measurement} $size
- * The size of the icon
- *
- * @param {color} $stroke
- * The color of the border. Defautls to {@link #$icon-font-default-border $icon-font-default-border}.
- *
- * @param {boolean} $include-staes
- * True to include states for hover and active. Defaults to `true`.
- */
+////
+// Includes a character into the specified selector, styled as an icon.
+//
+//     @include icon-font('a');
+//
+// @param {color} $color
+// The color of the icon. Defaults to {@link #$icon-font-default-background $icon-font-default-background}.
+//
+// @param {measurement} $size
+// The size of the icon
+//
+// @param {color} $stroke
+// The color of the border. Defautls to {@link #$icon-font-default-border $icon-font-default-border}.
+//
+// @param {boolean} $include-staes
+// True to include states for hover and active. Defaults to `true`.
+///
 @mixin icon-font(
     $character: attr(data-icon),
     $size: 48px,

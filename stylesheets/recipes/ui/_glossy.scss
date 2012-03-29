@@ -1,15 +1,15 @@
-/**
- * UI Glossy helper
- *
- * @deprecated
- * @todo Remove in 0.4
- * @see background/gradients
- *
- * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
+////
+// UI Glossy helper
+//
+// @deprecated
+// @todo Remove in 0.4
+// @see background/gradients
+//
+// @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
+///
+
 @mixin ui-glossy($color: #000, $opacity: .6, $border-width: .1em, $border-color-top: rgba(255,255,255,.5), $border-color-bottom: rgba(85,85,85,.6))
 {
-
     @warn '@mixin ui-glossy has been deprecated: Use background-gradient mixin/functions instead.';
 
     border-left: 0;

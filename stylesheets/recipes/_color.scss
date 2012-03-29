@@ -1,21 +1,17 @@
-/**
- *
- * @author David Kaneda - http://www.davidkaneda.com
- *
- */
+////
+// Color functions
+//
+// @author David Kaneda - http://www.davidkaneda.com
+///
 
 @import "color/name";
 
-/**
- * @class Color
- */
-
-/**
- * Returns the brightness (out of 100) of a specified color.
- * @todo explain why this is useful
- * @param {color} $color The color you want the brightness value of
- * @return {measurement}
- */
+////
+// Returns the brightness (out of 100) of a specified color.
+// @todo explain why this is useful
+// @param {color} $color The color you want the brightness value of
+// @return {measurement}
+///
 @function brightness($color) {
     $r: red($color) / 255 * 100;
     $g: green($color) / 255 * 100;
@@ -39,12 +35,12 @@
     }
 }
 
-/**
- * Returns the luminosity for a specified color
- * @todo explain why this is useful
- * @param {color} The color to check
- * @return {measurement}
- */
+////
+// Returns the luminosity for a specified color
+// @todo explain why this is useful
+// @param {color} The color to check
+// @return {measurement}
+///
 @function luminosity($color) {
     $r: color-luminance(red($color) / 255);
     $g: color-luminance(green($color) / 255);

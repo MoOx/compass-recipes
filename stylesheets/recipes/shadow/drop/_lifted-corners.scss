@@ -1,23 +1,24 @@
+////
+// Drop shadow w/ lifted corners
+//
+// @thanks Nicolas Gallagher @necolas
+// @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+// @thanks Matt Hamm @matthamm
+// @link http://matthamm.com/box-shadow-curl.html
+///
+
 @import "compass/css3/box-shadow";
 
-/**
- * Drop shadow w/ lifted corners parent element. Totally optional.
- */
-@mixin drop-shadow-lifted-corners-parent() {
+////
+// Drop shadow w/ lifted corners parent element. Totally optional.
+///
+@mixin drop-shadow-lifted-corners-parent()
+{
   position: relative;
   z-index: 1; /* prevent shadows falling behind containers with backgrounds */
   margin: 0;
 }
 
-
-/**
- * Drop shadow w/ lifted corners
- *
- * @thanks Nicolas Gallagher @necolas
- * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
- * @thanks Matt Hamm @matthamm
- * @link http://matthamm.com/box-shadow-curl.html
- */
 @mixin drop-shadow-lifted-corners($height: 16px, $margin: 10px, $angle: 6deg, $color: rgba(#000, .3))
 {
     position: relative;

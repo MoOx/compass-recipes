@@ -1,12 +1,12 @@
-/**
- * Keyboard key touch
- * A simple stylesheet for rendering beautiful keyboard-style elements.
-
- * @author Michael Hüneburg http://michaelhue.com/keyscss
- * @link https://github.com/michaelhue/keyscss (commit 76bb603e921d0145362e0f60eabb79d4f69cbda0)
- *
- * @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
-*/
+////
+// Keyboard key touch
+// A simple stylesheet for rendering beautiful keyboard-style elements.
+//
+// @author Michael Hüneburg http://michaelhue.com/keyscss
+// @link https://github.com/michaelhue/keyscss (commit 76bb603e921d0145362e0f60eabb79d4f69cbda0)
+//
+// @author Maxime Thirouin @MoOx maxime.thirouin@gmail.com
+///
 
 // Base style, essential for every key
 @mixin ui-keyboard-key-requirements($font-size: .85em, $line-height: 1, $font-family: "Lucida Grande")

@@ -1,14 +1,14 @@
-/**
- * Corner folded with pure CSS
- * 
- * Known support: Firefox 3.5+, Chrome 4+, Safari 4+, Opera 10+, IE 9+.
- * IE8 is not supported because it not render properly box-shadow and
- * pseudo element should be selected with ::element and not :element
- * 
- * @thanks Nicolas Gallagher @necolas
- * @link http://nicolasgallagher.com/pure-css-folded-corner-effect/demo/
- * @todo Nix in .4
- */
+////
+// Corner folded with pure CSS
+// 
+// Known support: Firefox 3.5+, Chrome 4+, Safari 4+, Opera 10+, IE 9+.
+// IE8 is not supported because it not render properly box-shadow and
+// pseudo element should be selected with ::element and not :element
+// 
+// @thanks Nicolas Gallagher @necolas
+// @link http://nicolasgallagher.com/pure-css-folded-corner-effect/demo/
+// @todo Nix in .4
+///
 
 @import "recipes/effect/folded-corner";
 

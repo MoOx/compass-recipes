@@ -1,9 +1,8 @@
-/**
- * Rotate a group of elements as if they were casually tossed on a table
- *
- * @author Mason Wendell http://thecodingdesigner.com
- *
- */
+////
+// Rotate a group of elements as if they were casually tossed on a table
+//
+// @author Mason Wendell http://thecodingdesigner.com
+///
 
 @mixin scatter($rotate: 10deg, $variation: 6) {
     $rotate-a: $rotate - $variation;
