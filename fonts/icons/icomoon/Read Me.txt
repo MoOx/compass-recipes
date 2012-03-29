@@ -1,0 +1,5 @@
+This is a free version of IcoMoon with a limited number of icons. More icons will be added to this package over time. Subscribe to this feed to be informed of future updates: http://feeds.feedburner.com/icomoon-updates
+
+Refer to Manual.pdf for a short guide on how to get started. An HTML version of this guide can be found here: http://keyamoon.com/icomoon/#toDocs
+
+Check out IcoMoon's webpage for more information: http://keyamoon.com/icomoon

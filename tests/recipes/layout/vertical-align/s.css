@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.v-align-container {
+  display: table;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  *position: relative;
+}
+
+.v-align-content-container {
+  display: table-cell;
+  vertical-align: middle;
+  *position: absolute;
+  *top: 50%;
+}
+
+.v-align-content {
+  *position: relative;
+  *top: -50%;
+}

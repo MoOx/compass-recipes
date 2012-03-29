@@ -1,0 +1,28 @@
+@import "recipes/icon-font";
+
+// you should not import all off it, it's just stupid but you know that
+@include icon-font-face-entypo;
+@include icon-font-face-heydings;
+@include icon-font-face-heydings_controls;
+@include icon-font-face-iconic_fill;
+@include icon-font-face-iconic_stroke;
+@include icon-font-face-icomoon;
+@include icon-font-face-modern-pictograms;
+@include icon-font-face-socialico;
+@include icon-font-face-websymbols;
+
+.smiley
+{
+    display: inline-block;
+    @include icon-font('\263a', $size: 200px, $color: #CFAB4F);
+}
+
+.entypo                 { @include icon-font($class: 'entypo'); }
+.heydings               { @include icon-font($class: 'heydings'); }
+.heydings_controls      { @include icon-font($class: 'heydings_controls'); }
+.iconic_fill            { @include icon-font($class: 'iconic_fill'); }
+.iconic_stroke          { @include icon-font($class: 'iconic_stroke'); }
+.icomoon                { @include icon-font($class: 'icomoon'); }
+.modern-pictograms      { @include icon-font($class: 'modern-pictograms'); }
+.socialico              { @include icon-font($class: 'socialico'); }
+.websymbols             { @include icon-font($class: 'websymbols'); }

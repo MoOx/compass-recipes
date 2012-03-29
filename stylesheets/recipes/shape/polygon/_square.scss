@@ -1,0 +1,12 @@
+////
+// Shape/Polygon/Square
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@mixin square($width: 100px, $background: transparent)
+{
+    width: $width;
+    height: $width;
+    background: $background;
+}

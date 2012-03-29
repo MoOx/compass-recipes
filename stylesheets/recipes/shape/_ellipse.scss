@@ -1,0 +1,25 @@
+////
+// Shape/Ellipse
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@import "compass/css3/border-radius";
+
+@mixin ellipse($width: 200px, $height: 100px)
+{
+    width: $width;
+    height: $height;
+    
+    @if ($width == $height) {
+        @include border-radius($width/2);
+    }
+    @else {
+        @include border-radius($width/2, $height/2);
+    }
+}
+
+@mixin circle($width: 100px)
+{
+    @include ellipse($width, $width);
+}

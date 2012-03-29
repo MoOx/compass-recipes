@@ -1,0 +1,9 @@
+@import "recipes/ui/overlay";
+
+.ui-overlay
+{
+    @include ui-overlay;
+
+    // just to be able to click on the navigation link for the demo
+    pointer-events: none;
+}

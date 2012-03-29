@@ -1,0 +1,31 @@
+.container {
+  *zoom: 1;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+.container:after {
+  clear: both;
+}
+
+.body {
+  width: 480px;
+  margin: 20px auto;
+}
+
+.container {
+  background: #DCE6BE;
+}
+
+.section {
+  float: left;
+  display: inline;
+  width: 220px;
+  height: 200px;
+  padding: 30px 0 0;
+  margin: 20px 10px;
+  text-align: center;
+  background: #A0C431;
+}

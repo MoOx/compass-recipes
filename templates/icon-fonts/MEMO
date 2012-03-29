@@ -1,0 +1,3 @@
+# commands used
+cd templates/icon-font/fonts/
+ln -s ../../../fonts/icons/ icons

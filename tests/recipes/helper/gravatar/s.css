@@ -1,0 +1,27 @@
+.gravatar {
+  width: 64px;
+  height: 64px;
+  background-image: url(http://www.gravatar.com/avatar/d2a1c95e2af59538301c3ee6d2907f6f.png?rating=PG&size=64&default=);
+  background-repeat: no-repeat;
+  margin-left: 50px;
+}
+.gravatar::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url(https://secure.gravatar.com/avatar/d2a1c95e2af59538301c3ee6d2907f6f.png?rating=PG&size=48&default=);
+  background-repeat: no-repeat;
+  position: relative;
+  left: -50px;
+}
+
+.gravatar-using-pseudo:before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 48px;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+}

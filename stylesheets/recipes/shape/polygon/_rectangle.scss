@@ -1,0 +1,12 @@
+////
+// Shape/Polygon/Rectangle
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@mixin rectangle($width: 100px, $height: 100px, $background: transparent)
+{
+    width: $width;
+    height: $height;
+    background: $background;
+}

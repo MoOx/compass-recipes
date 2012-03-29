@@ -1,0 +1,24 @@
+@import "compass/css3";
+@import "recipes/effect/corners-tucked";
+
+body {
+  background: #eeeeee;
+}
+
+.tucked-corners, .taped-corners{
+  width: 300px;
+  margin: 4em auto 8em;
+  background-color: #BADA55;
+  .bottom-corners {
+    padding: 0.5em 1em;
+  }
+}
+
+.tucked-corners{
+    @include corners-tucked(#eeeeee);
+    padding: 0.5em 1em;
+}
+
+.taped-corners{
+    @include corners-taped;
+}

@@ -1,0 +1,47 @@
+////
+// Background noise recipe
+//
+// This recipe use a sass function to generate a .png file
+//
+// Inspired by a jQuery plugin "Noisy" by Daniel Rapp @DanielRapp
+// @link https://github.com/DanielRapp/Noisy
+//
+// Converted using Sass by Aaron Russell @aaronrussell & Philipp Bosch @philippbosch
+// @link https://gist.github.com/1021332
+//
+// Ported to a sass gem by Antti Salonen @antsa
+// @link https://github.com/antsa/sassy_noise
+//
+// Mixin:        background-noise
+// Function:     background_noise
+//
+// @author Daniel Rapp @DanielRapp
+// @author Aaron Russell @aaronrussell
+// @author Philipp Bosch @philippbosch
+// @author Antti Salonen @antsa
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@import "compass/css3/images";
+
+// default values
+$background-noise-intensity:  0.5   !default;
+$background-noise-opacity:    0.12  !default;
+$background-noise-size:       200   !default;
+$background-noise-monochrome: true  !default;
+
+@mixin background-noise(
+    $intensity:   $background-noise-intensity,
+    $opacity:     $background-noise-opacity,
+    $size:        $background-noise-size,
+    $monochrome:  $background-noise-monochrome
+)
+{
+    background-image: background_noise(
+        $intensity: $intensity,
+        $opacity: $opacity,
+        $size: $size,
+        $monochrome: $monochrome
+    );
+    background-repeat: repeat;
+}
