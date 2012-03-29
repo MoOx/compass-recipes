@@ -60,8 +60,8 @@ task :pages do
   Dir["recipes/**/*"].each {|f| repo.add(f) }
   repo.status.deleted.each {|f, s| repo.remove(f)}
   message = ENV["MESSAGE"] || "Updated at #{Time.now.utc}"
-  #repo.commit(message)
+  repo.commit(message)
 
   # back to master (maybe it's not appropriate if we are not working on master ?!)
-  #repo.branch("master").checkout
+  repo.branch("master").checkout
 end
