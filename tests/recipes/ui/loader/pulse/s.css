@@ -1,9 +1,4 @@
 @charset "utf-8";
-/**
- * CSS pulse loader
- *
- * @author Maxime Thirouin maxime.thirouin@gmail.com
- */
 .ui-loader-pulse {
   position: relative;
   width: 40px;

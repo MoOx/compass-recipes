@@ -1,24 +1,4 @@
 @import url("//fonts.googleapis.com/css?family=Ubuntu:700");
-/**
- *
- * @author David Kaneda - http://www.davidkaneda.com
- *
- */
-/**
- * @class Color
- */
-/**
- * Returns the brightness (out of 100) of a specified color.
- * @todo explain why this is useful
- * @param {color} $color The color you want the brightness value of
- * @return {measurement}
- */
-/**
- * Returns the luminosity for a specified color
- * @todo explain why this is useful
- * @param {color} The color to check
- * @return {measurement}
- */
 h2 {
   font-family: Ubuntu, Helvetica, sans-serif;
   font-size: 144px;

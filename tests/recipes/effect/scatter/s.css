@@ -1,9 +1,3 @@
-/**
- * Rotate a group of elements as if they were casually tossed on a table
- *
- * @author Mason Wendell http://thecodingdesigner.com
- *
- */
 .scatter {
   -webkit-transform: rotate(10deg);
   -moz-transform: rotate(10deg);
