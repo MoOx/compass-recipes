@@ -8,6 +8,8 @@
 // @author Maxime Thirouin m@moox.fr @MoOx
 ///
 
+@import "compass/css3/user-interface";
+
 // Base style, essential for every key
 @mixin ui-keyboard-key-requirements($font-size: .85em, $line-height: 1, $font-family: "Lucida Grande")
 {
@@ -22,10 +24,7 @@
     display: inline-block;
     text-decoration: none;
     cursor: default;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    //@include user-select(none);
+    @include user-select(none);
 
     &[title]
     {
