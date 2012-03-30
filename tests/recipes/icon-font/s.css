@@ -1,9 +1,24 @@
+.entypo:after, .entypo:before, .heydings:after, .heydings:before, .heydings_controls:after, .heydings_controls:before, .iconic_fill:after, .iconic_fill:before, .iconic_stroke:after, .iconic_stroke:before, .icomoon:after, .icomoon:before, .modern-pictograms:after, .modern-pictograms:before, .socialico:after, .socialico:before, .websymbols:after, .websymbols:before, .smiley:after, .smiley:before {
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+  text-shadow: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 @font-face {
   font-family: "entypo";
   src: url('../../../fonts/icons/entypo/entypo-webfont.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/entypo/entypo-webfont.woff') format('woff'), url('../../../fonts/icons/entypo/entypo-webfont.ttf') format('truetype'), url('../../../fonts/icons/entypo/entypo-webfont.svg#EntypoRegular') format('svg');
 }
 
-.icon-font-entypo, .entypo:after, .entypo:before {
+.entypo:after, .entypo:before {
   font-family: entypo;
 }
 
@@ -12,7 +27,7 @@
   src: url('../../../fonts/icons/heydings/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/heydings/heydings_icons-webfont.woff') format('woff'), url('../../../fonts/icons/heydings/heydings_icons-webfont.ttf') format('truetype'), url('../../../fonts/icons/heydings/heydings_icons-webfont.svg#HeydingsCommonIconsRegular') format('svg');
 }
 
-.icon-font-heydings, .heydings:after, .heydings:before {
+.heydings:after, .heydings:before {
   font-family: heydings;
 }
 
@@ -21,7 +36,7 @@
   src: url('../../../fonts/icons/heydings-controls/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/heydings-controls/heydings_controls-webfont.woff') format('woff'), url('../../../fonts/icons/heydings-controls/heydings_controls-webfont.ttf') format('truetype'), url('../../../fonts/icons/heydings-controls/heydings_controls-webfont.svg#HeydingsControlsRegular') format('svg');
 }
 
-.icon-font-heydings_controls, .heydings_controls:after, .heydings_controls:before {
+.heydings_controls:after, .heydings_controls:before {
   font-family: heydings_controls;
 }
 
@@ -30,7 +45,7 @@
   src: url('../../../fonts/icons/iconic/iconic_fill.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/iconic/iconic_fill.woff') format('woff'), url('../../../fonts/icons/iconic/iconic_fill.ttf') format('truetype'), url('../../../fonts/icons/iconic/iconic_fill.svg#IconicFill') format('svg');
 }
 
-.icon-font-iconic_fill, .iconic_fill:after, .iconic_fill:before {
+.iconic_fill:after, .iconic_fill:before {
   font-family: iconic_fill;
 }
 
@@ -39,7 +54,7 @@
   src: url('../../../fonts/icons/iconic/iconic_stroke.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/iconic/iconic_stroke.woff') format('woff'), url('../../../fonts/icons/iconic/iconic_stroke.ttf') format('truetype'), url('../../../fonts/icons/iconic/iconic_stroke.svg#IconicStroke') format('svg');
 }
 
-.icon-font-iconic_stroke, .iconic_stroke:after, .iconic_stroke:before {
+.iconic_stroke:after, .iconic_stroke:before {
   font-family: iconic_stroke;
 }
 
@@ -48,7 +63,7 @@
   src: url('../../../fonts/icons/icomoon/icomoon.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/icomoon/icomoon.woff') format('woff'), url('../../../fonts/icons/icomoon/icomoon.ttf') format('truetype'), url('../../../fonts/icons/icomoon/icomoon.svg#IcoMoonRegular') format('svg');
 }
 
-.icon-font-icomoon, .icomoon:after, .icomoon:before {
+.icomoon:after, .icomoon:before {
   font-family: icomoon;
 }
 
@@ -57,7 +72,7 @@
   src: url('../../../fonts/icons/modern-pictograms/modernpics-webfont.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/modern-pictograms/modernpics-webfont.woff') format('woff'), url('../../../fonts/icons/modern-pictograms/modernpics-webfont.ttf') format('truetype'), url('../../../fonts/icons/modern-pictograms/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
 }
 
-.icon-font-modern-pictograms, .modern-pictograms:after, .modern-pictograms:before {
+.modern-pictograms:after, .modern-pictograms:before {
   font-family: modern-pictograms;
 }
 
@@ -66,7 +81,7 @@
   src: url('../../../fonts/icons/socialico/socialico-webfont.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/socialico/socialico-webfont.woff') format('woff'), url('../../../fonts/icons/socialico/socialico-webfont.ttf') format('truetype'), url('../../../fonts/icons/socialico/socialico-webfont.svg#SocialicoRegular') format('svg');
 }
 
-.icon-font-socialico, .socialico:after, .socialico:before {
+.socialico:after, .socialico:before {
   font-family: socialico;
 }
 
@@ -75,7 +90,7 @@
   src: url('../../../fonts/icons/websymbols/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/websymbols/websymbols-regular-webfont.woff') format('woff'), url('../../../fonts/icons/websymbols/websymbols-regular-webfont.ttf') format('truetype'), url('../../../fonts/icons/websymbols/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
 }
 
-.icon-font-websymbols, .websymbols:after, .websymbols:before {
+.websymbols:after, .websymbols:before {
   font-family: websymbols;
 }
 

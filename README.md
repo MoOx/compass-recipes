@@ -12,7 +12,7 @@ _Note: These are demos of the repository at its current state, *not* the last st
 * **Color** Variables Names & Advanced color functions like `brightness()`
 * **[Effects](http://moox.github.com/compass-recipes/recipes/effect/)** - Visual effects like `bevel` and `cutout`
 * **[Form skins](http://moox.github.com/compass-recipes/recipes/form/skin/)** - Only one at the moment.
-* **[Icons](http://moox.github.com/compass-recipes/recipes/icon)** - Includes webfont icon support and a few open source fonts.
+* **[Icon Fonts](http://moox.github.com/compass-recipes/recipes/icon-fonts)** - Includes icon fonts helper and a few open source fonts.
 * **[Layout](http://moox.github.com/compass-recipes/recipes/layout)** - Vertical centering and box layout shortcuts.
 * **[Media queries](http://moox.github.com/compass-recipes/recipes/media-queries)** - Predefined queries for common device widths. *Experimental: Uses `sass --pre`*
 * **[Shadows](http://moox.github.com/compass-recipes/recipes/shadow/)** - A wide collection of shadows which use pseudo elements to create fold effects, etc.
