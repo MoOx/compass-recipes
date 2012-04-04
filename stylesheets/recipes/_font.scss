@@ -20,13 +20,22 @@
     {
         $font-dir: $font-name;
     }
+    // append / if font-dir present
+    @if ($font-dir != false)
+    {
+        $font-dir: $font-dir + "/";
+    }
+    @else
+    {
+        $font-dir: "";
+    }
     @include font-face(
         "#{$font-name}",
         font-files(
-            "#{$font-dir}/#{$font-file-suffix}.eot?#iefix",
-            "#{$font-dir}/#{$font-file-suffix}.woff",
-            "#{$font-dir}/#{$font-file-suffix}.ttf",
-            "#{$font-dir}/#{$font-file-suffix}.svg##{$font-id}"
+            "#{$font-dir}#{$font-file-suffix}.eot?#iefix",
+            "#{$font-dir}#{$font-file-suffix}.woff",
+            "#{$font-dir}#{$font-file-suffix}.ttf",
+            "#{$font-dir}#{$font-file-suffix}.svg##{$font-id}"
         )
     );
 }

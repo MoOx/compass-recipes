@@ -19,6 +19,12 @@
 {
     width: 100px;
     height: 100px;
-    @include effect-glass(#fff, -20deg, .6em);
+    @include effect-glass(
+        $color: rgba(#fff, .25),
+        $reflectDegree: -60deg,
+        $border-radius: .3em,
+        $size: 40%,
+        $size-fadeout: 1%
+    );
     background: #000 url(http://lorempixel.com/100/100/) no-repeat;
 }
