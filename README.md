@@ -2,6 +2,8 @@
 
 A series of Compass and Sass mixins and functions for creating delicious CSS effects.
 
+_Compass Recipes is currently under active development. While it's being already used on multiple projects (even in production), you may encounter some issues. Please try it out in a project, and [make suggestions](https://github.com/MoOx/compass-recipes/issues/new) or [report bugs](https://github.com/MoOx/compass-recipes/issues) ! Your feedback matters._
+
 ## [Demos](http://moox.github.com/compass-recipes/)
 
 _Note: These are demos of the repository at its current state, *not* the last stable gem. To get the most up-to-date recipes, please see Installation for instructions on installing the repo at his current state_
