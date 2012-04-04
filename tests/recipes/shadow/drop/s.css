@@ -24,10 +24,15 @@
  * @link http://www.creativejuiz.fr/trytotry/css3-box-shadow-after-before/
  */
 /**
+ * Drop shadow w/ lifted corners parent element. Totally optional.
+ */
+/**
  * Drop shadow w/ lifted corners
  *
  * @thanks Nicolas Gallagher @necolas
  * @link http://nicolasgallagher.com/css-drop-shadows-without-images/demo/
+ * @thanks Matt Hamm @matthamm
+ * @link http://matthamm.com/box-shadow-curl.html
  */
 /**
  * Drop shadow w/ perspective
@@ -167,33 +172,40 @@ a.more {
 */
 .drop-shadow-lifted-corners {
   position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 .drop-shadow-lifted-corners::before, .drop-shadow-lifted-corners::after {
   content: "";
   position: absolute;
   z-index: -2;
-  bottom: 15px;
-  width: 50%;
-  height: 20%;
-  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  bottom: 10px;
+  width: 70%;
+  height: 55%;
+  max-width: 300px;
+  /* avoid rotation causing ugly appearance at large container widths */
+  max-height: 100px;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 .drop-shadow-lifted-corners::before {
   left: 10px;
-  -webkit-transform: rotate(-4deg);
-  -moz-transform: rotate(-4deg);
-  -ms-transform: rotate(-4deg);
-  -o-transform: rotate(-4deg);
-  transform: rotate(-4deg);
+  -webkit-transform: skew(-15deg) rotate(-6deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
+  transform: skew(-15deg) rotate(-6deg);
 }
 .drop-shadow-lifted-corners::after {
   right: 10px;
-  -webkit-transform: rotate(4deg);
-  -moz-transform: rotate(4deg);
-  -ms-transform: rotate(4deg);
-  -o-transform: rotate(4deg);
-  transform: rotate(4deg);
+  z-index: -1;
+  -webkit-transform: skew(15deg) rotate(6deg);
+  -moz-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
+  transform: skew(15deg) rotate(6deg);
 }
 
 .drop-shadow-perspective {
