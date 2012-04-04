@@ -12,14 +12,15 @@ task :pages do
   FileUtils.mkdir("tmp")
   (FileList.new('fonts/**/*')+FileList.new('stylesheets/**/*')+FileList.new('templates/**/*')+FileList.new('tests/**/*')).each do |file|
     if File.file?(file)
-      puts 'File ' + file
       if !File.directory?(File.dirname("tmp/#{file}"))
+        puts 'Mkdir' + File.dirname("tmp/#{file}")
         FileUtils.mkdir_p(File.dirname("tmp/#{file}"))
       end
       FileUtils.cp(file, "tmp/#{file}")
+      puts 'File ' + file
     else #assume dir
-      puts 'Dir  ' + file
       FileUtils.mkdir_p("tmp/#{file}")
+      puts 'Dir  ' + file
     end
   end
 
@@ -27,10 +28,10 @@ task :pages do
   repo.branch("gh-pages").checkout
 
   # Reset gh-pages
-  FileUtils.rm_rf "fonts/*"
-  FileUtils.rm_rf "stylesheets/*"
-  FileUtils.rm_rf "templates/*"
-  FileUtils.rm_rf "tests/*"
+  FileUtils.rm_rf "fonts"
+  FileUtils.rm_rf "stylesheets"
+  FileUtils.rm_rf "templates"
+  FileUtils.rm_rf "tests"
 
   # Prepare tests addons
   headMarker = '<!doctype html>'
@@ -47,17 +48,18 @@ task :pages do
     htmlfile.close
   end
 
-  # CSS: just copy
+  # just copy all files
   FileList.new('tmp/*').each do |file|
-    FileUtils.mkdir_p(File.dirname("#{file[4..-1]}"))
-    FileUtils.mv(file, "#{file[4..-1]}")
+    #FileUtils.mkdir_p(File.dirname("#{file[4..-1]}"))
+    puts 'File copy: ' + file + ' to ' + "#{file[4..-1]}"
+    FileUtils.mv(file, Dir.pwd + "/#{file[4..-1]}")
   end
 
   FileUtils.rm_rf("tmp")
 
   # Commit gh-pages changes
   # @todo make this optional ?
-  Dir["recipes/**/*"].each {|f| repo.add(f) }
+  Dir["fonts/**/*", "stylesheets/**/*", "templates/**/*", "tests/**/*"].each {|f| repo.add(f) }
   repo.status.deleted.each {|f, s| repo.remove(f)}
   message = ENV["MESSAGE"] || "Updated at #{Time.now.utc}"
   repo.commit(message)
