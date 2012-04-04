@@ -1,5 +1,6 @@
-//@import "recipes/background/noise";
-@import "compass/css3";
+@import "compass";
+@import "recipes";
+@include base-normalize;
 
 body {
     margin-top: 1.0em;
@@ -9,44 +10,28 @@ body {
         linear-gradient(0, rgba(#000, .4), rgba(#000, 0) 25%),
         linear-gradient(0, rgba(#000, 0) 75%, rgba(#000, .4)),
         radial-gradient(rgba(#000, 0) 75%, rgba(#000, .4)),
+        background_noise($intensity: 1, $opacity: 0.08),
         #2F2F2F);
 }
 #container {
     margin: 0 auto;
-    width: 700px;
+    max-width: 800px;
+}
+
+#ribbon
+{
+    @include effect-ribbon-corner('top right', 18em);
+    text-decoration: none;
 }
 
 #logo
 {
+    @include hide-text;
     background: url(img/compass-recipes.png) no-repeat;
-    text-indent: -9999px;
-    overflow: hidden;
     width: 428px;
     height: 128px;
-    padding: 0;
-}
-
-h1 {
-    font-size: 3.8em;
-    color: #fff;
-    margin-bottom: 3px;
     
-    .small {
-        font-size: 0.4em;
-    }
-
-    a {
-        text-decoration: none
-    }
-}
-
-h2 {
-    font-size: 1.5em;
-    color: #fff;
-}
-h3 {
-    text-align: center;
-    color: #fff;
+    padding: 0;
 }
 
 a {
