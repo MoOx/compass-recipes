@@ -14,7 +14,7 @@
 
 // @todo add http://fortaweso.me/font-awesome
 
-$icon-font-class-suffix: "icon-font" !default;
+$icon-font-class-suffix: icon-font !default;
 $icon-font-base-class:   "#{$icon-font-class-suffix}-base" !default;
 
 ////
@@ -64,10 +64,10 @@ $icon-font-default-gradient: matte !default;
 {
     @include font-face-kit($font-name, $font-id, $font-file-suffix, $font-dir);
 
-    .#{$icon-font-class-suffix}-#{$font-name}
+    %#{$icon-font-class-suffix}-#{$font-name}
     {
         font-family: #{$font-name};
-        @extend .#{$icon-font-base-class};
+        @extend %#{$icon-font-base-class};
     }
 }
 
@@ -149,7 +149,7 @@ $icon-font-default-gradient: matte !default;
     &:after,
     &:before
     {
-        @extend .#{$icon-font-class-suffix}-#{$class};
+        @extend %#{$icon-font-class-suffix}-#{$class};
         font-size: $size;
         content: $character;
 
@@ -197,27 +197,10 @@ $icon-font-attr-default-pseudo: before !default;
 
 @mixin icon-font-attr-rules()
 {
-    [data-icon]
+    [#{$icon-font-attr-name}]:#{$icon-font-attr-default-pseudo},
+    [#{$icon-font-attr-name}-before]:before,
+    [#{$icon-font-attr-name}-after]:after
     {
-        &:#{$icon-font-from-attr-default-pseudo}
-        {
-            content: attr($icon-font-attr-name);
-        }
-    }
-
-    [data-icon-before]
-    {
-        &:before
-        {
-            content: attr($icon-font-attr-name);
-        }
-    }
-
-    [data-icon-after]
-    {
-        &:after
-        {
-            content: attr($icon-font-attr-name);
-        }
+        content: attr($icon-font-attr-name);
     }
 }
