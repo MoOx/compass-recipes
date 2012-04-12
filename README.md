@@ -80,7 +80,7 @@ There is also an IRC channel, **#compass-recipes** on _irc.freenode.net_.
 
 Feel free to ping @MoOx if he’s there to get his attention quickly. If there’s no one on **#compass-recipes**, you can try the **#compass** or maybe the **#sass** channel on IRC.
 
-If you have a longer question (or no one’s around on IRC at the moment), the Sass Google group is a great place to go. You’ll usually get a response within a couple hours or so.
+If you have a longer question (or no one’s around on IRC at the moment), drop a mail at [compass-recipes@moox.fr](mailto:compass-recipes@moox.fr). You’ll usually get a response within a couple hours or so.
 
 ## Open to All
 
