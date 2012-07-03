@@ -29,7 +29,7 @@ div {
 }
 
 .background-blueprint-grid {
-    @include background-blueprint-grid;
+    @include background-blueprint-grid($foreground-color: #000, $width: 50px); 
 }
 
 .background-noise {
