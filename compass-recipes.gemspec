@@ -8,7 +8,7 @@ Gem::Specification.new do |gemspec|
   gemspec.authors = ["Maxime Thirouin", "David Kaneda"]
   gemspec.summary = %q{Recipes for Compass}
   gemspec.description = %q{A Compass extension to have some sass/compass recipes ready to use ! }
-  gemspec.email = "maxime.thirouin@gmail.com"
+  gemspec.email = "m@moox.fr"
   gemspec.homepage = "http://moox.github.com/compass-recipes"
 
   gemspec.rubyforge_project = "compass-recipes"
@@ -23,6 +23,6 @@ Gem::Specification.new do |gemspec|
   gemspec.files += Dir.glob("templates/**{,/*/**}/*.*")
   gemspec.files += Dir.glob("stylesheets/**/*.*")
 
-  gemspec.add_dependency("sass", "~> 3.2.0.alpha.96")
-  gemspec.add_dependency("compass", [">= 0.12.1"])
+  gemspec.add_dependency("sass", "~> 3.2.0.alpha.261")
+  gemspec.add_dependency("compass", [">= 0.13.alpha.0"])
 end
