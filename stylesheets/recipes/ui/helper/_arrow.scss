@@ -24,7 +24,10 @@
     $position-offset: 50%;
     @if ($margin-side == auto)
     {
-        $margin: -#{$width};
+        @if ($margin == auto)
+        {
+            $margin: -#{$width};
+        }
     }
     @else
     {
@@ -43,7 +46,7 @@
     @if ($position == top or $position == bottom)
     {
         left: $position-offset;
-        @if ($margin-side == center)
+        @if ($margin-side == auto)
         {
             margin-left: $margin;
         }
@@ -64,7 +67,7 @@
     @if ($position == left or $position == right)
     {
         top: $position-offset;
-        @if ($margin-side == center)
+        @if ($margin-side == auto)
         {
             margin-top: $margin;
         }
