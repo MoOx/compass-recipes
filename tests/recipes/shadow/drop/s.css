@@ -31,9 +31,9 @@ a.more {
   position: absolute;
   z-index: -1;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   background: #eeeeee;
 }
 .drop-shadow-curved-vt:hover,
@@ -139,7 +139,6 @@ a.more {
 }
 .drop-shadow-lifted-corners::after {
   right: 10px;
-  z-index: -1;
   -webkit-transform: skew(15deg) rotate(6deg);
   -moz-transform: skew(15deg) rotate(6deg);
   -ms-transform: skew(15deg) rotate(6deg);
