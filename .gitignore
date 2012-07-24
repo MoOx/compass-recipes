@@ -1,5 +1,5 @@
 .DS_Store
 .rvmrc
 *.lock
-/.sass-cache/
+.sass-cache
 compass-recipes-*.gem

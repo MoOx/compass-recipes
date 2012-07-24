@@ -9,7 +9,7 @@
 ///
 
 @import "compass/css3/transform";
-@import "recipes/shared/pseudo-element";
+@import "recipes/utilities/pseudo-element";
 
 @mixin effect-ribbon-corner($position: 'top left', $width: 10em, $height: 2em, $lines: 1, $skin: 'classic', $width-add: 0, $height-add: 0)
 {
@@ -36,7 +36,7 @@
         $transform-origin-x: 100%;
         //$transform-origin-y: 100%;
     }
-    @elseif ($position == 'bottom right')
+    @else if ($position == 'bottom right')
     {
         $position-v: bottom;
         $position-h: right;
@@ -44,7 +44,7 @@
         $transform-origin-x: 100%;
         $transform-origin-y: 0;
     }
-    @elseif ($position == 'bottom left')
+    @else if ($position == 'bottom left')
     {
         $position-v: bottom;
         //$position-h: left;

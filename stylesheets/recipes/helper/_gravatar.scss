@@ -9,7 +9,7 @@
 // @author Maxime Thirouin m@moox.fr @MoOx
 ///
 
-@import "recipes/shared/pseudo-element";
+@import "recipes/utilities/pseudo-element";
 
 // default values
 $helper-gravatar-size:      48px    !default;
@@ -57,7 +57,7 @@ $helper-gravatar-ssl:       false   !default;
     $ssl:       $helper-gravatar-ssl
 )
 {
-    @include pseudo-element($size, $size, $position: default);
+    @include pseudo-element($size, $size, $position: null);
     @include helper-gravatar-base($email, $size, $default, $rating, $ssl);
 }
 
@@ -70,7 +70,7 @@ $helper-gravatar-ssl:       false   !default;
 {
     &:#{$pseudo}
     {
-        @include pseudo-element($size, $size, $position: default);
+        @include pseudo-element($size, $size, $position: null);
         width: $size;
         height: $size;
         background-repeat: no-repeat;
