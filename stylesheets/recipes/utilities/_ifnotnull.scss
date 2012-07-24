@@ -1,0 +1,10 @@
+// Include a CSS property only if value != null
+// $property - css property to include
+// $value - css value
+@mixin ifnotnull($property, $value)
+{
+	@if ($value != null)
+	{
+		#{$property}:  $value;
+	}
+}
