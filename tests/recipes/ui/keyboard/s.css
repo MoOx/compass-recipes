@@ -21,7 +21,6 @@ kbd {
   background: -webkit-linear-gradient(top, #d2d2d2, #ffffff);
   background: -moz-linear-gradient(top, #d2d2d2, #ffffff);
   background: -o-linear-gradient(top, #d2d2d2, #ffffff);
-  background: -ms-linear-gradient(top, #d2d2d2, #ffffff);
   background: linear-gradient(top, #d2d2d2, #ffffff);
   color: #444;
   text-shadow: 0 0 2px white;
@@ -64,7 +63,6 @@ kbd[title] {
   background: -webkit-linear-gradient(#3c3c3c, #505050);
   background: -moz-linear-gradient(#3c3c3c, #505050);
   background: -o-linear-gradient(#3c3c3c, #505050);
-  background: -ms-linear-gradient(#3c3c3c, #505050);
   background: linear-gradient(#3c3c3c, #505050);
   color: #fafafa;
   text-shadow: -1px -1px 0 #464646;
