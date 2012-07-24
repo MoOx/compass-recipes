@@ -83,7 +83,7 @@ h2 {
 
 h3 {
   font-size: 1.17em;
-  line-height: 1.282em;
+  line-height: 1.28205em;
 }
 
 h4 {
@@ -93,7 +93,7 @@ h4 {
 
 h5 {
   font-size: 0.83em;
-  line-height: 1.807em;
+  line-height: 1.80723em;
 }
 
 h6 {
@@ -218,16 +218,16 @@ fieldset {
   border-color: #c0c0c0;
   margin: 0 2px;
   border-top-style: solid;
-  border-top-width: 0.063em;
-  padding-top: 0.462em;
+  border-top-width: 0.0625em;
+  padding-top: 0.4625em;
   border-bottom-style: solid;
-  border-bottom-width: 0.063em;
-  padding-bottom: 0.913em;
+  border-bottom-width: 0.0625em;
+  padding-bottom: 0.9125em;
   border-left-style: solid;
-  border-left-width: 0.063em;
+  border-left-width: 0.0625em;
   padding-left: 0.875em;
   border-right-style: solid;
-  border-right-width: 0.063em;
+  border-right-width: 0.0625em;
   padding-right: 0.875em;
 }
 
