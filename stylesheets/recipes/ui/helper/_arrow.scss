@@ -5,7 +5,8 @@
 ///
 
 @import "recipes/shape/polygon/triangle";
-@import "recipes/shared/pseudo-element";
+@import "recipes/utilities/pseudo-element";
+@import "recipes/utilities/relative-position";
 
 @mixin ui-helper-arrow($position: bottom, $width: 6px, $color: #fff)
 {
@@ -13,69 +14,13 @@
 
     &:after
     {
-        @include ui-helper-arrow-element($position, $width, $color)
+        @include pseudo-element;
+        @include ui-helper-arrow-element($position, $width, $color);
     }
 }
 
-@mixin ui-helper-arrow-element($position: bottom, $width: 6px, $color: #fff, $margin-side: auto, $margin: auto)
+@mixin ui-helper-arrow-element($position: bottom, $width: 6px, $color: #fff, $margin-position: auto, $margin: auto)
 {
-    @include pseudo-element();
-
-    $position-offset: 50%;
-    @if ($margin-side == auto)
-    {
-        @if ($margin == auto)
-        {
-            $margin: -#{$width};
-        }
-    }
-    @else
-    {
-        $position-offset: 0;
-    }
-
-    // vertical
-    @if ($position == top)
-    {
-        top: -$width;
-    }
-    @if ($position == bottom)
-    {
-        bottom: -$width;
-    }
-    @if ($position == top or $position == bottom)
-    {
-        left: $position-offset;
-        @if ($margin-side == auto)
-        {
-            margin-left: $margin;
-        }
-        @else
-        {
-            margin-#{$margin-side}: $margin;
-        }
-    }
-
-    @if ($position == left)
-    {
-        left: -$width;
-    }
-    @if ($position == right)
-    {
-        right: -$width;
-    }
-    @if ($position == left or $position == right)
-    {
-        top: $position-offset;
-        @if ($margin-side == auto)
-        {
-            margin-top: $margin;
-        }
-        @else
-        {
-            margin-#{$margin-side}: $margin;
-        }
-    }
-
-    @include triangle($position, $width, 0, $color);
+    @include triangle($position, $width, half, $color);
+    @include relative-position($position: $position, $width: $width, $height: $width, $add-width-height: false);
 }
