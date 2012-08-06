@@ -1,6 +1,7 @@
 description "Compass Recipes extension for Gravatar"
 
-javascript 'getElementsByClassName.js', :to => 'getElementsByClassName.js'
+javascript '../../javascripts/polyfills/addEventListener.js', :to => 'polyfills/addEventListener.js'
+javascript '../../javascripts/polyfills/getElementsByClassName.js', :to => 'polyfills/getElementsByClassName.js'
 javascript 'md5.js', :to => 'md5.js'
 javascript 'gravatar.js', :to => 'gravatar.js'
 
@@ -9,7 +10,7 @@ This is a Compass Recipes extension for Gravatar
 
 $ gem install compass-recipes
 # edit your config.rb file adding : require "compass-recipes"
-$ compass install -r recipes/gravatar
+$ compass install recipes/gravatar
 
 }
 
