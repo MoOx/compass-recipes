@@ -9,6 +9,7 @@ require File.join(File.dirname(__FILE__), 'lib', 'compass-recipes')
 http_path = '/'
 css_dir = '.'
 sass_dir = '.'
+images_dir= 'tests/images'
 
 line_comments = false
 relative_assets = true
