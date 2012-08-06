@@ -7,16 +7,19 @@
 * lots of backgrounds (gradients & patterns)
 * ui keyboard
 * ui dropdown menu
-* merge effects & enhancements
+* merge "effects" & "enhancements"
+* move "shared" to "utilities"
 * deprecated ui glossy, gradients & convex
-* ui separator
+* ui separators
 * animations keyframes
-* colors names & functions
-* icons (using fonts) : icon-fonts extension
 * Animation mixin ! (require sass 3.2+)
+* colors names, schemes & functions
+* Compass extension: icon-fonts (icons using fonts)
+* Compass extension: gravatar helper
 * loading indicator
 * 2 news effects (corners scatter & tuckeds/taped)
-* gravatar helper extension
+* lots of utilities (position, relative position, ifnotnull)
+* ui tooltip ! ("cssarrowplease like" mixin)
 
 ## 0.2.1
 

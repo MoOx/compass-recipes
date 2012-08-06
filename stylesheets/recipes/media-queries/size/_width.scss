@@ -1,0 +1,31 @@
+//
+// Media Queries for width
+//
+// you can use directly media-min since the default "side" is the width
+//
+// @author Maxime Thirouin <m@moox.fr>
+//
+
+@mixin media-min-width($min-width)
+{
+    @include media-min($min-width)
+    {
+        @content;
+    }
+}
+
+@mixin media-max-width($max-width)
+{
+    @include media-max($max-width)
+    {
+        @content;
+    }
+}
+
+@mixin media-gap-width($min-width, $max-width)
+{
+    @include media-gap($min-width, $max-width)
+    {
+        @content;
+    }
+}
