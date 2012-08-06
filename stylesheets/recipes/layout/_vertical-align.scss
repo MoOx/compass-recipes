@@ -1,65 +1,24 @@
-////
-// Vertical alignement for page
-// Inspired by http://css-tricks.com/snippets/css/center-div-with-dynamic-height/
-// 
-// @usage
-// --sass
-// @include vertical-align-requirement;
-// .v-align-container { @include vertical-align-container }
-// .v-align-content-container { @include vertical-align-content-container }
-// .v-align-content { @include vertical-align-content }
-// --html
-// <body>
-//     <div class="v-align-container">
-//         <div class="v-align-content-container">
-//             <div class="v-align-content">
-//             Your content !
-//             </div>
-//         </div> 
-//     </div>
-// </body>
-//
-// @thanks Chris Coyier @chriscoyier
-// @author Maxime Thirouin m@moox.fr @MoOx
-///
+@import "recipes/layout/vertical-align/block";
 
-@mixin vertical-align-requirement
+// Simple vertical align mixin
+// Parent must have the same height & line-height. It's does the trick
+// (use vertical-align-parent-height() mixin)
+// $line-height - original line-height to set back
+// $vertical-align - vertical align wanted
+// $text-align - optional text-align, can be set to null if not wanted
+@mixin vertical-align($line-height: 1, $vertical-align: middle, $text-align: center)
 {
-    html,
-    body
-    {
-        height:100%;
-        margin: 0;
-        padding: 0;
-    }
+	display: inline-block;
+	line-height: $line-height;
+	vertical-align: $vertical-align;
+	@if ($text-align != null)
+	{
+		text-align: $text-align;
+	}
 }
 
-@mixin vertical-align-container
+@mixin vertical-align-parent-height($height)
 {
-
-    display: table;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-
-    // ie6 ie7
-    *position:relative;
+	height: $height;
+	line-height: $height;
 }
-
-    @mixin vertical-align-content-container
-    {
-        display: table-cell;
-        vertical-align: middle;
-
-        // ie6 ie7
-        *position: absolute;
-        *top: 50%;
-    }
-
-        @mixin vertical-align-content
-        {
-            // ie6 ie7
-            *position: relative;
-            *top: -50%;
-        }

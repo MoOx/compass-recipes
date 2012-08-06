@@ -1,27 +1,11 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.valign {
+  outline: 1px solid red;
+  height: 10em;
+  line-height: 10em;
 }
-
-.v-align-container {
-  display: table;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  *position: relative;
-}
-
-.v-align-content-container {
-  display: table-cell;
+.valign p {
+  display: inline-block;
+  line-height: 1;
   vertical-align: middle;
-  *position: absolute;
-  *top: 50%;
-}
-
-.v-align-content {
-  *position: relative;
-  *top: -50%;
+  text-align: center;
 }

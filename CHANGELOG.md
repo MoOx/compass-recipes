@@ -20,6 +20,7 @@
 * 2 news effects (corners scatter & tuckeds/taped)
 * lots of utilities (position, relative position, ifnotnull)
 * ui tooltip ! ("cssarrowplease like" mixin)
+* new simple vertical align mixin + previous rewritten as `vertical-align-block`
 
 ## 0.2.1
 
