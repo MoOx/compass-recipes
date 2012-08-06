@@ -7,7 +7,7 @@ This is a Compass Recipes icon fonts extension
 
 $ gem install compass-recipes
 # edit your config.rb file adding : require "compass-recipes"
-$ compass install -r recipes/icon-fonts
+$ compass install recipes/icon-fonts
 
 }
 
