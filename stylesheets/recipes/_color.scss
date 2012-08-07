@@ -4,7 +4,8 @@
 // @author David Kaneda - http://www.davidkaneda.com
 ///
 
-@import "color/name";
+@import "recipes/color/name";
+@import "recipes/color/scheme";
 
 ////
 // Returns the brightness (out of 100) of a specified color.
@@ -78,7 +79,7 @@
     @if $inverse == true {
         $mode: reverse-color-mode($mode);
     }
-    
+
     @if ($mode == light) {
         @return rgba(lighten($flat_color, $contrast), opacity($color));
     } @else if ($mode == dark) {
@@ -110,7 +111,7 @@
 @function color-by-background($bg-color, $contrast: $default-text-contrast) {
     $bg-color: check-opacity($bg-color);
     $tmpmode: get-color-mode($bg-color);
-    
+
     @return color-offset($bg-color, $contrast, $tmpmode, $inverse: true);
 }
 
@@ -136,7 +137,7 @@
     } @else {
         color: color-by-background($bg-color, $contrast);
     }
-    
+
     @if $inset-text {
         @include inset-by-background($bg-color);
     }
@@ -149,7 +150,7 @@
     @if ($box == true) {
         @include box-shadow(color-offset($bg-color, $contrast, $mode: get-color-mode($bg-color)) 0 $offset 0);
     }
-    
+
     @include text-shadow(color-offset($bg-color, $contrast, $mode: get-color-mode($bg-color)) 0 $offset 0);
 }
 

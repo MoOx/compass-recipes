@@ -1,0 +1,72 @@
+.colors div {
+  display: inline-block;
+  width: 4em;
+  height: 6em;
+  background: transparent;
+  position: relative;
+}
+.colors div span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: .8em;
+  padding: .4em;
+  color: #fff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+.colors .main-color {
+  background: #663333;
+}
+.colors .analog {
+  background: #664633;
+}
+.colors .analog-alt {
+  background: #663346;
+}
+.colors .complementary {
+  background: #336666;
+}
+.colors .complementary-alt {
+  background: #2b5555;
+}
+.colors .complementary-light {
+  background: #994d4d;
+}
+.colors .complementary-lighter {
+  background: #bb7777;
+}
+.colors .split {
+  background: #336653;
+}
+.colors .split-alt {
+  background: #335366;
+}
+.colors .subtle-light {
+  background: #884a44;
+}
+.colors .subtle-lighter {
+  background: #aa6355;
+}
+.colors .subtle-dark {
+  background: #442225;
+}
+.colors .subtle-darker {
+  background: #221114;
+}
+.colors .tetra {
+  background: #4d6633;
+}
+.colors .tetra-alt {
+  background: #4c3366;
+}
+.colors .triad {
+  background: #336640;
+}
+.colors .triad-alt {
+  background: #334066;
+}
