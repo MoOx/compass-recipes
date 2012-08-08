@@ -42,10 +42,12 @@
 	gravatarOptions.size = gravatarOptions.size || 48; // 1 - 512
 	gravatarOptions.rating = gravatarOptions.rating || 'PG'; // g | pg | r | x
 	gravatarOptions.default = gravatarOptions.default || ''; // 404 | mm | identicon | monsterid | wavatar
+	gravatarOptions.propertyUsed = gravatarOptions.propertyUsed || 'background-image'; // content | background-image (note: if you use background-image, don't forget to add content: "" !)
+	gravatarOptions.addDimensions = gravatarOptions.addDimensions != undefined ? gravatarOptions.addDimensions : true;
 
 	// since we can't manipulate pseudo element (so their content), we insert css rules foreach gravatar.
 	var time = new Date().getTime();
-	function setPseudoElementContent(element, content, pseudo)
+	function addPseudoElementRule(element, rule, pseudo)
 	{
 		pseudo = pseudo || 'before';
 		var id = element.getAttribute('id');
@@ -54,7 +56,7 @@
 			id = 'gravatar' + ++time;
 			element.setAttribute('id', id);
 		}
-		addCssRule('#' + id + ':' + pseudo, 'content: ' + content);
+		addCssRule('#' + id + ':' + pseudo, rule);
 	}
 
 	function initGravatars()
@@ -91,12 +93,16 @@
 
 				for(var i=0; i<length; i++)
 				{
-					var emailMd5 = gravatarElements[i].getAttribute('data-email-md5')
-					gravatarUrl = gravatarUrlPrefix + '.gravatar.com/avatar/' + emailMd5 + '.png';
-					gravatarUrl += '?s=' + (gravatarElements[i].getAttribute('data-gravatar-size') || gravatarOptions.size);
+					var emailMd5 = gravatarElements[i].getAttribute('data-email-md5');
+					var gravatarUrl = gravatarUrlPrefix + '.gravatar.com/avatar/' + emailMd5 + '.png';
+					var size = gravatarElements[i].getAttribute('data-gravatar-size') || gravatarOptions.size;
+					gravatarUrl += '?s=' + size;
 					gravatarUrl += '&r=' + (gravatarElements[i].getAttribute('data-gravatar-rating') || gravatarOptions.rating);
 					gravatarUrl += '&d=' + (gravatarElements[i].getAttribute('data-gravatar-default') || gravatarOptions.default);
-					setPseudoElementContent(gravatarElements[i], 'url(' + gravatarUrl + ')', pseudos[p]);
+					addPseudoElementRule(gravatarElements[i],
+						gravatarOptions.propertyUsed + ': url(' + gravatarUrl + ');'
+						+ (gravatarOptions.addDimensions ? 'width: ' + size + 'px;' + 'height: ' + size + 'px' : '')
+					, pseudos[p]);
 				}
 			}
 		}

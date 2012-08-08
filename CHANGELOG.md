@@ -1,6 +1,6 @@
 # Compass Recipes CHANGELOG
 
-## 0.3 (no published yet)
+## 0.3 (alpha relase - depending on sass 3.2 alpha)
 
 * normalize.css
 * media queries
