@@ -71,8 +71,6 @@ $helper-gravatar-ssl:       false   !default;
     &:#{$pseudo}
     {
         @include pseudo-element($size, $size, $position: null);
-        width: $size;
-        height: $size;
         background-repeat: no-repeat;
     }
 

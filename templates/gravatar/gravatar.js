@@ -41,30 +41,31 @@
 	gravatarOptions = (typeof gravatarOptions == 'object') ? gravatarOptions : {};
 	gravatarOptions.size = gravatarOptions.size || 48; // 1 - 512
 	gravatarOptions.rating = gravatarOptions.rating || 'PG'; // g | pg | r | x
-	gravatarOptions.default = gravatarOptions.default || ''; // 404 | mm | identicon | monsterid | wavatar
+	gravatarOptions.defaultImage = gravatarOptions.defaultImage || ''; // 404 | mm | identicon | monsterid | wavatar
 	gravatarOptions.propertyUsed = gravatarOptions.propertyUsed || 'background-image'; // content | background-image (note: if you use background-image, don't forget to add content: "" !)
 	gravatarOptions.addDimensions = gravatarOptions.addDimensions != undefined ? gravatarOptions.addDimensions : true;
 
 	// since we can't manipulate pseudo element (so their content), we insert css rules foreach gravatar.
 	var time = new Date().getTime();
-	function addPseudoElementRule(element, rule, pseudo)
+	function addElementRule(element, rule, pseudo)
 	{
-		pseudo = pseudo || 'before';
+		pseudo = pseudo ? ':' + pseudo : '';
 		var id = element.getAttribute('id');
 		if (!id)
 		{
 			id = 'gravatar' + ++time;
 			element.setAttribute('id', id);
 		}
-		addCssRule('#' + id + ':' + pseudo, rule);
+		addCssRule('#' + id + pseudo, rule);
 	}
 
 	function initGravatars()
 	{
-		var pseudos = ['before', 'after'];
-		for(var p = 0; p < pseudos.length; p++)
+		var elements = [null, 'before', 'after'];
+		for(var p = 0; p < elements.length; p++)
 		{
-			var gravatarElements = document.getElementsByClassName('gravatar-' + pseudos[p]);
+			var element = elements[p]!= null ? '-' + elements[p] : '';
+			var gravatarElements = document.getElementsByClassName('gravatar' + element);
 			var length = gravatarElements.length;
 			if (length)
 			{
@@ -98,11 +99,11 @@
 					var size = gravatarElements[i].getAttribute('data-gravatar-size') || gravatarOptions.size;
 					gravatarUrl += '?s=' + size;
 					gravatarUrl += '&r=' + (gravatarElements[i].getAttribute('data-gravatar-rating') || gravatarOptions.rating);
-					gravatarUrl += '&d=' + (gravatarElements[i].getAttribute('data-gravatar-default') || gravatarOptions.default);
-					addPseudoElementRule(gravatarElements[i],
+					gravatarUrl += '&d=' + (gravatarElements[i].getAttribute('data-gravatar-defaultImage') || gravatarOptions.defaultImage);
+					addElementRule(gravatarElements[i],
 						gravatarOptions.propertyUsed + ': url(' + gravatarUrl + ');'
 						+ (gravatarOptions.addDimensions ? 'width: ' + size + 'px;' + 'height: ' + size + 'px' : '')
-					, pseudos[p]);
+					, elements[p]);
 				}
 			}
 		}
