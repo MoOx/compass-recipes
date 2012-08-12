@@ -43,7 +43,6 @@
 @function background-gradient($bg-color, $type: null, $direction: top)
 {
     @if $type != null and $bg-color != transparent {
-        @debug($type);
         // Color stops provided
         @if type-of($type) == "list" {
             @return linear-gradient($direction, $type);
