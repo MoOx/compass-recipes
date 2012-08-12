@@ -22,3 +22,4 @@ additional_import_paths = [
 # for repeating-linear-gradient
 # https://github.com/chriseppstein/compass/issues/401
 Compass::BrowserSupport.add_support('repeating-linear-gradient', 'webkit', 'moz', 'o', 'ms')
+Compass::BrowserSupport.add_support('repeating-radial-gradient', 'webkit', 'moz', 'o', 'ms')

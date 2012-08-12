@@ -9,7 +9,7 @@
 
 @import "compass/css3/images";
 
-@mixin background-stripes-cicada($bg-color: gray, $stripe-color: white, $dir: left) {
+@mixin background-cicada-stripes($bg-color: gray, $stripe-color: white, $dir: left) {
     $transparent: rgba(black, 0);
     $stripe-color1: rgba($stripe-color, 0.07);
     $stripe-color2: rgba($stripe-color, 0.13);

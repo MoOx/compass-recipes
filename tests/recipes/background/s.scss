@@ -29,8 +29,54 @@ div {
 }
 
 .background-blueprint-grid {
-    @include background-blueprint-grid($foreground-color: #000, $width: 50px);
+    @include background-blueprint-grid();
+    &:hover { /* add another example using options */ }
 }
+
+.background-carbon-fiber {
+    @include background-carbon-fiber;
+    &:hover { /* add another example using options */ }
+}
+
+.background-checkerboard {
+    @include background-checkerboard;
+    &:hover { /* add another example using options */ }
+}
+
+.background-checkerboard-diagonal {
+    @include background-checkerboard-diagonal;
+    &:hover { /* add another example using options */ }
+}
+
+.background-cicada-stripes {
+    @include background-cicada-stripes;
+    &:hover { /* add another example using options */ }
+}
+
+.background-houndstooth {
+    @include background-houndstooth;
+    &:hover { /* add another example using options */ }
+}
+
+.background-lined-paper {
+    @include background-lined-paper;
+    &:hover { /* add another example using options */ }
+}
+
+.background-madras {
+    @include background-madras;
+    &:hover { /* add another example using options */ }
+}
+
+.background-metal {
+    @include background-metal;
+    &:hover { /* add another example using options */ }
+}
+
+    .background-metal-radial {
+        @include background-metal-radial;
+        &:hover { /* add another example using options */ }
+    }
 
 .background-noise {
     //background-color: #000;
@@ -40,66 +86,42 @@ div {
         //$monochrome: true,
         $opacity: .12
     );
-}
-
-.background-radial-overlay {
-    @include background-radial-overlay;
-}
-
-.background-tartan {
-    @include background-tartan;
-}
-
-.background-carbon-fiber {
-    @include background-carbon-fiber;
-}
-
-.background-horizontal-stripes {
-    @include background-stripes-straight;
-}
-
-.background-diagonal-stripes {
-    @include background-diagonal-stripes;
-}
-
-.background-stripes-cicada {
-    @include background-stripes-cicada;
-}
-
-.background-tablecloth {
-    @include background-tablecloth;
-}
-
-.background-lined-paper {
-    @include background-lined-paper;
-}
-
-.background-madras {
-    @include background-madras;
-}
-
-.background-checkerboard {
-    @include background-checkerboard;
-}
-
-.background-checkerboard-diagonal {
-    @include background-checkerboard-diagonal;
-}
-
-.background-houndstooth {
-    @include background-houndstooth;
+    &:hover { /* add another example using options */ }
 }
 
 .background-polka-dot {
     @include background-polka-dot;
+    &:hover { /* add another example using options */ }
+}
+
+.background-radial-overlay {
+    @include background-radial-overlay;
+    &:hover { /* add another example using options */ }
 }
 
 .background-rainbow {
     @include background-rainbow;
-    &:hover
-    {
-        @include background-rainbow(.8);
+    &:hover { @include background-rainbow(.8); }
+}
+
+    .background-stripes-straight {
+        @include background-stripes-straight;
+        &:hover { /* add another example using options */ }
     }
+
+    .background-diagonal-stripes {
+        @include background-diagonal-stripes;
+        &:hover { /* add another example using options */ }
+    }
+
+.background-tablecloth {
+	@include background-tablecloth;
+	&:hover { /* add another example using options */ }
+}
+
+.background-tartan {
+    @include background-tartan;
+    &:hover { /* add another example using options */ }
 }
 
 // Gradients
@@ -107,18 +129,22 @@ $gradient-color: #CF714A;
 
 .background-glossy {
     @include background-gradient($gradient-color, glossy);
+    &:hover { /* add another example using options */ }
 }
 
 .background-matte {
     @include background-gradient($gradient-color, matte);
+    &:hover { /* add another example using options */ }
 }
 
 .background-bevel {
     @include background-gradient($gradient-color, bevel);
+    &:hover { /* add another example using options */ }
 }
 
 .background-recessed {
     @include background-gradient($gradient-color, recessed);
+    &:hover { /* add another example using options */ }
 }
 
 
@@ -131,4 +157,5 @@ $gradient-color: #CF714A;
         matte-gradient(rgba(yellow, .2)),
         glossy-gradient($gradient-color)
     );
+    &:hover { /* add another example using options */ }
 }
