@@ -1,6 +1,6 @@
 description "Compass Recipes icon fonts extension"
 
-directory "fonts/icons" => :within fonts_dir
+discover :fonts
 
 help %Q{
 This is a Compass Recipes icon fonts extension
@@ -12,6 +12,6 @@ $ compass install recipes/icon-fonts
 }
 
 welcome_message %Q{
-You've installed Compass Recipes icons fonts extension. Let's go to lazy use awesome responsive icons !
+You've installed Compass Recipes icon-fonts extension. Let's go to use awesome responsives icons !
 
 }
