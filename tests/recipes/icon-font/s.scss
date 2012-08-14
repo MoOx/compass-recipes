@@ -5,6 +5,7 @@
 @include icon-font-face-cuticons;
 @include icon-font-face-ecoico;
 @include icon-font-face-entypo;
+@include icon-font-face-fontawesome;
 @include icon-font-face-heydings_icons;
 @include icon-font-face-heydings_controls;
 @include icon-font-face-icomoon;
@@ -29,6 +30,7 @@
 .cuticons               { @include icon-font($class: 'cuticons'); }
 .ecoico                 { @include icon-font($class: 'ecoico'); }
 .entypo                 { @include icon-font($class: 'entypo'); }
+.fontawesome            { @include icon-font($class: 'fontawesome'); }
 .heydings_icons         { @include icon-font($class: 'heydings_icons'); }
 .heydings_controls      { @include icon-font($class: 'heydings_controls'); }
 .icomoon                { @include icon-font($class: 'icomoon'); }

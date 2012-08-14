@@ -1,4 +1,4 @@
-.broccolidry:after, .broccolidry:before, .cuticons:after, .cuticons:before, .ecoico:after, .ecoico:before, .entypo:after, .entypo:before, .heydings_icons:after, .heydings_icons:before, .heydings_controls:after, .heydings_controls:before, .icomoon:after, .icomoon:before, .iconic_fill:after, .iconic_fill:before, .iconic_stroke:after, .iconic_stroke:before, .iconminia:after, .iconminia:before, .meteocons:after, .meteocons:before, .modern_pictograms:after, .modern_pictograms:before, .silkcons:after, .silkcons:before, .socialico:after, .socialico:before, .typicons:after, .typicons:before, .websymbols:after, .websymbols:before, .wpzoom:after, .wpzoom:before, .smiley:after, .smiley:before {
+.broccolidry:after, .broccolidry:before, .cuticons:after, .cuticons:before, .ecoico:after, .ecoico:before, .entypo:after, .entypo:before, .fontawesome:after, .fontawesome:before, .heydings_icons:after, .heydings_icons:before, .heydings_controls:after, .heydings_controls:before, .icomoon:after, .icomoon:before, .iconic_fill:after, .iconic_fill:before, .iconic_stroke:after, .iconic_stroke:before, .iconminia:after, .iconminia:before, .meteocons:after, .meteocons:before, .modern_pictograms:after, .modern_pictograms:before, .silkcons:after, .silkcons:before, .socialico:after, .socialico:before, .typicons:after, .typicons:before, .websymbols:after, .websymbols:before, .wpzoom:after, .wpzoom:before, .smiley:after, .smiley:before {
   color: transparent;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -47,6 +47,15 @@
 
 .entypo:after, .entypo:before {
   font-family: entypo;
+}
+
+@font-face {
+  font-family: "fontawesome";
+  src: url('../../../fonts/icons/fontawesome/fontawesome.eot?#iefix') format('embedded-opentype'), url('../../../fonts/icons/fontawesome/fontawesome.woff') format('woff'), url('../../../fonts/icons/fontawesome/fontawesome.ttf') format('truetype'), url('../../../fonts/icons/fontawesome/fontawesome.svg#FontAwesomeRegular') format('svg');
+}
+
+.fontawesome:after, .fontawesome:before {
+  font-family: fontawesome;
 }
 
 @font-face {
@@ -418,6 +427,58 @@
   text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
 }
 .entypo:active:after {
+  background-image: none;
+  background-color: #1d64dc;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
+  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+}
+
+.fontawesome {
+  position: relative;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  overflow: visible;
+  display: inline-block;
+  width: 48px;
+  line-height: 48px;
+  height: 48px;
+  text-indent: -9999px;
+}
+.fontawesome:after, .fontawesome:before {
+  font-size: 48px;
+  content: attr(data-icon);
+  background-image: none;
+  background-color: #999999;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
+  background-image: -webkit-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -moz-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: -o-linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+  background-image: linear-gradient(top, #bfbfbf, #a6a6a6 3%, #8c8c8c);
+}
+.fontawesome:before {
+  background: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+}
+.fontawesome:hover:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+}
+.fontawesome:hover:after {
+  background-image: none;
+  background-color: #3778e5;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
+  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+}
+.fontawesome:active:before {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+}
+.fontawesome:active:after {
   background-image: none;
   background-color: #1d64dc;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));

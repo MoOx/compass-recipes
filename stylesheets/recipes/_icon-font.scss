@@ -80,6 +80,7 @@ $icon-font-default-gradient: matte !default;
 @mixin icon-font-face-cuticons()                { @include icon-font-face(cuticons); }
 @mixin icon-font-face-ecoico()                  { @include icon-font-face(ecoico); }
 @mixin icon-font-face-entypo()                  { @include icon-font-face(entypo, EntypoRegular); }
+@mixin icon-font-face-fontawesome()             { @include icon-font-face(fontawesome, FontAwesomeRegular); }
 @mixin icon-font-face-heydings_controls()       { @include icon-font-face(heydings_controls, HeydingsControlsRegular); }
 @mixin icon-font-face-heydings_icons()          { @include icon-font-face(heydings_icons, HeydingsCommonIconsRegular); }
 @mixin icon-font-face-icomoon()                 { @include icon-font-face(icomoon, IcoMoonRegular); }
