@@ -59,9 +59,16 @@
     for(var i = 0; i < fonts.length; i++)
     {
         document.write('<h2>' + fonts[i]+  '</h2>');
-        recipes_icon_font_abcplease(fonts[i], '\u0021', '\u007d'); // mains icons
-        recipes_icon_font_abcplease(fonts[i], '\ue000', '\ue100'); // mains icons
-
+        if (fonts[i]!='fontawesome')
+        {
+            recipes_icon_font_abcplease(fonts[i], '\u0021', '\u007d'); // mains icons
+            recipes_icon_font_abcplease(fonts[i], '\ue000', '\ue100'); // mains icons
+        }
+        else
+        {
+            recipes_icon_font_abcplease(fonts[i], '\uf000', '\uf100'); // font awesome
+            recipes_icon_font_abcplease(fonts[i], '\uf200', '\uf200'); // font awesome
+        }
     }
 
 })();
