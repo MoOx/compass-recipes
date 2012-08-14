@@ -1,15 +1,23 @@
 @import "recipes/icon-font";
 
 // you should not import all off it, it's just stupid but you know that
+@include icon-font-face-broccolidry;
+@include icon-font-face-cuticons;
+@include icon-font-face-ecoico;
 @include icon-font-face-entypo;
-@include icon-font-face-heydings;
+@include icon-font-face-heydings_icons;
 @include icon-font-face-heydings_controls;
+@include icon-font-face-icomoon;
 @include icon-font-face-iconic_fill;
 @include icon-font-face-iconic_stroke;
-@include icon-font-face-icomoon;
-@include icon-font-face-modern-pictograms;
+@include icon-font-face-iconminia;
+@include icon-font-face-meteocons;
+@include icon-font-face-modern_pictograms;
+@include icon-font-face-silkcons;
 @include icon-font-face-socialico;
+@include icon-font-face-typicons;
 @include icon-font-face-websymbols;
+@include icon-font-face-wpzoom;
 
 .smiley
 {
@@ -17,12 +25,20 @@
     @include icon-font('\263a', $size: 200px, $color: #CFAB4F);
 }
 
+.broccolidry            { @include icon-font($class: 'broccolidry'); }
+.cuticons               { @include icon-font($class: 'cuticons'); }
+.ecoico                 { @include icon-font($class: 'ecoico'); }
 .entypo                 { @include icon-font($class: 'entypo'); }
-.heydings               { @include icon-font($class: 'heydings'); }
+.heydings_icons         { @include icon-font($class: 'heydings_icons'); }
 .heydings_controls      { @include icon-font($class: 'heydings_controls'); }
+.icomoon                { @include icon-font($class: 'icomoon'); }
 .iconic_fill            { @include icon-font($class: 'iconic_fill'); }
 .iconic_stroke          { @include icon-font($class: 'iconic_stroke'); }
-.icomoon                { @include icon-font($class: 'icomoon'); }
-.modern-pictograms      { @include icon-font($class: 'modern-pictograms'); }
+.iconminia              { @include icon-font($class: 'iconminia'); }
+.meteocons              { @include icon-font($class: 'meteocons'); }
+.modern_pictograms      { @include icon-font($class: 'modern_pictograms'); }
+.silkcons               { @include icon-font($class: 'silkcons'); }
 .socialico              { @include icon-font($class: 'socialico'); }
+.typicons               { @include icon-font($class: 'typicons'); }
 .websymbols             { @include icon-font($class: 'websymbols'); }
+.wpzoom                 { @include icon-font($class: 'wpzoom'); }
