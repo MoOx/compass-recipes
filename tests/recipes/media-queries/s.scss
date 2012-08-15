@@ -86,3 +86,8 @@ div
 		@include media-highres() { content: 'High res (shortcut)'; }
 	}
 }
+
+// media-queries-for-js tests
+@include media-queries-for-js(small, 'max-width: 40em');
+@include media-queries-for-js(medium, 'min-width: 40em');
+@include media-queries-for-js(large, 'min-width: 60em');

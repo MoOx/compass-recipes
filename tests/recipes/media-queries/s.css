@@ -144,3 +144,22 @@ div {
     content: 'High res (shortcut)';
   }
 }
+
+@media (max-width: 40em) {
+  body:after {
+    content: "small";
+    display: none;
+  }
+}
+@media (min-width: 40em) {
+  body:after {
+    content: "medium";
+    display: none;
+  }
+}
+@media (min-width: 60em) {
+  body:after {
+    content: "large";
+    display: none;
+  }
+}
