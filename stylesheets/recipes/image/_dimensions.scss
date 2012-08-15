@@ -1,0 +1,69 @@
+// image-dimensions(img_src)
+// $img - image path
+// $dimensions: list explaining which dimensions we should include (width height line-height).
+// By default it's set to `true` which is equivalent to width: true height: true line-height: false
+// You can pass `true false` to have only width, or `false false true` to only have line-height
+@mixin image-dimensions($img, $dimensions: true)
+{
+	$args: length($dimensions);
+	$width: nth($dimensions, 1);
+	$height: false;
+	$line-height: false;
+	@if ($width == all)
+	{
+		$width: true;
+		$height: true;
+		$line-height: true;
+	}
+	@if ($args>1)
+	{
+		$height: nth($dimensions, 2);
+		@if ($args>2)
+		{
+			$line-height: nth($dimensions, 3);
+		}
+	}
+	@else
+	{
+		$height: $width;
+	}
+
+	// width
+	@if ($width == true)
+	{
+		@include image-width($img);
+	}
+	@else if($width != false)
+	{
+		width: $width;
+	}
+
+	// height & line-height
+	@if ($height == true)
+	{
+		@include image-height($img);
+	}
+	@else if($height != false)
+	{
+		height: $height;
+	}
+
+	@if ($line-height == true)
+	{
+		line-height: image-height($img);
+	}
+	@else if($line-height != false)
+	{
+		line-height: $line-height;
+	}
+}
+
+@mixin image-width($img)
+{
+	width: image-width($img);
+}
+
+@mixin image-height($img)
+{
+	height: image-height($img);
+}

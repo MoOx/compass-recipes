@@ -1,0 +1,7 @@
+@import "recipes/image";
+
+.image { @include image("test.jpg") }
+.image-with-dimensions { @include image-with-dimensions("test.jpg") }
+.image-with-dimensions-line-height { @include image-with-dimensions("test.jpg", true) }
+.image-replace-text { @include image-replace-text("test.jpg") }
+.image-replace-text-with-dimensions { @include image-replace-text-with-dimensions("test.jpg") }

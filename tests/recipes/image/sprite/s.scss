@@ -1,0 +1,19 @@
+@import "recipes/shape/polygon";
+@import "recipes/image/sprite";
+
+$simple-sprite-map: simple-sprite-map();
+
+.sprite-item-1 { @include sprite-item(timer1) }
+.sprite-item-2 { @include sprite-item(timer2) }
+.sprite-item-3 { @include sprite-item(timer3) }
+.sprite-item-4 { @include sprite-item(timer4) }
+
+.sprite-item-with-dimensions-1 { @include sprite-item-with-dimensions(timer1) }
+.sprite-item-with-dimensions-2 { @include sprite-item-with-dimensions(timer2) }
+.sprite-item-with-dimensions-3 { @include sprite-item-with-dimensions(timer3) }
+.sprite-item-with-dimensions-4 { @include sprite-item-with-dimensions(timer4) }
+
+.sprite-item-replacement-1 { @include sprite-item-replacement(timer1) }
+.sprite-item-replacement-2 { @include sprite-item-replacement(timer2) }
+.sprite-item-replacement-3 { @include sprite-item-replacement(timer3) }
+.sprite-item-replacement-4 { @include sprite-item-replacement(timer4) }
