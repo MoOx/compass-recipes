@@ -6,7 +6,7 @@
 # for testing extension
 require File.join(File.dirname(__FILE__), 'lib', 'compass-recipes')
 
-http_path = '/'
+http_path = 'compass-recipes/'
 css_dir = '.'
 sass_dir = '.'
 fonts_dir = 'fonts'
