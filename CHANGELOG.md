@@ -1,8 +1,8 @@
 # Compass Recipes CHANGELOG
 
-## 0.3 (alpha relase - depending on sass 3.2 alpha)
+## HEAD
 
-* normalize.css
+* normalize.css compassified
 * media queries
 * lots of backgrounds (gradients & patterns)
 * ui keyboard
@@ -17,23 +17,27 @@
 * Compass extension: icon-fonts (icons using fonts)
 * Compass extension: gravatar helper
 * loading indicator
-* 2 news effects (corners scatter & tuckeds/taped)
+* news effects (corners scatter & tuckeds/taped)
 * lots of utilities (position, relative position, ifnotnull)
 * ui tooltip ! ("cssarrowplease like" mixin)
 * new simple vertical align mixin + previous rewritten as `vertical-align-block`
-* some color schemes
+* more images mixin (dimensions, sprite)
 
-## 0.2.1
+## 0.2.2 (August 16, 2012)
+
+* fix some import
+
+## 0.2.1 (January 26, 2012)
 
 * fix global import
 
-## 0.2
+## 0.2 (July 12, 2011)
 
 * ui gradients
 * more shapes
 * more shadows
 
-## 0.1
+## 0.1 (June 30, 2011)
 
 * triangles shapes
 * corner folded effects
