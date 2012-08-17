@@ -4,23 +4,25 @@ A series of Compass and Sass mixins and functions for creating delicious CSS eff
 
 _Compass Recipes is currently under active development. While it's being already used on multiple projects (even in production), you may encounter some issues. Please try it out in a project, and [make suggestions](https://github.com/MoOx/compass-recipes/issues/new) or [report bugs](https://github.com/MoOx/compass-recipes/issues) ! Your feedback matters._
 
-## [Demos](http://moox.github.com/compass-recipes/)
+## [Online Demos](http://moox.github.com/compass-recipes/tests/)
 
-_Note: These are demos of the repository at its current state, *not* the last stable gem. To get the most up-to-date recipes, please see Installation for instructions on installing the repo at his current state_
+If you want to view the Sass(scss) source of a demo, remember to find the appropriate `.scss` file of the deserved `s.css` (e.g. : open it from the source & switch extension).
 
-## Types of Recipes
+## Availables Recipes
 
-* **[Backgrounds](http://moox.github.com/compass-recipes/recipes/background/)** - Background patterns, gradients.
-* **Color** Variables Names & Advanced color functions like `brightness()`
-* **[Effects](http://moox.github.com/compass-recipes/recipes/effect/)** - Visual effects like `bevel` and `cutout`
-* **[Form skins](http://moox.github.com/compass-recipes/recipes/form/skin/)** - Only one at the moment.
-* **[Icon Fonts](http://moox.github.com/compass-recipes/recipes/icon-fonts)** - Includes icon fonts helper and a few open source fonts.
-* **[Layout](http://moox.github.com/compass-recipes/recipes/layout)** - Vertical centering and box layout shortcuts.
-* **[Media queries](http://moox.github.com/compass-recipes/recipes/media-queries)** - Predefined queries for common device widths. *Experimental: Uses `sass --pre`*
-* **[Shadows](http://moox.github.com/compass-recipes/recipes/shadow/)** - A wide collection of shadows which use pseudo elements to create fold effects, etc.
-* **[Shapes](http://moox.github.com/compass-recipes/recipes/shape/)** - Geometric and iconic shapes, created only with CSS
-* **[Shared](http://moox.github.com/compass-recipes/recipes/shared/)** - Common CSS tricks and hacks.
-* **[UI](http://moox.github.com/compass-recipes/recipes/ui/)** Lots of element styling for menu, buttons, loader, etc.
+* **[Backgrounds](http://moox.github.com/compass-recipes/tests/recipes/background/)** - Background patterns, gradients.
+* **[Normalize](http://moox.github.com/compass-recipes/tests/recipes/base/)** - [Normalize.css](http://necolas.github.com/normalize.css/) 'compassified'.
+* **[Color](http://moox.github.com/compass-recipes/tests/recipes/color/)** Variables Names, advanced color functions like `brightness()` & color scheme functions
+* **[Effects](http://moox.github.com/compass-recipes/tests/recipes/effect/)** - Visual effects like `glass`, `bevel`, `cutout` or `ribbon`
+* **[Form skins](http://moox.github.com/compass-recipes/tests/recipes/form/skin/)** - Only one at the moment. Please add yours :)
+* **[Icon Fonts](http://moox.github.com/compass-recipes/tests/recipes/icon-font/)** - Includes icon fonts helper and a few open source fonts as a compass extension ([more info](https://github.com/MoOx/compass-recipes/blob/master/templates/icon-fonts/README.md))
+* **[Image](http://moox.github.com/compass-recipes/tests/recipes/image/)** - More image mixins (& functions) than Compass deserve (dimensions, inline, simple spriting)
+* **[Layout](http://moox.github.com/compass-recipes/tests/recipes/layout/)** - Vertical centering and box layout shortcuts.
+* **[Media queries](http://moox.github.com/compass-recipes/tests/recipes/media-queries/)** - Shortcuts for media queries.
+* **[Shadows](http://moox.github.com/compass-recipes/tests/recipes/shadow/)** - A wide collection of shadows which use pseudo elements to create fold effects, etc.
+* **[Shapes](http://moox.github.com/compass-recipes/tests/recipes/shape/)** - Geometric and iconic shapes, created only with CSS
+* **[UI](http://moox.github.com/compass-recipes/tests/recipes/ui/)** Lots of element styling for loader, menu, overlay, separator, tooltip, etc.
+* **[Utilities](http://moox.github.com/compass-recipes/tests/recipes/utilities/)** Very usefull utilities, trick, hacks
 * [View other potential icoming items](https://github.com/MoOx/compass-recipes/issues?labels=enhancement%2Cfeature)
 
 ## Installation
@@ -94,7 +96,7 @@ Licences are distributed with the fonts.
 ## Build Documentation
 
 *You do not need to build documentation for testing your recipes.*
-*Just run `compass watch/compile` at the root of the repositorie.*
+*Just run `compass watch/compile` at the root of the repository.*
 
 First you need bundle
 
@@ -104,17 +106,13 @@ Then, to build the gh-pages from the `tests/`, you need to call
 
 ```bundle exec rake pages```
 
-This process create the pages & push them to your gh-pages branch.
+This process create the pages & commit them to your gh-pages branch.
 
 ## Authors/Maintainers
 
-Compass Recipes is maintained by [Maxime Thirouin](http://moox.fr), a french front-end web developer, and [David Kaneda](http://www.davidkaneda.com), creative director at [Sencha](http://www.sencha.com).
+Compass Recipes is maintained by [Maxime Thirouin](http://moox.fr), a french front-end web developer, and [David Kaneda](http://www.davidkaneda.com), previously creative director at [Sencha](http://www.sencha.com).
 
-### Recurrent Contributors
-
-* [@canarymason](https://github.com/canarymason)
-
-#### Sous Chefs
+[See all contributors](https://github.com/MoOx/compass-recipes/graphs/contributors)
 
 While Maxime and David are the primary project maintainers, most of the core ideas and techniques in the recipes are not from them.
 
@@ -124,7 +122,7 @@ Credits & Thanks:
 * [@leaverou](https://github.com/leaverou) (backgrounds patterns)
 * [@necolas](https://github.com/necolas) (normalize & tricks)
 * [@simurai](https://github.com/simurai) (awesomes design stuffs)
-* All of the people who contribute to the recipes (all names are in each recipes)
+* All of the people who contribute to the recipes (all names should be in each recipes source)
 
 ### Additional Resources
 
