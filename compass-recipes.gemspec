@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gemspec|
-  gemspec.version = "0.2.1"
+  gemspec.version = "0.2.2"
   gemspec.date = Date::today
 
   gemspec.name = "compass-recipes"
