@@ -10,7 +10,14 @@ task :pages do
   #  copy tests into a temp dir before switching branch
   FileUtils.rm_rf "tmp"
   FileUtils.mkdir("tmp")
-  (FileList.new('fonts/**/*')+FileList.new('stylesheets/**/*')+FileList.new('templates/**/*')+FileList.new('tests/**/*')).each do |file|
+  (
+    FileList.new('fonts/**/*')+
+    FileList.new('javascripts/**/*')+
+    FileList.new('lib/**/*')+
+    FileList.new('stylesheets/**/*')+
+    FileList.new('templates/**/*')+
+    FileList.new('tests/**/*')
+  ).each do |file|
     if File.file?(file)
       if !File.directory?(File.dirname("tmp/#{file}"))
         puts 'Mkdir' + File.dirname("tmp/#{file}")
@@ -29,6 +36,8 @@ task :pages do
 
   # Reset gh-pages
   FileUtils.rm_rf "fonts"
+  FileUtils.rm_rf "javascripts"
+  FileUtils.rm_rf "lib"
   FileUtils.rm_rf "stylesheets"
   FileUtils.rm_rf "templates"
   FileUtils.rm_rf "tests"
@@ -59,7 +68,14 @@ task :pages do
 
   # Commit gh-pages changes
   # @todo make this optional ?
-  Dir["fonts/**/*", "stylesheets/**/*", "templates/**/*", "tests/**/*"].each {|f| repo.add(f) }
+  Dir[
+    "fonts/**/*",
+    "javascripts/**/*",
+    "lib/**/*",
+    "stylesheets/**/*",
+    "templates/**/*",
+    "tests/**/*"
+  ].each {|f| repo.add(f) }
   repo.status.deleted.each {|f, s| repo.remove(f)}
   message = ENV["MESSAGE"] || "Updated at #{Time.now.utc}"
   repo.commit(message)
