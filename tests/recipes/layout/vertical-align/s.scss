@@ -1,18 +1,9 @@
 @import "recipes/layout/vertical-align";
 
-@include vertical-align-requirement;
-
-.v-align-container
+.valign
 {
-    @include vertical-align-container;
+    outline: 1px solid red;
+
+    @include vertical-align-parent-height(10em);
+    p { @include vertical-align }
 }
-
-    .v-align-content-container
-    {
-        @include vertical-align-content-container;
-    }
-
-        .v-align-content
-        {
-            @include vertical-align-content;
-        }

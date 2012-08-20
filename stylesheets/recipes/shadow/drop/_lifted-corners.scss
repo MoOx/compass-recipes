@@ -11,46 +11,50 @@
 
 ////
 // Drop shadow w/ lifted corners parent element. Totally optional.
+// Use this if the shadow does not display (shadow use negative z-index & can be "behind" the parent element, depending on the actual z-index)
 ///
 @mixin drop-shadow-lifted-corners-parent()
 {
-  position: relative;
-  z-index: 1; /* prevent shadows falling behind containers with backgrounds */
-  margin: 0;
+	position: relative;
+	z-index: 1; /* prevent shadows falling behind containers with backgrounds */
+	margin: 0;
 }
 
+// $height: height of the shadow element
+// $margin: margin of the shadow element
+// $angle: angle of the shadow. First parameter to reduce if you might thing there is a bug :)
+// $color: color of the shadow
 @mixin drop-shadow-lifted-corners($height: 16px, $margin: 10px, $angle: 6deg, $color: rgba(#000, .3))
 {
-    position: relative;
-    @include box-shadow(0 1px $height/4 $color);
+	position: relative;
+	@include box-shadow(0 1px $height/4 $color);
 
-    &::before,
-    &::after
-    {
-        content:"";
-        position:absolute;
-        z-index: -2;
-        
-        bottom: $margin;
+	&::before,
+	&::after
+	{
+		content:"";
+		position:absolute;
+		z-index: -2;
 
-        width: 70%;
-        height: 55%;
-        max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
-        max-height: 100px;
-        
-        @include box-shadow(0 $height/2 $height $color);
-    }
+		bottom: $margin;
 
-    &::before
-    {
-        left: $margin;
-        @include transform(skew(-$angle*2.5) rotate(-$angle));
-    }
-    
-    &::after
-    {
-        right: $margin;
-        z-index: -1;
-        @include transform(skew($angle*2.5) rotate($angle));
-    }
+		width: 70%;
+		height: 55%;
+		max-width: 300px; /* avoid rotation causing ugly appearance at large container widths */
+		max-height: 100px;
+
+		@include box-shadow(0 $height/2 $height $color);
+	}
+
+	&::before
+	{
+		left: $margin;
+		@include transform(skew(-$angle*2.5) rotate(-$angle));
+	}
+
+	&::after
+	{
+		right: $margin;
+		@include transform(skew($angle*2.5) rotate($angle));
+	}
 }

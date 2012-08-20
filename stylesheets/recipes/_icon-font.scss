@@ -1,6 +1,6 @@
 ////
 // Icon Fonts helpers
-// 
+//
 // Great to use with the some pictos fonts
 ///
 
@@ -14,6 +14,7 @@
 
 // @todo add http://fortaweso.me/font-awesome
 
+$icon-font-dir: 'icons' !default;
 $icon-font-class-suffix: icon-font !default;
 $icon-font-base-class:   "#{$icon-font-class-suffix}-base" !default;
 
@@ -60,26 +61,39 @@ $icon-font-default-gradient: matte !default;
 
 // http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
 
-@mixin icon-font-face($font-name, $font-id, $font-file-suffix: auto, $font-dir: auto)
+@mixin icon-font-face($name, $id: $name, $location: auto)
 {
-    @include font-face-kit($font-name, $font-id, $font-file-suffix, $font-dir);
-
-    %#{$icon-font-class-suffix}-#{$font-name}
+    @if ($location == auto)
     {
-        font-family: #{$font-name};
+        $location: '#{$icon-font-dir}/#{$name}';
+    }
+    @include font-face-kit($name, $id, $location);
+
+    %#{$icon-font-class-suffix}-#{$name}
+    {
+        font-family: #{$name};
         @extend %#{$icon-font-base-class};
     }
 }
 
-@mixin icon-font-face-entypo()                  { @include icon-font-face(entypo, EntypoRegular, entypo-webfont, icons/entypo); }
-@mixin icon-font-face-heydings()                { @include icon-font-face(heydings, HeydingsCommonIconsRegular, heydings_icons-webfont, icons/heydings); }
-@mixin icon-font-face-heydings_controls()       { @include icon-font-face(heydings_controls, HeydingsControlsRegular, heydings_controls-webfont, icons/heydings-controls); }
-@mixin icon-font-face-iconic_fill()             { @include icon-font-face(iconic_fill, IconicFill, iconic_fill, icons/iconic); }
-@mixin icon-font-face-iconic_stroke()           { @include icon-font-face(iconic_stroke, IconicStroke, iconic_stroke, icons/iconic); }
-@mixin icon-font-face-icomoon()                 { @include icon-font-face(icomoon, IcoMoonRegular, icomoon, icons/icomoon); }
-@mixin icon-font-face-modern-pictograms()       { @include icon-font-face(modern-pictograms, ModernPictogramsNormal, modernpics-webfont, icons/modern-pictograms);}
-@mixin icon-font-face-socialico()               { @include icon-font-face(socialico, SocialicoRegular, socialico-webfont, icons/socialico); }
-@mixin icon-font-face-websymbols()              { @include icon-font-face(websymbols, WebSymbolsRegular, websymbols-regular-webfont, icons/websymbols); }
+@mixin icon-font-face-broccolidry()             { @include icon-font-face(broccolidry); }
+@mixin icon-font-face-cuticons()                { @include icon-font-face(cuticons); }
+@mixin icon-font-face-ecoico()                  { @include icon-font-face(ecoico); }
+@mixin icon-font-face-entypo()                  { @include icon-font-face(entypo, EntypoRegular); }
+@mixin icon-font-face-fontawesome()             { @include icon-font-face(fontawesome, FontAwesomeRegular); }
+@mixin icon-font-face-heydings_controls()       { @include icon-font-face(heydings_controls, HeydingsControlsRegular); }
+@mixin icon-font-face-heydings_icons()          { @include icon-font-face(heydings_icons, HeydingsCommonIconsRegular); }
+@mixin icon-font-face-icomoon()                 { @include icon-font-face(icomoon, IcoMoonRegular); }
+@mixin icon-font-face-iconic_fill()             { @include icon-font-face(iconic_fill, IconicFill); }
+@mixin icon-font-face-iconic_stroke()           { @include icon-font-face(iconic_stroke, IconicStroke); }
+@mixin icon-font-face-iconminia()               { @include icon-font-face(iconminia); }
+@mixin icon-font-face-meteocons()               { @include icon-font-face(meteocons); }
+@mixin icon-font-face-modern_pictograms()       { @include icon-font-face(modern_pictograms, ModernPictogramsNormal);}
+@mixin icon-font-face-silkcons()                { @include icon-font-face(silkcons); }
+@mixin icon-font-face-socialico()               { @include icon-font-face(socialico, SocialicoRegular); }
+@mixin icon-font-face-typicons()                { @include icon-font-face(typicons); }
+@mixin icon-font-face-websymbols()              { @include icon-font-face(websymbols, WebSymbolsRegular); }
+@mixin icon-font-face-wpzoom()                  { @include icon-font-face(wpzoom); }
 
 ////
 // Includes a character into the specified selector, styled as an icon.

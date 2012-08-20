@@ -22,10 +22,10 @@
   border: 1px solid #a20909;
 }
 .swatch1:after {
-  content: "48.431%";
+  content: "48.43137%";
 }
 .swatch1:hover:after {
-  content: "31.011%";
+  content: "31.01137%";
 }
 .swatch1:active {
   background-color: #d20c0c;
@@ -40,10 +40,10 @@
   border: 1px solid #a25c09;
 }
 .swatch2:after {
-  content: "48.431%";
+  content: "48.43137%";
 }
 .swatch2:hover:after {
-  content: "58.635%";
+  content: "58.6349%";
 }
 .swatch2:active {
   background-color: #d2770c;
@@ -58,10 +58,10 @@
   border: 1px solid #8ca209;
 }
 .swatch3:after {
-  content: "48.431%";
+  content: "48.43137%";
 }
 .swatch3:hover:after {
-  content: "78.25%";
+  content: "78.2498%";
 }
 .swatch3:active {
   background-color: #b6d20c;
@@ -76,10 +76,10 @@
   border: 1px solid #0946a2;
 }
 .swatch4:after {
-  content: "48.431%";
+  content: "48.43137%";
 }
 .swatch4:hover:after {
-  content: "35.235%";
+  content: "35.23529%";
 }
 .swatch4:active {
   background-color: #0c5bd2;
@@ -94,10 +94,10 @@
   border: 1px solid #8009a2;
 }
 .swatch4:after {
-  content: "48.431%";
+  content: "48.43137%";
 }
 .swatch4:hover:after {
-  content: "35.146%";
+  content: "35.14588%";
 }
 .swatch4:active {
   background-color: #a60cd2;

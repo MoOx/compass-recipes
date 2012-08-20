@@ -18,8 +18,6 @@ div {
   height: 10em;
   -webkit-border-radius: 10em 5em;
   -moz-border-radius: 10em / 5em;
-  -ms-border-radius: 10em / 5em;
-  -o-border-radius: 10em / 5em;
   border-radius: 10em / 5em;
 }
 
@@ -28,8 +26,6 @@ div {
   height: 20em;
   -webkit-border-radius: 5em 10em;
   -moz-border-radius: 5em / 10em;
-  -ms-border-radius: 5em / 10em;
-  -o-border-radius: 5em / 10em;
   border-radius: 5em / 10em;
 }
 
@@ -38,8 +34,6 @@ div {
   height: 10em;
   -webkit-border-radius: 10em 5em;
   -moz-border-radius: 10em / 5em;
-  -ms-border-radius: 10em / 5em;
-  -o-border-radius: 10em / 5em;
   border-radius: 10em / 5em;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);

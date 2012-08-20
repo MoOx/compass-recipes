@@ -2,45 +2,92 @@
 
 div
 {
-    display: none;
-    &:after
-    {
-        content: attr(class);
-        font-size: 2em;
-    }
+	font-size: 2em;
 }
 
-.min,
-.max
+.media-min-width
 {
-    opacity: .4;
+	&:after {
+		content: 'Min width (for mobile first)';
+		@include media-min(20em) { content: 'Min width 20em'; }
+		@include media-min(40em) { content: 'Min width 40em'; }
+		@include media-min(60em) { content: 'Min width 60em'; }
+	}
 }
 
-.only
+.media-gap-width
 {
-    font-weight: bold;
+	&:after {
+		content: 'Gap width (for precision)';
+		@include media-gap(20em, 40em) { content: 'Gap width 20em -> 40em'; }
+		@include media-gap(40em, 60em) { content: 'Gap width 40em -> 60em'; }
+	}
 }
 
-.xxl.min    { @include media-xxl-min    { display: block }}
-.xl.min     { @include media-xl-min     { display: block }}
-.l.min      { @include media-l-min      { display: block }}
-.m.min      { @include media-m-min      { display: block }}
-.s.min      { @include media-s-min      { display: block }}
-.xs.min     { @include media-xs-min     { display: block }}
-.xxs.min    { @include media-xxs-min    { display: block }}
+.media-max-width
+{
+	&:after {
+		content: 'Max width (for desktop first)';
+		@include media-max(60em) { content: 'Max width 60em'; }
+		@include media-max(40em) { content: 'Max width 40em'; }
+		@include media-max(20em) { content: 'Max width 20em'; }
+	}
+}
 
-.xxl.only   { @include media-xxl        { display: block }}
-.xl.only    { @include media-xl         { display: block }}
-.l.only     { @include media-l          { display: block }}
-.m.only     { @include media-m          { display: block }}
-.s.only     { @include media-s          { display: block }}
-.xs.only    { @include media-xs         { display: block }}
-.xxs.only   { @include media-xxs        { display: block }}
+.media-min-height
+{
+	&:after {
+		content: 'Min height';
+		@include media-min-height(10em) { content: 'Min height 10em'; }
+		@include media-min-height(20em) { content: 'Min height 20em'; }
+		@include media-min(30em, height) { content: 'Min height 30em'; } // notice different syntax available
+	}
+}
+.media-gap-height
+{
+	&:after {
+		content: 'Gap height (for precision)';
+		@include media-gap(10em, 20em) { content: 'Gap height 10em -> 20em'; }
+		@include media-gap(20em, 30em) { content: 'Gap height 20em -> 30em'; }
+	}
+}
+.media-max-height
+{
+	&:after {
+		content: 'Max width (for desktop first)';
+		@include media-max(30em, height) { content: 'Max width 30em'; } // notice different syntax available
+		@include media-max-height(20em) { content: 'Max width 20em'; }
+		@include media-max-height(10em) { content: 'Max width 10em'; }
+	}
+}
 
-.xxl.max    { @include media-xxl-max    { display: block }}
-.xl.max     { @include media-xl-max     { display: block }}
-.l.max      { @include media-l-max      { display: block }}
-.m.max      { @include media-m-max      { display: block }}
-.s.max      { @include media-s-max      { display: block }}
-.xs.max     { @include media-xs-max     { display: block }}
-.xxs.max    { @include media-xxs-max    { display: block }}
+.media-orientation
+{
+	&:after {
+		content: 'No orientation defined';
+		@include media-portrait() { content: 'Orientation: portrait'; }
+		@include media-landscape() { content: 'Orientation: landscape'; }
+	}
+}
+
+.media-pixel-ratio
+{
+	&:after {
+		content: 'Default pixel ratio';
+		@include media-pixel-ratio(1) { content: 'Pixel ratio: 1'; }
+		@include media-pixel-ratio() { content: 'Pixel ratio: 1.5'; } // notice default value to 1.5
+		@include media-pixel-ratio(2) { content: 'Pixel ratio: 2'; }
+	}
+}
+
+.media-highres-shortcut
+{
+	&:after {
+		@include media-highres() { content: 'High res (shortcut)'; }
+	}
+}
+
+// media-queries-for-js tests
+@include media-queries-for-js(small, 'max-width: 40em');
+@include media-queries-for-js(medium, 'min-width: 40em');
+@include media-queries-for-js(large, 'min-width: 60em');

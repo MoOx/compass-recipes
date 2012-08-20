@@ -1,0 +1,11 @@
+$color-scheme-triad: 135 !default;
+
+@function triad-color($color)
+{
+	@return adjust-hue($color, $color-scheme-triad);
+}
+
+@function triad-color-alt($color)
+{
+	@return adjust-hue($color, -$color-scheme-triad);
+}

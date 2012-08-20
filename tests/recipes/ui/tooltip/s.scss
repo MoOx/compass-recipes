@@ -1,0 +1,56 @@
+@import "compass/css3";
+@import "recipes/ui/tooltip";
+
+div
+{
+	width: 16em;
+	height: 8em;
+	margin: 4em auto;
+}
+
+
+.tooltip-top { @include ui-tooltip(top);}
+.tooltip-right { @include ui-tooltip(right);}
+.tooltip-bottom { @include ui-tooltip;}
+.tooltip-left { @include ui-tooltip(left);}
+
+.cssarrowplease
+{
+	@include ui-tooltip(
+		top,
+		$border-radius: 6px,
+		$tip-color: #88b7d5,
+		$tip-color-alt: #c2e1f5,
+		$tip-width: 60px,
+		$tip-height: 30px,
+		$border-width: 4px
+	);
+}
+
+.bubble
+{
+	$tip-color: darken(#fff, 10%);
+	@include ui-tooltip(
+		$border-radius: 50%,
+		$tip-width: 20px,
+		$tip-color: $tip-color,
+		$tip-height: auto,
+		$background: radial-gradient(top, farthest-side, #fff 70%, $tip-color)
+	);
+}
+
+.squared-bubble
+{
+	@include ui-tooltip(
+		$tip-color: red,
+		$tip-width: 1em,
+		$tip-height: 3em,
+		$tip-margin-position: left,
+		$tip-margin: 1em,
+		//http://jsfiddle.net/necolas/hjMqh/
+		$tip-transform: rotate(25deg), // skewX(-15deg)
+		$tip-transform-origin: 100% 0% 0 0,
+		$border-width: .15em
+	);
+	&:before { z-index: -1 }; // fix triangle border overlay
+}

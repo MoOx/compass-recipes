@@ -1,0 +1,12 @@
+@import "recipes/image/dimensions";
+
+@mixin image-inline($image)
+{
+	background: inline_image($image) no-repeat;
+}
+
+@mixin image-inline-with-dimensions($image)
+{
+	background: inline_image($image) no-repeat;
+	@include image-dimensions($image)
+}

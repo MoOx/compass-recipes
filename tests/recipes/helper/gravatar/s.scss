@@ -1,10 +1,10 @@
 @import "recipes/helper/gravatar";
 
-.gravatar
+.sass-gravatar
 {
     @include helper-gravatar('m@moox.fr', 64px);
     // equivalent to
-    //$width: 48px;
+    //$width: 64px;
     //width: $width;
     //height: $width;
     //background: gravatar_url($email: m@moox.fr, $size: $width) no-repeat;
@@ -21,7 +21,5 @@
     }
 }
 
-.gravatar-using-pseudo
-{
-    @include helper-gravatar-auto();
-}
+.gravatar-before { @include helper-gravatar-auto(); }
+.gravatar-after { @include helper-gravatar-auto(after); }

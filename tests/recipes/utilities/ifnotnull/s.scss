@@ -1,0 +1,8 @@
+@import "recipes/utilities/ifnotnull";
+
+body
+{
+	/* You should see only "position: relative" */
+	@include ifnotnull(position, relative);
+	@include ifnotnull(top, null);
+}

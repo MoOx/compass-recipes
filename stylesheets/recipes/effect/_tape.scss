@@ -1,13 +1,13 @@
 ////
 // Scotch tape effect with pure CSS
-// 
+//
 // @thanks Nick La @nickla for original concept
 // @link http://webdesignerwall.com/tutorials/css3-image-styles
-// 
+//
 // @author David Kaneda http://www.davidkaneda.com
 ///
 
-@import "../shared/pseudo-element";
+@import "recipes/utilities/pseudo-element";
 
 $tape-width: 60px !default;
 $tape-height: 25px !default;
@@ -25,7 +25,7 @@ $tape-angle: -2deg !default;
 {
     overflow: visible;
     &:after {
-        @include pseudo-element($width: $width, $height: $height);
+        @include pseudo-element($width, $height);
         top: ceil(-$height/2);
         left: 50%;
         margin-left: -$width/2;

@@ -1,0 +1,21 @@
+//
+// Orientation (portrait/horizontal & landscape/vertical)
+//
+// @author Maxime Thirouin <m@moox.fr>
+//
+
+@mixin media-portrait
+{
+    @media (orientation: portrait)
+    {
+        @content;
+    }
+}
+
+@mixin media-landscape
+{
+    @media (orientation: landscape)
+    {
+        @content;
+    }
+}

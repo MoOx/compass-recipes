@@ -1,0 +1,156 @@
+.referent {
+  font-size: 2em;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  background: rgba(255, 0, 0, 0.5);
+  margin: 5em auto;
+}
+.referent div {
+  background: rgba(0, 128, 0, 0.5);
+  font-size: .5em;
+}
+
+.top {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: -1em;
+  left: 50%;
+  margin-left: -0.5em;
+}
+
+.right {
+  position: absolute;
+  width: 2em;
+  height: 0.5em;
+  right: -2em;
+  top: 50%;
+  margin-top: -0.25em;
+}
+
+.bottom {
+  position: absolute;
+  width: 0.5em;
+  height: 2em;
+  bottom: -2em;
+  left: 50%;
+  margin-left: -0.25em;
+}
+
+.left {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  left: -2em;
+  top: 50%;
+  margin-top: -1em;
+}
+
+.top-distanced {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: -4em;
+  left: 50%;
+  margin-left: -0.5em;
+}
+
+.right-distanced {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: -4em;
+  top: 50%;
+  margin-top: -0.5em;
+}
+
+.bottom-distanced {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  bottom: -4em;
+  left: 50%;
+  margin-left: -0.5em;
+}
+
+.left-distanced {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: -4em;
+  top: 50%;
+  margin-top: -0.5em;
+}
+
+.left-top {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: -1em;
+  top: 0;
+  margin-top: 0;
+}
+
+.right-top {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: -1em;
+  top: 0;
+  margin-top: 0;
+}
+
+.left-bottom {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: -1em;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+.right-bottom {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: -1em;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+.top-left-moved {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: -1em;
+  left: 0;
+  margin-left: 10%;
+}
+
+.top-right-moved {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: -1em;
+  right: 0;
+  margin-right: 20%;
+}
+
+.bottom-left-moved {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  bottom: -1em;
+  left: 0;
+  margin-left: 20%;
+}
+
+.bottom-right-moved {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  bottom: -1em;
+  right: 0;
+  margin-right: 30%;
+}

@@ -9,7 +9,7 @@
 
 // sometimes we don't use nesting all the time to optimize some selector
 
-@import "recipes/shared/block-inline-block";
+@import "recipes/utilities/block-inline-block";
 
 @mixin ui-menu-dropdown($z-index: 3)
 {

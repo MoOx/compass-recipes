@@ -3,14 +3,17 @@
 <link rel="stylesheet" href="s.css" />
 <h1>Tests for <a href="../../">recipes</a>/<a href="../">helper</a>/gravatar</h1>
 
-<!-- document.getElementsByClassName polyfill for IE8/7/6- -->
-<script src="../../../../templates/gravatar/getElementsByClassName.js"></script>
+<!-- polyfills for IE8/7/6- -->
+<script src="../../../../javascripts/polyfills/addEventListener.js"></script>
+<script src="../../../../javascripts/polyfills/getElementsByClassName.js"></script>
 <!-- md5 is only needed if you use data-email -->
 <script src="../../../../templates/gravatar/md5.js"></script>
 
 <script src="../../../../templates/gravatar/gravatar.js"></script>
 
-<div class="gravatar"></div>
+<div class="sass-gravatar"></div>
+
+<div class="gravatar" data-email-md5="null" data-gravatar-defaultImage="monster"></div>
 
 <div class="gravatar-before" data-email="m[at]moox(dot)fr"></div>
 

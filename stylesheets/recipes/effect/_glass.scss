@@ -1,14 +1,14 @@
 ////
 // Glass effect
 // Use this on image for better effect render
-// 
+//
 // Inspired from Simurai's IMDB redisign
 //
 // @link http://archive.simurai.com/lab/imdb/
 // @thanks Simurai @simurai
 ///
 
-@import "recipes/shared/pseudo-element";
+@import "recipes/utilities/pseudo-element";
 
 @mixin effect-glass(
     $color: rgba(#fff, .12),
@@ -24,7 +24,7 @@
 
     &:after
     {
-        @include pseudo-element($width: auto);
+        @include pseudo-element;
         overflow: hidden;
         top: 0;
         right: 0;

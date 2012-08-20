@@ -1,0 +1,21 @@
+// @link http://designshack.net/wp-content/uploads/less-snippets-9.jpg
+
+@function subtle-color-light($color)
+{
+	@return lighten(adjust-hue($color, 5), 10%);
+}
+
+@function subtle-color-lighter($color)
+{
+	@return lighten(adjust-hue($color, 10), 20%);
+}
+
+@function subtle-color-dark($color)
+{
+	@return darken(adjust-hue($color, -5), 10%);
+}
+
+@function subtle-color-darker($color)
+{
+	@return darken(adjust-hue($color, -10), 20%);
+}
