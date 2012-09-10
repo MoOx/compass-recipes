@@ -16,8 +16,8 @@ div {
 }
 .tooltip-top:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-right: 5px solid transparent;
@@ -30,8 +30,8 @@ div {
 }
 .tooltip-top:before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-right: 8px solid transparent;
@@ -55,8 +55,8 @@ div {
 }
 .tooltip-right:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
@@ -69,8 +69,8 @@ div {
 }
 .tooltip-right:before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
@@ -94,8 +94,8 @@ div {
 }
 .tooltip-bottom:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 5px solid white;
@@ -108,8 +108,8 @@ div {
 }
 .tooltip-bottom:before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 8px solid #cccccc;
@@ -133,8 +133,8 @@ div {
 }
 .tooltip-left:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
@@ -147,8 +147,8 @@ div {
 }
 .tooltip-left:before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
@@ -172,8 +172,8 @@ div {
 }
 .cssarrowplease:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-right: 30px solid transparent;
@@ -186,8 +186,8 @@ div {
 }
 .cssarrowplease:before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-right: 36px solid transparent;
@@ -215,8 +215,8 @@ div {
 }
 .bubble:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 20px solid #e6e6e6;
@@ -229,8 +229,8 @@ div {
 }
 .bubble:before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 23px solid #b3b3b3;
@@ -254,8 +254,8 @@ div {
 }
 .squared-bubble:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 3em solid red;
@@ -278,8 +278,8 @@ div {
 }
 .squared-bubble:before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-top: 3.21213em solid #990000;

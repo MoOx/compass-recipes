@@ -24,8 +24,8 @@
 }
 .corner-folded-top-left::before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   border-style: solid;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.6em;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.6em;
@@ -47,8 +47,8 @@
 }
 .corner-folded-top-right::before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   border-style: solid;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.6em;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.6em;
@@ -70,8 +70,8 @@
 }
 .corner-folded-bottom-left::before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   border-style: solid;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.6em;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.6em;
@@ -93,8 +93,8 @@
 }
 .corner-folded-bottom-right::before {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   border-style: solid;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.6em;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.6em;

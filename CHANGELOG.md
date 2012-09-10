@@ -18,7 +18,7 @@
 * Compass extension: gravatar helper
 * loading indicator
 * news effects (corners scatter & tuckeds/taped)
-* lots of utilities (position, relative position, ifnotnull)
+* lots of utilities (position, relative position)
 * ui tooltip ! ("cssarrowplease like" mixin)
 * new simple vertical align mixin + previous rewritten as `vertical-align-block`
 * more images mixin (dimensions, sprite)
