@@ -120,6 +120,25 @@ div {
   }
 }
 
+.media-resolution:after {
+  content: 'Default resolution 1dppx';
+}
+@media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+  .media-resolution:after {
+    content: 'Resolution 1dppx';
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .media-resolution:after {
+    content: 'Resolution 1.5dppx';
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .media-resolution:after {
+    content: 'Resolution 2dppx';
+  }
+}
+
 .media-pixel-ratio:after {
   content: 'Default pixel ratio';
 }

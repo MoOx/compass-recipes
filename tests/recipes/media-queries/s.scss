@@ -70,6 +70,16 @@ div
 	}
 }
 
+.media-resolution
+{
+	&:after {
+		content: 'Default resolution 1dppx';
+		@include media-resolution(1) { content: 'Resolution 1dppx'; }
+		@include media-resolution() { content: 'Resolution 1.5dppx'; } // notice default value to 1.5
+		@include media-resolution(2) { content: 'Resolution 2dppx'; }
+	}
+}
+
 .media-pixel-ratio
 {
 	&:after {
