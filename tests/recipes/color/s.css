@@ -104,3 +104,13 @@
   color: #f7dffd;
   text-shadow: #8009a2 0 -1px 0;
 }
+
+.black-white {
+  background: black;
+  color: white;
+}
+
+.black-white-transparente {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
