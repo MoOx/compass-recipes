@@ -12,11 +12,12 @@
 @import "recipes/font";
 @import "recipes/background/gradients";
 
-// @todo add http://fortaweso.me/font-awesome
-
 $icon-font-dir: 'icons' !default;
 $icon-font-class-suffix: icon-font !default;
-$icon-font-base-class:   "#{$icon-font-class-suffix}-base" !default;
+$icon-font-parent-style: "#{$icon-font-class-suffix}-base" !default;
+$icon-font-base-style: "#{$icon-font-class-suffix}-icon" !default;
+$icon-font-attr-name: data-icon !default;
+$icon-font-attr-default-pseudo: before !default;
 
 ////
 // @cfg {color} $icon-font-base-color
@@ -26,6 +27,8 @@ $icon-font-base-class:   "#{$icon-font-class-suffix}-base" !default;
 ///
 $icon-font-base-color: #999 !default;
 
+$icon-font-highlight-color: #333 !default;
+
 ////
 // @cfg {color} $icon-font-default-stroke
 // The default color to use on the border of icons, when using the {@link #icon-font} mixin.
@@ -33,8 +36,6 @@ $icon-font-base-color: #999 !default;
 // Defaults to `null`.
 ///
 $icon-font-default-stroke: darken($icon-font-base-color, 10) !default;
-
-$icon-font-highlight-color: #3778E5 !default;
 
 ////
 // @cfg {string} $icon-font-default-gradient
@@ -47,53 +48,64 @@ $icon-font-default-gradient: matte !default;
 // Base style for pseudo-selectors
 // @todo Doc me yo
 
-%#{$icon-font-base-class}
-{
-    color: transparent;
-    @include background-clip(text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-indent: 0;
-    @include text-shadow(none);
-    @include user-select(none);
+%#{$icon-font-parent-style} {
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	@include background-clip(text);
+}
+
+%#{$icon-font-base-style} {
+	color: transparent;
+	@include background-clip(text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-indent: 0;
+	@include text-shadow(none);
+	@include user-select(none);
+}
+
+@mixin icon-font-family($name) {
+	@if ($name != null) {
+		@extend %#{$icon-font-class-suffix}-#{$name};
+	}
 }
 
 // http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
 
 @mixin icon-font-face($name, $id: $name, $location: auto)
 {
-    @if ($location == auto)
-    {
-        $location: '#{$icon-font-dir}/#{$name}';
-    }
-    @include font-face-kit($name, $id, $location);
+	@if ($location == auto)
+	{
+		$location: '#{$icon-font-dir}/#{$name}';
+	}
+	@include font-face-kit($name, $id, $location);
 
-    %#{$icon-font-class-suffix}-#{$name}
-    {
-        font-family: #{$name};
-        @extend %#{$icon-font-base-class};
-    }
+	%#{$icon-font-class-suffix}-#{$name}
+	{
+		font-family: #{$name};
+	}
 }
 
-@mixin icon-font-face-broccolidry()             { @include icon-font-face(broccolidry); }
-@mixin icon-font-face-cuticons()                { @include icon-font-face(cuticons); }
-@mixin icon-font-face-ecoico()                  { @include icon-font-face(ecoico); }
-@mixin icon-font-face-entypo()                  { @include icon-font-face(entypo, EntypoRegular); }
-@mixin icon-font-face-fontawesome()             { @include icon-font-face(fontawesome, FontAwesomeRegular); }
-@mixin icon-font-face-heydings_controls()       { @include icon-font-face(heydings_controls, HeydingsControlsRegular); }
-@mixin icon-font-face-heydings_icons()          { @include icon-font-face(heydings_icons, HeydingsCommonIconsRegular); }
-@mixin icon-font-face-icomoon()                 { @include icon-font-face(icomoon, IcoMoonRegular); }
-@mixin icon-font-face-iconic_fill()             { @include icon-font-face(iconic_fill, IconicFill); }
-@mixin icon-font-face-iconic_stroke()           { @include icon-font-face(iconic_stroke, IconicStroke); }
-@mixin icon-font-face-iconminia()               { @include icon-font-face(iconminia); }
-@mixin icon-font-face-meteocons()               { @include icon-font-face(meteocons); }
-@mixin icon-font-face-modern_pictograms()       { @include icon-font-face(modern_pictograms, ModernPictogramsNormal);}
-@mixin icon-font-face-silkcons()                { @include icon-font-face(silkcons); }
-@mixin icon-font-face-socialico()               { @include icon-font-face(socialico, SocialicoRegular); }
-@mixin icon-font-face-typicons()                { @include icon-font-face(typicons); }
-@mixin icon-font-face-websymbols()              { @include icon-font-face(websymbols, WebSymbolsRegular); }
-@mixin icon-font-face-wpzoom()                  { @include icon-font-face(wpzoom); }
+@mixin icon-font-face-broccolidry()			{ @include icon-font-face(broccolidry); }
+@mixin icon-font-face-cuticons()			{ @include icon-font-face(cuticons); }
+@mixin icon-font-face-ecoico()				{ @include icon-font-face(ecoico); }
+@mixin icon-font-face-entypo()				{ @include icon-font-face(entypo, EntypoRegular); }
+@mixin icon-font-face-fontawesome()			{ @include icon-font-face(fontawesome, FontAwesomeRegular); }
+@mixin icon-font-face-heydings_controls()	{ @include icon-font-face(heydings_controls, HeydingsControlsRegular); }
+@mixin icon-font-face-heydings_icons()		{ @include icon-font-face(heydings_icons, HeydingsCommonIconsRegular); }
+@mixin icon-font-face-icomoon()				{ @include icon-font-face(icomoon, IcoMoonRegular); }
+@mixin icon-font-face-iconic_fill()			{ @include icon-font-face(iconic_fill, IconicFill); }
+@mixin icon-font-face-iconic_stroke()		{ @include icon-font-face(iconic_stroke, IconicStroke); }
+@mixin icon-font-face-iconminia()			{ @include icon-font-face(iconminia); }
+@mixin icon-font-face-meteocons()			{ @include icon-font-face(meteocons); }
+@mixin icon-font-face-modern_pictograms()	{ @include icon-font-face(modern_pictograms, ModernPictogramsNormal);}
+@mixin icon-font-face-silkcons()			{ @include icon-font-face(silkcons); }
+@mixin icon-font-face-socialico()			{ @include icon-font-face(socialico, SocialicoRegular); }
+@mixin icon-font-face-typicons()			{ @include icon-font-face(typicons); }
+@mixin icon-font-face-websymbols()			{ @include icon-font-face(websymbols, WebSymbolsRegular); }
+@mixin icon-font-face-wpzoom()				{ @include icon-font-face(wpzoom); }
 
 ////
 // Includes a character into the specified selector, styled as an icon.
@@ -113,108 +125,124 @@ $icon-font-default-gradient: matte !default;
 // True to include states for hover and active. Defaults to `true`.
 ///
 @mixin icon-font(
-    $character: attr(data-icon),
-    $size: 48px,
-    $class: 'base',
+	$character: attr(#{$icon-font-attr-name}),
+	$size: 1em,
+	$font: null,
 
-    $color: $icon-font-base-color,
-    $color-hover: $icon-font-highlight-color,
-    $color-active: darken($color-hover, 7%),
+	$color: $icon-font-base-color,
+	$color-hover: $icon-font-highlight-color,
+	$color-active: darken($color-hover, 7%),
 
-    $glow: null,
-    $glow-hover: $icon-font-highlight-color 0 0 10px,
-    $glow-active: $glow-hover,
+	$glow: null,
+	$glow-hover: $icon-font-highlight-color 0 0 1px,
+	$glow-active: $glow-hover,
 
-    $shadow: rgba(#000, .5) 0 1px 3px, // Shadow doesn't change, but hover does
+	$shadow: rgba(#000, .5) 0 1px 1px, // shadow doesn't change, but $glow-hover does
 
-    $stroke: false,
-    $stroke-hover: 1px darken($color-hover, 5),
-    $stroke-active: 1px darken($color-active, 5),
+	$stroke: false,
+	$stroke-hover: 1px darken($color-hover, 5),
+	$stroke-active: 1px darken($color-active, 5),
 
-    $gradient: $icon-font-default-gradient,
-    $gradient-hover: $gradient,
-    $gradient-active: recessed,
+	$gradient: $icon-font-default-gradient,
+	$gradient-hover: $gradient,
+	$gradient-active: recessed,
 
-    $include-states: true,
-    $hidetext: true
+	$include-states: true,
+	$hidetext: true
 ) {
-    position: relative;
-    @include background-clip(text);
-    overflow: visible;
-    display: inline-block;
+	@extend %#{$icon-font-parent-style};
 
-    // icon are square
-    width: $size;
-    line-height: $size;
-    height: $size;
+	// icon are square
+	width: $size;
+	height: $size;
+	line-height: $size;
 
-    @if ($hidetext == true)
-    {
-        text-indent: -9999px;
-        //@include hide-text();
-    }
+	@if ($hidetext == true)
+	{
+		text-indent: -9999px;
+		//@include hide-text();
+	}
 
-    @if $stroke
-    {
-        -webkit-text-stroke: if($stroke == true, darken($color, 10), $stroke);
-        text-stroke: if($stroke == true, darken($color, 10), $stroke);
-    }
+	@if $stroke
+	{
+		-webkit-text-stroke: if($stroke == true, darken($color, 10), $stroke);
+		text-stroke: if($stroke == true, darken($color, 10), $stroke);
+	}
 
-    &:after,
-    &:before
-    {
-        @extend %#{$icon-font-class-suffix}-#{$class};
-        font-size: $size;
-        content: $character;
+	&:after,
+	&:before
+	{
+		@extend %#{$icon-font-base-style};
+		@include icon-font-family($font);
+		content: $character;
+		font-size: $size;
 
-        @include background-gradient($color, $gradient);
-    }
+		@include background-gradient($color, $gradient);
+	}
 
-    &:before
-    {
-        // @include background-clip(padding-box);
-        background: none;
-        @include text-shadow($shadow);
-    }
+	&:before
+	{
+		// @include background-clip(padding-box);
+		background: none;
+		@include text-shadow($shadow);
+	}
 
-    @if $include-states {
-        &:hover {
-            @if $stroke-hover and $stroke {
-                -webkit-text-stroke: $stroke-hover;
-                text-stroke: $stroke-hover;
-            }
+	@if $include-states {
+		&:hover {
+			@if $stroke-hover and $stroke {
+				-webkit-text-stroke: $stroke-hover;
+				text-stroke: $stroke-hover;
+			}
 
-            &:before {
-                @include text-shadow($shadow, $glow-hover);
-            }
-            &:after {
-                @include background-gradient($color-hover, $gradient-hover);
-            }
-        }
-        &:active {
-            @if $stroke-active and $stroke {
-                -webkit-text-stroke: $stroke-active;
-                text-stroke: $stroke-active;
-            }
-            &:before {
-                @include text-shadow($shadow, $glow-active);
-            }
-            &:after {
-                @include background-gradient($color-active, $gradient-active);
-            }
-        }
-    }
+			&:before {
+				@include text-shadow($shadow, $glow-hover);
+			}
+			&:after {
+				@include background-gradient($color-hover, $gradient-hover);
+			}
+		}
+		&:active {
+			@if $stroke-active and $stroke {
+				-webkit-text-stroke: $stroke-active;
+				text-stroke: $stroke-active;
+			}
+			&:before {
+				@include text-shadow($shadow, $glow-active);
+			}
+			&:after {
+				@include background-gradient($color-active, $gradient-active);
+			}
+		}
+	}
 }
 
-$icon-font-attr-name: data-icon !default;
-$icon-font-attr-default-pseudo: before !default;
+@mixin icon-font-from-attr($font, $attr-name: $icon-font-attr-name, $pseudo: $icon-font-attr-default-pseudo) {
+	[#{$attr-name}] {
+		@include icon-font(attr($attr-name), $font: $font);
+		@content;
+	}
+}
 
-@mixin icon-font-attr-rules()
+@mixin icon-font-attr-pseudo($pseudo: before, $font: null) {
+	$attr: #{$icon-font-attr-name}-#{$pseudo};
+	[#{$attr}]:#{$pseudo} {
+		content: attr($attr);
+		@include icon-font-family($name);
+		@content;
+	}
+}
+
+	@mixin icon-font-before($font: null) {
+		@include icon-font-attr-pseudo(before, $font) { @content; }
+	}
+
+	@mixin icon-font-after($font: null) {
+		@include icon-font-attr-pseudo(after, $font) { @content; }
+	}
+
+@mixin icon-font-attr-rules($font: null, $from-attr-pseudo: before)
 {
-    [#{$icon-font-attr-name}]:#{$icon-font-attr-default-pseudo},
-    [#{$icon-font-attr-name}-before]:before,
-    [#{$icon-font-attr-name}-after]:after
-    {
-        content: attr($icon-font-attr-name);
-    }
+	@include icon-font-from-attr($font, $pseudo: $from-attr-pseudo);
+	@include icon-font-attr-before($font);
+	@include icon-font-attr-after($font);
 }

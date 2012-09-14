@@ -1,4 +1,13 @@
-.broccolidry:after, .broccolidry:before, .cuticons:after, .cuticons:before, .ecoico:after, .ecoico:before, .entypo:after, .entypo:before, .fontawesome:after, .fontawesome:before, .heydings_icons:after, .heydings_icons:before, .heydings_controls:after, .heydings_controls:before, .icomoon:after, .icomoon:before, .iconic_fill:after, .iconic_fill:before, .iconic_stroke:after, .iconic_stroke:before, .iconminia:after, .iconminia:before, .meteocons:after, .meteocons:before, .modern_pictograms:after, .modern_pictograms:before, .silkcons:after, .silkcons:before, .socialico:after, .socialico:before, .typicons:after, .typicons:before, .websymbols:after, .websymbols:before, .wpzoom:after, .wpzoom:before, .smiley:after, .smiley:before {
+.smiley, .broccolidry, .cuticons, .ecoico, .entypo, .fontawesome, .heydings_icons, .heydings_controls, .icomoon, .iconic_fill, .iconic_stroke, .iconminia, .meteocons, .modern_pictograms, .silkcons, .socialico, .typicons, .websymbols, .wpzoom {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+.smiley:after, .smiley:before, .broccolidry:after, .broccolidry:before, .cuticons:after, .cuticons:before, .ecoico:after, .ecoico:before, .entypo:after, .entypo:before, .fontawesome:after, .fontawesome:before, .heydings_icons:after, .heydings_icons:before, .heydings_controls:after, .heydings_controls:before, .icomoon:after, .icomoon:before, .iconic_fill:after, .iconic_fill:before, .iconic_stroke:after, .iconic_stroke:before, .iconminia:after, .iconminia:before, .meteocons:after, .meteocons:before, .modern_pictograms:after, .modern_pictograms:before, .silkcons:after, .silkcons:before, .socialico:after, .socialico:before, .typicons:after, .typicons:before, .websymbols:after, .websymbols:before, .wpzoom:after, .wpzoom:before {
   color: transparent;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -177,20 +186,14 @@
 
 .smiley {
   display: inline-block;
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
   width: 200px;
-  line-height: 200px;
   height: 200px;
+  line-height: 200px;
   text-indent: -9999px;
 }
 .smiley:after, .smiley:before {
-  font-size: 200px;
   content: "\263a";
+  font-size: 200px;
   background-image: none;
   background-color: #cfab4f;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dfc88b), color-stop(3%, #d4b563), color-stop(100%, #caa13b));
@@ -201,48 +204,42 @@
 }
 .smiley:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .smiley:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .smiley:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .smiley:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .smiley:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .broccolidry {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .broccolidry:after, .broccolidry:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -253,48 +250,42 @@
 }
 .broccolidry:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .broccolidry:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .broccolidry:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .broccolidry:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .broccolidry:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .cuticons {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .cuticons:after, .cuticons:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -305,48 +296,42 @@
 }
 .cuticons:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .cuticons:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .cuticons:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .cuticons:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .cuticons:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .ecoico {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .ecoico:after, .ecoico:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -357,48 +342,42 @@
 }
 .ecoico:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .ecoico:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .ecoico:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .ecoico:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .ecoico:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .entypo {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .entypo:after, .entypo:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -409,48 +388,42 @@
 }
 .entypo:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .entypo:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .entypo:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .entypo:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .entypo:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .fontawesome {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .fontawesome:after, .fontawesome:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -461,48 +434,42 @@
 }
 .fontawesome:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .fontawesome:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .fontawesome:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .fontawesome:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .fontawesome:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .heydings_icons {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .heydings_icons:after, .heydings_icons:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -513,48 +480,42 @@
 }
 .heydings_icons:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .heydings_icons:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .heydings_icons:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .heydings_icons:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .heydings_icons:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .heydings_controls {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .heydings_controls:after, .heydings_controls:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -565,48 +526,42 @@
 }
 .heydings_controls:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .heydings_controls:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .heydings_controls:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .heydings_controls:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .heydings_controls:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .icomoon {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .icomoon:after, .icomoon:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -617,48 +572,42 @@
 }
 .icomoon:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .icomoon:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .icomoon:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .icomoon:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .icomoon:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .iconic_fill {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .iconic_fill:after, .iconic_fill:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -669,48 +618,42 @@
 }
 .iconic_fill:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .iconic_fill:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .iconic_fill:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .iconic_fill:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .iconic_fill:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .iconic_stroke {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .iconic_stroke:after, .iconic_stroke:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -721,48 +664,42 @@
 }
 .iconic_stroke:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .iconic_stroke:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .iconic_stroke:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .iconic_stroke:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .iconic_stroke:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .iconminia {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .iconminia:after, .iconminia:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -773,48 +710,42 @@
 }
 .iconminia:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .iconminia:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .iconminia:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .iconminia:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .iconminia:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .meteocons {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .meteocons:after, .meteocons:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -825,48 +756,42 @@
 }
 .meteocons:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .meteocons:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .meteocons:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .meteocons:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .meteocons:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .modern_pictograms {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .modern_pictograms:after, .modern_pictograms:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -877,48 +802,42 @@
 }
 .modern_pictograms:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .modern_pictograms:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .modern_pictograms:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .modern_pictograms:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .modern_pictograms:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .silkcons {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .silkcons:after, .silkcons:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -929,48 +848,42 @@
 }
 .silkcons:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .silkcons:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .silkcons:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .silkcons:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .silkcons:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .socialico {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .socialico:after, .socialico:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -981,48 +894,42 @@
 }
 .socialico:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .socialico:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .socialico:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .socialico:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .socialico:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .typicons {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .typicons:after, .typicons:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -1033,48 +940,42 @@
 }
 .typicons:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .typicons:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .typicons:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .typicons:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .typicons:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .websymbols {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .websymbols:after, .websymbols:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -1085,48 +986,42 @@
 }
 .websymbols:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .websymbols:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .websymbols:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .websymbols:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .websymbols:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
 
 .wpzoom {
-  position: relative;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  overflow: visible;
-  display: inline-block;
-  width: 48px;
-  line-height: 48px;
-  height: 48px;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   text-indent: -9999px;
 }
 .wpzoom:after, .wpzoom:before {
-  font-size: 48px;
   content: attr(data-icon);
+  font-size: 1em;
   background-image: none;
   background-color: #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bfbfbf), color-stop(3%, #a6a6a6), color-stop(100%, #8c8c8c));
@@ -1137,29 +1032,29 @@
 }
 .wpzoom:before {
   background: none;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
 }
 .wpzoom:hover:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .wpzoom:hover:after {
   background-image: none;
-  background-color: #3778e5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7ba6ee), color-stop(3%, #4e87e8), color-stop(100%, #2069e2));
-  background-image: -webkit-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -moz-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: -o-linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
-  background-image: linear-gradient(top, #7ba6ee, #4e87e8 3%, #2069e2);
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #595959), color-stop(3%, #404040), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -moz-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: -o-linear-gradient(top, #595959, #404040 3%, #262626);
+  background-image: linear-gradient(top, #595959, #404040 3%, #262626);
 }
 .wpzoom:active:before {
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, #3778e5 0 0 10px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px, #333333 0 0 1px;
 }
 .wpzoom:active:after {
   background-image: none;
-  background-color: #1d64dc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #174faf), color-stop(10%, #1a5ac5), color-stop(65%, #1d64dc), color-stop(100%, #1d65de));
-  background-image: -webkit-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -moz-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: -o-linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
-  background-image: linear-gradient(top, #174faf, #1a5ac5 10%, #1d64dc 65%, #1d65de);
+  background-color: #212121;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #080808), color-stop(10%, #141414), color-stop(65%, #212121), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -moz-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: -o-linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
+  background-image: linear-gradient(top, #080808, #141414 10%, #212121 65%, #222222);
 }
