@@ -1,7 +1,7 @@
 .top-left, .top-right, .bottom-right, .bottom-left {
-  color: #fff;
+  color: white;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
-  border: .1em solid #631a15;
+  border: 1px solid #631a15;
   background: #c73b3c;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c73b3c), color-stop(100%, #b8201f));
   background: -webkit-linear-gradient(#c73b3c, #b8201f);
@@ -10,22 +10,23 @@
   background: linear-gradient(#c73b3c, #b8201f);
   box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.6);
 }
-.top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before {
-  border: 1px dashed #da5050;
-  margin-top: 1px;
-}
-.top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
-  border: 1px dashed #631a15;
-}
 .top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before, .top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
-  content: "";
-  display: block;
-  position: absolute;
   width: 100%;
-  height: 86%;
-  top: 7%;
+  height: 0;
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px dashed;
   border-left: 0;
   border-right: 0;
+  border-top-color: #631a15;
+  border-bottom-color: #da5050;
+}
+.top-left:before, .top-right:before, .bottom-right:before, .bottom-left:before {
+  top: 3px;
+}
+.top-left:after, .top-right:after, .bottom-right:after, .bottom-left:after {
+  bottom: 1px;
 }
 
 body {
@@ -35,11 +36,13 @@ body {
 .top-left {
   position: absolute;
   text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 10em;
   height: 3em;
   line-height: 3em;
-  top: 4.04178em;
+  top: 8.04178em;
   left: 0;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -56,6 +59,8 @@ body {
 .top-right {
   position: absolute;
   text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 20em;
   height: 3em;
@@ -77,12 +82,14 @@ body {
 .bottom-right {
   position: absolute;
   text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 10em;
   height: 2em;
   line-height: 2em;
   bottom: 5.04178em;
-  right: 0;
+  right: 10em;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -98,6 +105,8 @@ body {
 .bottom-left {
   position: absolute;
   text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 10em;
   height: 5em;
