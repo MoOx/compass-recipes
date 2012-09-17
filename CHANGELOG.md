@@ -2,7 +2,6 @@
 
 ## HEAD
 
-* normalize.css compassified
 * media queries
 * lots of backgrounds (gradients & patterns)
 * ui keyboard

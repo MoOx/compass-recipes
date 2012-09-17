@@ -2,7 +2,7 @@
 
 @import "compass";
 @import "recipes";
-@include base-normalize;
+@import "normalize";
 
 @include icon-font-face-fontawesome;
 @include icon-font-from-attr($font: fontawesome);

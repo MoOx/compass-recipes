@@ -1,17 +1,12 @@
 @charset "utf-8";
 @import "compass/css3";
 @import "recipes/utilities/clearfix";
+@import "normalize";
 
-html
-{
-    padding: 1em;
-    @include background(linear-gradient(rgba(#000, .45), rgba(#000, .1)) no-repeat);
-}
-
-body
-{
-    font-family: Lucida Sans Unicode, sans-serif;
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
+    padding: 1em;
 }
 
 h1

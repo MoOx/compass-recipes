@@ -15,6 +15,8 @@ images_dir = 'tests/images'
 line_comments = false
 relative_assets = true
 
+require "compass-normalize";
+
 additional_import_paths = [
     './stylesheets',
     './tests'

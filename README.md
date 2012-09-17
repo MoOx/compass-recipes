@@ -11,7 +11,6 @@ If you want to view the Sass(scss) source of a demo, remember to find the approp
 ## Availables Recipes
 
 * **[Backgrounds](http://moox.github.com/compass-recipes/tests/recipes/background/)** - Background patterns, gradients.
-* **[Normalize](http://moox.github.com/compass-recipes/tests/recipes/base/)** - [Normalize.css](http://necolas.github.com/normalize.css/) 'compassified'.
 * **[Color](http://moox.github.com/compass-recipes/tests/recipes/color/)** Variables Names, advanced color functions like `brightness()` & color scheme functions
 * **[Effects](http://moox.github.com/compass-recipes/tests/recipes/effect/)** - Visual effects like `glass`, `bevel`, `cutout` or `ribbon`
 * **[Form skins](http://moox.github.com/compass-recipes/tests/recipes/form/skin/)** - Only one at the moment. Please add yours :)
