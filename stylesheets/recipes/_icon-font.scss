@@ -71,7 +71,6 @@ $icon-font-stroke: null !default;
 	position: relative;
 	display: inline-block;
 	overflow: visible;
-	@include background-clip(text);
 }
 
 // Common base style for pseudo-selectors
@@ -217,6 +216,11 @@ $icon-font-stroke: null !default;
 		@include icon-font-family($font);
 		content: $character;
 		font-size: $size;
+	}
+
+	// Since :after is using text-fill-color: transparent, :before is only used for the shadow;
+	&:before {
+		color: transparent;
 	}
 
 	@include icon-font-effect($color, $gradient-type, $shadow, $stroke);

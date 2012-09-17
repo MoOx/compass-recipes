@@ -2,9 +2,6 @@
   position: relative;
   display: inline-block;
   overflow: visible;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
 }
 
 .smiley:before, .smiley:after, .broccolidry:before, .broccolidry:after, .cuticons:before, .cuticons:after, .ecoico:before, .ecoico:after, .entypo:before, .entypo:after, .fontawesome:before, .fontawesome:after, .heydings_icons:before, .heydings_icons:after, .heydings_controls:before, .heydings_controls:after, .icomoon:before, .icomoon:after, .iconic_fill:before, .iconic_fill:after, .iconic_stroke:before, .iconic_stroke:after, .iconminia:before, .iconminia:after, .meteocons:before, .meteocons:after, .modern_pictograms:before, .modern_pictograms:after, .silkcons:before, .silkcons:after, .socialico:before, .socialico:after, .typicons:before, .typicons:after, .websymbols:before, .websymbols:after, .wpzoom:before, .wpzoom:after {
@@ -192,6 +189,9 @@
   font-size: 200px;
 }
 .smiley:before {
+  color: transparent;
+}
+.smiley:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .smiley:after {
@@ -228,6 +228,9 @@
 .broccolidry:before, .broccolidry:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.broccolidry:before {
+  color: transparent;
 }
 .broccolidry:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
@@ -268,6 +271,9 @@
   font-size: 1em;
 }
 .cuticons:before {
+  color: transparent;
+}
+.cuticons:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .cuticons:after {
@@ -304,6 +310,9 @@
 .ecoico:before, .ecoico:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.ecoico:before {
+  color: transparent;
 }
 .ecoico:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
@@ -344,6 +353,9 @@
   font-size: 1em;
 }
 .entypo:before {
+  color: transparent;
+}
+.entypo:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .entypo:after {
@@ -380,6 +392,9 @@
 .fontawesome:before, .fontawesome:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.fontawesome:before {
+  color: transparent;
 }
 .fontawesome:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
@@ -420,6 +435,9 @@
   font-size: 1em;
 }
 .heydings_icons:before {
+  color: transparent;
+}
+.heydings_icons:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .heydings_icons:after {
@@ -456,6 +474,9 @@
 .heydings_controls:before, .heydings_controls:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.heydings_controls:before {
+  color: transparent;
 }
 .heydings_controls:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
@@ -496,6 +517,9 @@
   font-size: 1em;
 }
 .icomoon:before {
+  color: transparent;
+}
+.icomoon:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .icomoon:after {
@@ -532,6 +556,9 @@
 .iconic_fill:before, .iconic_fill:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.iconic_fill:before {
+  color: transparent;
 }
 .iconic_fill:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
@@ -572,6 +599,9 @@
   font-size: 1em;
 }
 .iconic_stroke:before {
+  color: transparent;
+}
+.iconic_stroke:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .iconic_stroke:after {
@@ -608,6 +638,9 @@
 .iconminia:before, .iconminia:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.iconminia:before {
+  color: transparent;
 }
 .iconminia:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
@@ -648,6 +681,9 @@
   font-size: 1em;
 }
 .meteocons:before {
+  color: transparent;
+}
+.meteocons:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .meteocons:after {
@@ -684,6 +720,9 @@
 .modern_pictograms:before, .modern_pictograms:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.modern_pictograms:before {
+  color: transparent;
 }
 .modern_pictograms:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
@@ -724,6 +763,9 @@
   font-size: 1em;
 }
 .silkcons:before {
+  color: transparent;
+}
+.silkcons:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .silkcons:after {
@@ -760,6 +802,9 @@
 .socialico:before, .socialico:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.socialico:before {
+  color: transparent;
 }
 .socialico:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
@@ -800,6 +845,9 @@
   font-size: 1em;
 }
 .typicons:before {
+  color: transparent;
+}
+.typicons:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .typicons:after {
@@ -838,6 +886,9 @@
   font-size: 1em;
 }
 .websymbols:before {
+  color: transparent;
+}
+.websymbols:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;
 }
 .websymbols:after {
@@ -874,6 +925,9 @@
 .wpzoom:before, .wpzoom:after {
   content: attr(data-icon);
   font-size: 1em;
+}
+.wpzoom:before {
+  color: transparent;
 }
 .wpzoom:before {
   text-shadow: rgba(0, 0, 0, 0.6) 0 1px 0;

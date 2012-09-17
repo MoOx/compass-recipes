@@ -21,12 +21,16 @@
 		<nav>
 			<ul>
 				<li id="home-link"><a href="./">Compass Recipes</a></li>
+				<!--<li><a href="#" data-icon-="&#xf015;">Home</a></li>-->
 				<li><a href="#overview">Overview</a></li>
 				<li><a href="#install">Install</a></li>
 				<li><a href="#quickstart">Quickstart</a></li>
 				<li class="sep-after"><a href="#demos">Demos</a></li>
 				<li><a href="#contribute">Submit a recipe</a></li>
-				<li><a href="https://github.com/MoOx/compass-recipes/issues/new">Request a recipe</a>
+				<li class="sep-after"><a href="https://github.com/MoOx/compass-recipes/issues/new">Request a recipe</a>
+				<li class="sep-after"><a href="https://github.com/MoOx/compass-recipes/issues/new">Report issue</a>
+				<li ><a  data-icon-="&#xf09b;"href="http://github.com/MoOx/compass-recipes">Github</a>
+				<li class="sep-after"><a  data-icon-="&#xf099;"href="https://twitter.com/Compass_Recipes">Twitter</a>
 			</ul>
 		</nav>
 
@@ -38,7 +42,7 @@
 				<i id="logo-icon"></i><span id="logo-text">compass <strong>recipes</strong> <small>using sass</small></span>
 			</h1>
 			<p>
-				Lots of CSS Recipes, made with <a href="http://compass-style.org">Compass</a> using <a href="http://sass-lang.com">Sass</a>. Ready to use.
+				Lots of CSS Recipes, made with <a href="http://compass-style.org/">Compass</a> using <a href="http://sass-lang.com/">Sass</a>. Ready to use.
 			</p>
 			<div>
 				<iframe src="http://ghbtns.com/github-btn.html?user=MoOx&repo=compass-recipes&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="50px" height="20px"></iframe>
@@ -75,10 +79,7 @@
 		<section id="install">
 			<h2>Installation</h2>
 			<p>
-				If you are a designer, I encourage you to read the
-				<a href="http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/">The Designer’s Guide to the OSX Command Prompt</a>
-
-				Compass Recipes is available as a gem (and require <a href="">Sass</a> and <a href="">Compass</a>)
+				Compass Recipes is available as a gem (and use <a href="http://sass-lang.com/">Sass</a> and <a href="http://compass-style.org/">Compass</a>)
 				<pre><code class="language-bash">gem update --system
 gem install compass-recipes</code></pre>
 
@@ -87,7 +88,11 @@ gem install compass-recipes</code></pre>
 			</p>
 
 			<p>
-				<em>For more information about alternative installation checkout the <a href="https://github.com/MoOx/compass-recipes">Readme on Github</a></em>
+				If you are a designer, I encourage you to read the
+				<a href="http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/">The Designer’s Guide to the OSX Command Prompt</a>.
+			</p>
+			<p>
+				<em>For more information about alternative installation checkout the <a href="https://github.com/MoOx/compass-recipes#installation">Readme on Github</a></em>
 			</p>
 		</section>
 
@@ -189,12 +194,26 @@ body {
 		<section id="contribute">
 			<h2>Submit a recipe</h2>
 			<p>
-				Fork, take a look to the file architecture, add your recipes into <code>stylesheets/recipes/</code> in the appropriate folder and do not forget to add a test/demo into <code>tests/recipes/</code> with the same path you use for the recipe Sass code.
-				Please use only Scss syntax.
+				It's easy to sumbit your own recipe. Using Github you just need to fork & add your recipes into <code>stylesheets/recipes/</code> in the appropriate folder.
+				<br />
+				Do not forget to add a visual test into <code>tests/recipes/</code> with the same path you use for the recipe Sass code.
+				<br />
+				<em>Please use only Scss syntax.</em>
 			</p>
 		</section>
 
+		<footer id="footer">
+			<h2>About</h2>
+
+			<p>
+				Compass Recipes is a project developed by <a href="http://moox.fr/">Maxime Thirouin</a>, and <a href="https://github.com/MoOx/compass-recipes/graphs/contributors">some other guys</a>.
+			</p>
+			<p>
+				It use <a href="http://sass-lang.com/">Sass</a> and <a href="http://compass-style.org/">Compass</a>, <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://necolas.github.com/normalize.css/">Normalize.css</a> (through <a href="">Compass Normalize</a>).
+			</p>
+		</footer>
 	</div>
+
 
 	<script src="docs/scripts/s.js"></script>
 	<script src="docs/scripts/prism.js"></script>
