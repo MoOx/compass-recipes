@@ -1,4 +1,4 @@
-# Compass Recipes
+# [Compass Recipes](http://moox.github.com/compass-recipes/) [![Build Status](https://secure.travis-ci.org/MoOx/compass-recipes.png)](http://travis-ci.org/MoOx/compass-recipes)
 
 A series of Compass and Sass mixins and functions for creating delicious CSS effects.
 

@@ -2,18 +2,22 @@
 
 ## HEAD
 
-* media queries
+## 0.3.0 (September 17, 2012)
+
+* media queries shortcuts
+* Compass extension: icon-fonts (icons using fonts)
+* add compass-normalize dependency
 * lots of backgrounds (gradients & patterns)
-* ui keyboard
-* ui dropdown menu
 * merge "effects" & "enhancements"
 * move "shared" to "utilities"
-* deprecated ui glossy, gradients & convex
-* ui separators
 * animations keyframes
-* Animation mixin ! (require sass 3.2+)
+* animation mixin ! (require sass 3.2+)
 * colors names, schemes & functions
-* Compass extension: icon-fonts (icons using fonts)
+* ui keyboard
+* ui dropdown menu
+* ui separators
+* deprecated ui glossy, gradients & convex
+
 * Compass extension: gravatar helper
 * loading indicator
 * news effects (corners scatter & tuckeds/taped)
@@ -21,6 +25,7 @@
 * ui tooltip ! ("cssarrowplease like" mixin)
 * new simple vertical align mixin + previous rewritten as `vertical-align-block`
 * more images mixin (dimensions, sprite)
+* webkit text gradient helper with fallback for other browsers
 
 ## 0.2.2 (August 16, 2012)
 
