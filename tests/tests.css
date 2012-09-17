@@ -203,22 +203,16 @@ table {
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 1em;
-}
-
-h1 {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 1em;
-  margin-bottom: .6em;
-}
-
-h1, h2, h3 {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-  white-space: nowrap;
+  padding: 0 1em;
+  background: #eee;
+  background-color: #cccccc;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 1 50%, color-stop(100%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 1 50%, color-stop(100%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
 }
 
 .doc {

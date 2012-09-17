@@ -115,10 +115,22 @@ header
 		.sep-after::after {
 			@include pseudo-element(1px, 100%, $display: inline-block);
 			top: 0;
-			right: -1px;
+			right: -2px;
 			background: rgba($colorDark, .9);
 			border-right: 1px solid rgba($colorLight, .1);
 		}
+
+		$icon-size: 16px;
+		[data-icon] {
+			width: $icon-size;
+			height: $icon-size;
+
+			&:before {
+				font-size: $icon-size;
+				vertical-align: middle;
+			}
+		}
+
 	}
 }
 
