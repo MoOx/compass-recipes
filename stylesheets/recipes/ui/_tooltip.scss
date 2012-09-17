@@ -30,7 +30,7 @@
 	$border-color: null
 )
 {
-	@include ifnotnull(position, $position);
+	position: $position;
 	@include border-radius($border-radius);
 	@if ($background !=null)
 	{

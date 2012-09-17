@@ -1,0 +1,47 @@
+//
+// Media Queries for (High) resolution screen (like "retina" display)
+//
+// @author Maxime Thirouin <m@moox.fr>
+//
+
+$screen-default-dpi: 96 !default;
+
+// Allow you to add some @content depending on the resolution of the screen.
+// Nice to change background image for highres screen.
+// (Specifying resolution using ddpx seems a nice idea (dots per px)
+// http://www.w3.org/TR/css3-values/#resolution )
+// $ratio dots per 'px' screen you want to scope
+// $minOrMax min or max resolution ?
+@mixin media-resolution($ratio: 1.5, $minOrMax: 'min') {
+	@media	(-webkit-#{$minOrMax}-device-pixel-ratio: $ratio),
+			(#{$minOrMax}-resolution: #{$screen-default-dpi*$ratio}dpi) {
+	// futur proof code
+	// @media only screen and (#{$minOrMax}-resolution: #{$ratio}dppx) {
+		// some hi-res css
+		@content;
+	}
+}
+
+// Allow you to add some @content depending on the pixel-ratio of the screen.
+// Nice to change background image for highres screen.
+// Prefer using media-resolution() for a shorter output with probably the same behavior.
+// $ratio dots per 'px' screen you want to scope
+// $minOrMax min or max resolution ?
+@mixin media-pixel-ratio($ratio: 1.5, $minOrMax: 'min') {
+	$fractionCoef: $ratio*2;
+	@media	(-webkit-#{$minOrMax}-device-pixel-ratio: $ratio),
+			(-moz-#{$minOrMax}-device-pixel-ratio: $ratio),
+			(-o-#{$minOrMax}-device-pixel-ratio: #{$fractionCoef}/2),
+			(#{$minOrMax}-device-pixel-ratio: $ratio) {
+		@content;
+	}
+}
+
+// media-resolution() shortcut
+// Allow you to add some @content for high resolution screen.
+// $ratio dots per 'px' screen you want to scope
+@mixin media-highres($ratio: 1.5) {
+	@include media-pixel-ratio($ratio, 'min') {
+		@content;
+	}
+}

@@ -56,3 +56,14 @@ $swatch5: #b90dea;
 .swatch4 {
     @include color-swatch($swatch5);
 }
+
+// black & white helpers
+
+.black-white {
+    background: black();
+    color: white();
+}
+.black-white-transparente {
+    background: black(.8);
+    color: white(.8);
+}

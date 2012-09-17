@@ -162,7 +162,20 @@ $base-gradient: matte !default;
 $default-text-contrast: 85% !default;
 $color-mode: get-color-mode($neutral-color) !default;
 
-// @debug color-difference(#95419F, #0FFF90);
-// @debug brightness(#cbea0d) - brightness(#ea850d);
-// @debug contrast-ratio(#95419F, #0FFF90);
-// @debug brightness(#E0F200);
+// Default black used for the black() helper
+$default-black: #000 !default;
+
+// Helper to generate transparent black
+// $opacity - opacity. Default to 1 (no opacity)
+@function black($opacity: 1) {
+    @return rgba($default-black, $opacity);
+}
+
+// Default white used for the white() helper
+$default-white: #fff !default;
+
+// Helper to generate transparent white
+// $opacity - opacity. Default to 1 (no opacity)
+@function white($opacity: 1) {
+    @return rgba($default-white, $opacity)
+}

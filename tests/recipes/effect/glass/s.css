@@ -16,8 +16,8 @@
 }
 .glass:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   overflow: hidden;
   top: 0;
   right: 0;
@@ -52,8 +52,8 @@
 }
 .glass-blue:after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   overflow: hidden;
   top: 0;
   right: 0;

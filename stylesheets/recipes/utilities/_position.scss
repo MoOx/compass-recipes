@@ -1,12 +1,10 @@
-@import "recipes/utilities/ifnotnull";
-
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null)
 {
-	@include ifnotnull(position, $position);
-	@include ifnotnull(top, $top);
-	@include ifnotnull(right, $right);
-	@include ifnotnull(bottom, $bottom);
-	@include ifnotnull(left, $left);
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
 }
 
 @mixin top-left 	($top: 0, 		$left: 0, 	$position: absolute)	{ @include position($position, $top: $top, 			$left: 	$left); }
