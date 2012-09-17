@@ -1,11 +1,11 @@
 .image {
-  background-image: url('../../images/test.jpg?1345441599');
+  background-image: url('../../images/test.jpg?1347863363');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .image-with-dimensions {
-  background-image: url('../../images/test.jpg?1345441599');
+  background-image: url('../../images/test.jpg?1347863363');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 640px;
@@ -13,7 +13,7 @@
 }
 
 .image-with-dimensions-line-height {
-  background-image: url('../../images/test.jpg?1345441599');
+  background-image: url('../../images/test.jpg?1347863363');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 640px;
@@ -25,7 +25,7 @@
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('../../images/test.jpg?1345441599');
+  background-image: url('../../images/test.jpg?1347863363');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -34,7 +34,7 @@
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('../../images/test.jpg?1345441599');
+  background-image: url('../../images/test.jpg?1347863363');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 640px;
