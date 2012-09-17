@@ -12,7 +12,6 @@ task :pages do
 	FileUtils.mkdir("tmp")
 	(
 		FileList.new('docs/**/*')+
-		FileList.new('fonts/**/*')+
 		FileList.new('javascripts/**/*')+
 		FileList.new('lib/**/*')+
 		FileList.new('stylesheets/**/*')+
@@ -44,7 +43,6 @@ task :pages do
 
 	# Reset gh-pages
 	FileUtils.rm_rf "docs"
-	FileUtils.rm_rf "fonts"
 	FileUtils.rm_rf "javascripts"
 	FileUtils.rm_rf "lib"
 	FileUtils.rm_rf "stylesheets"
@@ -74,7 +72,6 @@ task :pages do
 	# @todo make this optional ?
 	Dir[
 		"docs/**/*",
-		"fonts/**/*",
 		"javascripts/**/*",
 		"lib/**/*",
 		"stylesheets/**/*",
