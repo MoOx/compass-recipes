@@ -174,7 +174,7 @@ header
 	#logo-icon {
 		margin: 0 1em 0 0;
 		@include transform(rotate(-366deg) scale(0.8));
-		@include transition(all 1s);
+		@include transition(all 1s ease-in-out .6s);
 		#logo:hover & { @include transform(rotate(0deg) scale(1)); }
 
 		@include image-replace-text-with-dimensions("../../docs/img/logo/compass-recipes-icon-256.png");
