@@ -11,12 +11,14 @@ task :pages do
 	FileUtils.rm_rf "tmp"
 	FileUtils.mkdir("tmp")
 	(
+		FileList.new('docs/**/*')+
 		FileList.new('fonts/**/*')+
 		FileList.new('javascripts/**/*')+
 		FileList.new('lib/**/*')+
 		FileList.new('stylesheets/**/*')+
 		FileList.new('templates/**/*')+
-		FileList.new('tests/**/*')
+		FileList.new('tests/**/*')+
+		["index.html"]
 	).each do |file|
 		if File.file?(file)
 			if !File.directory?(File.dirname("tmp/#{file}"))
@@ -31,10 +33,17 @@ task :pages do
 		end
 	end
 
+	# Prepare tests addons
+	headMarker = '<!doctype html>'
+	# take latest header & footer layout for tests
+	htmlHeader = headMarker + File.open("docs/layout/header.html", "r").read
+	htmlFooter = File.open("docs/layout/footer.html", "r").read
+
 	# switch branch
 	repo.branch("gh-pages").checkout
 
 	# Reset gh-pages
+	FileUtils.rm_rf "docs"
 	FileUtils.rm_rf "fonts"
 	FileUtils.rm_rf "javascripts"
 	FileUtils.rm_rf "lib"
@@ -42,13 +51,8 @@ task :pages do
 	FileUtils.rm_rf "templates"
 	FileUtils.rm_rf "tests"
 
-	# Prepare tests addons
-	headMarker = '<!doctype html>'
-	htmlHeader = headMarker + File.open("layout/header.html", "r").read
-	htmlFooter = File.open("layout/footer.html", "r").read
-
 	# HTML files need header and footer
-	FileList.new('tmp/**/*.html').each do |file|
+	FileList.new('tmp/tests/**/*.html').each do |file|
 		contents = File.open(file, "rb").read
 		htmlfile = File.open("#{file}", "w")
 		contents = contents.sub(headMarker, htmlHeader)
@@ -69,6 +73,7 @@ task :pages do
 	# Commit gh-pages changes
 	# @todo make this optional ?
 	Dir[
+		"docs/**/*",
 		"fonts/**/*",
 		"javascripts/**/*",
 		"lib/**/*",
@@ -76,6 +81,7 @@ task :pages do
 		"templates/**/*",
 		"tests/**/*"
 	].each {|f| repo.add(f) }
+	repo.add("index.html")
 	repo.status.deleted.each {|f, s| repo.remove(f)}
 	message = ENV["MESSAGE"] || "Updated at #{Time.now.utc}"
 	repo.commit(message)

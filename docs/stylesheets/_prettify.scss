@@ -1,0 +1,120 @@
+////
+// Prettiprint theme
+//
+// based on @anthonyshort works (for his own website)
+// color from https://raw.github.com/mrlundis/Monokai-Dark-Soda.tmTheme/master/Monokai%20Dark%20Soda.tmTheme
+///
+
+// Legend
+//
+// pln - plaintext
+// str - string
+// kwd - keyword
+// com - comment
+// typ - type
+// lit - literal
+// pun - punctuation
+// opn - lisp open bracket
+// clo - lisp close bracket
+// tag - html/xml tag
+// atn - attribute name
+// atv - attribute value
+// dec - decimal
+// var - variable
+// fun - function
+
+// careful is you use em unit with <pre><code>, font-size is applied to `.prettyprint` and `.prettyprint code`
+$prettyprint-font-family: 	Menlo, Monaco, "Courier New", monospace	!default;
+$prettyprint-font-size: 	12px !default;
+$prettyprint-padding: 		12px !default;
+$prettyprint-line-height:	18px !default;
+$prettify-border-radius: 	5px !default;
+$prettify-border: 			1px solid #e1e1e8 !default;
+$prettify-background: 		#242424	!default;
+$prettify-color: 			#bebec5 !default;
+$prettify-text-shadow: 		0 1px 0 #000 !default;
+
+$prettify-linenums-padding:	7px !default;
+$prettify-linenums-width: 	40px !default;
+$prettify-linenums-background:	#444 !default;
+$prettify-linenums-border-color: #555 !default;
+$prettify-linenums-border-width: 1px !default;
+
+$prettify-color-nocode: 	#000	!default;
+$prettify-color-pln: 		#54d2ef	!default;
+$prettify-color-linenums: 	#bebec5	!default;
+$prettify-color-str: 		#e6d06c	!default;
+$prettify-color-kwd: 		#f12770	!default;
+$prettify-color-com: 		#93a1a1	!default;
+$prettify-color-typ: 		#fff	!default;
+$prettify-color-lit: 		#a77afe	!default;
+$prettify-color-pun: 		#eee	!default;
+$prettify-color-opn: 		#eee	!default;
+$prettify-color-clo: 		#eee	!default;
+$prettify-color-tag: 		#a6e22d	!default;
+$prettify-color-atn: 		#fff	!default;
+$prettify-color-atv: 		#e6d06c	!default;
+$prettify-color-dec: 		#fff	!default;
+$prettify-color-var: 		#fff	!default;
+$prettify-color-fun: 		#dc322f	!default;
+
+.prettyprint {
+	// whitespace management
+	white-space: pre; // fallback
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+
+	&,
+	& code {
+		font-family: $prettyprint-font-family;
+		font-size: 	$prettyprint-font-size;
+		line-height: $prettyprint-line-height;
+	}
+
+	padding: $prettyprint-padding;
+	@include border-radius($prettify-border-radius);
+	border: $prettify-border;
+	background: $prettify-background;
+	color: $prettify-color;
+	text-shadow: $prettify-text-shadow;
+
+	&.linenums {
+		@include box-shadow(inset $prettify-linenums-width 0 0 $prettify-linenums-background, inset ($prettify-linenums-width + $prettify-linenums-border-width) 0 0 $prettify-linenums-border-color);
+		padding-left: $prettify-linenums-padding;
+	}
+
+	// Specify class=linenums on a pre to get line numbering
+	ol.linenums {
+		// IE indents via margin-left
+		margin: 0 0 0 $prettify-linenums-width;
+		padding-left: 0;
+	}
+
+	.nocode { background-color: none; }
+
+	.kwd,
+	.tag,
+	.atn {
+		font-weight: bold
+	}
+
+	.linenums 	{ color: $prettify-color-linenums }
+	.nocode 	{ color: $prettify-color-nocode }
+	.pln 		{ color: $prettify-color-pln }
+
+	.str 		{ color: $prettify-color-str }
+	.kwd 		{ color: $prettify-color-kwd }
+	.com 		{ color: $prettify-color-com }
+	.typ 		{ color: $prettify-color-typ }
+	.lit 		{ color: $prettify-color-lit }
+	.pun 		{ color: $prettify-color-pun }
+	.opn 		{ color: $prettify-color-opn }
+	.clo 		{ color: $prettify-color-clo }
+	.tag 		{ color: $prettify-color-tag }
+	.atn 		{ color: $prettify-color-atn }
+	.atv 		{ color: $prettify-color-atv }
+	.dec 		{ color: $prettify-color-dec }
+	.var 		{ color: $prettify-color-var }
+	.fun 		{ color: $prettify-color-fun }
+}
