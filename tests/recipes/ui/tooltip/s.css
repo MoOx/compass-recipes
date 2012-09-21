@@ -210,7 +210,6 @@ div {
   background: -webkit-radial-gradient(top, farthest-side, #ffffff 70%, #e6e6e6);
   background: -moz-radial-gradient(top, farthest-side, #ffffff 70%, #e6e6e6);
   background: -o-radial-gradient(top, farthest-side, #ffffff 70%, #e6e6e6);
-  background: -ms-radial-gradient(top, farthest-side, #ffffff 70%, #e6e6e6);
   background: radial-gradient(top, farthest-side, #ffffff 70%, #e6e6e6);
   border: 2px solid #b3b3b3;
 }
