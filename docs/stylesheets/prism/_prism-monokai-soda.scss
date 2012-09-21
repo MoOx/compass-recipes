@@ -105,6 +105,7 @@ pre[class*="language-"] {
 	}
 
 	&.null,
+	&.operator,
 	&.boolean,
 	&.number {
 		color: $prism-color-number;
@@ -115,7 +116,6 @@ pre[class*="language-"] {
 		color: $prism-color-string;
 	}
 
-	&.operator,
 	&.entity,
 	&.url,
 	.language-css &.string,
