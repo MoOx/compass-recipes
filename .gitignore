@@ -3,3 +3,4 @@
 *.lock
 .sass-cache
 compass-recipes-*.gem
+/build/

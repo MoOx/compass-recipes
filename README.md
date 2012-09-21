@@ -1,27 +1,27 @@
-# [Compass Recipes](http://moox.github.com/compass-recipes/) [![Build Status](https://secure.travis-ci.org/MoOx/compass-recipes.png)](http://travis-ci.org/MoOx/compass-recipes)
+# [Compass Recipes](http://compass-recipes.moox.fr/) [![Build Status](https://secure.travis-ci.org/MoOx/compass-recipes.png)](http://travis-ci.org/MoOx/compass-recipes)
 
 A series of Compass and Sass mixins and functions for creating delicious CSS effects.
 
 _Compass Recipes is currently under active development. While it's being already used on multiple projects (even in production), you may encounter some issues. Please try it out in a project, and [make suggestions](https://github.com/MoOx/compass-recipes/issues/new) or [report bugs](https://github.com/MoOx/compass-recipes/issues) ! Your feedback matters._
 
-## [Online Demos](http://moox.github.com/compass-recipes/tests/)
+## [Online Demos](http://compass-recipes.moox.fr/tests/)
 
 If you want to view the Sass(scss) source of a demo, remember to find the appropriate `.scss` file of the deserved `s.css` (e.g. : open it from the source & switch extension).
 
 ## Availables Recipes
 
-* **[Backgrounds](http://moox.github.com/compass-recipes/tests/recipes/background/)** - Background patterns, gradients.
-* **[Color](http://moox.github.com/compass-recipes/tests/recipes/color/)** Variables Names, advanced color functions like `brightness()` & color scheme functions
-* **[Effects](http://moox.github.com/compass-recipes/tests/recipes/effect/)** - Visual effects like `glass`, `bevel`, `cutout` or `ribbon`
-* **[Form skins](http://moox.github.com/compass-recipes/tests/recipes/form/skin/)** - Only one at the moment. Please add yours :)
-* **[Icon Fonts](http://moox.github.com/compass-recipes/tests/recipes/icon-font/)** - Includes icon fonts helper and a few open source fonts as a compass extension ([more info](https://github.com/MoOx/compass-recipes/blob/master/templates/icon-fonts/README.md))
-* **[Image](http://moox.github.com/compass-recipes/tests/recipes/image/)** - More image mixins (& functions) than Compass deserve (dimensions, inline, simple spriting)
-* **[Layout](http://moox.github.com/compass-recipes/tests/recipes/layout/)** - Vertical centering and box layout shortcuts.
-* **[Media queries](http://moox.github.com/compass-recipes/tests/recipes/media-queries/)** - Shortcuts for media queries.
-* **[Shadows](http://moox.github.com/compass-recipes/tests/recipes/shadow/)** - A wide collection of shadows which use pseudo elements to create fold effects, etc.
-* **[Shapes](http://moox.github.com/compass-recipes/tests/recipes/shape/)** - Geometric and iconic shapes, created only with CSS
-* **[UI](http://moox.github.com/compass-recipes/tests/recipes/ui/)** Lots of element styling for loader, menu, overlay, separator, tooltip, etc.
-* **[Utilities](http://moox.github.com/compass-recipes/tests/recipes/utilities/)** Very usefull utilities, trick, hacks
+* **[Backgrounds](http://compass-recipes.moox.fr/tests/recipes/background/)** - Background patterns, gradients.
+* **[Color](http://compass-recipes.moox.fr/tests/recipes/color/)** Variables Names, advanced color functions like `brightness()` & color scheme functions
+* **[Effects](http://compass-recipes.moox.fr/tests/recipes/effect/)** - Visual effects like `glass`, `bevel`, `cutout` or `ribbon`
+* **[Form skins](http://compass-recipes.moox.fr/tests/recipes/form/skin/)** - Only one at the moment. Please add yours :)
+* **[Icon Fonts](http://compass-recipes.moox.fr/tests/recipes/icon-font/)** - Includes icon fonts helper and a few open source fonts as a compass extension ([more info](https://github.com/MoOx/compass-recipes/blob/master/templates/icon-fonts/README.md))
+* **[Image](http://compass-recipes.moox.fr/tests/recipes/image/)** - More image mixins (& functions) than Compass deserve (dimensions, inline, simple spriting)
+* **[Layout](http://compass-recipes.moox.fr/tests/recipes/layout/)** - Vertical centering and box layout shortcuts.
+* **[Media queries](http://compass-recipes.moox.fr/tests/recipes/media-queries/)** - Shortcuts for media queries.
+* **[Shadows](http://compass-recipes.moox.fr/tests/recipes/shadow/)** - A wide collection of shadows which use pseudo elements to create fold effects, etc.
+* **[Shapes](http://compass-recipes.moox.fr/tests/recipes/shape/)** - Geometric and iconic shapes, created only with CSS
+* **[UI](http://compass-recipes.moox.fr/tests/recipes/ui/)** Lots of element styling for loader, menu, overlay, separator, tooltip, etc.
+* **[Utilities](http://compass-recipes.moox.fr/tests/recipes/utilities/)** Very usefull utilities, trick, hacks
 * [View other potential icoming items](https://github.com/MoOx/compass-recipes/issues?labels=enhancement%2Cfeature)
 
 ## Installation

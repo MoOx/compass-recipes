@@ -9,7 +9,7 @@ Gem::Specification.new do |gemspec|
   gemspec.summary = %q{Recipes for Compass}
   gemspec.description = %q{A Compass extension to have some sass/compass recipes ready to use ! }
   gemspec.email = "m@moox.fr"
-  gemspec.homepage = "http://moox.github.com/compass-recipes"
+  gemspec.homepage = "http://compass-recipes.moox.fr/"
 
   gemspec.rubyforge_project = "compass-recipes"
 
@@ -20,8 +20,8 @@ Gem::Specification.new do |gemspec|
   gemspec.files = %w(README.md LICENSE VERSION)
   gemspec.files += Dir.glob("fonts/**/*.*")
   gemspec.files += Dir.glob("lib/**/*.*")
-  gemspec.files += Dir.glob("templates/**{,/*/**}/*.*")
   gemspec.files += Dir.glob("stylesheets/**/*.*")
+  gemspec.files += Dir.glob("templates/**{,/*/**}/*.*")
 
   gemspec.add_dependency("sass", ">= 3.2.1")
   gemspec.add_dependency("compass", ">= 0.12.2")
