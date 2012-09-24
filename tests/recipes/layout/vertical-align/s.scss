@@ -1,9 +1,0 @@
-@import "recipes/layout/vertical-align";
-
-.valign
-{
-    outline: 1px solid red;
-
-    @include vertical-align-parent-height(10em);
-    p { @include vertical-align }
-}
