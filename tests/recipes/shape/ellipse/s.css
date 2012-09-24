@@ -1,40 +1,3 @@
-html {
-  padding: 1em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #ffffff)) no-repeat;
-  background: -webkit-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -moz-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -o-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: -ms-linear-gradient(#dddddd, #ffffff) no-repeat;
-  background: linear-gradient(#dddddd, #ffffff) no-repeat;
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin-bottom: .6em;
-}
-
-p.doc {
-  background: #fff;
-  border: #ddd;
-  padding: 1em;
-  color: #bbb;
-  margin: 1em;
-  font-style: italic;
-}
-p.doc a {
-  color: #999;
-}
-
-/**
- * Shape/Ellipse
- *
- * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
 div {
   background: #000;
   margin: 4em auto;
@@ -43,11 +6,10 @@ div {
 .circle {
   width: 10em;
   height: 10em;
-  -moz-border-radius: 5em;
   -webkit-border-radius: 5em;
-  -o-border-radius: 5em;
+  -moz-border-radius: 5em;
   -ms-border-radius: 5em;
-  -khtml-border-radius: 5em;
+  -o-border-radius: 5em;
   border-radius: 5em;
 }
 
@@ -56,9 +18,6 @@ div {
   height: 10em;
   -webkit-border-radius: 10em 5em;
   -moz-border-radius: 10em / 5em;
-  -o-border-radius: 10em / 5em;
-  -ms-border-radius: 10em / 5em;
-  -khtml-border-radius: 10em / 5em;
   border-radius: 10em / 5em;
 }
 
@@ -67,9 +26,6 @@ div {
   height: 20em;
   -webkit-border-radius: 5em 10em;
   -moz-border-radius: 5em / 10em;
-  -o-border-radius: 5em / 10em;
-  -ms-border-radius: 5em / 10em;
-  -khtml-border-radius: 5em / 10em;
   border-radius: 5em / 10em;
 }
 
@@ -78,13 +34,10 @@ div {
   height: 10em;
   -webkit-border-radius: 10em 5em;
   -moz-border-radius: 10em / 5em;
-  -o-border-radius: 10em / 5em;
-  -ms-border-radius: 10em / 5em;
-  -khtml-border-radius: 10em / 5em;
   border-radius: 10em / 5em;
-  -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }

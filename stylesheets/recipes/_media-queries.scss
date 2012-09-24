@@ -1,0 +1,28 @@
+@import "recipes/media-queries/orientation";
+@import "recipes/media-queries/resolution";
+@import "recipes/media-queries/size";
+
+////
+// Media queries for javascript
+//
+// You can use this snippet
+// var size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+// if (size == 'widescreen') {
+//     // code for 'widescreen' !
+// }
+//
+// or use the compass extension media-queries-for-js with the command
+// `compass recipes/media-queries-for-js`
+//
+////
+@mixin media-queries-for-js($name, $media-queries)
+{
+	@media ($media-queries)
+	{
+		body:after
+		{
+			content: "#{$name}";
+			display: none;
+		}
+	}
+}

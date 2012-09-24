@@ -1,9 +1,17 @@
+////
+// UI convex effect from one color
+//
+// @todo merge with ui-button ?
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
 @mixin ui-convex($color: #ddd, $button-effect: true, $opacity-top: .5, $opacity-bottom: 0, $color-mix: #fff)
 {
     background: $color; // fallback
     
     // the original idea was to just add a layer of transparent white to make the convex effect
-    // but this didn't work with css3/pie module, so I've used sass color function to get the same result
+    // but this didn't work with css3/pie module, so I've used sass_extensions color functions to get the same result
     //@include background($color linear-gradient(transparentize($color-mix, $opacity-top ), transparentize($color-mix, $opacity-bottom )));
     
     $opacity-top: percentage(1-$opacity-top);

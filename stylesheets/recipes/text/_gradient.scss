@@ -1,0 +1,12 @@
+@import "recipes/background/gradients";
+
+@mixin text-gradient($color, $background-type) {
+	// normal icon color as fallback
+	color: $color;
+
+	// background clip text trick (gradient color)
+	// webkit support only for now, sorry
+	background: -webkit-#{background-gradient($color, $background-type)};
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}

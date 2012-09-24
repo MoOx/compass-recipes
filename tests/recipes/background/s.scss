@@ -1,0 +1,161 @@
+@import "compass/css3";
+@import "recipes/background";
+@import "recipes/utilities/clearfix";
+
+section
+{
+    @include clearfix;
+}
+
+// @todo add variante on hover
+
+div {
+    width: 20em;
+    height: 20em;
+
+    //cursor: pointer; // not used for now
+    background-color: #ccc;
+    @include border-radius(50%);
+    @include box-shadow(
+        -3px -3px 10px 2px rgba(0,0,0,.3) inset,
+        0 0 0 15px rgba(255, 255, 255, .6) inset,
+        0 0 0 1px rgba(0,0,0,.5),
+        2px 2px 10px rgba(0,0,0,.6)
+    );
+
+    // sort of grid
+    float: left;
+    margin: 1em;
+}
+
+.background-blueprint-grid {
+    @include background-blueprint-grid();
+    &:hover { /* add another example using options */ }
+}
+
+.background-carbon-fiber {
+    @include background-carbon-fiber;
+    &:hover { /* add another example using options */ }
+}
+
+.background-checkerboard {
+    @include background-checkerboard;
+    &:hover { /* add another example using options */ }
+}
+
+.background-checkerboard-diagonal {
+    @include background-checkerboard-diagonal;
+    &:hover { /* add another example using options */ }
+}
+
+.background-cicada-stripes {
+    @include background-cicada-stripes;
+    &:hover { /* add another example using options */ }
+}
+
+.background-houndstooth {
+    @include background-houndstooth;
+    &:hover { /* add another example using options */ }
+}
+
+.background-lined-paper {
+    @include background-lined-paper;
+    &:hover { /* add another example using options */ }
+}
+
+.background-madras {
+    @include background-madras;
+    &:hover { /* add another example using options */ }
+}
+
+.background-metal {
+    @include background-metal;
+    &:hover { /* add another example using options */ }
+}
+
+    .background-metal-radial {
+        @include background-metal-radial;
+        &:hover { /* add another example using options */ }
+    }
+
+.background-noise {
+    //background-color: #000;
+    @include background-noise(
+        //$intensity: .5,
+        //$size: 200,
+        //$monochrome: true,
+        $opacity: .12
+    );
+    &:hover { /* add another example using options */ }
+}
+
+.background-polka-dot {
+    @include background-polka-dot;
+    &:hover { /* add another example using options */ }
+}
+
+.background-radial-overlay {
+    @include background-radial-overlay;
+    &:hover { /* add another example using options */ }
+}
+
+.background-rainbow {
+    @include background-rainbow;
+    &:hover { @include background-rainbow(.8); }
+}
+
+    .background-stripes-straight {
+        @include background-stripes-straight;
+        &:hover { /* add another example using options */ }
+    }
+
+    .background-diagonal-stripes {
+        @include background-diagonal-stripes;
+        &:hover { /* add another example using options */ }
+    }
+
+.background-tablecloth {
+	@include background-tablecloth;
+	&:hover { /* add another example using options */ }
+}
+
+.background-tartan {
+    @include background-tartan;
+    &:hover { /* add another example using options */ }
+}
+
+// Gradients
+$gradient-color: #CF714A;
+
+.background-glossy {
+    @include background-gradient($gradient-color, glossy);
+    &:hover { /* add another example using options */ }
+}
+
+.background-matte {
+    @include background-gradient($gradient-color, matte);
+    &:hover { /* add another example using options */ }
+}
+
+.background-bevel {
+    @include background-gradient($gradient-color, bevel);
+    &:hover { /* add another example using options */ }
+}
+
+.background-recessed {
+    @include background-gradient($gradient-color, recessed);
+    &:hover { /* add another example using options */ }
+}
+
+
+// Caution! Mixing background noise with other gradients will output
+// the same base64-encoded image for every vendor prefixed gradient syntax.
+// Consider overlaying with a pseudo-element, or disabling specific vendor prefixes
+.background-mixed {
+    @include background-image(
+        background_noise($size: 40),
+        matte-gradient(rgba(yellow, .2)),
+        glossy-gradient($gradient-color)
+    );
+    &:hover { /* add another example using options */ }
+}

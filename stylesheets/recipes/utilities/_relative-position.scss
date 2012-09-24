@@ -1,0 +1,85 @@
+////
+// Relative position utility
+//
+// Allow you to place an element relativly to another using just a word and dimensions!
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+////
+@mixin relative-position($position, $width, $height, $margin-position: auto, $margin: center, $distance: 0, $add-width-height: true)
+{
+	position: absolute;
+	$position-offset: 50%;
+	@if ($add-width-height)
+	{
+		width: $width;
+		height: $height;
+	}
+
+	@if ($margin-position == auto)
+	{
+		@if ($margin == center)
+		{
+			@if ($position == top or $position == bottom)
+			{
+				$margin: -#{$width/2};
+			}
+			@else
+			{
+				$margin: -#{$height/2};
+			}
+		}
+	}
+	@else
+	{
+		$position-offset: 0;
+	}
+
+	// the following code can probably be refactored !
+
+	// vertical
+	@if ($position == top or $position == bottom)
+	{
+		@if ($position == top)
+		{
+			top: -$height - $distance;
+		}
+		@else if ($position == bottom)
+		{
+			bottom: -$height - $distance;
+		}
+
+		@if ($margin-position == auto)
+		{
+			left: $position-offset;
+			margin-left: $margin;
+		}
+		@else
+		{
+			#{$margin-position}: $position-offset;
+			margin-#{$margin-position}: $margin;
+		}
+	}
+
+	// horizontal
+	@if ($position == left or $position == right)
+	{
+		@if ($position == left)
+		{
+			left: -$width - $distance;
+		}
+		@if ($position == right)
+		{
+			right: -$width - $distance;
+		}
+		@if ($margin-position == auto)
+		{
+			top: $position-offset;
+			margin-top: $margin;
+		}
+		@else
+		{
+			#{$margin-position}: $position-offset;
+			margin-#{$margin-position}: $margin;
+		}
+	}
+}

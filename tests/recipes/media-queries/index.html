@@ -1,0 +1,52 @@
+<!doctype html>
+<link rel="stylesheet" href="s.css" />
+<h1>Tests for <a href="../">recipes</a>/media-queries</h1>
+
+<p class="doc">
+    Resize this window to checkout the result, or view this page with different device (with iOS Simulator or Opera Mobile Emulator)
+    <br />
+    For width and height, to be able to use this mixins, you should choose how many screen size you're about to support.
+    <br />
+    Advice: Use media-min() for mobile first approch, media-max otherwise
+</p>
+
+<div class="media-min-width"></div>
+<div class="media-gap-width"></div>
+<div class="media-max-width"></div>
+
+<div class="media-min-height"></div>
+<div class="media-gap-height"></div>
+<div class="media-max-height"></div>
+
+<div class="media-orientation"></div>
+
+<div class="media-resolution"></div>
+<div class="media-pixel-ratio"></div>
+<div class="media-highres-shortcut"></div>
+
+<!-- media-queries-for-js -->
+<script src="../../../javascripts/polyfills/addEventListener.js"></script>
+<script src="../../../templates/media-queries-for-js/media-queries.js"></script>
+<script>
+function logMediaQueriesName()
+{
+	console.log('Recipes.MediaQueries.getCurrent():' + Recipes.MediaQueries.getCurrent());
+	switch(Recipes.MediaQueries.getCurrent())
+	{
+		case 'small':
+			console.log("I'm so smalll");
+			break;
+
+		case 'medium':
+			console.log("My js name is 'medium'");
+			break;
+
+		case 'large':
+			console.log("Kin size duuude.");
+			break;
+	}
+}
+// be carefull of performance using "resize". You should use this with a different method. This is not my problem :p
+window.addEventListener('resize', logMediaQueriesName);
+logMediaQueriesName(); // call for first try :)
+</script>

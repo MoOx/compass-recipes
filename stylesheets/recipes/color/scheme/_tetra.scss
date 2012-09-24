@@ -1,0 +1,11 @@
+$color-scheme-tetra: 90 !default;
+
+@function tetra-color($color)
+{
+	@return adjust-hue($color, $color-scheme-tetra);
+}
+
+@function tetra-color-alt($color)
+{
+	@return adjust-hue($color, -$color-scheme-tetra);
+}

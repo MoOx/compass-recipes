@@ -1,0 +1,238 @@
+@charset "utf-8";
+/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* normalize.css v2.0.1 | HTML5 Display Definitions | MIT License | git.io/normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* normalize.css v2.0.1 | Base | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* normalize.css v2.0.1 | Links | MIT License | git.io/normalize */
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* normalize.css v2.0.1 | Typography | MIT License | git.io/normalize */
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* normalize.css v2.0.1 | Embedded Content | MIT License | git.io/normalize */
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* normalize.css v2.0.1 | Figures | MIT License | git.io/normalize */
+figure {
+  margin: 0;
+}
+
+/* normalize.css v2.0.1 | Forms | MIT License | git.io/normalize */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* normalize.css v2.0.1 | Tables | MIT License | git.io/normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0 1em;
+  background: #eee;
+  background-color: #cccccc;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 1 50%, color-stop(100%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, 0% 50%, 1 50%, color-stop(100%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+.doc {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1em;
+  margin: 1em 0;
+  font-style: italic;
+  font-size: .8em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.6);
+}
+.doc,
+.doc a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.doc:hover,
+.doc a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}

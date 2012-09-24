@@ -1,0 +1,97 @@
+<!doctype html>
+<link rel="stylesheet" href="s.css" />
+<h1>Tests for <a href="../">recipes</a>/icon-font</h1>
+
+<p class="doc">
+    Unicode usage : for the Unicode <code>U+f065</code> you should use different syntax depending on where you use it.
+    <br />HTML <code>&amp;#xf065;</code>
+    <br />CSS <code>\f065</code>
+    <br />Javascript <code>\uf065</code>
+</p>
+
+<h2>Unicode</h2>
+<a class="smiley">Test Text (to be hidden)</a>
+
+<script>
+// I USE DOCUMENT.WRITE YES
+(function()
+{
+    function strPad(i, l, s)
+    {
+        var o = i.toString();
+        s || (s = '0');
+        while (o.length < l)
+        {
+            o = s + o;
+        }
+
+        return o;
+    }
+
+    function htmlEntities(str) {
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function recipes_icon_font_abcplease(className, startChar, endChar, hexa)
+    {
+
+        startChar = startChar || 'a';
+        endChar = endChar || 'z';
+        for(var charCode = startChar.charCodeAt(0); charCode <= endChar.charCodeAt(0); charCode++)
+        {
+            document.write('<span title="\\u' + strPad(charCode.toString(16), 4) + '" class="' + className + '" data-icon="' + htmlEntities(String.fromCharCode(charCode)) + '"></span>');
+        }
+    }
+
+    var fonts =  [
+        'broccolidry',
+        'cuticons',
+        'ecoico',
+        'entypo',
+        'fontawesome',
+        'heydings_icons',
+        'heydings_controls',
+        'icomoon',
+        'iconic_fill',
+        'iconic_stroke',
+        'iconminia',
+        'meteocons',
+        'modern_pictograms',
+        'silkcons',
+        'socialico',
+        'typicons',
+        'websymbols',
+        'wpzoom'
+    ];
+    for(var i = 0; i < fonts.length; i++)
+    {
+        document.write('<h2>' + fonts[i]+  '</h2>');
+        if (fonts[i]!='fontawesome')
+        {
+            recipes_icon_font_abcplease(fonts[i], '\u0021', '\u007d'); // mains icons
+            recipes_icon_font_abcplease(fonts[i], '\ue000', '\ue100'); // mains icons
+        }
+        else
+        {
+            recipes_icon_font_abcplease(fonts[i], '\uf000', '\uf100'); // font awesome
+            recipes_icon_font_abcplease(fonts[i], '\uf200', '\uf200'); // font awesome
+        }
+    }
+
+})();
+
+/*
+// Generate something like
+
+<h2>iconic<h2>
+<a data-icon="a" class="iconic"></a>
+<a data-icon="b" class="iconic"></a>
+<a data-icon="c" class="iconic"></a>
+...
+
+<h2>icomoon<h2>
+<a data-icon="a" class="icomoon"></a>
+<a data-icon="b" class="icomoon"></a>
+...
+*/
+</script>

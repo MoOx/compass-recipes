@@ -1,0 +1,21 @@
+////
+// Rotate a group of elements as if they were casually tossed on a table
+//
+// @author Mason Wendell http://thecodingdesigner.com
+///
+
+@mixin scatter($rotate: 10deg, $variation: 6) {
+    $rotate-a: $rotate - $variation;
+    $rotate-b: $rotate + $variation;
+    $rotate-c: $rotate + ($variation / 2);
+    @include rotate($rotate);
+    &:nth-of-type(2n+2) {
+        @include rotate($rotate-a);
+    }
+    &:nth-of-type(3n+3) {
+        @include rotate($rotate-b);
+    }
+    &:nth-of-type(5n+5) {
+        @include rotate($rotate-c);
+    }
+}

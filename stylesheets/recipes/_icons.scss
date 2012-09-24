@@ -1,3 +1,9 @@
+////
+// Icon replacement helpers
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
 @mixin icon($background-position: 0 50%, $display: inline-block)
 {
     background-repeat: no-repeat;
@@ -6,8 +12,13 @@
     vertical-align: middle;
 }
 
-@mixin icon-inline($side: left, $width: 24px, $height: auto, $background-position: 2px 50%, $display: inline-block)
-{
+@mixin icon-inline(
+    $side: left,
+    $width: 24px,
+    $height: auto,
+    $background-position: 2px 50%,
+    $display: inline-block
+) {
     @if $height == auto
     {
         $height: $width;
@@ -18,12 +29,12 @@
     line-height: $height;
 }
 
-    @mixin icon-left($width: 24px, $height: auto, $background-position: 2px 50%, $display: inline-block)
-    {
-        @include icon-inline(left, $width, $height, $background-position, $display);
-    }
+@mixin icon-left($width: 24px, $height: auto, $background-position: 2px 50%, $display: inline-block)
+{
+    @include icon-inline(left, $width, $height, $background-position, $display);
+}
 
-    @mixin icon-right($width: 24px, $height: auto, $background-position: 100% 50%, $display: inline-block)
-    {
-        @include icon-inline(right, $width, $height, $background-position, $display);
-    }
+@mixin icon-right($width: 24px, $height: auto, $background-position: 100% 50%, $display: inline-block)
+{
+    @include icon-inline(right, $width, $height, $background-position, $display);
+}

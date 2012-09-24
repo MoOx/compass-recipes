@@ -1,0 +1,42 @@
+.image {
+  background-image: url('../../images/test.jpg?1347875798');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.image-with-dimensions {
+  background-image: url('../../images/test.jpg?1347875798');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 640px;
+  height: 458px;
+}
+
+.image-with-dimensions-line-height {
+  background-image: url('../../images/test.jpg?1347875798');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 640px;
+  height: 458px;
+  line-height: 458px;
+}
+
+.image-replace-text {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('../../images/test.jpg?1347875798');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.image-replace-text-with-dimensions {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('../../images/test.jpg?1347875798');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 640px;
+  height: 458px;
+}

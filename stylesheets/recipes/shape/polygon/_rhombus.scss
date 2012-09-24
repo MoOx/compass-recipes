@@ -1,0 +1,11 @@
+////
+// Shape/Polygon/Rhombus
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@mixin rhombus($width, $color: #000, $skew: 0deg, $rotate: -45deg)
+{
+    @include square($width, $color);
+    @include transform(rotate($rotate) skew($skew, $skew));
+}

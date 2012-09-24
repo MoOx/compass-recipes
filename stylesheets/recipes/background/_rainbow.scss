@@ -1,0 +1,28 @@
+////
+// Rainbow gradient function & background mixin
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@import "recipes/color/name";
+
+@mixin background-rainbow($alpha: 1, $from: left)
+{
+    @include background-image(linear-gradient-rainbow($alpha, $from));
+}
+
+@function linear-gradient-rainbow($alpha: 1, $from: left)
+{
+    $alpha: 1 - $alpha;
+    $percentage: 100%/6; // 7 colors, so 6 gaps
+    @return linear-gradient(
+        $from,
+        transparentize($red, $alpha),
+        transparentize($orange, $alpha) $percentage,
+        transparentize($yellow, $alpha) $percentage * 2,
+        transparentize($green, $alpha)  $percentage * 3,
+        transparentize($blue, $alpha)   $percentage * 4,
+        transparentize($indigo, $alpha) $percentage * 5,
+        transparentize($violet, $alpha)
+    );
+}

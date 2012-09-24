@@ -1,0 +1,291 @@
+////
+// Icon Fonts helpers
+//
+// Great to use with the some pictos fonts
+///
+
+@import "compass/css3/background-clip";
+@import "compass/css3/user-interface";
+@import "compass/css3/text-shadow";
+@import "compass/typography/text/replacement";
+
+@import "recipes/font";
+@import "recipes/text/gradient";
+@import "recipes/background/gradients";
+
+// The default dir where webfont icons are located.
+// Not need to specify Compass fonts_dir (automatically prefixed).
+$icon-font-dir: 'icons' !default;
+
+// The default suffix for all placeholders.
+$icon-font-placeholder-suffix: icon-font !default;
+
+// The default placeholder name for icon parent container.
+$icon-font-parent-placeholder: "#{$icon-font-placeholder-suffix}-parent" !default;
+
+// The default placeholder name for icon base style.
+$icon-font-base-placeholder: "#{$icon-font-placeholder-suffix}-base" !default;
+
+// The default attribute name which contains the icon character code.
+$icon-font-attr-name: data-icon !default;
+
+// The default icon font size
+$icon-font-size: 1em !default;
+
+// The default color of the icon.
+$icon-font-color: #999 !default;
+
+// The default color of the icon.
+$icon-font-color-hover: darken($icon-font-color, 10%) !default;
+
+// $icon-font-color - The default color of the icon.
+$icon-font-color-active: darken($icon-font-color, 20%) !default;
+
+// The default gradient type of the icon.
+// Compatibility Webkit only
+$icon-font-gradient-type: matte !default;
+
+// The default gradient type of the icon when state is :hover.
+// Compatibility in Webkit only
+$icon-font-gradient-type-hover: $icon-font-gradient-type !default;
+
+// The default gradient type of the icon when state is :active.
+// Compatibility in Webkit only
+$icon-font-gradient-type-active: recessed !default;
+
+// The default shadow type of the icon.
+$icon-font-shadow: rgba(#000, .6) 0 1px 0 !default;
+
+// The default shadow type of the icon when state is :hover.
+$icon-font-shadow-hover: rgba(#000, .8) 0 1px 0 !default;
+
+// The default shadow type of the icon when state is :active.
+$icon-font-shadow-active: $icon-font-shadow !default;
+
+// The default color to use on the border of icons
+// Compatibility in Webkit only
+$icon-font-stroke: null !default;
+
+// Common base style for icon parent container
+%#{$icon-font-parent-placeholder} {
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+}
+
+// Common base style for pseudo-selectors
+%#{$icon-font-base-placeholder} {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-indent: 0;
+	@include text-shadow(none);
+	@include user-select(none);
+}
+
+// automatically apply the good font family from the font name
+// Use @extend
+@mixin icon-font-family($name) {
+	@if ($name != null) {
+		@extend %#{$icon-font-placeholder-suffix}-#{$name};
+	}
+}
+
+// Icon font declaration using font face
+// http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
+// $name - font name
+// $id - font svg #id. Default to the font name
+// $location - directory where the icon font is located. Default to auto (=> fonts_dir/$icon-font-dir/$name)
+@mixin icon-font-face($name, $id: $name, $location: auto) {
+	@if ($location == auto) {
+		$location: '#{$icon-font-dir}/#{$name}';
+	}
+
+	// include the font
+	@include font-face-kit($name, $id, $location);
+
+	// declare the icon font family placeholder
+	%#{$icon-font-placeholder-suffix}-#{$name} {
+		font-family: #{$name};
+	}
+}
+
+// Include the icon font broccolidry
+@mixin icon-font-face-broccolidry()			{ @include icon-font-face(broccolidry); }
+// Include the icon font cuticons
+@mixin icon-font-face-cuticons()			{ @include icon-font-face(cuticons); }
+// Include the icon font ecoico
+@mixin icon-font-face-ecoico()				{ @include icon-font-face(ecoico); }
+// Include the icon font entypo
+@mixin icon-font-face-entypo()				{ @include icon-font-face(entypo, EntypoRegular); }
+// Include the icon font fontawesome
+@mixin icon-font-face-fontawesome()			{ @include icon-font-face(fontawesome, FontAwesomeRegular); }
+// Include the icon font heydings_controls
+@mixin icon-font-face-heydings_controls()	{ @include icon-font-face(heydings_controls, HeydingsControlsRegular); }
+// Include the icon font heydings_icons
+@mixin icon-font-face-heydings_icons()		{ @include icon-font-face(heydings_icons, HeydingsCommonIconsRegular); }
+// Include the icon font icomoon
+@mixin icon-font-face-icomoon()				{ @include icon-font-face(icomoon, IcoMoonRegular); }
+// Include the icon font iconic_fill
+@mixin icon-font-face-iconic_fill()			{ @include icon-font-face(iconic_fill, IconicFill); }
+// Include the icon font iconic_stroke
+@mixin icon-font-face-iconic_stroke()		{ @include icon-font-face(iconic_stroke, IconicStroke); }
+// Include the icon font iconminia
+@mixin icon-font-face-iconminia()			{ @include icon-font-face(iconminia); }
+// Include the icon font meteocons
+@mixin icon-font-face-meteocons()			{ @include icon-font-face(meteocons); }
+// Include the icon font modern_pictograms
+@mixin icon-font-face-modern_pictograms()	{ @include icon-font-face(modern_pictograms, ModernPictogramsNormal);}
+// Include the icon font silkcons
+@mixin icon-font-face-silkcons()			{ @include icon-font-face(silkcons); }
+// Include the icon font socialico
+@mixin icon-font-face-socialico()			{ @include icon-font-face(socialico, SocialicoRegular); }
+// Include the icon font typicons
+@mixin icon-font-face-typicons()			{ @include icon-font-face(typicons); }
+// Include the icon font websymbols
+@mixin icon-font-face-websymbols()			{ @include icon-font-face(websymbols, WebSymbolsRegular); }
+// Include the icon font wpzoom
+@mixin icon-font-face-wpzoom()				{ @include icon-font-face(wpzoom); }
+
+// Includes a icon font from a character code (Unicode), styled as an icon.
+//
+// $character - font character code used. Default to the attribute specified by $icon-font-attr-name
+// $size - size of the icon. Default to $icon-font-size
+// $font - icon font family to use. If you use a lot of icon, prefer to use icon-font-attr-rules() mixin to define font globally
+// $color - The color of the icon. Defaults to $icon-font-color.
+// $color-hover - The color of the icon when :hover. Default to $icon-font-color-hover,
+// $color-active - The color of the icon when :active. Default to $icon-font-color-active,
+
+// $gradient-type - The gradient type of the icon. Default to $icon-font-gradient-type. See @function background-gradient() for available types.
+// $gradient-type-hover - The gradient type of the icon when :hover. Default to $icon-font-gradient-type-hover. See @function background-gradient() for available types.
+// $gradient-type-active - The gradient type of the icon when :active. Default to $icon-font-gradient-type-active. See @function background-gradient() for available types.
+
+// $shadow - The shadow of the icon. Default to $icon-font-shadow,
+// $shadow-hover - The shadow of the icon when :hover. Default to $icon-font-shadow-hover,
+// $shadow-active - The shadow of the icon when :active. Default to $icon-font-shadow-active,
+
+// $stroke - The stroke color of the icon. Default to $icon-font-stroke (null)
+// $stroke-hover - The stroke color of the icon when :hover. Default to null,
+// $stroke-active - The stroke color of the icon when :active. Default to null,
+
+// $include-states - Whether to include or not :hover & :active states. Default to true,
+// $hidetext - Whether to hide the default text of the element. Default to true.
+//
+// Compatibility in Chrome, Safari, Firefox, Opera & IE8+
+@mixin icon-font(
+	$character: attr(#{$icon-font-attr-name}),
+	$size: $icon-font-size,
+	$font: null,
+
+	$color: $icon-font-color,
+	$color-hover: $icon-font-color-hover,
+	$color-active: $icon-font-color-active,
+
+	$gradient-type: $icon-font-gradient-type,
+	$gradient-type-hover: $icon-font-gradient-type-hover,
+	$gradient-type-active: $icon-font-gradient-type-active,
+
+	$shadow: $icon-font-shadow,
+	$shadow-hover: $icon-font-shadow-hover,
+	$shadow-active: $icon-font-shadow-active,
+
+	$stroke: null,
+	$stroke-hover: null,
+	$stroke-active: null,
+
+	$include-states: true,
+	$hidetext: true
+) {
+	@extend %#{$icon-font-parent-placeholder};
+
+	// icon are square
+	width: $size;
+	height: $size;
+	line-height: $size;
+
+	@if $hidetext {
+		text-indent: -9999px;
+		//@include hide-text();
+	}
+
+	// before is for the shadow
+	&:before,
+	// after is for the gradient text trick
+	&:after {
+		@extend %#{$icon-font-base-placeholder};
+		@include icon-font-family($font);
+		content: $character;
+		font-size: $size;
+	}
+
+	// Since :after is using text-fill-color: transparent, :before is only used for the shadow;
+	&:before {
+		color: transparent;
+	}
+
+	@include icon-font-effect($color, $gradient-type, $shadow, $stroke);
+
+	@if $include-states {
+		&:hover {
+			@include icon-font-effect($color-hover, $gradient-type-hover, $shadow-hover, $stroke-hover)
+		}
+		&:active {
+			@include icon-font-effect($color-active, $gradient-type-active, $shadow-active, $stroke-active)
+		}
+	}
+}
+
+	// Mixin to include icon-font color, shadow & stroke
+	// Used by @mixin icont-font()
+	//
+	// $color - The color of the icon
+	// $gradient-type - The gradient-type
+	// $color - The color of the icon
+	@mixin icon-font-effect($color, $gradient-type, $shadow, $stroke) {
+		@if $shadow {
+			&:before {
+				@include text-shadow($shadow);
+			}
+		}
+
+		@if $color and $gradient-type {
+			&:after {
+				@include text-gradient($color, $gradient-type);
+			}
+		}
+
+		@if $stroke {
+			-webkit-text-stroke: $stroke;
+			text-stroke: $stroke;
+		}
+	}
+
+@mixin icon-font-from-attr($font, $attr-name: $icon-font-attr-name) {
+	[#{$attr-name}] {
+		@include icon-font(attr($attr-name), $font: $font);
+		@content;
+	}
+}
+
+@mixin icon-font-attr-pseudo($pseudo: before, $font: null) {
+	$attr: #{$icon-font-attr-name}-#{$pseudo};
+	[#{$attr}]:#{$pseudo} {
+		content: attr($attr);
+		@include icon-font-family($name);
+		@content;
+	}
+}
+
+	@mixin icon-font-before($font: null) {
+		@include icon-font-attr-pseudo(before, $font) { @content; }
+	}
+
+	@mixin icon-font-after($font: null) {
+		@include icon-font-attr-pseudo(after, $font) { @content; }
+	}
+
+@mixin icon-font-attr-rules($font: null, $from-attr-pseudo: before) {
+	@include icon-font-from-attr($font, $pseudo: $from-attr-pseudo);
+	@include icon-font-attr-before($font);
+	@include icon-font-attr-after($font);
+}

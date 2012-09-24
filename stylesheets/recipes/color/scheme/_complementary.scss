@@ -1,0 +1,21 @@
+// @link http://designshack.net/wp-content/uploads/less-snippets-8.jpg
+
+@function complementary-color($color)
+{
+	@return adjust-hue($color, 180);
+}
+
+@function complementary-color-alt($color)
+{
+	@return darken(adjust-hue($color, 180), 5%);
+}
+
+@function complementary-color-light($color)
+{
+	@return lighten($color, 15%);
+}
+
+@function complementary-color-lighter($color)
+{
+	@return lighten($color, 30%);
+}

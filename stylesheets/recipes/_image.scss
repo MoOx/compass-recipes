@@ -1,0 +1,36 @@
+@import "compass/typography/text/replacement";
+@import "recipes/image/dimensions";
+@import "recipes/image/inline";
+@import "recipes/image/sprite";
+
+@mixin image($img, $x: 50%, $y: 50%, $dimensions: false)
+{
+	background: {
+		image: image-url($img);
+		repeat: no-repeat;
+		position: $x $y;
+	}
+	@include image-dimensions($img, $dimensions);
+}
+
+// Image with dimensions helper.
+// It use the background image property + width & height
+// $img: uri of the image you want;
+// $line-height: boolean to include the height as line-height too (e.g. for button with one line vertically centred)
+@mixin image-with-dimensions($img, $line-height: false, $x: 50%, $y: 50%)
+{
+	@include image($img, $x, $y, true true $line-height);
+}
+
+// I know it's like compass replace-text()
+// But I prefer this "verbosity
+@mixin image-replace-text($img, $x: 50%, $y: 50%, $dimensions: false)
+{
+	@include hide-text;
+	@include image($img, $x, $y, $dimensions);
+}
+
+@mixin image-replace-text-with-dimensions($img, $x: 50%, $y: 50%, $dimensions: true)
+{
+	@include image-replace-text($img, $x, $y, $dimensions);
+}

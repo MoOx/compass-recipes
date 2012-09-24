@@ -1,0 +1,29 @@
+//
+// Media Queries for Height
+//
+// @author Maxime Thirouin <m@moox.fr>
+//
+
+@mixin media-min-height($min-height)
+{
+    @include media-min($min-height, 'height')
+    {
+        @content;
+    }
+}
+
+@mixin media-max-height($max-height)
+{
+    @include media-max($max-height, 'height')
+    {
+        @content;;
+    }
+}
+
+@mixin media-gap-height($min-height, $max-height)
+{
+    @include media-gap($min-height, $max-height, 'height')
+    {
+        @content;
+    }
+}

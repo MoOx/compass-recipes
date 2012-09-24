@@ -1,0 +1,244 @@
+@charset "utf-8";
+.ui-loader-pulse {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  z-index: 1;
+  margin: 0 auto;
+}
+.ui-loader-pulse span {
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3))) 50% 50%;
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)) 50% 50%;
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)) 50% 50%;
+  background: -o-radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)) 50% 50%;
+  background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)) 50% 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  opacity: 1;
+  -webkit-animation: ui-loader-pulse 1.4s ease-in-out infinite;
+  -moz-animation: ui-loader-pulse 1.4s ease-in-out infinite;
+  animation: ui-loader-pulse 1.4s ease-in-out infinite;
+  z-index: 1;
+}
+.ui-loader-pulse:before, .ui-loader-pulse:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.ui-loader-pulse:before {
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: black;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(40%, #000000), color-stop(100%, #999999));
+  background: -webkit-radial-gradient(#000000 40%, #999999);
+  background: -moz-radial-gradient(#000000 40%, #999999);
+  background: -o-radial-gradient(#000000 40%, #999999);
+  background: radial-gradient(#000000 40%, #999999);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+}
+.ui-loader-pulse:after {
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  content: "• • •";
+  -webkit-animation: ui-loader-pulse-content 1s ease-in-out infinite;
+  -moz-animation: ui-loader-pulse-content 1s ease-in-out infinite;
+  animation: ui-loader-pulse-content 1s ease-in-out infinite;
+}
+
+.wrap {
+  background: #000;
+  margin: 2em;
+  padding: 2em;
+}
+
+.ui-loader-pulse.white {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  z-index: 1;
+}
+.ui-loader-pulse.white span {
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.8))) 50% 50%;
+  background: -webkit-radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)) 50% 50%;
+  background: -moz-radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)) 50% 50%;
+  background: -o-radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)) 50% 50%;
+  background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)) 50% 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  opacity: 1;
+  -webkit-animation: ui-loader-pulse 1.4s ease-in-out infinite;
+  -moz-animation: ui-loader-pulse 1.4s ease-in-out infinite;
+  animation: ui-loader-pulse 1.4s ease-in-out infinite;
+  z-index: 1;
+}
+.ui-loader-pulse.white:before, .ui-loader-pulse.white:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.ui-loader-pulse.white:before {
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: black;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(40%, #000000), color-stop(100%, #999999));
+  background: -webkit-radial-gradient(#000000 40%, #999999);
+  background: -moz-radial-gradient(#000000 40%, #999999);
+  background: -o-radial-gradient(#000000 40%, #999999);
+  background: radial-gradient(#000000 40%, #999999);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 0 6px rgba(0, 0, 0, 0.7), 0 0 0 1px black;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+}
+.ui-loader-pulse.white:after {
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  content: "• • •";
+  -webkit-animation: ui-loader-pulse-content 1s ease-in-out infinite;
+  -moz-animation: ui-loader-pulse-content 1s ease-in-out infinite;
+  animation: ui-loader-pulse-content 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes ui-loader-pulse {
+  100% {
+    opacity: 0;
+    width: 180%;
+    height: 180%;
+    margin: -40%;
+  }
+}
+
+@-moz-keyframes ui-loader-pulse {
+  100% {
+    opacity: 0;
+    width: 180%;
+    height: 180%;
+    margin: -40%;
+  }
+}
+
+@keyframes ui-loader-pulse {
+  100% {
+    opacity: 0;
+    width: 180%;
+    height: 180%;
+    margin: -40%;
+  }
+}
+
+@-webkit-keyframes ui-loader-pulse-content {
+  0% {
+    content: "•";
+  }
+
+  33% {
+    content: "•";
+  }
+
+  34% {
+    content: "• •";
+  }
+
+  66% {
+    content: "• •";
+  }
+
+  67% {
+    content: "• • •";
+  }
+
+  100% {
+    content: "• • •";
+  }
+}
+
+@-moz-keyframes ui-loader-pulse-content {
+  0% {
+    content: "•";
+  }
+
+  33% {
+    content: "•";
+  }
+
+  34% {
+    content: "• •";
+  }
+
+  66% {
+    content: "• •";
+  }
+
+  67% {
+    content: "• • •";
+  }
+
+  100% {
+    content: "• • •";
+  }
+}
+
+@keyframes ui-loader-pulse-content {
+  0% {
+    content: "•";
+  }
+
+  33% {
+    content: "•";
+  }
+
+  34% {
+    content: "• •";
+  }
+
+  66% {
+    content: "• •";
+  }
+
+  67% {
+    content: "• • •";
+  }
+
+  100% {
+    content: "• • •";
+  }
+}

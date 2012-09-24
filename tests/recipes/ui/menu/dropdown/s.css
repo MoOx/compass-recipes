@@ -1,0 +1,31 @@
+nav {
+  z-index: 3;
+}
+nav ul {
+  z-index: 4;
+  list-style-position: outside;
+}
+nav ul li {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+}
+nav ul a {
+  display: inline-block;
+}
+nav ul ul {
+  position: absolute;
+  z-index: 5;
+  display: none;
+}
+.no-js nav li:hover > ul {
+  display: block;
+}
+nav ul {
+  padding: 0;
+  background: #ccc;
+  border: 1px solid #ddd;
+}
+nav ul li {
+  border: 1px solid #aaa;
+}

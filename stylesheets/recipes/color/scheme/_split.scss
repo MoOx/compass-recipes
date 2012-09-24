@@ -1,0 +1,11 @@
+$color-scheme-split: 158 !default;
+
+@function split-color($color)
+{
+	@return adjust-hue($color, $color-scheme-split);
+}
+
+@function split-color-alt($color)
+{
+	@return adjust-hue($color, -$color-scheme-split);
+}

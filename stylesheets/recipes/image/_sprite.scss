@@ -1,0 +1,57 @@
+////
+// Sprites mixin/functions to make ti easier to deal with simple simple sprite
+//
+// $simple-sprite-map: simple-sprite();
+// rule { @include sprite-item(image-name)} // output background: {image-}url("sprite/image-name.png") x y no-repeat;
+////
+
+@import "recipes/image/dimensions";
+@import "compass/typography/text/replacement";
+
+$simple-sprite-path: "sprite" !default;
+$simple-sprite-map: null !default;
+
+// create simple sprite from image in $simple-sprite-path (default to "sprite" folder)
+@function simple-sprite-map()
+{
+	@return sprite-map($simple-sprite-path + "/*.png");
+}
+
+// return complete filename of the given sprite item
+@function sprite-item-file($image, $sprite-map: $simple-sprite-map)
+{
+	@return sprite-file($sprite-map, $image);
+}
+
+// return width of the given sprite item
+@function sprite-item-width($image, $sprite-map: $simple-sprite-map)
+{
+	@return image-width(sprite-item-file($image, $sprite-map));
+}
+
+// return height of the given sprite item
+@function sprite-item-height($image, $sprite-map: $simple-sprite-map)
+{
+	@return image-height(sprite-item-file($image, $sprite-map));
+}
+
+// include background property to use the sprite item
+@mixin sprite-item($image, $x: 0, $y: 0, $repeat: no-repeat, $sprite-map: $simple-sprite-map)
+{
+	background: sprite($sprite-map, $image, $x, $y) $repeat;
+}
+
+// include background property to use the sprite item + width & height (& line-height if you want (e.g. for button background))
+// do not forget to use a appropriated display property (like block or inline-block
+@mixin sprite-item-with-dimensions($image, $line-height: false, $x: 0, $y: 0, $sprite-map: $simple-sprite-map)
+{
+	@include image-dimensions(sprite-item-file($image, $sprite-map), true true $line-height);
+	@include sprite-item($image, $x, $y, $sprite-map: $sprite-map);
+}
+
+// include sprite item with dimensions (see sprite-item-with-dimensions()) + hide-text
+@mixin sprite-item-replacement($image, $line-height: false, $x: 0, $y: 0, $sprite-map: $simple-sprite-map)
+{
+	@include hide-text();
+	@include sprite-item-with-dimensions($image, $line-height, $x, $y, $sprite-map);
+}

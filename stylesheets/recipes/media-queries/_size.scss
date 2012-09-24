@@ -1,0 +1,81 @@
+//
+// Media min, max & gap
+//
+// @author Maxime Thirouin <m@moox.fr>
+//
+
+// Wrapper for IE trick from http://jakearchibald.github.com/sass-ie/
+// disabled by default
+$media-queries-fix-width:  false !default;
+$media-queries-fix-height: false !default;
+
+@mixin media-fix($value, $prop: 'width', $query: 'min')
+{
+    $media-queries-fix: $media-queries-fix-width;
+    @if ($prop == 'height')
+    {
+        $media-queries-fix: $media-queries-fix-height;
+    }
+
+    // If we're outputting for a fixed media query set...
+    @if $media-queries-fix
+    {
+        // ...and if we should apply these rules
+        @if $query == 'min'
+        {
+            @if $media-queries-fix >= $value
+            {
+                @content;
+            }
+        }
+        @else
+        {
+            @if $query == 'max'
+            {
+                @if $media-queries-fix < $value
+                {
+                    @content;
+                }
+            }
+            @else
+            {
+                @warn "#{error("media-fix need a min or a max for $query")}";
+            }
+        }
+    }
+    @else
+    {
+        // Otherwise, output it using a regular media query
+        @media (#{$query}-#{$prop}: $value)
+        {
+            @content;
+        }
+    }
+}
+
+@mixin media-min($min-size, $prop: 'width')
+{
+    @include media-fix($min-size, $prop)
+    {
+        @content;
+    }
+}
+
+@mixin media-max($max-size, $prop: 'width')
+{
+    @include media-fix($max-size, $prop, 'max')
+    {
+        @content;
+    }
+}
+
+@mixin media-gap($min-size, $max-size, $prop: 'width')
+{
+    @media (min-#{$prop}: $min-size) and (max-#{$prop}: $max-size)
+    {
+        @content;
+    }
+}
+
+@import "recipes/media-queries/size/width";
+@import "recipes/media-queries/size/height";

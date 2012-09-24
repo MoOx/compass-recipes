@@ -1,0 +1,124 @@
+////
+// CSS pulse loader
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@import "recipes/animation";
+
+@mixin ui-loader-pulse($color: #000, $color-alt: #fff, $pulse-color: rgba(#000, .3), $pulse-color-alt: rgba(#000, 0), $z-index: 1)
+{
+    @include ui-loader-pulse-element;
+    z-index: $z-index;
+
+    span
+    {
+        @include ui-loader-pulse-effect($pulse-color, $pulse-color-alt);
+        z-index: $z-index;
+    }
+
+    &:before,
+    &:after
+    {
+        @include ui-loader-pulse-position;
+        z-index: $z-index+1;
+    }
+
+    &:before
+    {
+        @include ui-loader-pulse-background($color, $color-alt);
+    }
+
+    &:after
+    {
+        @include ui-loader-pulse-content($color-alt);
+    }
+}
+
+    @mixin ui-loader-pulse-element
+    {
+        position: relative; // require for child element trick
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    @mixin ui-loader-pulse-effect($color: rgba(#000, .3), $color-alt: rgba(#000, 0))
+    {
+        @include background(radial-gradient($color-alt, $color) 50% 50%);
+        @include border-radius(50%);
+        //background-size: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0%;
+        opacity: 1;
+        @include animation(ui-loader-pulse 1.4s ease-in-out infinite);
+    }
+
+    @mixin ui-loader-pulse-position
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+        @mixin ui-loader-pulse-background($color: #000, $color-alt: #fff)
+        {
+            content: "";
+            @include border-radius(50%);
+            background: $color; // fallback
+            @include background(radial-gradient($color 40%, lighten($color, 60%) ));
+            @include box-shadow(
+                inset 0 1px 0 transparentize($color-alt, .4),
+                0 0 6px transparentize($color, .3),
+                0 0 0 1px $color
+            );
+            //border: 1px solid $color;
+            text-shadow: 0 1px 0 rgba($color, 0);
+        }
+
+        @mixin ui-loader-pulse-content($color: #fff)
+        {
+            color: $color;
+            font-size: 1em;
+            text-align: center;
+            content: "• • •";
+            @include animation(ui-loader-pulse-content 1s ease-in-out infinite); // see ui-loader-pulse-content
+        }
+
+@mixin ui-loader-pulse-effect-animation()
+{
+    // FAIL: I just not success to use only background size to make the exactly same effect
+    @include keyframes(ui-loader-pulse)
+    {
+        100%
+        {
+            //background-size: 180%;
+            opacity: 0;
+            width: 180%;
+            height: 180%;
+            margin: -40%;
+        }
+    }
+}
+
+// Cannot work ?
+@mixin ui-loader-pulse-content-animation()
+{
+    @include keyframes(ui-loader-pulse-content)
+    {
+        0%   { content: "•" }
+        33%  { content: "•" }
+        34%  { content: "• •" }
+        66%  { content: "• •" }
+        67%  { content: "• • •" }
+        100%  { content: "• • •" }
+    }
+}
+
+

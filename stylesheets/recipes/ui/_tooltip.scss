@@ -1,0 +1,144 @@
+////
+// UI Tooltip
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+////
+@import "recipes/shape/polygon/triangle";
+@import "recipes/utilities/pseudo-element";
+@import "recipes/utilities/relative-position";
+
+// TODO - add different type of arrow from http://nicolasgallagher.com/pure-css-speech-bubbles/demo/
+// TODO - add mixin for applying visual effect http://jsfiddle.net/greypants/zgCb7/
+@mixin ui-tooltip(
+	$tip-position: bottom,
+	$tip-color: #fff,
+	$tip-color-alt: darken($tip-color, 20%),
+	$tip-width: 10px,
+	$tip-height: half,
+	$tip-type: triangle,
+	$tip-margin-position: auto,
+	$tip-margin: center,
+	$tip-transform: null,
+	$tip-transform-origin: null,
+
+	$position: relative,
+	$background: $tip-color,
+
+	$border-radius: .2em,
+	$border-width: 2px,
+	$border-style: solid,
+	$border-color: null
+)
+{
+	position: $position;
+	@include border-radius($border-radius);
+	@if ($background !=null)
+	{
+		@include background($background);
+	}
+
+	@if ($tip-type == triangle)
+	{
+		@if ($tip-height == half)
+		{
+			$tip-height : $tip-width/2;
+		}
+		@if ($tip-height == auto)
+		{
+			$tip-height : $tip-width;
+		}
+	}
+
+	&:after
+	{
+		@include pseudo-element;
+		@include triangle($tip-position, $tip-width, $tip-height, $tip-color);
+		//@if ($tip-position == top or $tip-position == bottom)
+		//{
+			$relative-width: $tip-width;
+			$relative-height: $tip-height;
+		//}
+		@if ($tip-position == left or $tip-position == right)
+		{
+			$relative-width: $tip-height;
+			$relative-height: $tip-width;
+		}
+		@include relative-position($tip-position, $relative-width, $relative-height, $tip-margin-position, $tip-margin, 0, false);
+		@if ($tip-transform != null)
+		{
+			@include transform($tip-transform);
+		}
+		@if ($tip-transform-origin != null)
+		{
+			@include transform-origin(nth($tip-transform-origin, 1), nth($tip-transform-origin, 2), nth($tip-transform-origin, 3), nth($tip-transform-origin, 4));
+		}
+	}
+
+	@if ($border-width > 0)
+	{
+		@if ($border-color == null)
+		{
+			$border-color: $tip-color-alt;
+		}
+		&:before
+		{
+			@include pseudo-element;
+			$border-coef: sqrt(2);
+			$tip-border-width: $border-width * $border-coef;
+			@if (unit($border-width) == px)
+			{
+				$tip-border-width: round($tip-border-width); // fucking weird calculation fix for firefox
+			}
+			$tip-alt-width: $tip-width + $tip-border-width*2;
+			$tip-alt-height: $tip-height + $tip-border-width;
+			$tip-alt-margin: null;
+
+			@include triangle($tip-position, $tip-alt-width, $tip-alt-height, $tip-color-alt);
+
+			//@if ($tip-position == top or $tip-position == bottom)
+			//{
+				$relative-alt-width: $tip-alt-width;
+				$relative-alt-height: $tip-alt-height;
+			//}
+			@if ($tip-position == left or $tip-position == right)
+			{
+				$relative-alt-width: $tip-alt-height;
+				$relative-alt-height: $tip-alt-width;
+			}
+			@if ($tip-position == top or $tip-position == bottom)
+			{
+				$tip-alt-width: $tip-width + $tip-border-width;
+				@if ($tip-margin== center)
+				{
+					$tip-alt-margin: -#{$tip-width/2 + $tip-border-width};
+				}
+				@else
+				{
+					$tip-alt-margin: $tip-margin - $tip-border-width;
+				}
+			}
+			@else //if ($tip-position == left or $tip-position == right)
+			{
+				$tip-alt-height: $tip-height + $tip-border-width;
+				@if ($tip-margin== center)
+				{
+					$tip-alt-margin: -#{$tip-width/2 + $tip-border-width};
+				}
+				@else
+				{
+					$tip-alt-margin: $tip-margin - $tip-border-width;
+				}
+			}
+			@include relative-position($tip-position, $relative-alt-width, $relative-alt-height, $tip-margin-position, $tip-alt-margin, 0, false);
+			@if ($tip-transform != null)
+			{
+				@include transform($tip-transform);
+			}
+			@if ($tip-transform-origin != null)
+			{
+				@include transform-origin(nth($tip-transform-origin, 1) + $border-coef, nth($tip-transform-origin, 2) + $border-coef, nth($tip-transform-origin, 3), nth($tip-transform-origin, 4));
+			}
+		}
+		border: $border-width $border-style $border-color;
+	}
+}

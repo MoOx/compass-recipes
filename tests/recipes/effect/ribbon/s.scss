@@ -1,0 +1,23 @@
+@import "recipes/background";
+@import "recipes/effect/ribbon";
+
+body
+{
+    overflow: hidden; // to prevent scroll & show overflow created by ribbons
+}
+
+.top-left {
+	@include effect-ribbon-corner($height: 3em, $offset-v: 4em)
+}
+
+.top-right {
+	@include effect-ribbon-corner('top right', 20em, 3em)
+}
+
+.bottom-right {
+	@include effect-ribbon-corner('bottom right', $offset-h: 10em)
+}
+
+.bottom-left {
+	@include effect-ribbon-corner($position: 'bottom left', $height: 5em)
+}

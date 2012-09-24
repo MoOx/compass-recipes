@@ -1,0 +1,103 @@
+@import "recipes/media-queries";
+
+div
+{
+	font-size: 2em;
+}
+
+.media-min-width
+{
+	&:after {
+		content: 'Min width (for mobile first)';
+		@include media-min(20em) { content: 'Min width 20em'; }
+		@include media-min(40em) { content: 'Min width 40em'; }
+		@include media-min(60em) { content: 'Min width 60em'; }
+	}
+}
+
+.media-gap-width
+{
+	&:after {
+		content: 'Gap width (for precision)';
+		@include media-gap(20em, 40em) { content: 'Gap width 20em -> 40em'; }
+		@include media-gap(40em, 60em) { content: 'Gap width 40em -> 60em'; }
+	}
+}
+
+.media-max-width
+{
+	&:after {
+		content: 'Max width (for desktop first)';
+		@include media-max(60em) { content: 'Max width 60em'; }
+		@include media-max(40em) { content: 'Max width 40em'; }
+		@include media-max(20em) { content: 'Max width 20em'; }
+	}
+}
+
+.media-min-height
+{
+	&:after {
+		content: 'Min height';
+		@include media-min-height(10em) { content: 'Min height 10em'; }
+		@include media-min-height(20em) { content: 'Min height 20em'; }
+		@include media-min(30em, height) { content: 'Min height 30em'; } // notice different syntax available
+	}
+}
+.media-gap-height
+{
+	&:after {
+		content: 'Gap height (for precision)';
+		@include media-gap(10em, 20em) { content: 'Gap height 10em -> 20em'; }
+		@include media-gap(20em, 30em) { content: 'Gap height 20em -> 30em'; }
+	}
+}
+.media-max-height
+{
+	&:after {
+		content: 'Max width (for desktop first)';
+		@include media-max(30em, height) { content: 'Max width 30em'; } // notice different syntax available
+		@include media-max-height(20em) { content: 'Max width 20em'; }
+		@include media-max-height(10em) { content: 'Max width 10em'; }
+	}
+}
+
+.media-orientation
+{
+	&:after {
+		content: 'No orientation defined';
+		@include media-portrait() { content: 'Orientation: portrait'; }
+		@include media-landscape() { content: 'Orientation: landscape'; }
+	}
+}
+
+.media-resolution
+{
+	&:after {
+		content: 'Default resolution 1dppx';
+		@include media-resolution(1) { content: 'Resolution 1dppx'; }
+		@include media-resolution() { content: 'Resolution 1.5dppx'; } // notice default value to 1.5
+		@include media-resolution(2) { content: 'Resolution 2dppx'; }
+	}
+}
+
+.media-pixel-ratio
+{
+	&:after {
+		content: 'Default pixel ratio';
+		@include media-pixel-ratio(1) { content: 'Pixel ratio: 1'; }
+		@include media-pixel-ratio() { content: 'Pixel ratio: 1.5'; } // notice default value to 1.5
+		@include media-pixel-ratio(2) { content: 'Pixel ratio: 2'; }
+	}
+}
+
+.media-highres-shortcut
+{
+	&:after {
+		@include media-highres() { content: 'High res (shortcut)'; }
+	}
+}
+
+// media-queries-for-js tests
+@include media-queries-for-js(small, 'max-width: 40em');
+@include media-queries-for-js(medium, 'min-width: 40em');
+@include media-queries-for-js(large, 'min-width: 60em');

@@ -1,0 +1,77 @@
+////
+// Gravatar recipe
+//
+// This recipe use a gravatar as an element
+//
+// It's not really usable as it could be, @link https://github.com/MoOx/compass-recipes/issues/27
+// But I want something, so use javascript if you can, or helper if you just need one hardcoded gravatar
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@import "recipes/utilities/pseudo-element";
+
+// default values
+$helper-gravatar-size:      48px    !default;
+$helper-gravatar-default:   ""      !default;
+$helper-gravatar-rating:    PG      !default;
+$helper-gravatar-ssl:       false   !default;
+
+@mixin helper-gravatar-base(
+    $email,
+    $size:      $helper-gravatar-size,
+    $default:   $helper-gravatar-default,
+    $rating:    $helper-gravatar-rating,
+    $ssl:       $helper-gravatar-ssl
+)
+{
+    background-image: gravatar_url(
+        $email: unquote($email),
+        $size: $size/1px, // to remove px
+        $default: unquote($default),
+        $rating: $rating,
+        $ssl: $ssl
+    );
+    background-repeat: no-repeat;
+}
+
+@mixin helper-gravatar(
+    $email,
+    $size:      $helper-gravatar-size,
+    $default:   $helper-gravatar-default,
+    $rating:    $helper-gravatar-rating,
+    $ssl:       $helper-gravatar-ssl
+)
+{
+    width: $size;
+    height: $size;
+    @include helper-gravatar-base($email, $size, $default, $rating, $ssl);
+
+}
+
+@mixin helper-gravatar-pseudo(
+    $email,
+    $size:      $helper-gravatar-size,
+    $default:   $helper-gravatar-default,
+    $rating:    $helper-gravatar-rating,
+    $ssl:       $helper-gravatar-ssl
+)
+{
+    @include pseudo-element($size, $size, $position: null);
+    @include helper-gravatar-base($email, $size, $default, $rating, $ssl);
+}
+
+@mixin helper-gravatar-auto(
+    $pseudo:    before,
+    $size:      $helper-gravatar-size,
+    $default:   $helper-gravatar-default,
+    $ssl:       $helper-gravatar-ssl
+)
+{
+    &:#{$pseudo}
+    {
+        @include pseudo-element($size, $size, $position: null);
+        background-repeat: no-repeat;
+    }
+
+}

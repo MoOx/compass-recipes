@@ -1,0 +1,23 @@
+////
+// Pseudo element helper
+//
+// Note IE7/6 doesn't understand pseudo element as ::before and ::after
+// IE8 need to have :before and not ::before
+// So use only : and not :: if you want to support IE8
+// IE9 Webkit Firefox Opera understand ::
+///
+
+// Helper for playing with pseudo element
+// $width: width of the pseudo element.
+// $height: height of the pseudo element.
+// $content: when playing with pseudo element, you mainly use `content: ""` (default value).
+// $position: when playing with pseudo element, you mainly use `position: absolute` (default value).
+// $display: when playing with pseudo element, you mainly use `display: block` (default value).
+@mixin pseudo-element($width: null, $height: null, $content: "", $position: absolute, $display: block)
+{
+    width: $width;
+    height: $height;
+    content: $content;
+    position: $position;
+    display: $display;
+}

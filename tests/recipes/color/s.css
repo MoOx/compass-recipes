@@ -1,0 +1,116 @@
+.swatch, .swatch1, .swatch2, .swatch3, .swatch4 {
+  min-width: 100px;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.swatch1 {
+  background-color: #ea0d0d;
+  color: #fcc7c7;
+  text-shadow: #ba0a0a 0 -1px 0;
+  border: 1px solid #a20909;
+}
+.swatch1:after {
+  content: "48.43137%";
+}
+.swatch1:hover:after {
+  content: "31.01137%";
+}
+.swatch1:active {
+  background-color: #d20c0c;
+  color: #fddfdf;
+  text-shadow: #a20909 0 -1px 0;
+}
+
+.swatch2 {
+  background-color: #ea850d;
+  color: #291702;
+  text-shadow: #f49d36 0 1px 0;
+  border: 1px solid #a25c09;
+}
+.swatch2:after {
+  content: "48.43137%";
+}
+.swatch2:hover:after {
+  content: "58.6349%";
+}
+.swatch2:active {
+  background-color: #d2770c;
+  color: black;
+  text-shadow: #f3911e 0 1px 0;
+}
+
+.swatch3 {
+  background-color: #cbea0d;
+  color: #232902;
+  text-shadow: #d9f436 0 1px 0;
+  border: 1px solid #8ca209;
+}
+.swatch3:after {
+  content: "48.43137%";
+}
+.swatch3:hover:after {
+  content: "78.2498%";
+}
+.swatch3:active {
+  background-color: #b6d20c;
+  color: black;
+  text-shadow: #d5f31e 0 1px 0;
+}
+
+.swatch4 {
+  background-color: #0d65ea;
+  color: #c7dcfc;
+  text-shadow: #0a50ba 0 -1px 0;
+  border: 1px solid #0946a2;
+}
+.swatch4:after {
+  content: "48.43137%";
+}
+.swatch4:hover:after {
+  content: "35.23529%";
+}
+.swatch4:active {
+  background-color: #0c5bd2;
+  color: #dfebfd;
+  text-shadow: #0946a2 0 -1px 0;
+}
+
+.swatch4 {
+  background-color: #b90dea;
+  color: #f0c7fc;
+  text-shadow: #930aba 0 -1px 0;
+  border: 1px solid #8009a2;
+}
+.swatch4:after {
+  content: "48.43137%";
+}
+.swatch4:hover:after {
+  content: "35.14588%";
+}
+.swatch4:active {
+  background-color: #a60cd2;
+  color: #f7dffd;
+  text-shadow: #8009a2 0 -1px 0;
+}
+
+.black-white {
+  background: black;
+  color: white;
+}
+
+.black-white-transparente {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}

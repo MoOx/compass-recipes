@@ -1,0 +1,48 @@
+////
+// CSS3 Tucked Corners effect
+//
+// @thanks Chris Coyier @chriscoyier
+// @link http://css-tricks.com/snippets/css/tucked-corners/
+// @author original version Gene Locklin https://github.com/GeneLocklin
+// @author Compass version Mason Wendell http://thecodingdesigner.com
+///
+
+// $tape-color: the background css property
+// $inner-element: the selector for the inner element (for bottom corners)
+@mixin corners-tucked($tape-color: white, $height: 50px, $width: 100px, $inner-element: "span.bottom-corners") {
+    position: relative;
+    @include box-sizing(border-box);
+    &:after, &:before, #{$inner-element}:after, #{$inner-element}:before {
+        position: absolute;
+        content: "";
+        z-index: 10;
+        background: $tape-color;
+        height: $height;
+        width: $width;
+        @include box-shadow(rgba(black, 0.5) 0 6px 9px -8px); }
+    &:after {
+        top: -($height * 0.5);
+        left: -($width * 0.5);
+        @include rotate(-45deg); }
+    &:before {
+        top: -($height * 0.5);
+        right: -($width * 0.5);
+        @include rotate(45deg); }
+    #{$inner-element} {
+        display: block;
+        position: relative;
+        width: 100%;
+        @include box-sizing(border-box);
+        &:after {
+            bottom: -($height * 0.5);
+            left: -($width * 0.5);
+            @include rotate(-135deg); }
+        &:before {
+            bottom: -($height * 0.5);
+            right: -($width * 0.5);
+            @include rotate(135deg); } } }
+
+
+@mixin corners-taped($tape-color: rgba(white, 0.5), $height: 50px, $width: 100px, $inner-element: "span.bottom-corners") {
+    @include corners-tucked($tape-color, $height, $width, $inner-element);
+}

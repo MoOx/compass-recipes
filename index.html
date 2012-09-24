@@ -1,0 +1,223 @@
+<!doctype html>
+<!--[if lt IE 9]>      <html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Compass Recipes, CSS recipes using Sass &amp; Compass mixins and functions</title>
+	<meta name="description" content="">
+	<meta name="author" content="Maxime Thirouin">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="docs/stylesheets/s.css">
+	<link rel="icon" type="image/x-icon" href="docs/img/logo/compass-recipes-icon-16.png" />
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li id="home-link"><a href="./">Compass Recipes</a></li>
+				<!--<li><a href="#" data-icon-="&#xf015;">Home</a></li>-->
+				<li><a href="#overview">Overview</a></li>
+				<li><a href="#install">Install</a></li>
+				<li><a href="#quickstart">Quickstart</a></li>
+				<li class="sep-after"><a href="#demos">Demos</a></li>
+				<li><a href="#contribute">Submit a recipe</a></li>
+				<li class="sep-after"><a href="https://github.com/MoOx/compass-recipes/issues/new">Request a recipe</a>
+				<li class="sep-after"><a href="https://github.com/MoOx/compass-recipes/issues/new">Report issue</a>
+				<li ><a  data-icon-="&#xf09b;"href="http://github.com/MoOx/compass-recipes">Github</a>
+				<li class="sep-after"><a  data-icon-="&#xf099;"href="https://twitter.com/Compass_Recipes">Twitter</a>
+			</ul>
+		</nav>
+
+		<a id="ribbon" href="http://github.com/MoOx/compass-recipes">Source on Github</a>
+	</header>
+	<div class="wrapper">
+		<div id="jumbotron" class="row">
+			<h1 id="logo">
+				<i id="logo-icon"></i><span id="logo-text">compass <strong>recipes</strong> <small>using sass</small></span>
+			</h1>
+			<p>
+				Lots of CSS Recipes, made with <a href="http://compass-style.org/">Compass</a> using <a href="http://sass-lang.com/">Sass</a>. Ready to use.
+			</p>
+			<div>
+				<iframe src="http://ghbtns.com/github-btn.html?user=MoOx&repo=compass-recipes&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="50px" height="20px"></iframe>
+				<iframe src="http://ghbtns.com/github-btn.html?user=MoOx&repo=compass-recipes&type=fork"  allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
+				<a href="https://twitter.com/Compass_Recipes" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @Compass_Recipes</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<section id="overview">
+			<h2>Overview</h2>
+			<ul class="list">
+				<li><a href="tests/recipes/background">Backgrounds</a>, patterns & gradients effects</li>
+				<li><a href="tests/recipes/color">Color</a>, Variables Names, advanced color functions like `brightness()` & color scheme functions)</li>
+				<li><a href="tests/recipes/effect">Effects</a>, Visual effects like `glass`, `bevel`, `cutout` or `ribbon`</li>
+				<li><a href="tests/recipes/form">Forms</a>, Only one at the moment. Please add yours :)</li>
+				<li><a href="tests/recipes/icon-font">Icon fonts</a>, Includes icon fonts helper and a few open source fonts as a compass extension (<a href="https://github.com/MoOx/compass-recipes/blob/master/templates/icon-fonts/README.md">more info</a>)</li>
+				<li><a href="tests/recipes/image">Image</a>, More image mixins (& functions) than Compass deserve (dimensions, inline, simple spriting)</li>
+				<li><a href="tests/recipes/layout">Layouts</a>, Vertical centering and box layout shortcuts.</li>
+				<li><a href="tests/recipes/media-queries">Media Queries</a>, Shortcuts for media queries.</li>
+				<li><a href="tests/recipes/shadow">Shadows</a>, A wide collection of shadows which use pseudo elements to create fold effects, etc.</li>
+				<li><a href="tests/recipes/shape">Shapes</a>, Geometric and iconic shapes, created only with CSS</li>
+				<li><a href="tests/recipes/ui">UI components</a>, Lots of element styling for loader, menu, overlay, separator, tooltip, etc.</li>
+				<li><a href="tests/recipes/utilities">Utilities</a>, Very usefull utilities, trick, hacks</li>
+
+				<li style="margin: 1em 0 0; font-style-italic; font-size: .8em">
+				<a href="https://github.com/MoOx/compass-recipes/issues">
+				more incomming (see compass recipes issues), feel free to make a pull request to add your own !</a></li>
+			</ul>
+		</section>
+
+		<section id="install">
+			<h2>Installation</h2>
+			<p>
+				Compass Recipes is available as a gem (and use <a href="http://sass-lang.com/">Sass</a> and <a href="http://compass-style.org/">Compass</a>)
+				<pre><code class="language-bash">gem update --system
+gem install compass-recipes</code></pre>
+
+				Then in your compass configuration file <code>config.rb</code>, add :
+				<pre><code class="language-ruby">require "compass-recipes"</code></pre>
+			</p>
+
+			<p>
+				If you are a designer, I encourage you to read the
+				<a href="http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/">The Designer’s Guide to the OSX Command Prompt</a>.
+			</p>
+			<p>
+				<em>For more information about alternative installation checkout the <a href="https://github.com/MoOx/compass-recipes#installation">Readme on Github</a></em>
+			</p>
+		</section>
+
+		<section id="quickstart">
+			<h2>Quickstart</h2>
+			<p>
+				Like every Compass components, you just need to import file and use some mixins.
+<pre><code class="language-sass">@import "recipes/shape/triangle";
+.my-triangle {
+	@include triangle;
+}</code></pre>
+
+Like Compass does, you can include all recipes in a folder like this (some recipes examples have been sneaked)
+<pre><code class="language-sass">@import "recipes/shape";
+.my-triangle {
+	@include triangle;
+}
+.my-square {
+	@include square
+}
+
+@mixin my-weird-mixin($param: true) {
+	@if ($param == true) { // == @if (param);
+		background: lighten(#000, 10%);
+	}
+	@else if ($param != null and $param == false) {
+		background: darken(#fefefe, 10%);
+	}
+	@else {
+		@extend .selector;
+	}
+}
+
+@import "recipes/media-queries";
+.sidebar {
+	@include media-min(60em) {
+		float: left;
+	}
+	background: image-url("sidebar-bg.png");
+	@include media-highres() {
+		background: image-url("sidebar-bg@2x.png");
+	}
+	// @2x include will be automatic soon ;)
+}
+
+@import "recipes/ui";
+
+body.loading {
+	&::before {
+		@include ui-loader-pulse;
+	}
+}
+
+nav {
+	@extend %my-nav-style;
+	@include ui-menu-dropdown;
+}
+
+$tooltip-color: #000 !default;
+
+.tooltip {
+	@include ui-tooltip($tip-color: rgba($tooltip-color, .2));
+	:first-letter {
+		font-size: 1em
+	}
+}
+</code></pre>
+
+You can also includes all recipes in one line (this should add nothing to your stylesheets until you call mixins)
+<pre><code class="language-sass">
+@charset "utf-8";
+
+@import "recipes";
+
+// then call whatever mixins you want !
+body {
+	@include background-carbon-fiber;
+}
+
+@include icon-font-face-fontawesome;
+.icon {
+	@include icon-font($class: 'fontawesome', $hover: null);
+	// require .icon to have a data-icon="{unicode}", see tests to get custom unicode
+}
+
+.picture {
+	@include effect-glass;
+}
+</code></pre>
+			</p>
+		</section>
+
+		<section id="demos">
+			<h2>Demos <a href="#demos-iframe" data-icon="&#xf065;">View in Fullscreen</a></h2>
+			<iframe id="demos-iframe" src="tests/recipes/" allowtransparency="true" frameborder="0" width="100%" height="600"></iframe>
+		</section>
+
+
+		<section id="contribute">
+			<h2>Submit a recipe</h2>
+			<p>
+				It's easy to sumbit your own recipe. Using Github you just need to fork & add your recipes into <code>stylesheets/recipes/</code> in the appropriate folder.
+				<br />
+				Do not forget to add a visual test into <code>tests/recipes/</code> with the same path you use for the recipe Sass code.
+				<br />
+				<em>Please use only Scss syntax.</em>
+			</p>
+		</section>
+
+		<footer id="footer">
+			<h2>About</h2>
+
+			<p>
+				Compass Recipes is a project developed by <a href="http://moox.fr/">Maxime Thirouin</a>, and <a href="https://github.com/MoOx/compass-recipes/graphs/contributors">some other guys</a>.
+			</p>
+			<p>
+				It use <a href="http://sass-lang.com/">Sass</a> and <a href="http://compass-style.org/">Compass</a>, <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://necolas.github.com/normalize.css/">Normalize.css</a> (through <a href="">Compass Normalize</a>).
+			</p>
+		</footer>
+	</div>
+
+
+	<script src="docs/scripts/s.js"></script>
+	<script src="docs/scripts/prism.js"></script>
+	<script src="docs/scripts/prism/prism-bash.js"></script>
+	<script src="docs/scripts/prism/prism-ruby.js"></script>
+	<script src="docs/scripts/prism/prism-sass.js"></script>
+</body>
+</html>

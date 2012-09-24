@@ -1,0 +1,118 @@
+////
+// Ribbon effect
+// Transform an element to a "ribbon"
+// For now ribbon in corner is the only one available
+//
+// @todo add something inspired by http://soiheardyouliekribbon.com/
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
+@import "compass/css3";
+@import "recipes/utilities/pseudo-element";
+
+@mixin effect-ribbon-corner(
+    $position: 'top left',
+    $width: 10em, $height: 2em, $lines: 1,
+    $skin: 'classic', $width-add: 0, $height-add: 0,
+    $offset-v: 0, $offset-h: 0
+)
+{
+    position: absolute;
+    text-align: center;
+    @include box-sizing(border-box);
+
+    width: $width;
+    height: $height;
+    line-height: $height / $lines;
+
+    // @if ($position == top left)
+    $position-v: top;
+    $position-h: left;
+    $angle: -45deg;
+    $transform-origin-x: 0;
+    $transform-origin-y: 100%;
+
+    @if ($position == 'top right')
+    {
+        //$position-v: top;
+        $position-h: right;
+        $angle: 45deg;
+        $transform-origin-x: 100%;
+        //$transform-origin-y: 100%;
+    }
+    @else if ($position == 'bottom right')
+    {
+        $position-v: bottom;
+        $position-h: right;
+        //$angle: -45deg
+        $transform-origin-x: 100%;
+        $transform-origin-y: 0;
+    }
+    @else if ($position == 'bottom left')
+    {
+        $position-v: bottom;
+        //$position-h: left;
+        $angle: 45deg;
+        //$transform-origin-x: 0;
+        $transform-origin-y: 0;
+    }
+
+    @if ($skin == 'classic')
+    {
+        @extend %effect-ribbon-skin-classic;
+        // skin border size to remove;
+        $width-add: .1em;
+        $height-add: .1em;
+    }
+    //@elseif ($skin == 'github')
+    //{
+    //    @extend %effect-ribbon-skin-github;
+    //}
+
+    // here is the awesome trick !
+    $value: pow($width + $width-add, 2) / 2 ;
+    #{$position-v}: sqrt($value) - $height - $height-add + $offset-v;
+    #{$position-h}: 0 + $offset-h;
+
+    @include transform(rotate($angle));
+    @include transform-origin($transform-origin-x, $transform-origin-y);
+}
+
+%effect-ribbon-skin-classic
+{
+    $color: #fff;
+    $border-width: 1px;
+    $border-color: #631a15;
+    $border-dot-subcolor: #da5050;
+    $border-dot-offset: 3px;
+
+    color: $color;
+    text-shadow: 0 1px 0 rgba(#000, .8);
+
+    border: $border-width solid $border-color;
+
+    background: rgb(199,59,60); //fallback
+    @include background(linear-gradient(rgb(199,59,60),rgb(184,32,31)));
+    box-shadow: 0 .2em .6em rgba(#000, .6);
+
+    // todo replace this use of pseudo elements by appropriate backgrounds properties (tricky gradients)
+    &:before,
+    &:after {
+        @include pseudo-element(100%, 0);
+        border: $border-width dashed;
+        border-left: 0;
+        border-right: 0;
+        border-top-color: $border-color;
+        border-bottom-color: $border-dot-subcolor;
+    }
+
+    &:before { top: $border-dot-offset; }
+    &:after { bottom: $border-dot-offset - $border-width *2; }
+}
+
+// @todo ?
+//%effect-ribbon-skin-github
+//{
+//
+//}

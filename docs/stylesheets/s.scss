@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+@import "compass";
+@import "recipes";
+@import "normalize";
+
+@include icon-font-face-fontawesome;
+@include icon-font-from-attr($font: fontawesome);
+
+// $icon-spacing: .2em;
+// %icon {
+//     opacity: .8;
+//     font-size: .8em;
+//     text-decoration: none;
+// }
+// @include icon-font-before(fontawesome) {
+//     padding-right: $icon-spacing;
+//     @extend %icon;
+// };
+// @include icon-font-after(fontawesome) {
+//     padding-left: $icon-spacing;
+//     @extend %icon;
+// };
+
+@import "share";
+@import "prism/prism-monokai-soda";
+
+// standard code using prism style
+code:not([class*="language-"]) {
+	padding: 2px;
+	font-family: $prism-font-family;
+	font-size:  $prism-font-size;
+	line-height: $prism-line-height;
+	color: $prism-color-neutral;
+	text-shadow: $prism-text-shadow;
+	background: transparentize($prism-background, .2);
+	@include border-radius($prism-border-radius);
+	border: $prism-border;
+}
+
+$colorDark: #333;
+$colorLight: #eee;
+
+@mixin colors($foreground, $background) {
+	color: $foreground;
+	@include colors-elements($foreground, $background);
+}
+
+@mixin colors-elements($foreground, $background) {
+	a {
+		color: $foreground;
+		//&:hover { text-shadow: 0 -1px 0 rgba($background, .2); }
+	}
+}
+
+%light { @include colors($colorLight, $colorDark); }
+%dark  { @include colors($colorDark, $colorLight); }
+
+@include colors-elements($colorDark, $colorLight);
+
+hr {
+	border: 0;
+	width: 80%;
+	border-bottom: 1px solid #aaa;
+}
+
+// layout
+body {
+	margin-top: 1.0em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow-x: hidden; // for ribbon
+}
+
+.row {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+$nav-height: 2.4em;
+
+header
+{
+	nav
+	{
+		@extend %light;
+
+		@include ui-menu-dropdown;
+		@include position(fixed, $top: 0, $left: 0, $right: 0);
+		font-size: .9em;
+		line-height: $nav-height;
+
+		@include background-gradient(#2F2F2F, matte);
+		@include box-shadow(0 .2em .6em rgba(#000, .8));
+
+		ul
+		{
+			position: relative;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0;
+		}
+
+			li
+			{
+				padding: 0 .6em;
+			}
+
+				a {
+					text-decoration: none;
+					opacity: .8;
+
+					&:hover { opacity: 1 }
+				}
+
+		.sep-after::after {
+			@include pseudo-element(1px, 100%, $display: inline-block);
+			top: 0;
+			right: -2px;
+			background: rgba($colorDark, .9);
+			border-right: 1px solid rgba($colorLight, .1);
+		}
+
+		$icon-size: 16px;
+		[data-icon] {
+			width: $icon-size;
+			height: $icon-size;
+
+			&:before {
+				font-size: $icon-size;
+				vertical-align: middle;
+			}
+		}
+
+	}
+}
+
+	#home-link {
+		position: absolute;
+		top: 0;
+		right: 0;
+		a {
+			font-weight: bold;
+			color: #000;
+			text-shadow: 0 1px 0 rgba($colorLight,.1), 0 0 30px rgba($colorLight,.125);
+			@include transition(all .2s linear);
+
+			&:hover {
+				color: $colorLight;
+				text-decoration: none;
+				text-shadow: 0 1px 0 rgba($colorLight,.1), 0 0 30px rgba($colorLight,.4);
+			}
+		}
+	}
+
+	#ribbon
+	{
+		font-size: .9em;
+		@include effect-ribbon-corner('top right', 14em, 2.4em, $offset-v: 2em);
+		z-index: 2;
+		text-decoration: none;
+	}
+
+#logo
+{
+
+}
+
+	#logo-icon,
+	#logo-text {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	#logo-icon {
+		margin: 0 1em 0 0;
+		@include transform(rotate(-366deg) scale(0.8));
+		@include transition(all 1s ease-in-out .6s);
+		#logo:hover & { @include transform(rotate(0deg) scale(1)); }
+
+		@include image-replace-text-with-dimensions("../../docs/img/logo/compass-recipes-icon-256.png");
+	}
+
+	#logo-text {
+		@include hide-text;
+		@include image-replace-text-with-dimensions("../../docs/img/logo/compass-recipes-text-256.png");
+		margin: auto;
+		padding: 1em 0 2em;
+	}
+
+.wrapper {
+	@extend %light;
+	margin: auto;
+	padding: 3em 0 2em;
+	@include background(
+		linear-gradient(0, rgba(#000, .4), rgba(#000, 0) 25%),
+		linear-gradient(0, rgba(#000, 0) 75%, rgba(#000, .4)),
+		radial-gradient(rgba(#000, 0) 75%, rgba(#000, .4)),
+		background_noise(
+			$intensity: 1,
+			$opacity: 0.08),
+		#2F2F2F);
+
+	color: #C6C6C6;
+
+	code { color: #f1f1f1; }
+}
+
+#jumbotron
+{
+	font-size: 1em;
+	text-align: center;
+
+		iframe { vertical-align: middle; }
+}
+
+section {
+	padding-top: 3em;
+
+	> h2 { margin-top: 0; }
+}
+
+#demos {
+	iframe {
+		@include border-radius(3px);
+		@include box-shadow(0 0 6px rgba($colorDark, .8));
+
+		&:target {
+			position: fixed;
+			top: $nav-height;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			background: #fff;
+		}
+	}
+}
+
+.list
+{
+	li {
+		a:first-child { font-size: 1.2em; }
+	}
+}
+
+.download {
+	float: right;
+}
+
+.footer
+{
+	text-align: center;
+	padding-top: 30px;
+	font-style: italic;
+}

@@ -1,0 +1,11 @@
+$color-scheme-analog: 22 !default;
+
+@function analog-color($color)
+{
+	@return adjust-hue($color, $color-scheme-analog);
+}
+
+@function analog-color-alt($color)
+{
+	@return adjust-hue($color, -$color-scheme-analog);
+}

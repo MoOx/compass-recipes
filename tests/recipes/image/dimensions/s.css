@@ -1,0 +1,31 @@
+div {
+  outline: 1px solid red;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.image-dimensions {
+  width: 640px;
+  height: 458px;
+}
+
+.image-dimensions-true-false {
+  width: 640px;
+}
+
+.image-dimensions-true-false-true {
+  width: 640px;
+  line-height: 458px;
+}
+
+.image-dimensions-true-true-true {
+  width: 640px;
+  height: 458px;
+  line-height: 458px;
+}
+
+.image-dimensions-all {
+  width: 640px;
+  height: 458px;
+  line-height: 458px;
+}

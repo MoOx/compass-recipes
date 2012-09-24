@@ -1,8 +1,9 @@
-/**
- * Shape/Polygon/Hexagon
- *
- * @author Maxime Thirouin maxime.thirouin@gmail.com @MoOx
- */
+////
+// Shape/Polygon/Hexagon
+//
+// @author Maxime Thirouin m@moox.fr @MoOx
+///
+
 @mixin hexagon($width: 100px, $height: 55px, $background-color: transparent)
 {
     width: $width;

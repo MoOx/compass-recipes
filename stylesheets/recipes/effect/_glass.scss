@@ -1,26 +1,42 @@
-/**
- * Glass effect
- * Use this on image for better effect render
- * 
- * Inspired from Simurai's Imdb redisign
- *
- * @link http://lab.simurai.com/redesign/imdb
- * @thanks Simurai @simurai
- */
-@mixin effect-glass($color: #fff, $reflectDegree: -45deg, $border-radius: 4px)
+////
+// Glass effect
+// Use this on image for better effect render
+//
+// Inspired from Simurai's IMDB redisign
+//
+// @link http://archive.simurai.com/lab/imdb/
+// @thanks Simurai @simurai
+///
+
+@import "recipes/utilities/pseudo-element";
+
+@mixin effect-glass(
+    $color: rgba(#fff, .12),
+    $reflectDegree: -45deg,
+    $border-radius: .2em,
+    $border-color: rgba(#000, .2),
+    $size: 50%,
+    $size-fadeout: .5%
+)
 {
     position: relative;
     @include border-radius($border-radius);
 
-    &:before
+    &:after
     {
-        content: "";
-        position:absolute;
-        z-index: 1; // really need that ?
-        top: 0; right: 0; bottom: 0; left: 0;
-        border: transparent solid 1px;
+        @include pseudo-element;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid transparent; // transparent fallback
+        border-color: $border-color;
         @include border-radius($border-radius);
-        @include box-shadow(inset $color 0 0 2px, inset rgba($color,.4) 0 5px 10px);
-        @include background(linear-gradient($reflectDegree, rgba($color,.12) 50%, rgba($color, 0) 50.5% ));
+        @include box-shadow(
+            inset opacify($color, .6) 0 0 2px,   // inner glow
+            inset rgba($color, .4) 0 0 10px // inner glow
+        );
+        @include background(linear-gradient($reflectDegree, $color, transparentize($color, .06) $size, transparentize($color, 1) $size + $size-fadeout));
     }
 }
