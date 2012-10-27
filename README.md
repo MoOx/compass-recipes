@@ -4,7 +4,7 @@ A series of Compass and Sass mixins and functions for creating delicious CSS eff
 
 _Compass Recipes is currently under active development. While it's being already used on multiple projects (even in production), you may encounter some issues. Please try it out in a project, and [make suggestions](https://github.com/MoOx/compass-recipes/issues/new) or [report bugs](https://github.com/MoOx/compass-recipes/issues) ! Your feedback matters._
 
-## [Online Demos](http://compass-recipes.moox.fr/tests/)
+## [Online Demos](http://compass-recipes.moox.fr/tests/recipes/)
 
 If you want to view the Sass(scss) source of a demo, remember to find the appropriate `.scss` file of the deserved `s.css` (e.g. : open it from the source & switch extension).
 
