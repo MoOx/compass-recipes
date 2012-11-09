@@ -1,0 +1,35 @@
+//
+// @author Monin Sergey <moninsergei@gmail.com>
+// Original article: http://www.mobify.com/dev/multiline-ellipsis-in-pure-css/
+///
+
+@mixin multiline-ellipsis($height, $ellipsiswidth: 1em, $ellipsisbackground: inherit) {
+  overflow: hidden;
+  height: $height;
+
+  &:before {
+    content:"";
+    float: left;
+    width: 5px;
+    height: $height;
+  }
+
+  > *:not(img) {
+    float: right;
+    width: 100%;
+    margin-left: -5px;
+  }
+
+  &:after {
+    content: "\02026";
+
+    float: right; position: relative;
+    top: -25px; left: 100%;
+    width: $ellipsiswidth; margin-left: -#{$ellipsiswidth};
+    padding-right: 5px;
+
+    text-align: right;
+    background: $ellipsisbackground;
+  }
+}
+
