@@ -48,7 +48,7 @@ require 'compass-recipes'
 Then you can include some recipes like this
 
 ```scss
-@import "recipes/shape/triangle";
+@import "recipes/shape/polygon/triangle";
 .my-triangle
 {
     @include triangle;
