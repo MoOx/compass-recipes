@@ -1,0 +1,30 @@
+.ellipsis {
+  line-height: 25px;
+  margin: 10px;
+  border: 5px solid #aaaaaa;
+  overflow: hidden;
+  height: 190px;
+}
+.ellipsis:before {
+  content: "";
+  float: left;
+  width: 5px;
+  height: 190px;
+}
+.ellipsis > *:not(img) {
+  float: right;
+  width: 100%;
+  margin-left: -5px;
+}
+.ellipsis:after {
+  content: "\02026";
+  float: right;
+  position: relative;
+  top: -25px;
+  left: 100%;
+  width: 1em;
+  margin-left: -1em;
+  padding-right: 5px;
+  text-align: right;
+  background: inherit;
+}

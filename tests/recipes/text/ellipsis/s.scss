@@ -1,0 +1,9 @@
+@import "recipes/text";
+
+.ellipsis {
+  line-height: 25px;
+  margin: 10px;
+  border: 5px solid #AAA;
+  @include multiline-ellipsis(190px);
+}
+

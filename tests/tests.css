@@ -1,6 +1,5 @@
-@charset "utf-8";
-/* normalize.css v2.0.1 | MIT License | git.io/normalize */
-/* normalize.css v2.0.1 | HTML5 Display Definitions | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
 aside,
 details,
@@ -19,6 +18,8 @@ audio,
 canvas,
 video {
   display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 
 audio:not([controls]) {
@@ -30,7 +31,7 @@ audio:not([controls]) {
   display: none;
 }
 
-/* normalize.css v2.0.1 | Base | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | Base | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -41,7 +42,7 @@ body {
   margin: 0;
 }
 
-/* normalize.css v2.0.1 | Links | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | Links | MIT License | git.io/normalize */
 a:focus {
   outline: thin dotted;
 }
@@ -51,7 +52,7 @@ a:hover {
   outline: 0;
 }
 
-/* normalize.css v2.0.1 | Typography | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | Typography | MIT License | git.io/normalize */
 h1 {
   font-size: 2em;
 }
@@ -65,6 +66,10 @@ strong {
   font-weight: bold;
 }
 
+blockquote {
+  margin: 1em 40px;
+}
+
 dfn {
   font-style: italic;
 }
@@ -74,11 +79,17 @@ mark {
   color: #000;
 }
 
+p,
+pre {
+  margin: 1em 0;
+}
+
 code,
 kbd,
 pre,
 samp {
   font-family: monospace, serif;
+  _font-family: "courier new", monospace;
   font-size: 1em;
 }
 
@@ -90,6 +101,16 @@ pre {
 
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 
 small {
@@ -112,23 +133,51 @@ sub {
   bottom: -0.25em;
 }
 
-/* normalize.css v2.0.1 | Embedded Content | MIT License | git.io/normalize */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* normalize.css v1.0.1 | Embedded Content | MIT License | git.io/normalize */
 img {
   border: 0;
+  -ms-interpolation-mode: bicubic;
 }
 
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* normalize.css v2.0.1 | Figures | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | Figures | MIT License | git.io/normalize */
 figure {
   margin: 0;
 }
 
-/* normalize.css v2.0.1 | Forms | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | Forms | MIT License | git.io/normalize */
+form {
+  margin: 0;
+}
+
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -136,6 +185,8 @@ fieldset {
 legend {
   border: 0;
   padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
 }
 
 button,
@@ -145,6 +196,8 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
 }
 
 button,
@@ -158,6 +211,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+  *overflow: visible;
 }
 
 button[disabled],
@@ -169,6 +223,8 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
+  *height: 13px;
+  *width: 13px;
 }
 
 input[type="search"] {
@@ -194,7 +250,7 @@ textarea {
   vertical-align: top;
 }
 
-/* normalize.css v2.0.1 | Tables | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | Tables | MIT License | git.io/normalize */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -210,6 +266,7 @@ body {
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -moz-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
   background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -o-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
+  background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -ms-linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), -ms-linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), -ms-linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
   background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(left, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px), linear-gradient(left, rgba(255, 255, 255, 0.1) 1px, rgba(255, 255, 255, 0) 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
