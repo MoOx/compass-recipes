@@ -1,0 +1,46 @@
+/*
+Syntax error: File to import not found or unreadable: recipes.
+              Load path: C:/Users/monin_000/Desktop/GitHub/compass-recipes/tests/recipes
+        on line 1 of .\s.scss
+
+1: @import "recipes";
+
+Backtrace:
+.\s.scss:1
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/import_node.rb:45:in `import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/perform.rb:216:in `visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/perform.rb:98:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/perform.rb:98:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/engine.rb:265:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/plugin/compiler.rb:325:in `update_stylesheet'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/plugin/compiler.rb:182:in `block in update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/plugin/compiler.rb:179:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/plugin/compiler.rb:179:in `update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.0.alpha.69/lib/sass/plugin/compiler.rb:278:in `block in watch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/listen-0.7.2/lib/listen/multi_listener.rb:108:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/listen-0.7.2/lib/listen/multi_listener.rb:108:in `on_change'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/listen-0.7.2/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/listen-0.7.2/lib/listen/adapters/polling.rb:56:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/listen-0.7.2/lib/listen/adapters/polling.rb:56:in `poll'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/listen-0.7.2/lib/listen/adapters/polling.rb:32:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: recipes.\A               Load path: C:/Users/monin_000/Desktop/GitHub/compass-recipes/tests/recipes\A         on line 1 of .\s.scss\A \A 1: @import \"recipes\";"; }
