@@ -31,12 +31,11 @@
 @import "compass/css3/images";
 
 @mixin background-gradient($bg-color, $type: null, $direction: top) {
-    background-image: none;
-    background-color: $bg-color;
+    background: $bg-color; // fallback
     $background-image: background-gradient($bg-color, $type, $direction);
     @if $background-image != null
     {
-        @include background-image($background-image);
+        @include background($bg-color $background-image);
     }
 }
 
@@ -59,7 +58,10 @@
             @return linear-gradient($direction, color_stops(lighten($bg-color, 5%), darken($bg-color, 10%)));
         } @else if $type == matte {
             @return matte-gradient($bg-color, $direction);
+        } @else {
+            @warn "Background gradient type `#{$type} `does not exist";
         }
+        
     }
     @return null;
 }
