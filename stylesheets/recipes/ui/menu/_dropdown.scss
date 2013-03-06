@@ -11,42 +11,35 @@
 
 @import "recipes/utilities/block-inline-block";
 
-@mixin ui-menu-dropdown($z-index: 3)
-{
-    z-index: $z-index;
+@mixin ui-menu-dropdown($z-index: 3) {
+	z-index: $z-index; // ie absolute under relative fix
 
-    ul
-    {
-        z-index: $z-index + 1;
-        list-style-position: outside; // ie fix
+	ul {
+		z-index: $z-index + 1;
+		list-style-position: outside; // ie fix
 
-        li
-        {
-            position: relative;
-            @include block-inline-block;
-        }
+		li {
+			position: relative;
+			@include block-inline-block;
+		}
 
-        a
-        {
-            display: inline-block;
-        }
-    }
+		a {
+			display: inline-block;
+		}
 
-        // sub menu
-        ul ul
-        {
-            position: absolute;
-            z-index: $z-index + 2;
+		// sub menu
+		ul {
+			position: absolute;
+			z-index: $z-index + 2;
 
-            // default behavior
-            display: none;
-        }
-
-            // we use a selector with a parent class like this to do not override
-            // eventual js added behavior (see comment a the top of this file)
-            .no-js & li:hover > ul
-            {
-                    display: block;
-            }
+			// default behavior
+			display: none;
+		}
+	}
+		// we use a selector with a parent class like this to do not override
+		// eventual js added behavior (see comment a the top of this file)
+		.no-js & li:hover > ul {
+				display: block;
+		}
 }
 
