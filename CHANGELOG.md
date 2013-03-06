@@ -2,6 +2,8 @@
 
 ## HEAD
 
+* remove gravatar extension
+
 ## 0.3.0 (September 17, 2012)
 
 * media queries shortcuts
