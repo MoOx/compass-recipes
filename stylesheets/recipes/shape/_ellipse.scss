@@ -6,10 +6,10 @@
 
 @import "compass/css3/border-radius";
 
-@mixin ellipse($width: 200px, $height: 100px)
+@mixin ellipse($width: 200px, $height: 100px, $border-width:0px)
 {
-    width: $width;
-    height: $height;
+    width: $width - $border-width*2;
+    height: $height - $border-width*2;
     
     @if ($width == $height) {
         @include border-radius($width/2);
@@ -19,7 +19,7 @@
     }
 }
 
-@mixin circle($width: 100px)
+@mixin circle($width: 100px, $border-width:0px)
 {
-    @include ellipse($width, $width);
+    @include ellipse($width, $width, $border-width);
 }
