@@ -137,3 +137,7 @@ Some other great CSS/SCSS/design projects for making delicious websites:
 Copyright (c) 2012 Maxime Thirouin
 
 Released under [MIT Licence](http://moox.mit-license.org/)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/MoOx/compass-recipes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
