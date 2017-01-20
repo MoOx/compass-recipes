@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "bundle"
+gem "bundler"
 gem "rake"
 gem "compass-normalize", ">= 1.3"
 gem "compass", ">= 0.12.2"
